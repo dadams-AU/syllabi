@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the GitHub repository containing a curated collection of syllabi for courses in Public Administration and Public Policy, taught by David P. Adams, Ph.D., at California State University, Fullerton. These syllabi, formulated with unique pedagogical approaches and thematic focuses, serve as a valuable resource for educators and students alike. The syllabi are meticulously organized by course number and semester and represent the most recent versions, formatted in LaTeX.
+Welcome to my GitHub syllabi repository. These syllabi, formulated with unique pedagogical approaches and thematic focuses, serve as a valuable resource for educators and students alike. The syllabi are  organized by course number and semester and represent the most recent versions, formatted in LaTeX. A template is also provided for creating your own syllabi.
 
 ## Syllabi
 
