@@ -1,0 +1,439 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\frenchspacing
+\usepackage{multicol}
+\usepackage{eso-pic}
+\usepackage[longnamesfirst]{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{paralist}
+\usepackage{quoting}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{bookmark}
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+}
+\usepackage[scaled]{helvet} % Load the helvet package
+\renewcommand*\familydefault{\sfdefault} % Set the default font to be sans-serif
+
+
+\begin{document}
+\title{MPA Capstone Seminar: \\ Public Administration Theory}
+\author{POSC 521 — Fall 2024}
+\date{}
+    \maketitle
+
+    
+\begin{itemize}
+    \item \textbf{In-Person Sessions:} August 29; September 5, 12, 19, 26; October 3, 10, 17; November 14; December 5.
+    \item \textbf{Synchronous Online Session:} November 21.
+    \item \textbf{Asynchronous Online Sessions:} October 24, 31; November 7, 28; December 12.
+\end{itemize}
+
+    \subsection*{Professor: David P. Adams, Ph.D.}
+
+    \subsubsection*{Contact Information:}
+    
+    \begin{itemize}
+        \item Office: 516 Gordon Hall
+        \item Phone/SMS: (657) 278-4770
+        \item Zoom Meeting ID: 334 750 2369 or \href{https://fullerton.zoom.us/j/3347502369}{\texttt{fullerton.zoom.us/j/3347502369}} 
+        \item website: \href{https://dadams.io}{\texttt{dadams.io}}
+        \item email: \href{dpadams@fullerton.edu}{\texttt{dpadams@fullerton.edu}}
+        \item Office hours: Tuesdays \& Thursdays from 9:30 to 11:00, Thursdays from 5:30 to 6:30, and by \href{https://dadams.io/appointments}{appointment}.
+        \item Schedule meetings throughout the week: \href{https://dadams.io/appointments}{\texttt{dadams.io/appointments}}
+    \end{itemize}
+    
+    \section{Catalog Description}
+    Concepts, models and ideologies of public administration within the larger political system. Course restricted to students in their final six units of graduate work.
+    
+    \section{Course Description}
+    The capstone seminar in the Master of Public Administration program at Cal State Fullerton examines concepts, models, and ideologies of public administration within the larger political system.
+
+    \section{Course Prerequisites}
+    This course is restricted to students in their final six units of graduate work in the MPA program. Students must have completed all other required courses in the MPA program before enrolling in this course.
+    
+    \section{Course Objectives}
+    This course is designed to accomplish five interrelated objectives:
+    
+    \begin{enumerate}
+        \item \textbf{Theory Examination}: We will delve into the most important theories and literature in public administration, fostering a deep understanding of the field.
+        \item \textbf{Literature Review}: You will complete a literature review in your concentration area, allowing you to specialize and delve deeper into a specific aspect of public administration. This preparation will be crucial for the general concentration portion of the comprehensive exams.
+        \item \textbf{Writing Skills}: This course will enhance your writing skills, focusing on clear, concise, and effective communication. This preparation will be crucial for the general theory portion of the comprehensive exams.
+        \item \textbf{Critical Thinking}: You will develop your critical thinking skills, learning to analyze and evaluate complex arguments and theories. This preparation will be crucial for the general theory portion of the comprehensive exams.
+        \item \textbf{Professional Development}: This course will help you develop the skills and knowledge necessary for a successful career in public administration. You will learn about the latest trends and issues in the field and how to navigate the challenges of public service.
+    
+    \end{enumerate}
+    
+    \section{Course Materials}
+    \subsection*{Required Texts}
+    \begin{itemize}
+        \item \textbf{Denhardt and Denhardt}. \textit{The New Public Service: Serving, Not Steering}. 4th ed. Routledge, 2015.
+        \item \textbf{Lipsky, Michael}. \textit{Street-Level Bureaucracy: Dilemmas of the Individual in Public Services}. Russell Sage Foundation, 2010.
+        \item \textbf{Stivers, Camilla}. \textit{Bureau Men, Settlement Women: Constructing Public Administration in the Progressive Era}. University of Kansas Press, 2000.
+    \end{itemize}
+
+\subsection*{Additional Readings are indicated in the course schedule below.}
+
+\section{Technical Requirements}
+
+\subsection*{Pollak Library Resources}
+
+The Pollak Library provides a wide range of resources and services to support your research and learning. These resources include books, journals, databases, and research guides. You can access the library's resources online through the \href{http://www.library.fullerton.edu/}{Pollak Library website}. The library also offers research assistance through the \href{http://www.library.fullerton.edu/research/}{Research Assistance Program}. You can also access the \href{http://www.library.fullerton.edu/about/guidelines/online-instruction-guidelines.php}{library's online instruction guidelines} for help with online learning.
+
+\subsection*{Canvas}
+
+This course will be conducted using \href{https://csufullerton.instructure.com/}{Canvas}. You are responsible for checking \emph{Canvas} regularly for announcements, assignments, and other course materials. You are also responsible for ensuring that your \emph{Canvas} notifications are set to receive messages from the course. 
+
+\subsection*{Zoom}
+This course will include synchronous online sessions using \href{https://fullerton.zoom.us/}{Zoom}. You are responsible for ensuring that you have the necessary equipment and internet connection to participate in these sessions. 
+
+\subsection*{Minimum Technical Requirements}
+
+To participate in this course, you will need the following minimum technical requirements:
+\begin{itemize}
+    \item A computer or tablet with a reliable internet connection
+    \item A webcam and microphone
+    \item A modern web browser (Chrome, Firefox, Safari, or Edge)
+    \item Microsoft Word or a compatible word processing program
+    \item Adobe Acrobat Reader or a compatible PDF reader
+\end{itemize}
+
+
+\noindent Long- and short-term computer and internet access loans are available through the \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}.
+
+\section{Technical Problems}
+
+\subsection*{University IT Help Desk}
+
+Contact the instructor immediately to document the problem if you encounter any technical difficulties. Then contact the \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{Student IT Help Desk} for assistance. You can also call the Student IT Help Desk at (657) 278-8888, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, visit them at the Pollak Library North \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}, or log on to the \href{http://my.fullerton.edu/}{my.fullerton.edu} portal and click ``Online IT Help'' followed by ``Live Chat''.
+
+\subsection*{Canvas Support}
+
+If you encounter any technical difficulties with Canvas, call the Canvas Support Hotline at 855-302-7528, visit the \href{https://community.canvaslms.com/docs/DOC-10720-67952720329}{Canvas Community}, or click the ``Help'' button in the lower left corner of Canvas and select ``Report a Problem''. The \href{https://cases.canvaslms.com/liveagentchat?chattype=student&sfid=001A000000YzcwQIAR}{Student Support Live Chat} is available 24 hours a day, 7 days a week.
+
+
+\section{University Student Policies}
+
+In accordance with UPS 300.00, students must be familiar with certain policies applicable to all courses. Please review these policies as needed and visit this Cal State Fullerton website \texttt{\href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}} for links to the following information:
+
+\begin{enumerate}
+    \item   University learning goals and program learning outcomes.
+    \item	Learning objectives for each General Education (GE) category.
+    \item	Guidelines for appropriate online behavior (netiquette).
+    \item	Students' rights to accommodations for documented special needs.
+    \item   Campus student support measures, including Counseling \& Psychological Services, Title IV and Gender Equity, Diversity Initiatives and Resource Centers, and Basic Needs Services.
+    \item	Academic integrity (refer to UPS 300.021).
+    \item	Actions to take during an emergency.
+    \item	Library services information.
+    \item	Student Information Technology Services, including details on technical competencies and resources required for all students.
+    \item	Software privacy and accessibility statements.
+\end{enumerate}
+
+\section{Course Student Policies}
+
+\subsection*{Course Communication}
+All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email. Students are also responsible for ensuring that their \emph{Canvas} notifications are set to receive messages from the course. Students are expected to check \emph{Canvas} and their email at least once daily.
+
+\subsubsection*{Response Time}I will strive to respond to all student emails and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you do not receive a response within 24 hours, please send a follow-up message. If you do not receive a response within 48 hours, please send another follow-up message and contact me via phone or SMS text at (657) 278-4770.
+
+\subsection*{Due Dates}
+All assignments are due by 11:59 p.m. on the date specified in the course schedule. Late assignments will only be accepted if prior arrangements have been made with the professor. Students must submit all assignments on time and in the correct format. Failure to submit an assignment on time may result in a grade penalty.
+
+\subsection*{Alternative Procedures for Submitting Work}
+Students are expected to submit all assignments via \emph{Canvas}. If you cannot submit an assignment via \emph{Canvas}, please contact the professor to discuss alternative submission procedures.
+
+\subsection*{Extra Credit}
+Extra credit opportunities will not be offered in this course. All students will be graded based on the same criteria and standards.
+
+\subsection*{Attendance}
+Students are expected to attend all in-person and synchronous online sessions. If you are unable to attend a session, please notify the professor in advance. If you miss a session, you are responsible for obtaining the information and materials covered in the session.
+
+\subsection*{Retention of Student Work}
+Students are responsible for retaining copies of all assignments submitted in this course. Students should keep copies of all assignments until the end of the semester and verify that their assignments have been graded and returned before discarding them.
+
+\subsection*{Academic Integrity}
+Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy on academic dishonesty and to adhere to this policy in all aspects of this course. Any student who has questions about the policy should ask the professor for clarification.
+
+\subsection*{Plagiarism}
+Plagiarism is a serious violation of academic integrity and will not be tolerated in this course. Plagiarism includes, but is not limited to, copying and pasting text from sources without proper citation, paraphrasing text from sources without proper citation, and submitting work that is not your own. Students are expected to properly cite all sources used in their work and to submit original work. Failure to do so may result in a failing grade for the assignment and further disciplinary action.
+
+\subsection*{Written Work}
+All written work must be submitted in a professional format, including proper grammar, spelling, and punctuation. Written work must also be properly cited using the appropriate citation style. Students are expected to follow the guidelines for written work provided by the professor and to seek clarification if they have questions about the requirements.
+
+\subsection*{AI Generated Text} 
+Large language models, such as GPT-3.5, have made it easier to generate text that mimics human writing. While these models can be useful for generating ideas and content, they can also be misused to produce work that is not original. Students are expected to use AI-generated text responsibly and to ensure that all work submitted in this course is their own. Failure to do so may result in a failing grade for the assignment and further disciplinary action.
+
+
+\vspace{1ex}  
+
+\noindent Written work will be submitted on \emph{Canvas} and checked for plagiarism using Turnitin. Students are expected to submit original work and properly cite all sources. Failure to do so may result in a failing grade for the assignment and further disciplinary action.
+
+\section{University-wide Student Learning Outcomes}
+As a capstone course in the MPA program, this course is designed to help students achieve the following university-wide student learning outcomes:
+\begin{enumerate}
+    \item Knowledge, skills, and professional dispositions including higher order competence in disciplinary perspectives and interdisciplinary points of view;
+    \item The ability to access, analyze, synthesize, and evaluate complex information from multiple sources and in new situations and settings;
+    \item Advanced communication skills;
+    \item The ability to work independently and in collaboration with others as artists, practitioners, researchers, and/or scholars;
+    \item The ability to determine and apply appropriate methods and technologies to address problems that affect their communities; 
+    \item A commitment to social justice and ethical leadership within diverse communities and an interdependent global community.
+\end{enumerate}
+
+
+\section{Course Requirements}
+
+\subsection*{Annotated Bibliography, Synthesis, and Personal Reflection}
+During the first eight weeks of the course, students will complete an annotated bibliography, synthesis, and personal reflection on the assigned readings. The annotated bibliography will include a summary of the critical points of each reading, an analysis of the strengths and weaknesses of the arguments presented, and a reflection on the implications of the readings for public administration theory and practice. The synthesis will integrate the key points of the readings and identify common themes and divergent perspectives. The personal reflection will provide an opportunity for students to connect the readings to their own experiences and perspectives and consider the readings' implications for their future careers in public administration.
+
+\subsection*{MPA Comprehensive General Area Essay Exam}
+
+Students will complete a comprehensive general area essay exam as part of the MPA program’s comprehensive exam requirement. The exam will consist of three questions from which students will choose one to answer. The questions will be based on the course readings and discussions and will require students to demonstrate their understanding of public administration's key concepts, theories, and debates. The exam will allow students to synthesize their learning in the course and demonstrate their ability to think critically and write clearly about complex issues in public administration.
+
+\subsection*{Concentration Area Literature Review}
+
+Students will complete a literature review in their concentration area as part of the MPA program's comprehensive exam requirement. The literature review will examine the practical and theoretical issues related to a specific public administration topic and synthesize the essential findings and debates in the literature. The literature review will allow students to deepen their knowledge of their concentration area and develop their research and writing skills. A peer review process will be used to provide feedback on the literature review, and students will have the opportunity to revise and resubmit their work based on the feedback received. Peer reviews will be conducted anonymously on \emph{Canvas}, and students will be assigned to review the work of their classmates.
+
+\section{Course Requirements Due Dates}
+
+The due dates for the course requirements are as follows:
+    \begin{itemize}
+        \item Book Report or Annotated Bibliography and Synthesis: 
+        \begin{itemize}
+            \item Due each week by 6:59 p.m. on Thursday
+            \item Personal Reflection: Due each week by 11:59 p.m. on Sunday
+        \end{itemize}Due each week by 6:59 p.m. on Thursday
+        \item MPA Comprehensive General Area Essay Exam:
+        \begin{itemize}
+            \item Distributed on 10/31
+            \item Due on 11/7
+        \end{itemize}
+        \item Concentration Area Literature Review:
+        \begin{itemize}
+            \item Topic Selection: Due on 11/14
+            \item Annotated Bibliography: Due on 11/21
+            \item Draft: Due on 12/5
+            \item Peer Review: Due on 12/12
+            \item Final Draft: Due on 12/19
+        \end{itemize}
+    \end{itemize}
+
+\section{Grades}
+
+Your work in this class will be graded based on four criteria:
+    \begin{enumerate}
+        \item Thoroughly complete each assignment, address all questions, and participate in class discussions.
+        \item Effective use of class materials (and other literature while researching your literature review topic).
+        \item Sophisticated substantive content and discussion rather than superficial.
+        \item Writing at the graduate level, including proper mechanics, grammar, syntax, and citation style.
+    \end{enumerate}
+
+\subsection*{Grading Scale and Grade Weights}  
+
+The grading scale is shown in Table~\ref{tab:grading-scale}. Grades will be given based on the weights in Table~\ref{tab:grade-weights}.
+
+\begin{table}[h]
+\centering
+\caption{Grading Scale}
+\begin{tabular}{llll}
+\toprule
+\textbf{Grade} & \textbf{Percentage} & \textbf{Grade} & \textbf{Percentage} \\
+\midrule
+A+ & 98.0 -- 100 & B- & 80.0 -- 81.9\\
+A & 92.0 -- 97.9 & C+ & 78.0 -- 79.9\\
+A- & 90.0 -- 91.9 & C & 72.0 -- 77.9\\
+B+ & 88.0 -- 89.9 & C- & 70.0 -- 71.9\\
+B & 82.0 -- 87.9 & D & 60.0 -- 69.9\\
+D- & 50.0 -- 59.9 & F & 0 -- 49.9\\
+
+\bottomrule
+\end{tabular}
+\label{tab:grading-scale}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\caption{Grade Weights}
+\begin{tabular}{ll}
+    \toprule
+\textbf{Assignment} & \textbf{Percentage} \\
+\midrule
+Weekly Annotated Bibliography & 5\% \\
+Weekly Synthesis & 20\% \\
+Weekly Personal Reflection & 5\% \\
+MPA Comprehensive General Area Essay Exam & 45\% \\
+Concentration Area Literature Review Annotated Bibliography & 5\% \\
+Concentration Area Literature Review Draft & 5\% \\
+Concentration Area Literature Review Peer Review & 5\% \\
+Concentration Area Literature Review Final Draft & 10\% \\
+\midrule
+\textbf{Total} & \textbf{100\%} \\
+\bottomrule
+\end{tabular}
+\label{tab:grade-weights}
+\end{table}
+
+
+\section{Course Schedule}
+
+\subsection*{Week 1 -- 8/29: Public Administration Theory I}
+\begin{itemize}
+    \item \textbf{In-person Session}: Introduction to the Course
+    \item Readings:
+        \begin{itemize}
+            \item \citet{newton2016}, Cicero (44), \emph{On Duties}
+            \item \citet{Wilson1887}, ``The Study of Administration''
+            \item \citet{Weber1946}, ``Bureaucracy'' 
+            \item \citet{gulick1937}, ``Notes on the Theory of Organization'' 
+            \item \citet{Follett1926}, ``The Giving of Orders'' 
+            \item \citet{simon1946a}, ``Proverbs of Administration'' 
+        \end{itemize}
+    \item Due Thursday: Annotated Bibliography and Synthesis
+    \item Due Saturday: Personal Reflection
+\end{itemize}
+
+
+\subsection*{Week 2 -- 9/5: Public Administration Theory II}
+\begin{itemize}
+    \item \textbf{In-person Session}: Public Administration in the U.S. Context
+    \item Readings:
+        \begin{itemize}
+            \item \citet{Stivers2000}, \emph{Bureau Men, Settlement Women} 
+            \item \citet{Denhardt2015}, \emph{The New Public Service}, Chapters 1--4 
+        \end{itemize}
+    \item Due Thursday: Annotated Bibliography and Synthesis
+    \item Due Saturday: Personal Reflection
+\end{itemize}
+\subsection*{Week 3 -- 9/12: Ethics and Values in Public Administration}
+\begin{itemize}
+    \item \textbf{In-person Session}: Public Service Values and Ethics
+    \item Readings:
+        \begin{itemize}
+            \item \citet{friedrich1935}, ``Responsible Government Service Under the American Constitution'' 
+            \item \citet{FINER1941}, ``Administrative Responsibility in Democratic Government'' 
+            \item \citet{goss1996}, ``A Distinct Public Administration Ethics?'' 
+            \item \citet{Adams2009}, ``Unmasking Administrative Evil'' 
+            \item \citet{Denhardt2015}, \emph{The New Public Service}, Chapter 7 
+        \end{itemize}
+    \item Due Thursday: Annotated Bibliography and Synthesis
+    \item Due Saturday: Personal Reflection
+\end{itemize}
+
+\subsection*{Week 4 -- 9/19: Leadership and Motivation}
+\begin{itemize}
+    \item \textbf{In-person Session}: Leadership and Motivation
+    \item Readings:
+        \begin{itemize}
+            \item Christensen, ``Public Service Motivation Research'' \citet{Christensen2017}
+            \item Denhardt, \emph{The New Public Service}, Chapter 8 \citet{Denhardt2015}
+            \item Lachance, ``Public Service Motivation'' \citet{Lachance2017}
+            \item Maslow, ``A Theory of Human Motivation'' \citet{maslow1943}
+            \item Fairholm, ``Different Perspectives on the Practice of Leadership'' \citet{Fairholm2004}
+        \end{itemize}
+    \item Due Thursday: Annotated Bibliography and Synthesis
+    \item Due Saturday: Personal Reflection
+\end{itemize}
+
+\subsection*{Week 5 -- 9/26: Performance Management}
+\begin{itemize}
+    \item \textbf{In-person Session}: Performance Management
+    \item Readings:
+        \begin{itemize}
+            \item Behn, ``Why Measure Performance?'' \citet{Behn2003}
+            \item Denhardt, \emph{The New Public Service}, Chapter 9 \citet{Denhardt2015}
+            \item Douglas, ``Getting a Grip on Performance of Collaborations'' \citet{douglas2021}
+            \item Marvel, ``Unconscious Bias in Citizens' Evaluations\dots'' \citet{marvel2015}
+            \item Nicholson-Crotty, ``Public Management and Organizational Performance'' \citet{nicholson-crotty2004}
+        \end{itemize}
+    \item Due Thursday: Book Report
+    \item Due Saturday: Personal Reflection
+\end{itemize}
+
+\subsection*{Week 6 -- 10/3: Street-Level Bureaucrats}
+\begin{itemize}
+    \item \textbf{In-person Session}: Street-Level Bureaucrats
+    \item Readings:
+        \begin{itemize}
+            \item Lipsky, \emph{Street-Level Bureaucracy}, Chapters 1--10 \citet{Lipsky2010}
+            \item Denhardt, \emph{The New Public Service}, Chapters 5--6 \citet{Denhardt2015}
+        \end{itemize}
+    \item Due Thursday: Book Report
+    \item Due Saturday: Personal Reflection
+    \item \textbf{Assignment}: Literature Review Topic Selection
+\end{itemize}
+
+\subsection*{Week 9 -- 10/24: Comprehensive General Area Essay}
+\begin{itemize}
+    \item \textbf{Asynchronous Session}: Comprehensive General Area Essay Study Break
+\end{itemize}
+
+
+\subsection*{Week 10 -- 10/31: Comprehensive General Area Essay Exam}
+\begin{itemize}
+    \item \textbf{Asynchronous Session}: Comprehensive General Area Essay Exam Distributed
+\end{itemize}   
+
+\subsection*{Week 11 -- 11/7: Comprehensive General Area Essay Exam}
+\begin{itemize}
+    \item \textbf{Asynchronous Session}: \textbf{Comprehensive General Area Essay Exam Due}
+\end{itemize}
+
+\subsection*{Week 12 -- 11/14: Concentration Area Literature Review}
+\begin{itemize}
+    \item \textbf{Synchronous Online Session}: Concentration Area Literature Review
+    \item Literature review expectations and guidelines
+    \item Due: Literature Review Topic outline
+\end{itemize}
+
+\subsection*{Week 13 -- 11/21: Concentration Area Literature Review}
+\begin{itemize}
+    \item \textbf{Asynchronous Session}: Concentration Area Literature Review
+    \item Due: Literature Review Annotated Bibliography
+\end{itemize}
+
+\subsection*{Week 14 -- 12/5: Concentration Area Literature Review}
+\begin{itemize}
+    \item \textbf{Asynchronous Session}: Concentration Area Literature Review
+    \item Due: Literature Review Draft
+\end{itemize}
+
+\subsection*{Week 15 -- 12/12: Concentration Area Literature Review}
+\begin{itemize}
+    \item \textbf{In-person Session}: Concentration Area Literature Review
+    \item Due: Literature Review Peer Review
+    \item Course Wrap-Up and Final Reflections
+\end{itemize}
+
+\subsection*{Week 16 -- 12/19: Concentration Area Literature Review}
+\begin{itemize}
+    \item \textbf{Asynchronous Session}: Concentration Area Literature Review
+    \item Due: Literature Review Final Draft
+\end{itemize}
+
+
+            \singlespace
+            \bibliographystyle{apsr}
+            \bibliography{521_Fall2024}
+            
+\end{document}

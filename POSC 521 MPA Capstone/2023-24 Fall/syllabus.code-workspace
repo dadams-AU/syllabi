@@ -1,0 +1,15 @@
+{
+	"folders": [],
+	"settings": {
+		"grammarly.selectors": [
+			{
+				"language": "Log",
+				"scheme": "output"
+			},
+			{
+				"language": "latex",
+				"scheme": "file"
+			}
+		]
+	}
+}

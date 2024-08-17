@@ -1,0 +1,381 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[sfdefault]{roboto}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\frenchspacing
+\usepackage{multicol}
+\usepackage{eso-pic}
+\usepackage[longnamesfirst]{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{paralist}
+\usepackage{quoting}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+
+\fancypagestyle{plain}{
+  \fancyhead{}
+  \fancyhead[C]{\includegraphics[width=8cm]{csuf_logo.png}}
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+\usepackage{float}
+\usepackage{bookmark}
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{\section{\refname}}{}{}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+
+
+\begin{document}
+\title{\textbf{Environmental Politics and Policy}}
+
+\author{POSC 415-T -- Fall 2024}
+\date{Asynchronous Online Course \\ \textsc{August 26 -- December 13, 2024}}
+
+    \maketitle
+
+
+\subsection*{Professor: David P. Adams, Ph.D.}
+
+\subsubsection*{Contact Information:}
+
+\begin{itemize}
+	\item Office: 516 Gordon Hall
+	\item Phone/Text: \href{tel:+16572784770}{(657) 278-4770}
+	\item Zoom: \href{https://fullerton.zoom.us/j/3347502369}{\texttt{https://fullerton.zoom.us/j/3347502369}}
+	\item website: \href{https://dadams.io}{\texttt{https://dadams.io}}
+	\item email: \href{dpadams@fullerton.edu}{\texttt{dpadams@fullerton.edu}}
+	\item Office Hours:
+        \begin{itemize}
+            \item Monday: 10:00am-12:00pm on Zoom
+            \item Schedule meetings throughout the week: \href{https://dadams.io/appt}{\texttt{https://dadams.io/appt}}
+        \end{itemize}  
+\end{itemize}
+
+
+
+\section*{Catalog Description}
+
+This course examines the political, social, and economic dimensions of environmental policy in the United States. Topics include the history of environmental policy, the role of government in environmental protection, the influence of interest groups and public opinion on environmental policy, and the impact of environmental policy on society.
+
+\section*{Course Description}
+
+U.S. environmental policy, as a field, is home to a diverse array of topics, jobs, challenges, and institutions. It ranges from inspectors to planners and from energy companies to climate change activists. This class is designed to be an introduction to many of the institutions, actors, issues, and policies that shape contemporary U.S. environmental politics. It covers topics such as the basic tasks/functions environmental institutions, key stakeholders and organizations, and some of the challenges associated with solving America’s energy and environmental needs. 
+
+\section*{Student Learning Objectives}
+
+\begin{itemize}
+    \item Understand essential laws, policies, actors, and institutions of American environmental politics and policy.
+    \item Understand the historical and contemporary developments in environmental issues and relate them to current trends and practices in meeting future challenges.
+    \item Apply key concepts and elements of public policy to contemporary discussions surrounding America’s energy mix.
+    \item Develop critical thinking and policy analysis skills.
+    \item Understand how energy and environmental policies shape daily, short-term, and long-term goals and how they are interrelated.
+\end{itemize}
+
+\section*{Required Text}
+
+\begin{itemize}
+    \item Kraft, Michael E., Barry G. Rabe, and Norman J. Vig. 2025. \emph{Environmental Policy: New Directions for the Twenty-First Century}. 12th ed. CQ Press.
+    \item Additional readings will be provided on \emph{Canvas} and are available online.
+\end{itemize}
+
+\section*{Prequisites}
+
+POSC 100 and completion of G.E. Category D.1. 
+
+\section*{Technical Competencies}
+
+Students are expected to have the following technical competencies to succeed in this course:
+\begin{itemize}
+    \item Basic computer skills, including the ability to navigate the internet, use email, and create and save documents.
+    \item Proficiency in using \emph{Canvas}, including submitting assignments, participating in discussions, and accessing course materials.
+    \item Ability to use word processing software, such as Microsoft Word or Google Docs, to create and format documents.
+    \item Access to a reliable computer and internet connection.
+    \item Ability to use Zoom for virtual meetings and discussions.
+    \item Basic knowledge of online communication tools, such as email and discussion boards.
+    \item Ability to use online research tools and databases to find academic sources.
+\end{itemize}
+
+\section*{Technical Problems}
+
+\subsection*{University IT Help Desk}
+
+Contact the instructor immediately to document the problem if you encounter any technical difficulties. Then contact the \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{Student IT Help Desk} for assistance. You can also call the Student IT Help Desk at \href{tel:+16572788888}{(657) 278-8888}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, visit them at the Pollak Library North \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}, or log on to the \href{http://my.fullerton.edu/}{my.fullerton.edu} portal and click ``Online IT Help'' followed by ``Live Chat''.
+
+\subsection*{Canvas Support}
+
+If you encounter any technical difficulties with Canvas, call the Canvas Support Hotline at \href{tel:+18553027528}{855-302-7528}, visit the \href{https://community.canvaslms.com/docs/DOC-10720-67952720329}{Canvas Community}, or click the ``Help'' button in the lower left corner of Canvas and select ``Report a Problem''. The \href{https://cases.canvaslms.com/liveagentchat?chattype=student&sfid=001A000000YzcwQIAR}{Student Support Live Chat} is available 24 hours a day, 7 days a week.
+
+\section*{Response Time} I will strive to respond to all student emails, Discord posts, and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you are still awaiting a response within 24 hours, please send a follow-up message. If you are still waiting to receive a response within 48 hours, please send another follow-up message and contact me via phone or text at \href{tel:+16572784770}{(657) 278-4770}.
+
+\section{University Student Policies}
+
+In accordance with UPS 300.00, students must be familiar with certain policies applicable to all courses. Please review these policies as needed and visit this Cal State Fullerton website \texttt{\href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}} for links to the following information:
+
+\begin{enumerate}
+    \item   University learning goals and program learning outcomes.
+    \item	Learning objectives for each General Education (GE) category.
+    \item	Guidelines for appropriate online behavior (netiquette).
+    \item	Students’ rights to accommodations for documented special needs.
+    \item   Campus student support measures, including Counseling \& Psychological Services, Title IV and Gender Equity, Diversity Initiatives and Resource Centers, and Basic Needs Services.
+    \item	Academic integrity (refer to UPS 300.021).
+    \item	Actions to take during an emergency.
+    \item	Library services information.
+    \item	Student Information Technology Services, including details on technical competencies and resources required for all students.
+    \item	Software privacy and accessibility statements.
+\end{enumerate}
+
+\section*{Course Student Policies}
+
+\subsection*{Course Communication}
+All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email. Students are also responsible for ensuring that their \emph{Canvas} notifications are set to receive messages from the course. Students are expected to check \emph{Canvas} and their email at least once daily.
+
+\subsection*{Due Dates}
+All assignments are due by 11:59pm on the specified due date. Late assignments will not be accepted unless prior arrangements have been made with the professor. Students are responsible for submitting assignments on time.
+
+\subsection*{Alternative Procedures for Submitting Work}
+Students are expected to submit all assignments via \emph{Canvas}. If you cannot submit an assignment via \emph{Canvas}, please get in touch with the professor to discuss alternative submission procedures.
+
+\subsection*{Retention of Student Work}
+Students are responsible for retaining copies of all assignments submitted for this course. Students are also responsible for retaining copies of all graded assignments returned by the professor.
+
+\subsection*{Extra Credit}
+There are no extra credit assignments in this course. 
+
+\subsection*{Academic Integrity}
+Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy on academic dishonesty and to adhere to this policy in all aspects of this course. Any student who has questions about the policy should ask the professor for clarification.
+
+\section*{Course Delivery and Technology}
+
+This course is divided into 16 modules. Each module is one week long and begins on a Monday and ends on a Friday. Each module contains a variety of learning activities, including readings, videos, discussions, and assignments. The course schedule is available on \emph{Canvas} and is subject to change with advance notice.
+
+\section*{Canvas}
+
+This course will be delivered via \emph{Canvas}, the primary platform for all course materials, announcements, and communications. Students are expected to:
+\begin{itemize}
+    \item Log on to \emph{Canvas} at least once daily to check for updates.
+    \item Ensure that \emph{Canvas} notifications are set to receive messages.
+    \item Check their university email at least once daily.
+\end{itemize}
+
+\section*{Course Structure Overview}
+
+The course is structured around weekly modules, each including the following components:
+\begin{itemize}
+    \item \textbf{Video Modules}: One videos per module, complementing the readings.
+    \item \textbf{Readings}: Each module corresponds to a textbook chapter along with supplementary readings.
+    \item \textbf{Discussions}: Weekly discussion prompts to be responded to by Friday 11:59pm.
+    \item \textbf{Writing Assignments}: Four policy memo assignments spread throughout the course, due by Friday 11:59pm.
+    \item \textbf{Final Project}: A comprehensive policy analysis report, due at the end of the last module.
+    \item \textbf{Participation and Engagement}: Active participation in discussions and engagement with all course materials.
+\end{itemize}
+
+\section*{Course Assignment Descriptions}
+
+\subsection*{Discussion Posts}
+Students are required to submit weekly discussion posts in response to assigned prompts. These should:
+\begin{itemize}
+    \item Be at least 250 words in length.
+    \item Demonstrate critical engagement with the course material.
+    \item Be submitted by Friday 11:59pm each week.
+\end{itemize}
+
+\subsection*{Policy Memo Assignments}
+There are four policy memos throughout the course, requiring students to:
+\begin{itemize}
+    \item Analyze specific environmental policy issues.
+    \item Submit memos of at least 500 words by the due date.
+    \item Show critical analysis and engagement with the topic.
+\end{itemize}
+
+\subsection*{Final Project}
+The final project will allow students to creatively engage with and present their analysis of a selected environmental issue. Options for the final project include:
+
+\begin{itemize}
+    \item \textbf{Recorded Presentation}: A video presentation, lasting 15-20 minutes, where students present their policy analysis, incorporating visuals such as slides, graphs, and other relevant media.
+    \item \textbf{Podcast}: A podcast episode, 15-20 minutes long, discussing the policy analysis in a structured format. Students should include interviews with experts or role-playing to enhance the discussion (if possible).
+    \item \textbf{Interactive Web Content}: Creation of an interactive website or digital presentation that includes text, visuals, and other media to explain the policy analysis. This should be equivalent in content to a 2,000-word report.
+\end{itemize}
+
+\subsection*{Final Paper Assignment for Graduate Students}
+Graduate students will be required to submit a 3,000-word policy analysis paper on a selected environmental issue. The paper should include a literature review, policy analysis, and recommendations for policy change. Graduate students are encouraged to discuss their topic and approach with the professor before beginning the assignment. This paper is due by Friday 11:59pm of the final module.
+
+
+
+Students are required to:
+\begin{itemize}
+    \item Submit a proposal early in the semester outlining their chosen format and topic.
+    \item Provide a draft or outline mid-semester for feedback.
+    \item Ensure that their final submission effectively communicates their analysis and understanding of the chosen environmental issue.
+    \item Submit their final project by Friday 11:59pm of the final module.
+\end{itemize}
+
+\textbf{Evaluation Criteria:} Projects will be evaluated based on clarity of communication, depth of analysis, creativity in presentation, technical quality, and engagement with the topic.
+
+\section*{Grading}
+Grades will be allocated based on the following components:
+\begin{itemize}
+    \item \textbf{Discussion Posts}: 20\%
+    \item \textbf{Policy Memos}: 40\%
+    \item \textbf{Final Project}: 30\%
+    \item \textbf{Participation and Engagement}: 10\%
+\end{itemize}
+
+\subsection*{Grading Scale}
+
+\begin{itemize}
+    \item A: 90-100
+    \item A-: 85-89
+    \item B+: 80-84
+    \item B: 75-79
+    \item B-: 70-74
+    \item C+: 65-69
+    \item C: 60-64
+    \item C-: 55-59
+    \item D+: 50-54
+    \item D: 45-49
+    \item D-: 40-44
+    \item F: 0-39
+\end{itemize}
+
+
+\section*{Course Schedule}
+\subsection*{Week 1 (8/26): Introduction to Environmental Policy}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 1 - U.S. Environmental Policy: A Half-Century Assessment
+    \item \textbf{Video:} Introduction to Environmental Policy (provided on Canvas)
+    \item \textbf{Discussion Post:} Share your thoughts on the most significant changes in U.S. environmental policy over the past 50 years.
+    \item \textbf{Assignment:} None this week.
+\end{itemize}
+
+\subsection*{Week 2 (9/2): State Government Roles}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 2 - Racing to the Top, the Bottom, or the Middle of the Pack?
+    \item \textbf{Video:} State-level Environmental Initiatives (TED Talk)
+    \item \textbf{Discussion Post:} Discuss the effectiveness of state policies in environmental protection.
+    \item \textbf{Assignment:} Policy Memo 1 on state vs. federal roles in environmental policy.
+\end{itemize}
+
+\subsection*{Week 3 (9/9): Public Opinion and Policy}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 3 - Politics, Prices and Proof
+    \item \textbf{Video:} Public Opinion and Environmental Legislation
+    \item \textbf{Discussion Post:} How does public opinion impact environmental policy in the U.S.?
+\end{itemize}
+
+\subsection*{Week 4 (9/16): Presidential Powers}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 4 - Presidential Powers and Environmental Policy
+    \item \textbf{Video:} The Presidency and Environmental Policy
+    \item \textbf{Discussion Post:} Evaluate a presidential decision that significantly impacted environmental policy.
+\end{itemize}
+
+\subsection*{Week 5 (9/23): Environmental Policy in Congress}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 5 - Environmental Policy in Congress
+    \item \textbf{Video:} Legislative Processes Related to Environmental Law
+    \item \textbf{Discussion Post:} Discuss a recent environmental legislation and its impact.
+\end{itemize}
+
+\subsection*{Week 6 (9/30): Environmental Policy in the Courts}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 6 - Environmental Policy in the Courts
+    \item \textbf{Video:} Landmark Environmental Court Cases
+    \item \textbf{Discussion Post:} Analyze a court case that has shaped environmental policy.
+\end{itemize}
+
+\subsection*{Week 7 (10/7): The Environmental Protection Agency (EPA)}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 7 - The Environmental Protection Agency
+    \item \textbf{Video:} Overview of the EPA's Role in Environmental Regulation
+    \item \textbf{Discussion Post:} Evaluate the effectiveness of a recent EPA regulation.
+\end{itemize}
+
+\subsection*{Week 8 (10/14): Midterm Review}
+\begin{itemize}
+    \item \textbf{Assignment:} Policy Memo 2 on a controversial EPA regulation.
+\end{itemize}
+
+\subsection*{Week 9 (10/21): Energy Policy}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 8 - Energy Policy
+    \item \textbf{Video:} Renewable Energy Technologies and Policies
+    \item \textbf{Discussion Post:} Discuss the challenges and opportunities in U.S. energy policy.
+\end{itemize}
+
+\subsection*{Week 10 (10/28): Natural Resources and Market Principles}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 9 - Natural Resource Policies in an Era of Polarized Politics
+    \item \textbf{Video:} Market Approaches to Environmental Conservation
+    \item \textbf{Discussion Post:} Evaluate the effectiveness of market-based approaches in resource conservation.
+\end{itemize}
+
+\subsection*{Week 11 (11/4): Sustainability in Cities}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 10 - Sustainability and Resilience in Cities
+    \item \textbf{Video:} Urban Sustainability Initiatives
+    \item \textbf{Discussion Post:} Analyze a city’s approach to sustainability and resilience.
+\end{itemize}
+
+\subsection*{Week 12 (11/11): Global Climate Change Governance}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 11 - Global Climate Change Governance
+    \item \textbf{Video:} The Paris Agreement and Its Challenges
+    \item \textbf{Discussion Post:} Discuss the effectiveness of international agreements in managing climate change.
+\end{itemize}
+
+\subsection*{Week 13 (11/18): Environment and the Developing World}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 12 - Environment, Population, and the Developing World
+    \item \textbf{Video:} Environmental Challenges in Developing Countries
+    \item \textbf{Discussion Post:} Discuss the unique environmental policy challenges faced by developing countries.
+\end{itemize}
+
+\subsection*{Fall Break (11/25): No Class}
+
+\subsection*{Week 14 (12/2): The Green Economy}
+\begin{itemize}
+    \item \textbf{Readings:} Chapter 13 - Creating the Green Economy
+    \item \textbf{Video:} Innovations in the Green Economy
+    \item \textbf{Discussion Post:} Evaluate the role of government and business in creating a sustainable green economy.
+\end{itemize}
+
+\subsection*{Week 15 (12/9): Course Review and Final Exam Prep}
+\begin{itemize}
+    \item \textbf{Assignment:} Policy Memo 3 reviewing a global environmental issue and proposing policy solutions.
+\end{itemize}
+
+\subsection*{Week 16 (12/16): Final Project Submissions and Course Reflections}
+\begin{itemize}
+    \item \textbf{Final Project:} Comprehensive environmental policy analysis report due.
+    \item \textbf{Discussion Post:} Reflect on the course learnings and your final project experience.
+\end{itemize}
+
+
+\end{document}
