@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: posc521_2024_fall.aux
+The style file: apsr.bst
+Database file #1: 521_Fall2024.bib
+Warning--empty publisher in friedrich1935
+You've used 27 entries,
+            2874 wiz_defined-function locations,
+            817 strings with 9006 characters,
+and the built_in function-call counts, 96831 in all, are:
+= -- 15781
+> -- 961
+< -- 0
++ -- 7220
+- -- 358
+* -- 8105
+:= -- 19596
+add.period$ -- 110
+call.type$ -- 27
+change.case$ -- 353
+chr.to.int$ -- 27
+cite$ -- 28
+duplicate$ -- 449
+empty$ -- 966
+format.name$ -- 395
+if$ -- 17397
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 32
+newline$ -- 120
+num.names$ -- 295
+pop$ -- 117
+preamble$ -- 1
+purify$ -- 405
+quote$ -- 0
+skip$ -- 372
+stack$ -- 0
+substring$ -- 22143
+swap$ -- 76
+text.length$ -- 378
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 98
+warning$ -- 1
+while$ -- 633
+width$ -- 0
+write$ -- 382
+(There was 1 warning)
