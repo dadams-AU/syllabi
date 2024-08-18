@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.5)  17 AUG 2024 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.5)  17 AUG 2024 19:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -515,30 +515,34 @@ Overfull \hbox (0.28053pt too wide) in paragraph at lines 188--189
 
 [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 539.
+(Font)              <12> on input line 550.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 539.
+(Font)              <8> on input line 550.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 539.
- [17] [18] [19] [20] [21] (./posc521_2024_fall.bbl [22] [23]) [24] (./posc521_2024_fall.aux)
+(Font)              <6> on input line 550.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18] [19] [20] [21] (./posc521_2024_fall.bbl [22] [23]) [24] (./posc521_2024_fall.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14112 strings out of 474104
- 227254 string characters out of 5743468
- 1937493 words of memory out of 5000000
- 36127 multiletter control sequences out of 15000+600000
+ 14115 strings out of 474104
+ 227281 string characters out of 5743468
+ 1938493 words of memory out of 5000000
+ 36126 multiletter control sequences out of 15000+600000
  584720 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,8n,93p,943b,849s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,8n,93p,943b,787s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on posc521_2024_fall.pdf (24 pages, 118187 bytes).
+Output written on posc521_2024_fall.pdf (24 pages, 118979 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 408 compressed objects within 5 object streams
- 169 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 448 PDF objects out of 1000 (max. 8388607)
+ 409 compressed objects within 5 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
