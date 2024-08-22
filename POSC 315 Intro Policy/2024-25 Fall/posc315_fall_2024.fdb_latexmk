@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1724361180.05857 "/Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2024-25 Fall/posc315_fall_2024.tex" "posc315_fall_2024.pdf" "posc315_fall_2024" 1724361180.76562 0
+["pdflatex"] 1724363057.75237 "/Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2024-25 Fall/posc315_fall_2024.tex" "posc315_fall_2024.pdf" "posc315_fall_2024" 1724363058.45365 0
   "/Users/dpadams/Repos/syllabi/Images/stacked.png" 1724353144.86743 33252 bac227fd9bfb280447e0ea0acb46657b ""
-  "/Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2024-25 Fall/posc315_fall_2024.tex" 1724361179.14137 28100 b1a4e0cef32033d8173c34ab72812eec ""
+  "/Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2024-25 Fall/posc315_fall_2024.tex" 1724363056.8039 28032 15026e84f7cf4188d0e8eb605d3200c4 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1710106625 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/fontname/texfonts.map" 1710106625 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1710106625 5472554 f7861620179a71a79d4bd86251f559d0 ""
@@ -87,8 +87,8 @@
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1710106625 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/web2c/texmf.cnf" 1710106625 41652 e14926ab86fde7902cad99d9eeaa5ca5 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1710106625 8221851 5146b755db1b51297976139fe7739199 ""
-  "posc315_fall_2024.aux" 1724361180.69935 5636 d2e695e1c6543dc6792f262b147b0ed3 "pdflatex"
-  "posc315_fall_2024.tex" 1724361179.14137 28100 b1a4e0cef32033d8173c34ab72812eec ""
+  "posc315_fall_2024.aux" 1724363058.38855 5636 8c475de4b7cdc2dd48b0b74022841838 "pdflatex"
+  "posc315_fall_2024.tex" 1724363056.8039 28032 15026e84f7cf4188d0e8eb605d3200c4 ""
   (generated)
   "posc315_fall_2024.aux"
   "posc315_fall_2024.log"
