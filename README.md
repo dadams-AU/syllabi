@@ -12,8 +12,8 @@ Welcome to my GitHub syllabi repository. These syllabi, formulated with unique p
 
 ### Undergraduate Courses
 
-- [**POSC 315: Introduction to Public Administration**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy) - Explore the basics of public administration, including its role in government efficiency and public service.
-- [**POSC 320: Policy and Administration**](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA) - Delve into the relationship between policy-making and administrative processes.
+- [**POSC 315: Introduction to Public Policy**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy) - Explore the basics of public administration, including its role in government efficiency and public service.
+- [**POSC 320: Introduction to Public Administration**](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA) - Delve into the relationship between policy-making and administrative processes.
 
 ### Graduate Courses
 
