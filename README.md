@@ -12,14 +12,18 @@ Welcome to my GitHub syllabi repository. These syllabi, formulated with unique p
 
 ### Undergraduate Courses
 
-- [**POSC 315: Introduction to Public Policy**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy) - Explore the basics of public administration, including its role in government efficiency and public service.
-- [**POSC 320: Introduction to Public Administration**](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA) - Delve into the relationship between policy-making and administrative processes.
+- [**POSC 315: Introduction to Public Policy**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy)
+  
+- [**POSC 320: Introduction to Public Administration**](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA) 
 
 ### Graduate Courses
 
-- [**POSC 509: Foundations of Public Administration**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations) - A comprehensive overview of public administration principles and practices.
-- [**POSC 521: Public Administration Theory: MPA Capstone**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone) - An advanced course synthesizing public administration theories.
-- [**POSC 588: Collaborative Governance**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20588%20Collab%20Gov) - Focus on collaborative strategies in governance and policy-making.
+- [**POSC 509: Foundations of Public Administration**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations)
+  
+- [**POSC 521: Public Administration Theory: MPA Capstone**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone)
+  
+- [**POSC 588: Collaborative Governance**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20588%20Collab%20Gov)
+  
 
 ## Using the Repository
 
