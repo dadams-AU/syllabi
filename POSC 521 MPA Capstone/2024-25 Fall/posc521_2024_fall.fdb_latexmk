@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex posc521_2024_fall"] 1728058728.39784 "posc521_2024_fall.aux" "posc521_2024_fall.bbl" "posc521_2024_fall" 1728058729.51208 0
+["bibtex posc521_2024_fall"] 1728058883.75802 "posc521_2024_fall.aux" "posc521_2024_fall.bbl" "posc521_2024_fall" 1728058884.91194 0
   "./521_Fall2024.bib" 1724353144.8928 31570 2338688c06333d752ddbbbc0a30ab65e ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/bibtex/bst/harvard/apsr.bst" 1710106625 25357 c990a86d1a60aa9370f76a9507b609ec ""
-  "posc521_2024_fall.aux" 1728058729.20317 8854 6fd772c54fdeaf69ac0c169af02285fb "pdflatex"
+  "posc521_2024_fall.aux" 1728058884.5576 8854 aba40ca786c72f3a59a7d9269677449f "pdflatex"
   (generated)
   "posc521_2024_fall.bbl"
   "posc521_2024_fall.blg"
   (rewritten before read)
-["pdflatex"] 1728058728.51726 "/Users/dpadams/Repos/syllabi/POSC 521 MPA Capstone/2024-25 Fall/posc521_2024_fall.tex" "posc521_2024_fall.pdf" "posc521_2024_fall" 1728058729.51222 0
-  "/Users/dpadams/Repos/syllabi/POSC 521 MPA Capstone/2024-25 Fall/posc521_2024_fall.tex" 1728058725.69336 47437 b4de3220fd36c1ba01c29d22f35cf995 ""
+["pdflatex"] 1728058883.88466 "/Users/dpadams/Repos/syllabi/POSC 521 MPA Capstone/2024-25 Fall/posc521_2024_fall.tex" "posc521_2024_fall.pdf" "posc521_2024_fall" 1728058884.91209 0
+  "/Users/dpadams/Repos/syllabi/POSC 521 MPA Capstone/2024-25 Fall/posc521_2024_fall.tex" 1728058882.41698 49125 2ee316fe8aa94c5a6f63f996b867e7bc ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1710106625 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1710106625 2971 def0b6c1f0b107b3b936def894055589 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/fonts/map/fontname/texfonts.map" 1710106625 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -115,9 +115,9 @@
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1710106625 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-dist/web2c/texmf.cnf" 1710106625 41652 e14926ab86fde7902cad99d9eeaa5ca5 ""
   "/opt/homebrew/Cellar/texlive/20240312_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1710106625 8221851 5146b755db1b51297976139fe7739199 ""
-  "posc521_2024_fall.aux" 1728058729.20317 8854 6fd772c54fdeaf69ac0c169af02285fb "pdflatex"
-  "posc521_2024_fall.bbl" 1728058728.51126 6721 4c3d26854255ba4fca6b4cf62e53b735 "bibtex posc521_2024_fall"
-  "posc521_2024_fall.tex" 1728058725.69336 47437 b4de3220fd36c1ba01c29d22f35cf995 ""
+  "posc521_2024_fall.aux" 1728058884.5576 8854 aba40ca786c72f3a59a7d9269677449f "pdflatex"
+  "posc521_2024_fall.bbl" 1728058883.87678 6721 4c3d26854255ba4fca6b4cf62e53b735 "bibtex posc521_2024_fall"
+  "posc521_2024_fall.tex" 1728058882.41698 49125 2ee316fe8aa94c5a6f63f996b867e7bc ""
   (generated)
   "posc521_2024_fall.aux"
   "posc521_2024_fall.log"
