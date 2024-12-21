@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1734819883.67994 "/Users/dpadams/Repos/syllabi/CRJU_POSC 320 Intro PA/2024-25 Intersession/CRJU-POSC_320.tex" "CRJU-POSC_320.pdf" "CRJU-POSC_320" 1734819884.42902 0
-  "/Users/dpadams/Repos/syllabi/CRJU_POSC 320 Intro PA/2024-25 Intersession/CRJU-POSC_320.tex" 1734819882.64632 22621 aee11c4be0a16c7da1a455ca0ee76a64 ""
+["pdflatex"] 1734820178.18603 "/Users/dpadams/Repos/syllabi/CRJU_POSC 320 Intro PA/2024-25 Intersession/CRJU-POSC_320.tex" "CRJU-POSC_320.pdf" "CRJU-POSC_320" 1734820178.93621 0
+  "/Users/dpadams/Repos/syllabi/CRJU_POSC 320 Intro PA/2024-25 Intersession/CRJU-POSC_320.tex" 1734820177.61352 22621 c00f287ddfc12ac74877aa825d7b5029 ""
   "/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1710106625 2971 def0b6c1f0b107b3b936def894055589 ""
   "/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/roboto/rbto_b5rac7.enc" 1710106625 3075 0696ceafc85b8352a913efb9ba64bc17 ""
   "/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc" 1710106625 3314 42351250ac95a91f488e14b5633f75ce ""
@@ -123,8 +123,8 @@
   "/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1710106625 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/web2c/texmf.cnf" 1710106625 41652 e14926ab86fde7902cad99d9eeaa5ca5 ""
   "/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1710106625 8221878 83314ecb9b2818e5586c154833f52511 ""
-  "CRJU-POSC_320.aux" 1734819884.32376 743 ab32250674ecb86b8a899ad41de481f3 "pdflatex"
-  "CRJU-POSC_320.tex" 1734819882.64632 22621 aee11c4be0a16c7da1a455ca0ee76a64 ""
+  "CRJU-POSC_320.aux" 1734820178.83757 743 ab32250674ecb86b8a899ad41de481f3 "pdflatex"
+  "CRJU-POSC_320.tex" 1734820177.61352 22621 c00f287ddfc12ac74877aa825d7b5029 ""
   (generated)
   "CRJU-POSC_320.aux"
   "CRJU-POSC_320.log"
