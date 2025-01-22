@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2024/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: POSC521_2025_Spring.aux
+Case mismatch error between cite keys wilson1887 and Wilson1887
+---line 54 of file POSC521_2025_Spring.aux
+ : \citation{wilson1887
+ :                     }
+I'm skipping whatever remains of this command
+The style file: apsr.bst
+Database file #1: 521_students.bib
+Warning--empty publisher in friedrich1935
+You've used 27 entries,
+            2874 wiz_defined-function locations,
+            833 strings with 10052 characters,
+and the built_in function-call counts, 96932 in all, are:
+= -- 15805
+> -- 961
+< -- 0
++ -- 7220
+- -- 358
+* -- 8116
+:= -- 19628
+add.period$ -- 124
+call.type$ -- 27
+change.case$ -- 353
+chr.to.int$ -- 27
+cite$ -- 28
+duplicate$ -- 437
+empty$ -- 970
+format.name$ -- 395
+if$ -- 17408
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 32
+newline$ -- 132
+num.names$ -- 295
+pop$ -- 100
+preamble$ -- 1
+purify$ -- 405
+quote$ -- 0
+skip$ -- 357
+stack$ -- 0
+substring$ -- 22165
+swap$ -- 64
+text.length$ -- 378
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 98
+warning$ -- 1
+while$ -- 634
+width$ -- 0
+write$ -- 408
+(There was 1 error message)
