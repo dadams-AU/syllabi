@@ -1,53 +1,48 @@
 This is BibTeX, Version 0.99d (TeX Live 2024/Arch Linux)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: POSC521_2025_Spring.aux
-Case mismatch error between cite keys wilson1887 and Wilson1887
----line 54 of file POSC521_2025_Spring.aux
- : \citation{wilson1887
- :                     }
-I'm skipping whatever remains of this command
 The style file: apsr.bst
 Database file #1: 521_students.bib
 Warning--empty publisher in friedrich1935
-You've used 27 entries,
+You've used 28 entries,
             2874 wiz_defined-function locations,
-            833 strings with 10052 characters,
-and the built_in function-call counts, 96932 in all, are:
-= -- 15805
-> -- 961
+            838 strings with 10270 characters,
+and the built_in function-call counts, 100618 in all, are:
+= -- 16423
+> -- 977
 < -- 0
-+ -- 7220
-- -- 358
-* -- 8116
-:= -- 19628
-add.period$ -- 124
-call.type$ -- 27
-change.case$ -- 353
-chr.to.int$ -- 27
-cite$ -- 28
-duplicate$ -- 437
-empty$ -- 970
-format.name$ -- 395
-if$ -- 17408
++ -- 7499
+- -- 365
+* -- 8425
+:= -- 20368
+add.period$ -- 129
+call.type$ -- 28
+change.case$ -- 366
+chr.to.int$ -- 28
+cite$ -- 29
+duplicate$ -- 452
+empty$ -- 1003
+format.name$ -- 404
+if$ -- 18068
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 32
-newline$ -- 132
-num.names$ -- 295
-pop$ -- 100
+missing$ -- 33
+newline$ -- 137
+num.names$ -- 305
+pop$ -- 102
 preamble$ -- 1
-purify$ -- 405
+purify$ -- 420
 quote$ -- 0
-skip$ -- 357
+skip$ -- 370
 stack$ -- 0
-substring$ -- 22165
-swap$ -- 64
-text.length$ -- 378
+substring$ -- 23040
+swap$ -- 66
+text.length$ -- 392
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 98
+type$ -- 102
 warning$ -- 1
-while$ -- 634
+while$ -- 657
 width$ -- 0
-write$ -- 408
-(There was 1 error message)
+write$ -- 423
+(There was 1 warning)
