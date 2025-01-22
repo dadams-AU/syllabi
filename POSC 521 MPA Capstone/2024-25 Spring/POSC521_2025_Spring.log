@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 13:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -517,59 +517,61 @@ Overfull \hbox (0.28053pt too wide) in paragraph at lines 188--189
 \T1/phv/m/n/12 email. Stu-dents are re-spon-si-ble for reg-u-larly check-ing their \T1/phv/m/sl/12 Can-vas \T1/phv/m/n/12 no-ti-fi-ca-tions and email.
  []
 
-[5] [6] [7] [8] [9]
-Overfull \hbox (1.30762pt too wide) in paragraph at lines 322--326
+[5] [6] [7]
+Overfull \hbox (2.00949pt too wide) in paragraph at lines 258--259
+[]\T1/phv/b/n/12 Bias Aware-ness\T1/phv/m/n/12 : Un-der-stand that AI tools can re-flect and per-pet-u-ate bi-ases present
+ []
+
+[8] [9]
+Overfull \hbox (1.30762pt too wide) in paragraph at lines 334--338
 []\T1/phv/m/n/12 I've com-pleted an an-no-tated bib-li-og-ra-phy for [Read-ing Ti-tle]. Here's
  []
 
 [10] [11] [12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 473.
+(Font)              <12> on input line 485.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 473.
+(Font)              <8> on input line 485.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 473.
- [13]
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 508.
-LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 11.39996pt on input line 508.
- [14] [15]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+(Font)              <6> on input line 485.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16] [17] [18]
-Overfull \hbox (4.08028pt too wide) in paragraph at lines 709--710
+[13] [14]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 520.
+LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
+(Font)              scaled to size 11.39996pt on input line 520.
+ [15] [16] [17] [18] [19]
+Overfull \hbox (4.08028pt too wide) in paragraph at lines 721--722
 [][][]\T1/phv/m/n/12 Nicholson-Crotty[][] ([][]2004[][]), ``Pub-lic Man-age-ment and Or-ga-ni-za-tional Per-for-mance'' 
  []
 
-[19] [20] [21] (./POSC521_2025_Spring.bbl [22] [23]
+[20] [21] (./POSC521_2025_Spring.bbl [22] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 98--101
 \T1/cmtt/m/n/12 edu / login ? url = https : / / search . ebscohost . com / login . aspx ? direct = true & db =
  []
 
-) [24] (./POSC521_2025_Spring.aux)
+[24]) [25] (./POSC521_2025_Spring.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14126 strings out of 476076
- 225348 string characters out of 5793775
+ 14130 strings out of 476076
+ 225380 string characters out of 5793775
  1940187 words of memory out of 5000000
  35869 multiletter control sequences out of 15000+600000
  587576 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 83i,8n,93p,947b,847s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,8n,93p,947b,833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on POSC521_2025_Spring.pdf (24 pages, 129853 bytes).
+Output written on POSC521_2025_Spring.pdf (25 pages, 131201 bytes).
 PDF statistics:
- 502 PDF objects out of 1000 (max. 8388607)
- 461 compressed objects within 5 object streams
- 174 named destinations out of 1000 (max. 500000)
+ 511 PDF objects out of 1000 (max. 8388607)
+ 469 compressed objects within 5 object streams
+ 178 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
