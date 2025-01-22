@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 13:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 13:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -513,27 +513,27 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 11.39996pt on input line 120.
  [3] [4]
-Overfull \hbox (0.28053pt too wide) in paragraph at lines 187--188
+Overfull \hbox (0.28053pt too wide) in paragraph at lines 188--189
 \T1/phv/m/n/12 email. Stu-dents are re-spon-si-ble for reg-u-larly check-ing their \T1/phv/m/sl/12 Can-vas \T1/phv/m/n/12 no-ti-fi-ca-tions and email.
  []
 
 [5] [6] [7] [8] [9]
-Overfull \hbox (1.30762pt too wide) in paragraph at lines 321--325
+Overfull \hbox (1.30762pt too wide) in paragraph at lines 322--326
 []\T1/phv/m/n/12 I've com-pleted an an-no-tated bib-li-og-ra-phy for [Read-ing Ti-tle]. Here's
  []
 
 [10] [11] [12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 472.
+(Font)              <12> on input line 473.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 472.
+(Font)              <8> on input line 473.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 472.
+(Font)              <6> on input line 473.
  [13]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 507.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 508.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 11.39996pt on input line 507.
+(Font)              scaled to size 11.39996pt on input line 508.
  [14] [15]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -542,7 +542,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16] [17] [18]
-Overfull \hbox (4.08028pt too wide) in paragraph at lines 708--709
+Overfull \hbox (4.08028pt too wide) in paragraph at lines 709--710
 [][][]\T1/phv/m/n/12 Nicholson-Crotty[][] ([][]2004[][]), ``Pub-lic Man-age-ment and Or-ga-ni-za-tional Per-for-mance'' 
  []
 
@@ -566,7 +566,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  83i,8n,93p,947b,847s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on POSC521_2025_Spring.pdf (24 pages, 129655 bytes).
+Output written on POSC521_2025_Spring.pdf (24 pages, 129853 bytes).
 PDF statistics:
  502 PDF objects out of 1000 (max. 8388607)
  461 compressed objects within 5 object streams
