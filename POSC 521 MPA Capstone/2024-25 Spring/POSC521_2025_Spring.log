@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 13:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 13:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -497,54 +497,61 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 53.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 80.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 78.
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 87.
+(Font)              scaled to size 16.41594pt on input line 85.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 87.
+(Font)              scaled to size 16.41594pt on input line 85.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 122.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 120.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 122.
+(Font)              scaled to size 11.39996pt on input line 120.
  [3] [4]
-Overfull \hbox (0.28053pt too wide) in paragraph at lines 189--190
+Overfull \hbox (0.28053pt too wide) in paragraph at lines 187--188
 \T1/phv/m/n/12 email. Stu-dents are re-spon-si-ble for reg-u-larly check-ing their \T1/phv/m/sl/12 Can-vas \T1/phv/m/n/12 no-ti-fi-ca-tions and email.
  []
 
 [5] [6] [7] [8] [9]
-Overfull \hbox (1.30762pt too wide) in paragraph at lines 323--327
+Overfull \hbox (1.30762pt too wide) in paragraph at lines 321--325
 []\T1/phv/m/n/12 I've com-pleted an an-no-tated bib-li-og-ra-phy for [Read-ing Ti-tle]. Here's
  []
 
 [10] [11] [12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 474.
+(Font)              <12> on input line 472.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 474.
+(Font)              <8> on input line 472.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 474.
+(Font)              <6> on input line 472.
  [13]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 509.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 507.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 11.39996pt on input line 509.
- [14] [15] [16] [17] [18]
-Overfull \hbox (4.08028pt too wide) in paragraph at lines 707--708
+(Font)              scaled to size 11.39996pt on input line 507.
+ [14] [15]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16] [17] [18]
+Overfull \hbox (4.08028pt too wide) in paragraph at lines 708--709
 [][][]\T1/phv/m/n/12 Nicholson-Crotty[][] ([][]2004[][]), ``Pub-lic Man-age-ment and Or-ga-ni-za-tional Per-for-mance'' 
  []
 
-[19] [20] [21] (./POSC521_2025_Spring.bbl [22]
+[19] [20] [21] (./POSC521_2025_Spring.bbl [22] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 98--101
 \T1/cmtt/m/n/12 edu / login ? url = https : / / search . ebscohost . com / login . aspx ? direct = true & db =
  []
 
-[23]) [24] (./POSC521_2025_Spring.aux)
+) [24] (./POSC521_2025_Spring.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -557,12 +564,12 @@ Here is how much of TeX's memory you used:
  35869 multiletter control sequences out of 15000+600000
  587576 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 83i,8n,93p,947b,903s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,8n,93p,947b,847s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on POSC521_2025_Spring.pdf (24 pages, 129366 bytes).
+Output written on POSC521_2025_Spring.pdf (24 pages, 129655 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
- 460 compressed objects within 5 object streams
+ 502 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
  174 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
