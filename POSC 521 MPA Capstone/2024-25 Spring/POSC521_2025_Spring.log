@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 17:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 19:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -551,41 +551,96 @@ Overfull \hbox (14.5713pt too wide) in paragraph at lines 170--171
  []
 
 [5] [6] [7] [8] [9] [10]
-Overfull \hbox (2.15875pt too wide) in paragraph at lines 355--356
+Overfull \hbox (11.35504pt too wide) in paragraph at lines 332--333
+[]\T1/Roboto-LF/bold/n/12 Optional AI In-te-gra-tion\T1/Roboto-LF/regular/n/12 : Stu-dents may use Open AI's [][]Chat-GPT[][], An-thropic's
+ []
+
+
+Overfull \hbox (20.96025pt too wide) in paragraph at lines 334--335
+[]\T1/cmtt/m/n/12 "I've completed an annotated bibliography for an article.
+ []
+
+
+Overfull \hbox (2.43977pt too wide) in paragraph at lines 334--335
+\T1/cmtt/m/n/12 The citation is [insert citation]. The summary I wrote
+ []
+
+
+Overfull \hbox (14.78676pt too wide) in paragraph at lines 334--335
+\T1/cmtt/m/n/12 is [insert summary]. I've noted the relevance as [insert
+ []
+
+
+Overfull \hbox (14.78676pt too wide) in paragraph at lines 334--335
+\T1/cmtt/m/n/12 relevance]. Could you provide feedback on my summary and
+ []
+
+
+Overfull \hbox (2.15875pt too wide) in paragraph at lines 353--354
 []\T1/Roboto-LF/regular/n/12 Identifies pat-terns, con-nec-tions, and con-tra-dic-tions across the read-
  []
 
-[11] [12]
+
+Overfull \hbox (8.61327pt too wide) in paragraph at lines 358--359
+[]\T1/cmtt/m/n/12 "I've synthesized information from [number] articles on
+ []
+
+
+Overfull \hbox (20.96025pt too wide) in paragraph at lines 358--359
+\T1/cmtt/m/n/12 [topic]. Here's my draft of the synthesis [insert draft].
+ []
+
+
+Overfull \hbox (2.43977pt too wide) in paragraph at lines 358--359
+\T1/cmtt/m/n/12 Could you provide feedback and suggest any connections
+ []
+
+[11]
+Overfull \hbox (21.50345pt too wide) in paragraph at lines 389--390
+[]\T1/cmtt/m/n/12 "I've completed a reflection on my learning process for this
+ []
+
+
+Overfull \hbox (2.98297pt too wide) in paragraph at lines 389--390
+\T1/cmtt/m/n/12 week's synthesis assignment. Here's my reflection [insert
+ []
+
+
+Overfull \hbox (15.32996pt too wide) in paragraph at lines 389--390
+\T1/cmtt/m/n/12 reflection]. Could you provide feedback or ask questions to
+ []
+
+[12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 462.
+(Font)              <12> on input line 453.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 462.
+(Font)              <8> on input line 453.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 462.
+(Font)              <6> on input line 453.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13]
-Overfull \hbox (2.20279pt too wide) in paragraph at lines 486--487
+Overfull \hbox (2.20279pt too wide) in paragraph at lines 477--478
 []\T1/Roboto-LF/regular/n/12 Participation: The fa-cil-i-ta-tors ac-tively par-tic-i-pate in the dis-cus-sion and con-tribute
  []
 
 [14]
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/it' aliased to
-(Font)              `T1/Roboto-LF/bold/it' on input line 497.
+(Font)              `T1/Roboto-LF/bold/it' on input line 488.
  [15] [16] [17] [18]
-Overfull \hbox (2.89215pt too wide) in paragraph at lines 660--661
+Overfull \hbox (2.89215pt too wide) in paragraph at lines 651--652
 [][][]\T1/Roboto-LF/regular/n/12 Friedrich[][] ([][]1935[][]), ``Re-spon-si-ble Gov-ern-ment Ser-vice Un-der the Amer-i-can Con-
  []
 
 
-Overfull \hbox (9.66013pt too wide) in paragraph at lines 677--678
+Overfull \hbox (9.66013pt too wide) in paragraph at lines 668--669
 [][][]\T1/Roboto-LF/regular/n/12 Christensen, Paarl-berg and Perry[][] ([][]2017[][]), ``Pub-lic Ser-vice Mo-ti-va-tion Re-search'' 
  []
 
 [19] [20]
-Overfull \hbox (4.97655pt too wide) in paragraph at lines 742--743
+Overfull \hbox (4.97655pt too wide) in paragraph at lines 733--734
 [][][]\T1/Roboto-LF/regular/n/12 Maynard-Moody and Musheno[][] ([][]2012[][]), ``So-cial Eq-ui-ties and In-equities in Prac-
  []
 
@@ -616,18 +671,18 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14936 strings out of 476076
- 243425 string characters out of 5793775
+ 14937 strings out of 476076
+ 243432 string characters out of 5793775
  1939187 words of memory out of 5000000
  36651 multiletter control sequences out of 15000+600000
  609830 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 83i,8n,93p,947b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,8n,93p,947b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-BoldItalic.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on POSC521_2025_Spring.pdf (25 pages, 175983 bytes).
+Output written on POSC521_2025_Spring.pdf (25 pages, 178613 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 464 compressed objects within 5 object streams
- 177 named destinations out of 1000 (max. 500000)
+ 512 PDF objects out of 1000 (max. 8388607)
+ 469 compressed objects within 5 object streams
+ 178 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
