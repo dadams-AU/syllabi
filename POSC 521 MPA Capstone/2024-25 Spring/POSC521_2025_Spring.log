@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 22:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -386,46 +386,18 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 \BKM@id=\count302
 ))
 Package hyperref Info: Option `colorlinks' set `true' on input line 35.
- (/usr/share/texmf-dist/tex/latex/roboto/roboto.sty
-Package: roboto 2022/09/10 (Bob Tennent) Supports Roboto fonts for all LaTeX engines.
- (/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-) (/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-) (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks27
-\XKV@tempa@toks=\toks28
+ (/usr/share/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
-\XKV@depth=\count303
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/share/texmf-dist/tex/latex/fontaxes/fontaxes.sty
-Package: fontaxes 2020/07/21 v1.0e Font selection axes
-LaTeX Info: Redefining \upshape on input line 29.
-LaTeX Info: Redefining \itshape on input line 31.
-LaTeX Info: Redefining \slshape on input line 33.
-LaTeX Info: Redefining \swshape on input line 35.
-LaTeX Info: Redefining \scshape on input line 37.
-LaTeX Info: Redefining \sscshape on input line 39.
-LaTeX Info: Redefining \ulcshape on input line 41.
-LaTeX Info: Redefining \textsw on input line 47.
-LaTeX Info: Redefining \textssc on input line 48.
-LaTeX Info: Redefining \textulc on input line 49.
-))
-LaTeX Font Info:    Trying to load font information for T1+Roboto-LF on input line 42.
- (/usr/share/texmf-dist/tex/latex/roboto/T1Roboto-LF.fd
-File: T1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for T1/Roboto-LF.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 42.
+ (/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 42.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 42.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count304
+\l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box102
 ) (./POSC521_2025_Spring.aux)
 \openout1 = `POSC521_2025_Spring.aux'.
@@ -485,17 +457,17 @@ LaTeX Font Info:    ... okay on input line 42.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count305
+\scratchcounter=\count304
 \scratchdimen=\dimen196
 \scratchbox=\box103
-\nofMPsegments=\count306
-\nofMParguments=\count307
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count308
+\nofMPsegments=\count305
+\nofMParguments=\count306
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count307
 \MPscratchDim=\dimen197
-\MPnumerator=\count309
-\makeMPintoPDFobject=\count310
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count308
+\makeMPintoPDFobject=\count309
+\everyMPtoPDFconversion=\toks28
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -507,55 +479,55 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 42.
-\c@mv@tabular=\count311
-\c@mv@boldtabular=\count312
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 49.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 49.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 19.70294pt on input line 49.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 49.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 49.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 52.
-LaTeX Font Info:    Trying to load font information for TS1+Roboto-LF on input line 53.
- (/usr/share/texmf-dist/tex/latex/roboto/TS1Roboto-LF.fd
-File: TS1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for TS1/Roboto-LF.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 49.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 52.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 53.
+ (/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-LaTeX Font Info:    Font shape `TS1/Roboto-LF/m/n' aliased to
-(Font)              `TS1/Roboto-LF/regular/n' on input line 53.
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 53.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 78.
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 85.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 85.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 16.41594pt on input line 85.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 16.41594pt on input line 85.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_b5rac7.enc}{/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Overfull \hbox (3.6032pt too wide) in paragraph at lines 102--103
-[]\T1/Roboto-LF/bold/n/12 Professional De-vel-op-ment\T1/Roboto-LF/regular/n/12 : This course will help you de-velop the skills and knowl-
- []
-
-[2]
-LaTeX Font Info:    Font shape `T1/Roboto-LF/m/it' aliased to
-(Font)              `T1/Roboto-LF/regular/it' on input line 120.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 120.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 11.39996pt on input line 120.
  [3] [4]
-Overfull \hbox (14.5713pt too wide) in paragraph at lines 170--171
-\T1/Roboto-LF/regular/n/12 Fuller-ton web-site [][]\T1/cmtt/m/n/12 https://fdc.fullerton.edu/teaching/student-info-syllabi.html[][]
+Overfull \hbox (0.28053pt too wide) in paragraph at lines 188--189
+\T1/phv/m/n/12 email. Stu-dents are re-spon-si-ble for reg-u-larly check-ing their \T1/phv/m/sl/12 Can-vas \T1/phv/m/n/12 no-ti-fi-ca-tions and email.
  []
 
-[5] [6] [7] [8] [9] [10]
-Overfull \hbox (11.35504pt too wide) in paragraph at lines 332--333
-[]\T1/Roboto-LF/bold/n/12 Optional AI In-te-gra-tion\T1/Roboto-LF/regular/n/12 : Stu-dents may use Open AI's [][]Chat-GPT[][], An-thropic's
+[5] [6] [7]
+Overfull \hbox (2.00949pt too wide) in paragraph at lines 258--259
+[]\T1/phv/b/n/12 Bias Aware-ness\T1/phv/m/n/12 : Un-der-stand that AI tools can re-flect and per-pet-u-ate bi-ases present
  []
 
+[8] [9]
+Overfull \hbox (7.96008pt too wide) in paragraph at lines 332--333
+[]\T1/phv/b/n/12 Optional AI In-te-gra-tion\T1/phv/m/n/12 : Stu-dents may use Open AI's [][]Chat-GPT[][], An-thropic's
+ []
 
+[10]
 Overfull \hbox (20.96025pt too wide) in paragraph at lines 334--335
 []\T1/cmtt/m/n/12 "I've completed an annotated bibliography for an article.
  []
@@ -573,11 +545,6 @@ Overfull \hbox (14.78676pt too wide) in paragraph at lines 334--335
 
 Overfull \hbox (14.78676pt too wide) in paragraph at lines 334--335
 \T1/cmtt/m/n/12 relevance]. Could you provide feedback on my summary and
- []
-
-
-Overfull \hbox (2.15875pt too wide) in paragraph at lines 353--354
-[]\T1/Roboto-LF/regular/n/12 Identifies pat-terns, con-nec-tions, and con-tra-dic-tions across the read-
  []
 
 
@@ -610,79 +577,49 @@ Overfull \hbox (15.32996pt too wide) in paragraph at lines 389--390
 \T1/cmtt/m/n/12 reflection]. Could you provide feedback or ask questions to
  []
 
-[12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 453.
+(Font)              <12> on input line 432.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 453.
+(Font)              <8> on input line 432.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 453.
-
+(Font)              <6> on input line 432.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13]
-Overfull \hbox (2.20279pt too wide) in paragraph at lines 477--478
-[]\T1/Roboto-LF/regular/n/12 Participation: The fa-cil-i-ta-tors ac-tively par-tic-i-pate in the dis-cus-sion and con-tribute
+[12] [13]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 467.
+LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
+(Font)              scaled to size 11.39996pt on input line 467.
+ [14] [15] [16] [17] [18]
+Overfull \hbox (4.08028pt too wide) in paragraph at lines 668--669
+[][][]\T1/phv/m/n/12 Nicholson-Crotty[][] ([][]2004[][]), ``Pub-lic Man-age-ment and Or-ga-ni-za-tional Per-for-mance'' 
  []
 
-[14]
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/it' aliased to
-(Font)              `T1/Roboto-LF/bold/it' on input line 488.
- [15] [16] [17]
-Overfull \hbox (2.89215pt too wide) in paragraph at lines 637--638
-[][][]\T1/Roboto-LF/regular/n/12 Friedrich[][] ([][]1935[][]), ``Re-spon-si-ble Gov-ern-ment Ser-vice Un-der the Amer-i-can Con-
- []
-
-[18]
-Overfull \hbox (9.66013pt too wide) in paragraph at lines 668--669
-[][][]\T1/Roboto-LF/regular/n/12 Christensen, Paarl-berg and Perry[][] ([][]2017[][]), ``Pub-lic Ser-vice Mo-ti-va-tion Re-search'' 
- []
-
-[19] [20]
-Overfull \hbox (4.97655pt too wide) in paragraph at lines 733--734
-[][][]\T1/Roboto-LF/regular/n/12 Maynard-Moody and Musheno[][] ([][]2012[][]), ``So-cial Eq-ui-ties and In-equities in Prac-
- []
-
-[21] (./POSC521_2025_Spring.bbl [22] [23]
-Underfull \hbox (badness 4205) in paragraph at lines 84--87
-[]\T1/Roboto-LF/regular/n/12 Marvel, John D. 2015.  ``Un-con-scious Bias in Cit-i-zens' Eval-u-a-tions of Pub-
- []
-
-
-Underfull \hbox (badness 2221) in paragraph at lines 84--87
-\T1/Roboto-LF/regular/n/12 lic Sec-tor Per-for-mance.'' \T1/Roboto-LF/regular/it/12 Jour-nal of Pub-lic Ad-min-is-tra-tion Re-search and The-
- []
-
-
-Underfull \hbox (badness 3758) in paragraph at lines 98--101
-[]\T1/Roboto-LF/regular/n/12 McCandless, Sean, Se-bawit G. Bishu, Melissa Gómez Hernán-dez, Érika Pare-
- []
-
-
+[19] [20] (./POSC521_2025_Spring.bbl [21] [22]
 Underfull \hbox (badness 10000) in paragraph at lines 98--101
-\T1/cmtt/m/n/12 lib-[]proxy . fullerton . edu / login ? url = https : / / search . ebscohost . com / login .
+\T1/cmtt/m/n/12 edu / login ? url = https : / / search . ebscohost . com / login . aspx ? direct = true & db =
  []
 
-[24]) [25] (./POSC521_2025_Spring.aux)
+[23]) [24] (./POSC521_2025_Spring.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14937 strings out of 476076
- 243432 string characters out of 5793775
- 1940187 words of memory out of 5000000
- 36651 multiletter control sequences out of 15000+600000
- 609830 words of font info for 69 fonts, out of 8000000 for 9000
+ 14128 strings out of 476076
+ 225358 string characters out of 5793775
+ 1941187 words of memory out of 5000000
+ 35869 multiletter control sequences out of 15000+600000
+ 587576 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 83i,8n,93p,947b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-BoldItalic.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on POSC521_2025_Spring.pdf (25 pages, 178339 bytes).
+ 83i,8n,93p,947b,815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on POSC521_2025_Spring.pdf (24 pages, 131262 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 469 compressed objects within 5 object streams
- 178 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 450 compressed objects within 5 object streams
+ 176 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
