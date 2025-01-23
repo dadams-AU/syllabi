@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex POSC521_2025_Spring"] 1737607848.22077 "POSC521_2025_Spring.aux" "POSC521_2025_Spring.bbl" "POSC521_2025_Spring" 1737607856.83774 0
+["bibtex POSC521_2025_Spring"] 1737614131.92707 "POSC521_2025_Spring.aux" "POSC521_2025_Spring.bbl" "POSC521_2025_Spring" 1737614132.61331 0
   "./521_Students.bib" 1737578422.25734 33300 4008b0eb03005a5c043b850cec6f2e2f ""
   "/usr/share/texmf-dist/bibtex/bst/harvard/apsr.bst" 1727349926 25357 c990a86d1a60aa9370f76a9507b609ec ""
-  "POSC521_2025_Spring.aux" 1737607856.67831 9612 7697c116da61144ce5114cf2a68c756d "pdflatex"
+  "POSC521_2025_Spring.aux" 1737614132.46305 9612 7697c116da61144ce5114cf2a68c756d "pdflatex"
   (generated)
   "POSC521_2025_Spring.bbl"
   "POSC521_2025_Spring.blg"
   (rewritten before read)
-["pdflatex"] 1737607856.16689 "/home/dadams/Repos/syllabi/POSC 521 MPA Capstone/2024-25 Spring/POSC521_2025_Spring.tex" "POSC521_2025_Spring.pdf" "POSC521_2025_Spring" 1737607856.83797 0
-  "/home/dadams/Repos/syllabi/POSC 521 MPA Capstone/2024-25 Spring/POSC521_2025_Spring.tex" 1737607855.92831 45829 f70fde03e35d271a7c0ed0cd88e02cc0 ""
+["pdflatex"] 1737614131.98447 "/home/dadams/Repos/syllabi/POSC 521 MPA Capstone/2024-25 Spring/POSC521_2025_Spring.tex" "POSC521_2025_Spring.pdf" "POSC521_2025_Spring" 1737614132.61349 0
+  "/home/dadams/Repos/syllabi/POSC 521 MPA Capstone/2024-25 Spring/POSC521_2025_Spring.tex" 1737614130.34637 45828 1199a68c542dad09f262cecf224c9bad ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1727349926 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_b5rac7.enc" 1727349926 3075 0696ceafc85b8352a913efb9ba64bc17 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc" 1727349926 3314 42351250ac95a91f488e14b5633f75ce ""
@@ -129,9 +129,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1733468204.6143 5312047 b07fcd2a9090df96fc745b92a3db793b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1733468182 7112988 dcdb991ae45cf5dc9f43bc5a0249169e ""
-  "POSC521_2025_Spring.aux" 1737607856.67831 9612 7697c116da61144ce5114cf2a68c756d "pdflatex"
-  "POSC521_2025_Spring.bbl" 1737607848.26829 8137 758b6ce0555edb12ed50335084eed983 "bibtex POSC521_2025_Spring"
-  "POSC521_2025_Spring.tex" 1737607855.92831 45829 f70fde03e35d271a7c0ed0cd88e02cc0 ""
+  "POSC521_2025_Spring.aux" 1737614132.46305 9612 7697c116da61144ce5114cf2a68c756d "pdflatex"
+  "POSC521_2025_Spring.bbl" 1737614131.97971 8137 758b6ce0555edb12ed50335084eed983 "bibtex POSC521_2025_Spring"
+  "POSC521_2025_Spring.tex" 1737614130.34637 45828 1199a68c542dad09f262cecf224c9bad ""
   (generated)
   "POSC521_2025_Spring.aux"
   "POSC521_2025_Spring.log"
