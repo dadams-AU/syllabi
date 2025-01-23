@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.5)  22 JAN 2025 17:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -557,35 +557,35 @@ Overfull \hbox (2.15875pt too wide) in paragraph at lines 355--356
 
 [11] [12]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 467.
+(Font)              <12> on input line 462.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 467.
+(Font)              <8> on input line 462.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 467.
+(Font)              <6> on input line 462.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13]
-Overfull \hbox (2.20279pt too wide) in paragraph at lines 491--492
+Overfull \hbox (2.20279pt too wide) in paragraph at lines 486--487
 []\T1/Roboto-LF/regular/n/12 Participation: The fa-cil-i-ta-tors ac-tively par-tic-i-pate in the dis-cus-sion and con-tribute
  []
 
 [14]
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/it' aliased to
-(Font)              `T1/Roboto-LF/bold/it' on input line 502.
+(Font)              `T1/Roboto-LF/bold/it' on input line 497.
  [15] [16] [17] [18]
-Overfull \hbox (2.89215pt too wide) in paragraph at lines 665--666
+Overfull \hbox (2.89215pt too wide) in paragraph at lines 660--661
 [][][]\T1/Roboto-LF/regular/n/12 Friedrich[][] ([][]1935[][]), ``Re-spon-si-ble Gov-ern-ment Ser-vice Un-der the Amer-i-can Con-
  []
 
 
-Overfull \hbox (9.66013pt too wide) in paragraph at lines 682--683
+Overfull \hbox (9.66013pt too wide) in paragraph at lines 677--678
 [][][]\T1/Roboto-LF/regular/n/12 Christensen, Paarl-berg and Perry[][] ([][]2017[][]), ``Pub-lic Ser-vice Mo-ti-va-tion Re-search'' 
  []
 
 [19] [20]
-Overfull \hbox (4.97655pt too wide) in paragraph at lines 747--748
+Overfull \hbox (4.97655pt too wide) in paragraph at lines 742--743
 [][][]\T1/Roboto-LF/regular/n/12 Maynard-Moody and Musheno[][] ([][]2012[][]), ``So-cial Eq-ui-ties and In-equities in Prac-
  []
 
@@ -624,7 +624,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  83i,8n,93p,947b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-BoldItalic.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on POSC521_2025_Spring.pdf (25 pages, 176054 bytes).
+Output written on POSC521_2025_Spring.pdf (25 pages, 175983 bytes).
 PDF statistics:
  507 PDF objects out of 1000 (max. 8388607)
  464 compressed objects within 5 object streams
