@@ -24,15 +24,20 @@ Access the [LaTeX template](https://github.com/dadams-AU/syllabi/tree/main/templ
 ## 🗂️ Repository Structure
 
 ```
-syllabi/
-├── template/
-│   ├── syllabus.tex
-│   └── syllabus.pdf
-├── POSC 315 Intro Policy/
+.
 ├── CRJU_POSC 320 Intro PA/
+├── Images/
+├── POSC 315 Intro Policy/
+├── POSC 428/
 ├── POSC 509 MPA Foundations/
 ├── POSC 521 MPA Capstone/
-└── POSC 588 Collab Gov/
+├── POSC 588 Collab Gov/
+└── template/
+    ├── CNAME
+    ├── README.md
+    ├── syllabus.pdf
+    ├── syllabus.tex
+    └── syllabi.code-workspace
 ```
 
 ## 📖 Usage Guide
