@@ -9,18 +9,18 @@ A curated repository of LaTeX-formatted syllabi for undergraduate and graduate c
 ## 📚 Available Syllabi
 
 ### 🎓 Undergraduate Courses
-- [**POSC 315**: Introduction to Public Policy](POSC%20315%20Intro%20Policy/syllabus.pdf)
-- [**POSC 320**: Introduction to Public Administration](CRJU_POSC%20320%20Intro%20PA/syllabus.pdf)
+- [**POSC 315**: Introduction to Public Policy](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy)
+- [**POSC 320**: Introduction to Public Administration](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA))
 
 ### 📚 Graduate Courses
-- [**POSC 509**: Foundations of Public Administration](POSC%20509%20MPA%20Foundations/syllabus.pdf)
-- [**POSC 521**: Public Administration Theory: MPA Capstone](POSC%20521%20MPA%20Capstone/syllabus.pdf)
-- [**POSC 588**: Collaborative Governance](POSC%20588%20Collab%20Gov/syllabus.pdf)
+- [**POSC 509**: Foundations of Public Administration](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations))
+- [**POSC 521**: Public Administration Theory: MPA Capstone](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone))
+- [**POSC 588**: Collaborative Governance](https://github.com/dadams-AU/syllabi/tree/main/POSC%20588%20Collab%20Gov)
 
 [Rest of the README remains the same...]
 
 ### 📋 Template
-Access the [LaTeX template](template/syllabus.tex) and [preview the output](template/syllabus.pdf) to get started with your own syllabus.
+Access the [LaTeX template](https://github.com/dadams-AU/syllabi/tree/main/template) and [preview the output](https://raw.githubusercontent.com/dadams-AU/syllabi/main/template/syllabus.pdf) to get started with your own syllabus.
 
 ## 🗂️ Repository Structure
 
@@ -41,8 +41,8 @@ syllabi/
 ### Getting Started
 1. Navigate to the desired course folder
 2. Each folder contains:
-   - [`syllabus.tex`](template/syllabus.tex) - LaTeX source file
-   - [`syllabus.pdf`](template/syllabus.pdf) - Compiled document for viewing
+   - [`syllabus.tex`](https://github.com/dadams-AU/syllabi/tree/main/template/syllabus.tex) - LaTeX source file
+   - [`syllabus.pdf`](https://raw.githubusercontent.com/dadams-AU/syllabi/main/template/syllabus.pdf) - Compiled document for viewing
 
 ### Creating Your Own Syllabus
 1. Copy the contents from the [`template`](template/) folder
