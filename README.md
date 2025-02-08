@@ -65,6 +65,7 @@ Associate Professor of Public Administration
 California State University, Fullerton  
 📧 [dpadams@fullerton.edu](mailto:dpadams@fullerton.edu)
 🌐 [https://dadams.io](dadams.io)
+
 ---
 
 *Note: While feedback and suggestions are welcome, this repository is currently not accepting direct contributions.*
