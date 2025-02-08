@@ -1,57 +1,71 @@
-# Syllabi Repository
+# Academic Syllabi Collection
 
-## Introduction
+A curated repository of LaTeX-formatted syllabi for undergraduate and graduate courses in Public Policy and Administration.
 
-Welcome to my GitHub syllabi repository. These syllabi, formulated with unique pedagogical approaches and thematic focuses, serve as a valuable resource for educators and students alike. The syllabi are  organized by course number and semester and represent the most recent versions, formatted in LaTeX. A template is also provided for creating your own syllabi.
+📍 **Access the syllabi:**
+- 🌐 Web: [syllabi.dadams.io](https://syllabi.dadams.io)
+- 💻 GitHub Repository: [github.com/dadams-AU/syllabi](https://github.com/dadams-AU/syllabi)
 
-## Syllabi
+## 📚 Available Syllabi
 
-### Template
+### 🎓 Undergraduate Courses
+- [**POSC 315**: Introduction to Public Policy](POSC%20315%20Intro%20Policy/syllabus.pdf)
+- [**POSC 320**: Introduction to Public Administration](CRJU_POSC%20320%20Intro%20PA/syllabus.pdf)
 
-- [**Template**](https://github.com/dadams-AU/syllabi/tree/main/template) - A LaTeX template for creating your own syllabi.
+### 📚 Graduate Courses
+- [**POSC 509**: Foundations of Public Administration](POSC%20509%20MPA%20Foundations/syllabus.pdf)
+- [**POSC 521**: Public Administration Theory: MPA Capstone](POSC%20521%20MPA%20Capstone/syllabus.pdf)
+- [**POSC 588**: Collaborative Governance](POSC%20588%20Collab%20Gov/syllabus.pdf)
 
-### Undergraduate Courses
+[Rest of the README remains the same...]
 
-- [**POSC 315: Introduction to Public Policy**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy)
-  
-- [**POSC 320: Introduction to Public Administration**](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA) 
+### 📋 Template
+Access the [LaTeX template](template/syllabus.tex) and [preview the output](template/syllabus.pdf) to get started with your own syllabus.
 
-### Graduate Courses
+## 🗂️ Repository Structure
 
-- [**POSC 509: Foundations of Public Administration**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations)
-  
-- [**POSC 521: Public Administration Theory: MPA Capstone**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone)
-  
-- [**POSC 588: Collaborative Governance**](https://github.com/dadams-AU/syllabi/tree/main/POSC%20588%20Collab%20Gov)
-  
+```
+syllabi/
+├── template/
+│   ├── syllabus.tex
+│   └── syllabus.pdf
+├── POSC 315 Intro Policy/
+├── CRJU_POSC 320 Intro PA/
+├── POSC 509 MPA Foundations/
+├── POSC 521 MPA Capstone/
+└── POSC 588 Collab Gov/
+```
 
-## Using the Repository
+## 📖 Usage Guide
 
-### Navigating the Repository
+### Getting Started
+1. Navigate to the desired course folder
+2. Each folder contains:
+   - [`syllabus.tex`](template/syllabus.tex) - LaTeX source file
+   - [`syllabus.pdf`](template/syllabus.pdf) - Compiled document for viewing
 
-The repository is organized by course number and semester. Each course folder contains the LaTeX source file (`syllabus.tex`) and a compiled PDF (`syllabus.pdf`) for easy viewing.
+### Creating Your Own Syllabus
+1. Copy the contents from the [`template`](template/) folder
+2. Modify the LaTeX source according to your needs
+3. Refer to the included comments for guidance
 
-### Customizing the Syllabi
+## 🔄 Maintenance
 
-To create your own syllabi using this format, use the `syllabus.tex` files in the `template` folder. These files are well-commented to help you understand and modify the LaTeX code. The `syllabus.pdf` files provide a visual reference for the final format.
+- Repository contains the most recent versions of all syllabi
+- Regular updates reflect current course content and policies
+- Version history available through commit logs
 
-## Updates and Version Control
+## 📄 License
 
-This repository is regularly updated to reflect the most current syllabi. Check the commit history for a record of updates and changes.
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-## Feedback and Contributions
+## 📬 Contact Information
 
-Your feedback is valuable! For suggestions or contributions, please reach out via the contact information below. Currently, the repository is not open for direct contributions, but input and ideas are always welcome.
+**David P. Adams, Ph.D.**  
+Associate Professor of Public Administration  
+California State University, Fullerton  
+📧 [dpadams@fullerton.edu](mailto:dpadams@fullerton.edu)
 
-## License
+---
 
-This collection of syllabi is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-## Contact
-
-For inquiries or feedback:
-[David P. Adams, Ph.D.](mailto:dpadams@fullerton.edu)
-
-Associate Professor of Public Administration
-
-California State University, Fullerton
+*Note: While feedback and suggestions are welcome, this repository is currently not accepting direct contributions.*
