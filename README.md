@@ -1,6 +1,6 @@
-# Academic Syllabi Collection
+# Adams Syllabi Collection
 
-A curated repository of LaTeX-formatted syllabi for undergraduate and graduate Public Policy and Administration courses.
+A repository of LaTeX-formatted syllabi for undergraduate and graduate Public Policy and Administration courses that I teach at [Cal State Fullerton](https://fullerton.edu).
 
 📍 **Access the syllabi:**
 - 🌐 Web: [syllabi.dadams.io](https://syllabi.dadams.io)
