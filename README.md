@@ -1,6 +1,6 @@
 # Academic Syllabi Collection
 
-A curated repository of LaTeX-formatted syllabi for undergraduate and graduate courses in Public Policy and Administration.
+A curated repository of LaTeX-formatted syllabi for undergraduate and graduate Public Policy and Administration courses.
 
 📍 **Access the syllabi:**
 - 🌐 Web: [syllabi.dadams.io](https://syllabi.dadams.io)
@@ -10,14 +10,13 @@ A curated repository of LaTeX-formatted syllabi for undergraduate and graduate c
 
 ### 🎓 Undergraduate Courses
 - [**POSC 315**: Introduction to Public Policy](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy)
-- [**POSC 320**: Introduction to Public Administration](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA))
+- [**POSC 320**: Introduction to Public Administration](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA)
 
 ### 📚 Graduate Courses
-- [**POSC 509**: Foundations of Public Administration](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations))
-- [**POSC 521**: Public Administration Theory: MPA Capstone](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone))
+- [**POSC 509**: Foundations of Public Administration](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations)
+- [**POSC 521**: Public Administration Theory: MPA Capstone](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone)
 - [**POSC 588**: Collaborative Governance](https://github.com/dadams-AU/syllabi/tree/main/POSC%20588%20Collab%20Gov)
 
-[Rest of the README remains the same...]
 
 ### 📋 Template
 Access the [LaTeX template](https://github.com/dadams-AU/syllabi/tree/main/template) and [preview the output](https://raw.githubusercontent.com/dadams-AU/syllabi/main/template/syllabus.pdf) to get started with your own syllabus.
