@@ -25,6 +25,7 @@ Access the [LaTeX template](https://github.com/dadams-AU/syllabi/tree/main/templ
 
 ```
 .
+├── CNAME
 ├── CRJU_POSC 320 Intro PA/
 ├── Images/
 ├── POSC 315 Intro Policy/
@@ -32,12 +33,11 @@ Access the [LaTeX template](https://github.com/dadams-AU/syllabi/tree/main/templ
 ├── POSC 509 MPA Foundations/
 ├── POSC 521 MPA Capstone/
 ├── POSC 588 Collab Gov/
+├── README.md
+├── syllabi.code-workspace
 └── template/
-    ├── CNAME
-    ├── README.md
     ├── syllabus.pdf
-    ├── syllabus.tex
-    └── syllabi.code-workspace
+    └── syllabus.tex
 ```
 
 ## 📖 Usage Guide
