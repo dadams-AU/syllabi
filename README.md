@@ -44,7 +44,7 @@ syllabi/
    - [`syllabus.pdf`](https://raw.githubusercontent.com/dadams-AU/syllabi/main/template/syllabus.pdf) - Compiled document for viewing
 
 ### Creating Your Own Syllabus
-1. Copy the contents from the [`template`](template/) folder
+1. Copy the contents from the [`template`](https://github.com/dadams-AU/syllabi/tree/main/template) folder
 2. Modify the LaTeX source according to your needs
 3. Refer to the included comments for guidance
 
