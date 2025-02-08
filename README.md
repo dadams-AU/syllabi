@@ -63,8 +63,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 **David P. Adams, Ph.D.**  
 Associate Professor of Public Administration  
 California State University, Fullerton  
-📧 [dpadams@fullerton.edu](mailto:dpadams@fullerton.edu)
-
+📧 [dpadams@fullerton.edu](mailto:dpadams@fullerton.edu) | 
 🌐 [https://dadams.io](dadams.io)
 
 ---
