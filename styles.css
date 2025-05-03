@@ -1,0 +1,43 @@
+/* Tailwind CDN utilities still apply; this is for your custom overrides */
+.hero-pattern {
+    background-color: #f7fafc;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.dark .hero-pattern {
+    background-color: #1a202c;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a5568' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f1f5f9;
+}
+.dark ::-webkit-scrollbar-track {
+    background-color: #1f2937;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280;
+}
