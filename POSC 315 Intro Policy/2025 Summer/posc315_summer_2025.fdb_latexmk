@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1747087238.23521 "/Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_spring_2025.tex" "posc315_spring_2025.pdf" "posc315_spring_2025" 1747087240.32992 0
-  "/Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_spring_2025.tex" 1747087237.72193 23617 634e8f2a219dc6bead2658c4c3968112 ""
+["pdflatex"] 1747087404.4944 "/Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.tex" "posc315_summer_2025.pdf" "posc315_summer_2025" 1747087405.09129 0
+  "/Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.tex" 1747087403.62429 23617 634e8f2a219dc6bead2658c4c3968112 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/roboto/rbto_h6xohf.enc" 1741388039 2976 14f3c84565dd1bc57c13b9dc0aaeea06 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc" 1741388039 3314 42351250ac95a91f488e14b5633f75ce ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/roboto/rbto_schjax.enc" 1741388039 2974 729e60f1953f7d28deb744dead16208c ""
@@ -96,10 +96,10 @@
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1741388039 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/web2c/texmf.cnf" 1741388039 42151 79f67285bdd95beca4d137b380b4b9e5 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1741388039 3346141 1288109d02d1c772df65535881471649 ""
-  "posc315_spring_2025.aux" 1747087239.87867 5254 45a383aed7c779e49710feac5be47a70 "pdflatex"
-  "posc315_spring_2025.tex" 1747087237.72193 23617 634e8f2a219dc6bead2658c4c3968112 ""
+  "posc315_summer_2025.aux" 1747087404.99904 5254 45a383aed7c779e49710feac5be47a70 "pdflatex"
+  "posc315_summer_2025.tex" 1747087403.62429 23617 634e8f2a219dc6bead2658c4c3968112 ""
   (generated)
-  "posc315_spring_2025.aux"
-  "posc315_spring_2025.log"
-  "posc315_spring_2025.pdf"
+  "posc315_summer_2025.aux"
+  "posc315_summer_2025.log"
+  "posc315_summer_2025.pdf"
   (rewritten before read)

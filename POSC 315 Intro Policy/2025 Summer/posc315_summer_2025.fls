@@ -1,8 +1,8 @@
 PWD /Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/web2c/texmf.cnf
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_spring_2025.tex
-OUTPUT posc315_spring_2025.log
+INPUT /Users/dpadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.tex
+OUTPUT posc315_summer_2025.log
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/article.cls
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/article.cls
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/size11.clo
@@ -133,10 +133,10 @@ INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/roboto/
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/google/roboto/Roboto-Regular-lf-ot1.tfm
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./posc315_spring_2025.aux
-INPUT ./posc315_spring_2025.aux
-INPUT posc315_spring_2025.aux
-OUTPUT posc315_spring_2025.aux
+INPUT ./posc315_summer_2025.aux
+INPUT ./posc315_summer_2025.aux
+INPUT posc315_summer_2025.aux
+OUTPUT posc315_summer_2025.aux
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -146,7 +146,7 @@ INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/latexco
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/color.sty
-OUTPUT posc315_spring_2025.pdf
+OUTPUT posc315_summer_2025.pdf
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/google/roboto/Roboto-Regular-lf-ot1.tfm
@@ -177,7 +177,7 @@ INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/r
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/google/roboto/Roboto-Bold-lf-ot1.tfm
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/tfm/google/roboto/Roboto-Italic-lf-ot1.tfm
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/roboto/rbto_h6xohf.enc
-INPUT posc315_spring_2025.aux
+INPUT posc315_summer_2025.aux
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb
