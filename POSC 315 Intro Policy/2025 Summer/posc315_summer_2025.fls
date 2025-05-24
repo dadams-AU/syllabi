@@ -177,3 +177,8 @@ INPUT /usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc
 INPUT /usr/share/texmf-dist/fonts/tfm/google/roboto/Roboto-Bold-lf-ot1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/google/roboto/Roboto-Italic-lf-ot1.tfm
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_h6xohf.enc
+INPUT posc315_summer_2025.aux
+INPUT /usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb

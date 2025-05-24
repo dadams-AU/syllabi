@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.25)  23 MAY 2025 09:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.25)  23 MAY 2025 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,4 +382,116 @@ Package hyperref Info: Link coloring ON on input line 20.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
  (/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable 
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+\c@mv@tabular=\count307
+\c@mv@boldtabular=\count308
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/n' aliased to
+(Font)              `OT1/Roboto-LF/regular/n' on input line 26.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 17.28pt on input line 26.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/n' aliased to
+(Font)              `OT1/Roboto-LF/regular/n' on input line 26.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 10.0pt on input line 26.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/n' aliased to
+(Font)              `OT1/Roboto-LF/regular/n' on input line 26.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 26.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
+(Font)              `OT1/Roboto-LF/bold/n' on input line 27.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 10.95pt on input line 27.
+LaTeX Font Info:    Trying to load font information for TS1+Roboto-LF on input line 30.
+ (/usr/share/texmf-dist/tex/latex/roboto/TS1Roboto-LF.fd
+File: TS1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for TS1/Roboto-LF.
+)
+LaTeX Font Info:    Font shape `TS1/Roboto-LF/m/n' aliased to
+(Font)              `TS1/Roboto-LF/regular/n' on input line 30.
+LaTeX Font Info:    Font shape `TS1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 10.95pt on input line 30.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/n' aliased to
+(Font)              `OT1/Roboto-LF/regular/n' on input line 43.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 14.4pt on input line 43.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
+(Font)              `OT1/Roboto-LF/bold/n' on input line 43.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 14.4pt on input line 43.
+
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_schjax.enc}{/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}]
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
+(Font)              `OT1/Roboto-LF/bold/n' on input line 70.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
+(Font)              scaled to size 12.0pt on input line 70.
+
+
+[2]
+Overfull \hbox (1.72154pt too wide) in paragraph at lines 84--85
+\OT1/Roboto-LF/regular/n/10.95 po-rary, and fu-ture prob-lems con-fronting com-mu-ni-ties at dif-fer-ent ge-o-graph-i-cal scales,
+ []
+
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/m/it' aliased to
+(Font)              `OT1/Roboto-LF/regular/it' on input line 89.
+LaTeX Font Info:    Font shape `OT1/Roboto-LF/regular/it' will be
+(Font)              scaled to size 10.95pt on input line 89.
+
+Overfull \hbox (3.62032pt too wide) in paragraph at lines 100--101
+[]\OT1/Roboto-LF/regular/n/10.95 Basic knowl-edge of on-line com-mu-ni-ca-tion tools, such as email and dis-cus-sion boards. 
+ []
+
+
+
+[3{/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_h6xohf.enc}]
+
+[4]
+
+[5]
+Overfull \hbox (1.1104pt too wide) in paragraph at lines 161--162
+\OT1/Roboto-LF/regular/n/10.95 Plagiarism is a se-ri-ous vi-o-la-tion of aca-demic in-tegrity and will not be tol-er-ated in this course.
+ []
+
+
+
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+
+[11] (./posc315_summer_2025.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 12996 strings out of 475171
+ 209353 string characters out of 5767095
+ 612226 words of memory out of 5000000
+ 35792 multiletter control sequences out of 15000+600000
+ 573987 words of font info for 58 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 75i,7n,79p,873b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb></usr/share/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on posc315_summer_2025.pdf (11 pages, 108076 bytes).
+PDF statistics:
+ 190 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+

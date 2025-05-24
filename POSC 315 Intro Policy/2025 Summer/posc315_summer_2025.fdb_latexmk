@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1748017543.08223 "/home/dadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.tex" "posc315_summer_2025.pdf" "posc315_summer_2025" 1748017543.45283 0
-  "/home/dadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.tex" 1748017542.90171 23982 471f93a4be9ea62bf2d5e4a43bc4018e ""
+["pdflatex"] 1748057424.50538 "/home/dadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.tex" "posc315_summer_2025.pdf" "posc315_summer_2025" 1748057424.87476 0
+  "/home/dadams/Repos/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.tex" 1748017767.47582 24250 2909bc551fe512b10c6de4b69a96b67c ""
   "/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_h6xohf.enc" 1742685315 2976 14f3c84565dd1bc57c13b9dc0aaeea06 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc" 1742685315 3314 42351250ac95a91f488e14b5633f75ce ""
   "/usr/share/texmf-dist/fonts/enc/dvips/roboto/rbto_schjax.enc" 1742685315 2974 729e60f1953f7d28deb744dead16208c ""
@@ -96,8 +96,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1742947519 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1742947491 2008243 86214860b76ff15ce84b4058e1525788 ""
-  "posc315_summer_2025.aux" 1748017543.40838 5254 ce0f3c08ed8343518d0923b43ed433da "pdflatex"
-  "posc315_summer_2025.tex" 1748017542.90171 23982 471f93a4be9ea62bf2d5e4a43bc4018e ""
+  "posc315_summer_2025.aux" 1748057424.82823 5254 e8f51fa805fb527642e129d3d0e37dfc "pdflatex"
+  "posc315_summer_2025.tex" 1748017767.47582 24250 2909bc551fe512b10c6de4b69a96b67c ""
   (generated)
   "posc315_summer_2025.aux"
   "posc315_summer_2025.log"
