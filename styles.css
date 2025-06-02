@@ -11,10 +11,27 @@ html.dark .hero-pattern {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a5568' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
 }
 
+.card-hover {
+    /* Apply transitions to the base class for smoother hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .card-hover:hover {
     transform: translateY(-5px);
-    transition: transform 0.3s ease;
+    /* Tailwind's shadow-md is applied by default via HTML classes.
+       If a specific light-mode hover shadow different from the default shadow-md
+       were needed, it could be added here. For this case, we assume Tailwind's
+       default shadow on the card is sufficient for light mode hover indication
+       beyond the transform. */
 }
+
+/* Specific hover effect for dark mode cards */
+html.dark .card-hover:hover {
+    transform: translateY(-5px); /* Ensure transform is consistent */
+    /* Example: a subtle blue glow. Adjust color and spread as needed. */
+    box-shadow: 0 0 15px 2px rgba(59, 130, 246, 0.4);
+}
+
 .animate-float {
     animation: float 6s ease-in-out infinite;
 }
