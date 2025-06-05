@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeX Syllabus Template - Syllabus Repository</title>
+    <!-- Early theme setting script -->
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hidden { display: none; }
+        /* Basic styling for pre block */
+        pre {
+            background-color: var(--bg-alt);
+            color: var(--fg);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--accent1);
+            overflow-x: auto; /* Allow horizontal scrolling for long lines */
+            white-space: pre-wrap; /* Wrap long lines but preserve formatting */
+            word-wrap: break-word; /* Break words if necessary */
+        }
+    </style>
+</head>
+<body class="bg-base text-fg font-primary">
+
+    <header class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <div class="flex items-center">
+            <h1 class="text-3xl font-secondary" style="color: var(--accent1);">Syllabus Repository</h1>
+            <p class="text-lg font-primary" style="color: var(--fg); margin-left: 1rem; align-self: center;">David P. Adams - Cal State Fullerton</p>
+        </div>
+        <nav>
+            <a href="index.html" class="font-secondary px-3 py-2 rounded hover:bg-accent1 hover:text-base" style="color:var(--accent2)">Back to Syllabi</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-secondary mb-4" style="color: var(--accent1);">TeX Syllabus Template</h2>
+
+        <div class="mb-6">
+            <a href="template/syllabus.tex" download="syllabus_template.tex"
+               class="retro-button inline-block font-secondary py-2 px-4 rounded focus:outline-none"
+               style="text-decoration: none;">
+               Download TeX Template
+            </a>
+        </div>
+
+        <h3 class="text-xl font-secondary mb-2" style="color: var(--accent2);">Template Preview:</h3>
+        <pre id="tex-template-content">
+\documentclass[12pt, letterpaper]{article}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[sfdefault]{roboto}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[longnamesfirst]{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}
+\frenchspacing
+\usepackage{multicol}
+\usepackage{eso-pic}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{paralist}
+\usepackage{quoting}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+
+\usepackage{float}
+\usepackage{bookmark}
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{\section{\refname}}{}{}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+
+
+\begin{document}
+\title{\textbf{Syllabus Template}}
+
+\author{Public Administration 590 -- Fall 2023}
+\date{Asynchronous Online Course}
+
+    \maketitle
+
+
+\subsection*{Professor:}
+
+\subsubsection*{Contact Information:}
+
+\begin{itemize}
+	\item Office:
+	\item Phone/SMS:
+	\item website:
+	\item email:
+	\item Office Hours:
+\end{itemize}
+
+\section*{Catalog Description}
+
+\section*{Course Description}
+
+\section*{Student Learning Objectives}
+
+\section*{Course Materials}
+
+\section*{Required Text}
+
+\section*{Prequisites}
+
+\section*{General Education Information}
+
+\section*{University Student Policies}
+
+\section*{Course Student Policies}
+
+\section*{Course Structure}
+
+\section*{Course Requirements}
+
+\section*{Grades}
+
+\subsection*{Grading Scale and Grade Weights}
+The grading scale is shown in Table~\ref{tab:grading-scale}. Grades will be given based on Table~\ref{tab:grade-weights} weights.
+
+\begin{table}[ht]
+\centering
+\caption{Grading Scale}
+\begin{tabular}{llll}
+\toprule
+\textbf{Grade} &amp; \textbf{Percentage} &amp; \textbf{Grade} &amp; \textbf{Percentage} \\ \hline
+        A+ &amp; 98.0 -- 100  &amp; C+ &amp; 78.0 -- 79.9 \\
+        A  &amp; 92.0 -- 97.9 &amp; C  &amp; 72.0 -- 77.9 \\
+        A- &amp; 90.0 -- 91.9 &amp; C- &amp; 70.0 -- 71.9 \\
+        B+ &amp; 88.0 -- 89.9 &amp; D+ &amp; 68.0 -- 69.9 \\
+        B  &amp; 82.0 -- 87.9 &amp; D  &amp; 62.0 -- 67.9 \\
+        B- &amp; 80.0 -- 81.9 &amp; D- &amp; 60.0 -- 61.9 \\
+           &amp;              &amp; F  &amp; Below 59.9   \\
+\bottomrule
+\end{tabular}
+\label{tab:grading-scale}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \caption{Grade Weights}
+    \begin{tabular}{ll}
+        \toprule
+    \textbf{Assignment} &amp; \textbf{Percentage} \\
+    \midrule
+    Discussion Posts &amp; 20\% \\
+    \bottomrule
+    \end{tabular}
+    \label{tab:grade-weights}
+    \end{table}
+
+\section*{Course Schedule}
+
+
+
+\end{document}
+        </pre>
+    </main>
+
+    <footer class="container mx-auto px-4 py-8 text-center mt-12">
+        <p class="font-secondary" style="color: var(--accent2);">Browse Course Syllabi</p>
+        <p class="text-sm mt-2">&copy; <span id="copyright-year"></span>. All Rights Reserved.</p>
+<p class='text-sm mt-2'><a href='https://github.com/dadams-AU/syllabi' target='_blank' rel='noopener noreferrer' class='hover:text-accent1' style='color: var(--fg); text-decoration: underline;'>View Project on GitHub</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <!-- Include theme switcher for consistency, though no toggle button is on this page -->
+    <script src="js/theme-switcher.js"></script>
+</body>
+</html>

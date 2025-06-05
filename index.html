@@ -1,380 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" class="transition-colors duration-300">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adams Syllabus Collection</title>
-
-    <!-- Tailwind: class-based dark mode -->
+    <title>Syllabus Repository - Modern/Retro</title>
+    <!-- Early theme setting script -->
     <script>
-        tailwind.config = { darkMode: 'class' }
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    document.documentElement.classList.add('dark');
+                } else {
+                    // Default to light if no preference or if 'light' is stored
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {
+                // If localStorage is unavailable, default to light theme
+                document.documentElement.setAttribute('data-theme', 'light');
+                console.warn('localStorage not available for theme persistence.');
+            }
+        })();
     </script>
+    <!-- Tailwind CSS (CDN for now, build step will be configured later) -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome (single CDN, latest version) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Theme script -->
-    <script src="theme.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Minimal style for hidden class if needed before CSS loads */
+        .hidden { display: none; }
+    </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 font-sans text-gray-800 dark:text-gray-200">
+<body class="bg-base text-fg font-primary"> <!-- Will be styled by CSS variables -->
 
-    <!-- Theme Toggle -->
-    <button onclick="toggleTheme()"
-        class="fixed top-4 right-4 z-50 p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600">
-        <i id="sunIcon" class="fas fa-sun text-yellow-500 hidden"></i>
-        <i id="moonIcon" class="fas fa-moon text-blue-300"></i>
-    </button>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-accent1 focus:text-base">Skip to main content</a>
 
-    <!-- Header -->
-    <header class="hero-pattern">
-        <div class="max-w-7xl mx-auto px-4 py-16">
-            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transition-colors duration-300">
-                <div class="md:flex">
-                    <div class="p-8 md:p-12 md:w-7/12">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-3 rounded-full mr-4">
-                                <i class="fas fa-book-open text-xl"></i>
-                            </div>
-                            <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white">Adams Syllabi Collection</h1>
-                        </div>
-                        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                            A comprehensive repository of LaTeX-formatted syllabi for undergraduate and graduate Public Policy and Administration courses taught at
-                            <a href="https://fullerton.edu" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition duration-200">Cal State Fullerton</a>.
-                        </p>
-                        <div class="bg-blue-50 dark:bg-blue-900/30 p-6 rounded-xl border border-blue-100 dark:border-blue-800 mb-8">
-                            <p class="font-semibold text-gray-800 dark:text-gray-200 mb-4 flex items-center">
-                                <i class="fas fa-map-pin text-blue-500 dark:text-blue-400 mr-2"></i>
-                                Access the syllabi collection:
-                            </p>
-                            <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                                <a href="https://syllabi.dadams.io" class="flex items-center bg-white dark:bg-gray-700 py-3 px-5 rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md transition-all duration-200">
-                                    <i class="fas fa-globe text-blue-500 dark:text-blue-400 mr-3"></i>
-                                    <span class="font-medium text-gray-800 dark:text-gray-200">syllabi.dadams.io</span>
-                                </a>
-                                <a href="https://github.com/dadams-AU/syllabi" class="flex items-center bg-white dark:bg-gray-700 py-3 px-5 rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md transition-all duration-200">
-                                    <i class="fab fa-github text-gray-700 dark:text-gray-300 mr-3"></i>
-                                    <span class="font-medium text-gray-800 dark:text-gray-200">GitHub Repository</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:w-5/12 bg-gradient-to-br from-blue-500 to-blue-700 dark:from-blue-600 dark:to-blue-800 text-white p-8 md:p-12 flex items-center">
-                        <div class="animate-float">
-                            <div class="text-3xl font-bold mb-4">LaTeX Templates</div>
-                            <p class="mb-6">Professionally formatted syllabi designed for educators in Public Policy and Administration.</p>
-                            <ul class="space-y-3">
-                                <li class="flex items-center"><i class="fas fa-check-circle mr-2 text-blue-200"></i>Consistent formatting</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle mr-2 text-blue-200"></i>Version controlled</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle mr-2 text-blue-200"></i>Ready to customize</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle mr-2 text-blue-200"></i>Open source licensed</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <header class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="text-3xl font-secondary" style="color: var(--accent1);">Syllabus Repository</h1><p class="text-lg font-primary" style="color: var(--fg); margin-left: 1rem; align-self: center;">David P. Adams - Cal State Fullerton</p>
+        <button id="themeToggle" aria-label="Toggle theme" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-accent1">
+            <svg id="icon-sun" width="24" height="24" viewBox="0 0 8 8" class="retro-icon hidden">
+                <!-- 8x8 pixel sun -->
+                <rect x="3" y="0" width="2" height="1" fill="currentColor"/>
+                <rect x="3" y="7" width="2" height="1" fill="currentColor"/>
+                <rect x="0" y="3" width="1" height="2" fill="currentColor"/>
+                <rect x="7" y="3" width="1" height="2" fill="currentColor"/>
+                <rect x="1" y="1" width="1" height="1" fill="currentColor"/>
+                <rect x="6" y="1" width="1" height="1" fill="currentColor"/>
+                <rect x="1" y="6" width="1" height="1" fill="currentColor"/>
+                <rect x="6" y="6" width="1" height="1" fill="currentColor"/>
+                <rect x="2" y="2" width="4" height="4" fill="currentColor"/>
+            </svg>
+            <svg id="icon-moon" width="24" height="24" viewBox="0 0 8 8" class="retro-icon">
+                <!-- 8x8 pixel moon -->
+                <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+                <rect x="3" y="1" width="1" height="1" fill="currentColor"/>
+                <rect x="4" y="2" width="1" height="1" fill="currentColor"/>
+                <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+                <rect x="1" y="3" width="1" height="1" fill="currentColor"/>
+                <rect x="4" y="3" width="1" height="1" fill="currentColor"/>
+                <rect x="1" y="4" width="1" height="1" fill="currentColor"/>
+                <rect x="4" y="4" width="1" height="1" fill="currentColor"/>
+                <rect x="2" y="5" width="1" height="1" fill="currentColor"/>
+                <rect x="3" y="5" width="1" height="1" fill="currentColor"/>
+                <rect x="2" y="6" width="1" height="1" fill="currentColor"/>
+            </svg>
+        </button>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 py-12">
-        <!-- Available Syllabi Section -->
-        <section class="mb-16">
-            <div class="flex items-center mb-8">
-                <div class="bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400 p-3 rounded-full mr-4">
-                    <i class="fas fa-bookmark text-xl"></i>
-                </div>
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Available Syllabi</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Undergraduate Courses -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 card-hover transition-colors duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400 p-3 rounded-full mr-4">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Undergraduate Courses</h3>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-colors duration-200">
-                            <div class="flex items-center text-gray-700 dark:text-gray-200">
-                                <span class="text-lg font-semibold mr-2 w-24">POSC 315</span>
-                                <span class="flex-1">Introduction to Public Policy</span>
-                                <div class="flex space-x-2">
-                                    <a href="https://dadams-au.github.io/syllabi/POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.pdf" target="_blank" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 hover:bg-yellow-200 dark:hover:bg-yellow-900/70 transition-colors">
-                                        <i class="fas fa-file-pdf mr-1"></i> PDF
-                                    </a>
-                                    <a href="https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors">
-                                        <i class="fab fa-github mr-1"></i> Source
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-colors duration-200">
-                            <div class="flex items-center text-gray-700 dark:text-gray-200">
-                                <span class="text-lg font-semibold mr-2 w-24">POSC 320</span>
-                                <span class="flex-1">Introduction to Public Administration</span>
-                                <div class="flex space-x-2">
-                                    <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/CRJU_POSC%20320%20Intro%20PA/2024-25%20Intersession/CRJU-POSC_320.pdf" target="_blank" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 hover:bg-yellow-200 dark:hover:bg-yellow-900/70 transition-colors">
-                                        <i class="fas fa-file-pdf mr-1"></i> PDF
-                                    </a>
-                                    <a href="https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors">
-                                        <i class="fab fa-github mr-1"></i> Source
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Graduate Courses -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 card-hover transition-colors duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 p-3 rounded-full mr-4">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Graduate Courses</h3>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors duration-200">
-                            <div class="flex items-center text-gray-700 dark:text-gray-200">
-                                <span class="text-lg font-semibold mr-2 w-24">POSC 509</span>
-                                <span class="flex-1">Foundations of Public Administration</span>
-                                <div class="flex space-x-2">
-                                    <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20509%20MPA%20Foundations/spring%2024/POSC_509_Spring24.pdf" target="_blank" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-900/70 transition-colors">
-                                        <i class="fas fa-file-pdf mr-1"></i> PDF
-                                    </a>
-                                    <a href="https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors">
-                                        <i class="fab fa-github mr-1"></i> Source
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors duration-200">
-                            <div class="flex items-center text-gray-700 dark:text-gray-200">
-                                <span class="text-lg font-semibold mr-2 w-24">POSC 521</span>
-                                <span class="flex-1">Public Administration Theory: MPA Capstone</span>
-                                <div class="flex space-x-2">
-                                    <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20521%20MPA%20Capstone/2024-25%20Fall/posc521_2024_fall.pdf" target="_blank" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-900/70 transition-colors">
-                                        <i class="fas fa-file-pdf mr-1"></i> PDF
-                                    </a>
-                                    <a href="https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors">
-                                        <i class="fab fa-github mr-1"></i> Source
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors duration-200">
-                            <div class="flex items-center text-gray-700 dark:text-gray-200">
-                                <span class="text-lg font-semibold mr-2 w-24">POSC 588</span>
-                                <span class="flex-1">Collaborative Governance</span>
-                                <div class="flex space-x-2">
-                                    <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20588%20Collab%20Gov/spring_24/POSC_588_Spring24.pdf" target="_blank" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-900/70 transition-colors">
-                                        <i class="fas fa-file-pdf mr-1"></i> PDF
-                                    </a>
-                                    <a href="https://github.com/dadams-AU/syllabi/tree/main/POSC%20588%20Collab%20Gov" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors">
-                                        <i class="fab fa-github mr-1"></i> Source
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <div class="container mx-auto px-4 flex flex-col md:flex-row gap-6">
+        <aside class="w-full md:w-1/4 lg:w-1/5">
+            <nav id="filter-panel" class="p-4 rounded-lg" style="background-color: var(--bg-alt); border: 1px solid var(--accent2);">
+                <h2 class="text-xl font-secondary mb-4" style="color: var(--accent2);">Filter Syllabi</h2>
 
-        <!-- Template Section -->
-        <section class="mb-16">
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-colors duration-300">
-                <div class="md:flex">
-                    <div class="md:w-2/3 p-8">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 p-3 rounded-full mr-4">
-                                <i class="fas fa-file-alt text-xl"></i>
-                            </div>
-                            <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Template</h2>
-                        </div>
-                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                            Want to create your own syllabus using the same LaTeX template? Get started by accessing the template files below.
-                        </p>
-                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                            <a href="https://github.com/dadams-AU/syllabi/tree/main/template" class="flex items-center bg-gray-100 dark:bg-gray-700 py-3 px-5 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-200">
-                                <i class="fas fa-code text-indigo-500 dark:text-indigo-400 mr-3"></i>
-                                <span class="font-medium text-gray-800 dark:text-gray-200">LaTeX Template</span>
-                            </a>
-                            <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/template/syllabus.pdf" class="flex items-center bg-gray-100 dark:bg-gray-700 py-3 px-5 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-200">
-                                <i class="fas fa-file-pdf text-indigo-500 dark:text-indigo-400 mr-3"></i>
-                                <span class="font-medium text-gray-800 dark:text-gray-200">Preview Output</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/3 bg-indigo-50 dark:bg-indigo-900/20 p-8 flex items-center justify-center">
-                        <div class="text-center space-y-6">
-                            <div class="relative inline-block">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/latex.svg" alt="LaTeX Logo" class="h-20 w-20 mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md border-2 border-indigo-200 dark:border-indigo-700 p-3">
-                                <span class="absolute bottom-2 right-2 bg-indigo-100 dark:bg-indigo-900 rounded-full p-2 shadow">
-                                    <i class="fas fa-file-code text-indigo-500 text-xl"></i>
-                                </span>
-                            </div>
-                            <div class="text-lg font-medium text-gray-800 dark:text-gray-200">syllabus.tex</div>
-                            <div class="relative inline-block">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF Icon" class="h-20 w-20 mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md border-2 border-red-200 dark:border-red-700 p-3">
-                                <span class="absolute bottom-2 right-2 bg-red-100 dark:bg-red-900 rounded-full p-2 shadow">
-                                    <i class="fas fa-file-pdf text-red-500 text-xl"></i>
-                                </span>
-                            </div>
-                            <div class="text-lg font-medium text-gray-800 dark:text-gray-200">syllabus.pdf</div>
-                        </div>
+                <div> <!-- Term Filters Section -->
+                    <h3 class="font-semibold mb-2">Term</h3>
+                    <div id="term-filters-container">
+                        <p class="text-sm" style="color: var(--fg-alt);">Loading terms...</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Usage Guide Section -->
-        <section class="mb-16">
-            <div class="flex items-center mb-8">
-                <div class="bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400 p-3 rounded-full mr-4">
-                    <i class="fas fa-book-reader text-xl"></i>
+                <div class="mt-4"> <!-- Course Level Filters Section -->
+                    <h3 class="font-semibold mb-2">Course Level</h3>
+                    <div id="level-filters-container">
+                        <p class="text-sm" style="color: var(--fg-alt);">Loading levels...</p>
+                    </div>
                 </div>
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Usage Guide</h2>
-            </div>
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 transition-colors duration-300">
-                <div class="mb-8">
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Getting Started</h3>
-                    <ol class="space-y-6">
-                        <li class="flex">
-                            <div class="flex-shrink-0 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400 h-8 w-8 rounded-full flex items-center justify-center mr-4 mt-1">
-                                <span class="font-bold">1</span>
-                            </div>
-                            <div>
-                                <p class="text-lg font-medium text-gray-800 dark:text-gray-200">Navigate to the desired course folder</p>
-                                <p class="text-gray-600 dark:text-gray-400 mt-1">Select the course you'd like to use as a starting point from the available options.</p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <div class="flex-shrink-0 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400 h-8 w-8 rounded-full flex items-center justify-center mr-4 mt-1">
-                                <span class="font-bold">2</span>
-                            </div>
-                            <div>
-                                <p class="text-lg font-medium text-gray-800 dark:text-gray-200">Each folder contains these key files:</p>
-                                <div class="mt-4 bg-gray-50 dark:bg-gray-700 p-5 rounded-lg">
-                                    <div class="flex items-center mb-4">
-                                        <i class="fas fa-file-code text-blue-500 dark:text-blue-400 mr-3 w-6"></i>
-                                        <div>
-                                            <a href="https://github.com/dadams-AU/syllabi/tree/main/template/syllabus.tex" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">syllabus.tex</a>
-                                            <p class="text-gray-600 dark:text-gray-400 text-sm">LaTeX source file</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-file-pdf text-red-500 dark:text-red-400 mr-3 w-6"></i>
-                                        <div>
-                                            <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/template/syllabus.pdf" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">syllabus.pdf</a>
-                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Compiled document for viewing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </section>
 
-        <!-- Maintenance and License Section -->
-        <div class="grid md:grid-cols-2 gap-8 mb-16">
-            <!-- Maintenance Section -->
-            <section class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 card-hover transition-colors duration-300">
-                <div class="flex items-center mb-6">
-                    <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-3 rounded-full mr-4">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Maintenance</h2>
-                </div>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <div class="bg-blue-50 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 p-2 rounded-full mr-3 mt-1">
-                            <i class="fas fa-check"></i>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300">Repository contains the most recent versions of all syllabi</p>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="bg-blue-50 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 p-2 rounded-full mr-3 mt-1">
-                            <i class="fas fa-check"></i>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300">Regular updates reflect current course content and policies</p>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="bg-blue-50 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 p-2 rounded-full mr-3 mt-1">
-                            <i class="fas fa-check"></i>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300">Version history available through commit logs</p>
-                    </li>
-                </ul>
-            </section>
-            <!-- License Section -->
-            <section class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 card-hover transition-colors duration-300">
-                <div class="flex items-center mb-6">
-                    <div class="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 p-3 rounded-full mr-4">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">License</h2>
-                </div>
-                <div class="p-5 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-center">
-                    <i class="fab fa-creative-commons text-4xl text-gray-500 dark:text-gray-400 mr-4"></i>
-                    <div>
-                        <p class="text-gray-700 dark:text-gray-300 mb-2">This work is licensed under a:</p>
-                        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+                <div class="mt-4"> <!-- Tags Filters Section -->
+                    <h3 class="font-semibold mb-2">Tags</h3>
+                    <div id="tag-filters-container">
+                        <p class="text-sm" style="color: var(--fg-alt);">Loading tags...</p>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <!-- Contact Section -->
-        <section class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden mb-16 transition-colors duration-300">
-            <div class="md:flex">
-                <div class="md:w-2/3 p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400 p-3 rounded-full mr-4">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Contact Information</h2>
-                    </div>
-                    <div class="space-y-4">
-                        <p class="text-xl font-bold text-gray-800 dark:text-gray-200">David P. Adams, Ph.D.</p>
-                        <p class="text-lg text-gray-600 dark:text-gray-300">Associate Professor of Public Administration<br>California State University, Fullerton</p>
-                        <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-3 sm:space-y-0 mt-6">
-                            <a href="mailto:dpadams@fullerton.edu" class="flex items-center text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300">
-                                <i class="fas fa-envelope mr-2"></i>
-                                <span>dpadams@fullerton.edu</span>
-                            </a>
-                            <a href="https://dadams.io" class="flex items-center text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300">
-                                <i class="fas fa-globe mr-2"></i>
-                                <span>dadams.io</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/3 bg-gradient-to-br from-purple-500 to-purple-700 dark:from-purple-600 dark:to-purple-800 text-white p-8 flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="relative bg-white dark:bg-gray-700 rounded-full h-24 w-24 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                            <i class="fas fa-user-tie text-4xl text-purple-600 dark:text-purple-400"></i>
-                            <span class="absolute bottom-2 right-2 bg-purple-100 dark:bg-purple-900 rounded-full p-2 shadow">
-                                <i class="fas fa-comments text-purple-600 dark:text-purple-400 text-xl"></i>
-                            </span>
-                        </div>
-                        <p class="text-lg font-medium">Connect & Collaborate</p>
-                    </div>
-                </div>
+                <button id="mobile-filter-toggle" class="md:hidden mt-4 p-2 w-full rounded" style="background-color: var(--accent1); color: var(--bg);" aria-controls="filter-panel" aria-expanded="false">Toggle Filters</button>
+            </nav>
+        </aside>
+
+        <main id="main-content" class="w-full md:w-3/4 lg:w-4/5">
+            <div class="mb-6">
+                <input type="search" id="search-bar" aria-label="Search syllabi by course code, title, or keyword" placeholder="Search by course code, title, or keyword..." class="w-full p-3 rounded-lg focus:ring-2 focus:ring-accent1 focus:outline-none" style="background-color: var(--bg-alt); border: 1px solid var(--accent1);">
             </div>
-        </section>
+            <div class="mb-6 flex justify-end">
+                <select id="sort-dropdown" aria-label="Sort syllabi" class="p-3 rounded-lg focus:ring-2 focus:ring-accent1 focus:outline-none" style="background-color: var(--bg-alt); border: 1px solid var(--accent1);">
+                    <option value="newest">Sort by: Newest First</option>
+                    <option value="oldest">Sort by: Oldest First</option>
+                    <option value="code_asc">Sort by: Course Code A-Z</option>
+                </select>
+            </div>
+            <div id="cardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <!-- Syllabus cards will be injected here by JavaScript -->
+                <p>Loading syllabi...</p>
+            </div>
+        </main>
+    </div>
 
-        <!-- Footer -->
-        <footer class="text-center text-gray-500 dark:text-gray-400 mb-8">
-            <p class="italic">Note: While feedback and suggestions are welcome, this repository is currently not accepting direct contributions.</p>
-            <p class="mt-4">© 2025 - David P. Adams</p>
-        </footer>
-    </main>
+    <footer class="container mx-auto px-4 py-8 text-center mt-12">
+        <p class="font-secondary" style="color: var(--accent2);">Browse Course Syllabi</p>
+        <p class="text-sm mt-2">&copy; <span id="copyright-year"></span> RetroModern UI. All Rights Reserved.</p>
+<p class='text-sm mt-4'><a href='template.html' class='hover:text-accent1' style='color: var(--fg); text-decoration: underline;'>View TeX Template</a></p>
+<p class='text-sm mt-2'><a href='https://github.com/dadams-AU/syllabi' target='_blank' rel='noopener noreferrer' class='hover:text-accent1' style='color: var(--fg); text-decoration: underline;'>View Project on GitHub</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <!-- Main JS files -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/repository.js"></script>
 </body>
 </html>
