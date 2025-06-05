@@ -107,7 +107,9 @@
 
     // --- Dynamic Filter Population ---
     function populateDynamicFilters(syllabi) {
-        if (!termFiltersContainer || !levelFiltersContainer || !tagFiltersContainer) {
+        // Check yearFiltersContainer instead of tagFiltersContainer
+        const yearFiltersContainer = document.getElementById("year-filters-container");
+        if (!termFiltersContainer || !levelFiltersContainer || !yearFiltersContainer) {
             console.error("Filter container elements not found!");
             return;
         }
@@ -138,7 +140,6 @@
 
         termFiltersContainer.innerHTML = "";
         // Insert year filters after clearing term container
-        const yearFiltersContainer = document.getElementById("year-filters-container");
         if (yearFiltersContainer) {
             yearFiltersContainer.innerHTML = "";
             years.forEach(year => yearFiltersContainer.appendChild(createCheckbox("year", year, year)));
@@ -149,8 +150,10 @@
         // For levels, the value is "100", "200", etc. Label is "100-level"
         levels.forEach(levelFullText => levelFiltersContainer.appendChild(createCheckbox("level", levelFullText.substring(0,3), levelFullText)));
 
-        tagFiltersContainer.innerHTML = "";
-        tags.forEach(tag => tagFiltersContainer.appendChild(createCheckbox("tags", tag, tag)));
+        if (tagFiltersContainer) { // Only populate tags if the container exists
+            tagFiltersContainer.innerHTML = "";
+            tags.forEach(tag => tagFiltersContainer.appendChild(createCheckbox("tags", tag, tag)));
+        }
     }
 
     function renderSyllabusCards(syllabiToRender) {
