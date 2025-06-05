@@ -1,37 +1,91 @@
 /* Tailwind CDN utilities still apply; this is for your custom overrides */
-/* Light mode */
+
+/* ========== HERO PATTERN ========== */
 .hero-pattern {
     background-color: #f7fafc !important;
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
     transition: background-color 0.3s ease, background-image 0.3s ease;
 }
-
 html.dark .hero-pattern {
     background-color: #1a202c !important;
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a5568' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
 }
 
+/* ========== CARD COMPONENT ========== */
 .card-hover {
-    /* Apply transitions to the base class for smoother hover effects */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    color: #1e293b;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-
 .card-hover:hover {
     transform: translateY(-5px);
-    /* Tailwind's shadow-md is applied by default via HTML classes.
-       If a specific light-mode hover shadow different from the default shadow-md
-       were needed, it could be added here. For this case, we assume Tailwind's
-       default shadow on the card is sufficient for light mode hover indication
-       beyond the transform. */
+    /* Tailwind's shadow-md is applied by default via HTML classes. */
 }
-
-/* Specific hover effect for dark mode cards */
+html.dark .card-hover {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border-color: #334155;
+}
 html.dark .card-hover:hover {
-    transform: translateY(-5px); /* Ensure transform is consistent */
-    /* Example: a subtle blue glow. Adjust color and spread as needed. */
+    transform: translateY(-5px);
     box-shadow: 0 0 15px 2px rgba(59, 130, 246, 0.4);
 }
 
+/* ========== BUTTON COMPONENT ========== */
+.button-custom {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button-custom:hover {
+    background-color: #1d4ed8;
+}
+html.dark .button-custom {
+    background-color: #1e40af;
+    color: #e0e7ef;
+}
+html.dark .button-custom:hover {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+/* ========== INPUT COMPONENT ========== */
+.input-custom {
+    background-color: #fff;
+    color: #1e293b;
+    border: 1px solid #cbd5e1;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.input-custom:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+html.dark .input-custom {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    border-color: #334155;
+}
+html.dark .input-custom:focus {
+    border-color: #2563eb;
+}
+
+/* ========== MODAL COMPONENT ========== */
+.modal-custom {
+    background-color: #fff;
+    color: #1e293b;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+html.dark .modal-custom {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    box-shadow: 0 10px 25px rgba(30,41,59,0.7);
+}
+
+/* ========== FLOAT ANIMATION ========== */
 .animate-float {
     animation: float 6s ease-in-out infinite;
 }
@@ -40,25 +94,72 @@ html.dark .card-hover:hover {
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
-/* Custom scrollbar for dark mode */
+
+/* ========== SCROLLBAR ========== */
 ::-webkit-scrollbar {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
     background-color: #f1f5f9;
 }
-.dark ::-webkit-scrollbar-track {
+html.dark ::-webkit-scrollbar-track {
     background-color: #1f2937;
 }
 ::-webkit-scrollbar-thumb {
     background-color: #cbd5e1;
 }
-.dark ::-webkit-scrollbar-thumb {
+html.dark ::-webkit-scrollbar-thumb {
     background-color: #4b5563;
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: #94a3b8;
 }
-.dark ::-webkit-scrollbar-thumb:hover {
+html.dark ::-webkit-scrollbar-thumb:hover {
     background-color: #6b7280;
+}
+
+/* ========== TABLE COMPONENT ========== */
+.table-custom {
+    background-color: #fff;
+    color: #1e293b;
+    border-collapse: collapse;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+.table-custom th,
+.table-custom td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+}
+.table-custom th {
+    background-color: #f1f5f9;
+    color: #334155;
+}
+html.dark .table-custom {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+html.dark .table-custom th {
+    background-color: #334155;
+    color: #e0e7ef;
+}
+html.dark .table-custom th,
+html.dark .table-custom td {
+    border-color: #334155;
+}
+
+/* ========== LINK COMPONENT ========== */
+.link-custom {
+    color: #2563eb;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+.link-custom:hover {
+    color: #1d4ed8;
+}
+html.dark .link-custom {
+    color: #60a5fa;
+}
+html.dark .link-custom:hover {
+    color: #93c5fd;
 }
