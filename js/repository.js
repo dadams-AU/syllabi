@@ -140,7 +140,6 @@
 
         termFiltersContainer.innerHTML = "";
         // Insert year filters after clearing term container
-        const yearFiltersContainer = document.getElementById("year-filters-container");
         if (yearFiltersContainer) {
             yearFiltersContainer.innerHTML = "";
             years.forEach(year => yearFiltersContainer.appendChild(createCheckbox("year", year, year)));
