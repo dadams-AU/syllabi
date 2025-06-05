@@ -10,7 +10,7 @@
 
   /* Font families from Tailwind config for consistency if needed outside Tailwind classes */
   --font-primary: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
-  --font-secondary: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+  --font-secondary: 'Press Start 2P', 'VT323', 'Share Tech Mono', 'Fira Mono', 'monospace', 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
 
   /* Default body styles using variables */
   /* These are also set on <body> in index.html using Tailwind classes, but good for fallback/global */
