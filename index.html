@@ -72,26 +72,29 @@
         <aside class="w-full md:w-1/4 lg:w-1/5">
             <nav id="filter-panel" class="p-4 rounded-lg" style="background-color: var(--bg-alt); border: 1px solid var(--accent2);">
                 <h2 class="text-xl font-secondary mb-4" style="color: var(--accent2);">Filter Syllabi</h2>
-                <div>
+
+                <div> <!-- Term Filters Section -->
                     <h3 class="font-semibold mb-2">Term</h3>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="term" value="Summer 2025"> <span>Summer 2025</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="term" value="Fall 2024"> <span>Fall 2024</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="term" value="Spring 2025"> <span>Spring 2025</span></label>
+                    <div id="term-filters-container">
+                        <p class="text-sm" style="color: var(--fg-alt);">Loading terms...</p>
+                    </div>
                 </div>
-                <div class="mt-4">
+
+                <div class="mt-4"> <!-- Course Level Filters Section -->
                     <h3 class="font-semibold mb-2">Course Level</h3>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="level" value="100"> <span>100 Level</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="level" value="200"> <span>200 Level</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="level" value="300"> <span>300 Level</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="level" value="500"> <span>500 Level</span></label>
+                    <div id="level-filters-container">
+                        <p class="text-sm" style="color: var(--fg-alt);">Loading levels...</p>
+                    </div>
                 </div>
-                <div class="mt-4">
+
+                <div class="mt-4"> <!-- Tags Filters Section -->
                     <h3 class="font-semibold mb-2">Tags</h3>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="tags" value="Public Policy"> <span>Public Policy</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="tags" value="Retro"> <span>Retro</span></label>
-                    <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="tags" value="Graduate"> <span>Graduate</span></label>
+                    <div id="tag-filters-container">
+                        <p class="text-sm" style="color: var(--fg-alt);">Loading tags...</p>
+                    </div>
                 </div>
-                 <button id="mobile-filter-toggle" class="md:hidden mt-4 p-2 w-full rounded" style="background-color: var(--accent1); color: var(--bg);" aria-controls="filter-panel" aria-expanded="false">Toggle Filters</button>
+
+                <button id="mobile-filter-toggle" class="md:hidden mt-4 p-2 w-full rounded" style="background-color: var(--accent1); color: var(--bg);" aria-controls="filter-panel" aria-expanded="false">Toggle Filters</button>
             </nav>
         </aside>
 
@@ -115,8 +118,9 @@
 
     <footer class="container mx-auto px-4 py-8 text-center mt-12">
         <p class="font-secondary" style="color: var(--accent2);">Browse Course Syllabi</p>
-        <p class="text-sm mt-2">&copy; <span id="copyright-year"></span> David P. Adams. All Rights Reserved.</p>
+        <p class="text-sm mt-2">&copy; <span id="copyright-year"></span> RetroModern UI. All Rights Reserved.</p>
 <p class='text-sm mt-4'><a href='template.html' class='hover:text-accent1' style='color: var(--fg); text-decoration: underline;'>View TeX Template</a></p>
+<p class='text-sm mt-2'><a href='https://github.com/dadams-AU/syllabi' target='_blank' rel='noopener noreferrer' class='hover:text-accent1' style='color: var(--fg); text-decoration: underline;'>View Project on GitHub</a></p>
     </footer>
 
     <script>

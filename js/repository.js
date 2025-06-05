@@ -5,6 +5,9 @@
     const filterPanel = document.getElementById('filter-panel'); // Added filterPanel
     const sortDropdown = document.getElementById("sort-dropdown"); // Added for sorting
     const mobileFilterToggleButton = document.getElementById('mobile-filter-toggle'); // Added mobile toggle button
+    const termFiltersContainer = document.getElementById("term-filters-container");
+    const levelFiltersContainer = document.getElementById("level-filters-container");
+    const tagFiltersContainer = document.getElementById("tag-filters-container");
 
     let allSyllabi = [];
     let currentlyDisplayedSyllabi = [];
@@ -99,6 +102,47 @@
         else seasonOrder = 0; // Default for unknown terms
 
         return year * 10 + seasonOrder; // e.g., Fall 2024 -> 20243, Spring 2025 -> 20251
+    }
+
+    // --- Dynamic Filter Population ---
+    function populateDynamicFilters(syllabi) {
+        if (!termFiltersContainer || !levelFiltersContainer || !tagFiltersContainer) {
+            console.error("Filter container elements not found!");
+            return;
+        }
+
+        const terms = [...new Set(syllabi.map(s => s.term).filter(t => t))].sort();
+        const levels = [...new Set(syllabi.map(s => {
+            const code = s.courseCode || "";
+            const match = code.match(/^\D*(\d)/); // Match first digit after optional non-digits
+            return match ? `${match[1]}00-level` : null; // e.g. POSC 315 -> 300-level
+        }))].filter(l => l).sort((a,b) => parseInt(a) - parseInt(b)); // Sort numerically
+        const tags = [...new Set(syllabi.flatMap(s => s.tags || []).filter(t => t))].sort();
+
+        const createCheckbox = (group, value, labelText) => {
+            const label = document.createElement("label");
+            label.className = "flex items-center space-x-2 font-primary text-sm py-1";
+            const input = document.createElement("input");
+            input.type = "checkbox";
+            input.className = "form-checkbox h-4 w-4";
+            input.dataset.filterGroup = group;
+            input.value = value;
+            label.appendChild(input);
+            const span = document.createElement("span");
+            span.textContent = labelText;
+            label.appendChild(span);
+            return label;
+        };
+
+        termFiltersContainer.innerHTML = "";
+        terms.forEach(term => termFiltersContainer.appendChild(createCheckbox("term", term, term)));
+
+        levelFiltersContainer.innerHTML = "";
+        // For levels, the value is "100", "200", etc. Label is "100-level"
+        levels.forEach(levelFullText => levelFiltersContainer.appendChild(createCheckbox("level", levelFullText.substring(0,3), levelFullText)));
+
+        tagFiltersContainer.innerHTML = "";
+        tags.forEach(tag => tagFiltersContainer.appendChild(createCheckbox("tags", tag, tag)));
     }
 
     function renderSyllabusCards(syllabiToRender) {
@@ -200,25 +244,21 @@
         });
     }
 
-    // --- Filter Panel Functionality ---
+    // --- Filter Panel Functionality (Event Delegation) ---
     if (filterPanel) {
-        const checkboxes = filterPanel.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', (event) => {
+        filterPanel.addEventListener("change", (event) => {
+            if (event.target.type === "checkbox" && event.target.dataset.filterGroup) {
                 const filterGroup = event.target.dataset.filterGroup;
                 const filterValue = event.target.value;
-
-                if (filterGroup) {
-                    if (event.target.checked) {
-                        if (!activeFilters[filterGroup].includes(filterValue)) {
-                            activeFilters[filterGroup].push(filterValue);
-                        }
-                    } else {
-                        activeFilters[filterGroup] = activeFilters[filterGroup].filter(item => item !== filterValue);
+                if (event.target.checked) {
+                    if (!activeFilters[filterGroup].includes(filterValue)) {
+                        activeFilters[filterGroup].push(filterValue);
                     }
-                    applyAllFilters(); // Use combined filter function
+                } else {
+                    activeFilters[filterGroup] = activeFilters[filterGroup].filter(item => item !== filterValue);
                 }
-            });
+                applyAllFilters();
+            }
         });
     }
 
@@ -236,6 +276,27 @@
         });
     }
 
+    // Mobile Filter Panel Toggle
+    if (mobileFilterToggleButton && filterPanel) {
+        const filterContentContainer = filterPanel.querySelector("div:not(#mobile-filter-toggle)"); // Selects the main content div inside panel
+
+        // Set initial state for button text and aria-expanded
+        if (filterContentContainer) {
+            const isInitiallyHidden = filterContentContainer.classList.contains("hidden");
+            mobileFilterToggleButton.setAttribute("aria-expanded", String(!isInitiallyHidden));
+            mobileFilterToggleButton.textContent = isInitiallyHidden ? "Show Filters" : "Hide Filters";
+        }
+
+        mobileFilterToggleButton.addEventListener("click", () => {
+            if (filterContentContainer) {
+                filterContentContainer.classList.toggle("hidden");
+                const isExpanded = !filterContentContainer.classList.contains("hidden");
+                mobileFilterToggleButton.setAttribute("aria-expanded", String(isExpanded));
+                mobileFilterToggleButton.textContent = isExpanded ? "Hide Filters" : "Show Filters";
+            }
+        });
+    }
+
 
     // Function to fetch syllabus data
     async function fetchSyllabi() {
@@ -245,13 +306,13 @@
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             allSyllabi = await response.json();
+            populateDynamicFilters(allSyllabi); // Populate filters after data is fetched
             // Initialize activeFilters with available options from data (optional, but good for dynamic filters)
             // For now, filters are static in HTML.
 
             currentlyDisplayedSyllabi = [...allSyllabi];
             // applyAllFilters will now handle the initial sort based on sortDropdown.value
             applyAllFilters(); // Apply any default or persisted filters on load
-            console.log('Syllabi data loaded and initial filters applied.');
         } catch (error) {
             console.error('Error fetching syllabi data:', error);
             if (cardGrid) {

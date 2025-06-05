@@ -59,5 +59,4 @@
         }
     });
 
-    console.log('Theme switcher initialized.');
 })();
