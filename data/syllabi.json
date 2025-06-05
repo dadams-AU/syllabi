@@ -1,0 +1,92 @@
+[
+  {
+    "courseCode": "POSC 315",
+    "title": "Introduction to Public Policy",
+    "term": "Summer 2025",
+    "instructor": "David Adams",
+    "fileFormats": ["PDF"],
+    "tags": ["Public Policy", "Undergraduate"],
+    "description": "Overview of policy cycles and analysis techniques."
+  },
+  {
+    "courseCode": "CRJU 101",
+    "title": "Intro to Criminal Justice",
+    "term": "Fall 2024",
+    "instructor": "Sarah Miller",
+    "fileFormats": ["PDF", "DOCX"],
+    "tags": ["Criminal Justice", "Undergraduate", "Core"],
+    "description": "A foundational look at the criminal justice system."
+  },
+  {
+    "courseCode": "ART 250",
+    "title": "Pixel Art Fundamentals",
+    "term": "Spring 2025",
+    "instructor": "Mike Chen",
+    "fileFormats": ["PDF"],
+    "tags": ["Art", "Digital Media", "Retro"],
+    "description": "Learn the basics of creating 8-bit and 16-bit art."
+  },
+  {
+    "courseCode": "HIST 305",
+    "title": "History of Video Games",
+    "term": "Fall 2024",
+    "instructor": "Dr. Retro",
+    "fileFormats": ["PDF"],
+    "tags": ["History", "Gaming", "Elective"],
+    "description": "From Pong to modern consoles, a historical journey."
+  },
+  {
+    "courseCode": "ENG 100",
+    "title": "Basic Composition",
+    "term": "Summer 2025",
+    "instructor": "Jane Doe",
+    "fileFormats": ["DOCX"],
+    "tags": ["English", "Core", "Undergraduate"],
+    "description": "Developing fundamental writing skills."
+  },
+  {
+    "courseCode": "CS 501",
+    "title": "Advanced Web Development",
+    "term": "Spring 2025",
+    "instructor": "Alex Nguyen",
+    "fileFormats": ["PDF"],
+    "tags": ["Computer Science", "Graduate", "Web"],
+    "description": "Deep dive into modern web technologies and frameworks."
+  },
+  {
+    "courseCode": "MUS 110",
+    "title": "Chiptune and Synthwave Creation",
+    "term": "Fall 2024",
+    "instructor": "Synth Lord",
+    "fileFormats": ["PDF"],
+    "tags": ["Music", "Retro", "Elective"],
+    "description": "Composing music with a retro electronic feel."
+  },
+  {
+    "courseCode": "PHIL 420",
+    "title": "Ethics in Technology",
+    "term": "Summer 2025",
+    "instructor": "Eleanor Vance",
+    "fileFormats": ["PDF", "DOCX"],
+    "tags": ["Philosophy", "Technology", "Graduate"],
+    "description": "Examining the ethical implications of emerging technologies."
+  },
+  {
+    "courseCode": "GD 220",
+    "title": "Retro UI/UX Design",
+    "term": "Spring 2025",
+    "instructor": "Max Power",
+    "fileFormats": ["PDF"],
+    "tags": ["Graphic Design", "UX", "Retro", "Undergraduate"],
+    "description": "Principles of user interface design with a nostalgic twist."
+  },
+  {
+    "courseCode": "MATH 099",
+    "title": "Arcade Game Mathematics",
+    "term": "Fall 2024",
+    "instructor": "Prof. Vector",
+    "fileFormats": ["PDF"],
+    "tags": ["Mathematics", "Gaming", "Fun"],
+    "description": "The underlying math that powers classic arcade games."
+  }
+]

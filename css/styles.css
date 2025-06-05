@@ -1,0 +1,289 @@
+/* CSS Custom Properties (Variables) */
+:root {
+  --bg: #F8F8F2;
+  --bg-alt: #FFFFFF; /* For elements like cards that need to be white in light mode */
+  --fg: #1C1C1C;
+  --accent1: #39FF14; /* Neon Green */
+  --accent2: #FF00FF; /* Neon Pink */
+  --hero-gradient-start: #4B0082; /* Deep Purple (example for CRT glow) */
+  --hero-gradient-end: #000080;   /* Midnight Blue (example for CRT glow) */
+
+  /* Font families from Tailwind config for consistency if needed outside Tailwind classes */
+  --font-primary: 'Roboto', 'Poppins', sans-serif;
+  --font-secondary: '"Press Start 2P"', '"VT323"', cursive;
+
+  /* Default body styles using variables */
+  /* These are also set on <body> in index.html using Tailwind classes, but good for fallback/global */
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0B0B0B;
+  --bg-alt: #1C1C1C; /* Darker background for cards in dark mode */
+  --fg: #D3D3D3;
+  --accent1: #00FFD7; /* Teal */
+  --accent2: #FF1CED; /* Magenta */
+  --hero-gradient-start: #1A001A; /* Darker Purple for dark mode CRT glow */
+  --hero-gradient-end: #000033;   /* Darker Midnight Blue for dark mode CRT glow */
+}
+
+/* Retro Icon Styling */
+.retro-icon {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: crisp-edges;    /* Old Chrome */
+}
+
+/* Basic body styling (can be in Tailwind too, but good for global defaults) */
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-primary); /* Tailwind's 'font-primary' class will handle this if applied to body */
+  line-height: 1.6; /* Generous line-height */
+}
+
+/* Styling for pixel/secondary font where used */
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+/* Example of using a hero gradient (not applied yet) */
+.hero-section-with-crt-glow {
+  background-image: linear-gradient(to bottom right, var(--hero-gradient-start), var(--hero-gradient-end));
+}
+
+/* Additional global styles can go here */
+
+/* Tailwind base and components are usually imported if using a build process.
+   For CDN, Tailwind's own reset/base styles are applied.
+   This file is for *custom* additions and overrides. */
+
+/* Ensure hidden class works as expected */
+.hidden {
+  display: none !important; /* Added !important to ensure it overrides other display properties if necessary */
+}
+
+/* Accessibility: Skip link styling */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Custom checkbox style to match retro theme if needed (Tailwind forms plugin usually handles this well) */
+/* For now, we rely on browser defaults or Tailwind Forms if it's part of the default CDN build */
+
+/* Basic button styling (can be extended) */
+button, .button {
+  font-family: var(--font-secondary); /* Retro font for buttons */
+  /* Other button base styles here if not handled by Tailwind component classes */
+}
+
+#themeToggle {
+  /* Ensure current color is used for SVGs by default */
+  color: var(--fg);
+}
+
+:root[data-theme="dark"] #themeToggle {
+  color: var(--fg); /* Should be light gray in dark mode */
+}
+:root[data-theme="light"] #themeToggle {
+  color: var(--fg); /* Should be dark in light mode */
+}
+
+/* Style for the filter panel */
+#filter-panel {
+    background-color: var(--bg-alt); /* Uses the alternate background color */
+    border: 1px solid var(--accent2); /* Uses accent2 for border */
+    /* Tailwind classes will handle padding, rounded corners etc. */
+}
+
+#filter-panel h2, #filter-panel h3 {
+    color: var(--accent2); /* Accent color for filter panel headers */
+    font-family: var(--font-secondary);
+}
+
+#filter-panel label {
+    color: var(--fg); /* Standard text color for filter options */
+    font-family: var(--font-primary);
+}
+
+/* Style for search bar and sort dropdown */
+#search-bar, #sort-dropdown {
+    background-color: var(--bg-alt);
+    border: 1px solid var(--accent1);
+    color: var(--fg); /* Ensure text input is readable */
+}
+
+#search-bar::placeholder {
+    color: var(--fg);
+    opacity: 0.7;
+}
+
+/* Ensure body takes on the theme variables */
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+/* --- Card Styling and Animations (Step 7) --- */
+
+/* Card base styling (some already applied via JS, this ensures consistency and allows overrides) */
+#cardGrid .p-4 { /* Targeting cards more specifically if needed */
+  background-color: var(--bg-alt);
+  border: 1px solid var(--accent1); /* Default border */
+  border-radius: 0.5rem; /* from brief */
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  overflow: hidden; /* For scanline effect if it uses pseudo-elements that might overflow */
+}
+
+/* Card Hover States */
+#cardGrid .p-4:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 0 15px var(--accent1); /* Softer shadow + Neon glow */
+  border-color: var(--accent1); /* Ensure accent border is visible on hover */
+}
+
+/* Scanline Glitch Effect (Conceptual - a simple version) */
+#cardGrid .p-4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -100%; /* Start off-screen */
+  width: 100%;
+  height: 2px; /* Scanline thickness */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle white line */
+  opacity: 0;
+  animation: scanline-glitch 0.2s linear forwards; /* Animation applied on hover via JS or a class */
+}
+
+/* Keyframes for scanline - this will be triggered on hover by adding a class or direct style */
+@keyframes scanline-glitch-anim {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  50% {
+    top: 50%; /* Moves across the card */
+    opacity: 0.7;
+  }
+  100% {
+    top: 200%; /* Moves off-screen */
+    opacity: 0;
+  }
+}
+
+/* Class to trigger scanline on hover (can be added by JS if preferred) */
+#cardGrid .p-4.scanline-active::before {
+  animation: scanline-glitch-anim 0.2s linear forwards;
+}
+
+
+/* Download Button Styling */
+#cardGrid button { /* General button styling within cards */
+  font-family: var(--font-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem; /* Slightly less rounded than card for a bit of contrast */
+  transition: background-color 0.2s, color 0.2s, transform 0.1s, border-color 0.2s;
+  border: 2px solid transparent; /* For outline effect transition */
+  text-transform: uppercase; /* As per "DOWNLOAD" example */
+  cursor: pointer;
+}
+
+/* Light Mode Button */
+:root[data-theme="light"] #cardGrid button {
+  background-color: var(--accent1);
+  color: var(--bg); /* Text color (off-white for neon green) */
+  border-color: var(--accent1);
+}
+:root[data-theme="light"] #cardGrid button:hover {
+  background-color: var(--accent2); /* Example: flip to other accent on hover */
+  border-color: var(--accent2);
+  color: var(--bg);
+  transform: scale(1.05);
+}
+
+/* Dark Mode Button (Inverted Outline) */
+:root[data-theme="dark"] #cardGrid button {
+  background-color: transparent;
+  color: var(--accent1);
+  border: 2px solid var(--accent1);
+}
+:root[data-theme="dark"] #cardGrid button:hover {
+  background-color: var(--accent1);
+  color: var(--bg); /* Text color (jet-black for teal bg) */
+  transform: scale(1.05);
+}
+
+/* Button Press Animation */
+#cardGrid button:active {
+  transform: scale(0.95);
+  /* For dark mode, flip outline thickness (already 2px, can make it thicker or change color) */
+}
+:root[data-theme="dark"] #cardGrid button:active {
+   border-width: 3px; /* Example: thicker border on press */
+}
+
+
+/* Tag Styling (Pill Badges) */
+#cardGrid .tags-container span { /* Assuming tags are in a div with class 'tags-container' in JS */
+  /* font-primary is already set in JS, px-2 py-1 rounded-full too */
+  background-color: var(--accent2); /* Default tag color */
+  color: var(--bg); /* Text color for good contrast on accent2 */
+  transition: filter 0.2s ease-out, background-color 0.2s;
+  font-size: 0.7rem; /* Slightly smaller */
+  padding: 0.25rem 0.6rem;
+}
+
+#cardGrid .tags-container span:hover {
+  filter: hue-rotate(90deg); /* Hue rotate on hover */
+}
+
+/* Card Load Animation: Slide up + Fade in */
+/* This requires adding a class to cards when they are rendered or become visible */
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-animate-in {
+  animation: slideUpFadeIn 0.5s ease-out forwards;
+  /* Apply a delay dynamically in JS for staggered effect if desired */
+}
+
+/* Ensure card headers use pixel font and accent color */
+#cardGrid h3.font-secondary {
+    font-family: var(--font-secondary);
+    color: var(--accent1);
+}
+
+/* Ensure card subtext and description use primary font and fg color */
+#cardGrid p.font-primary {
+    font-family: var(--font-primary);
+    color: var(--fg);
+}
