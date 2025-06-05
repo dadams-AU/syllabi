@@ -2,7 +2,8 @@
   {
     "courseCode": "CRJU POSC 320",
     "title": "Introduction to Public Administration",
-    "term": "2024-25 Intersession",
+    "term": "Intersession",
+    "year": "2025",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -18,7 +19,8 @@
   {
     "courseCode": "CRJU POSC 320",
     "title": "Introduction to Public Administration",
-    "term": "2023-24 Intersession",
+    "term": "Intersession",
+    "year": "2024",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -34,7 +36,8 @@
   {
     "courseCode": "CRJU POSC 320",
     "title": "Introduction to Public Administration",
-    "term": "2024 Summer",
+    "term": "Summer",
+    "year": "2024",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -50,7 +53,8 @@
   {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
-    "term": "2024-25 Spring",
+    "term": "Spring",
+    "year": "2025",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -65,7 +69,8 @@
   {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
-    "term": "2023-24 Fall",
+    "term": "Fall",
+    "year": "2024",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -80,7 +85,8 @@
   {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
-    "term": "2022-23 Spring",
+    "term": "Spring",
+    "year": "2023",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -95,7 +101,8 @@
   {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
-    "term": "2025 Summer",
+    "term": "Summer",
+    "year": "2025",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -110,7 +117,8 @@
   {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
-    "term": "2024-25 Fall",
+    "term": "Fall",
+    "year": "2025",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -123,52 +131,10 @@
     "description": "Syllabus for POSC 315 - 2024-25 Fall."
   },
   {
-    "courseCode": "POSC 428",
-    "title": "Environmental Policy",
-    "term": "Undated",
-    "fileFormats": [
-      "PDF"
-    ],
-    "path": "https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20428/Enviro%20Policy%20Syllabus-accessible.pdf",
-    "tags": [
-      "400-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 428."
-  },
-  {
-    "courseCode": "POSC 428",
-    "title": "Environmental Policy",
-    "term": "Undated",
-    "fileFormats": [
-      "PDF"
-    ],
-    "path": "https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20428/Enviro%20Policy%20Syllabus%20Check.pdf",
-    "tags": [
-      "400-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 428."
-  },
-  {
-    "courseCode": "POSC 428",
-    "title": "Environmental Policy",
-    "term": "Undated",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20428/Enviro%20Policy%20Syllabus.pdf",
-    "tags": [
-      "400-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 428."
-  },
-  {
     "courseCode": "POSC 509",
     "title": "MPA Foundations",
-    "term": "spring 24",
+    "term": "Spring",
+    "year": "2024",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -183,7 +149,8 @@
   {
     "courseCode": "POSC 509",
     "title": "MPA Foundations",
-    "term": "2022-23 Spring",
+    "term": "Spring",
+    "year": "2023",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -198,7 +165,8 @@
   {
     "courseCode": "POSC 521",
     "title": "MPA Capstone",
-    "term": "2024-25 Spring",
+    "term": "Spring",
+    "year": "2025",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -213,7 +181,8 @@
   {
     "courseCode": "POSC 521",
     "title": "MPA Capstone",
-    "term": "2023-24 Fall",
+    "term": "Fall",
+    "year": "2024",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -228,7 +197,8 @@
   {
     "courseCode": "POSC 521",
     "title": "MPA Capstone",
-    "term": "2024-25 Fall",
+    "term": "Fall",
+    "year": "2025",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -243,7 +213,8 @@
   {
     "courseCode": "POSC 588",
     "title": "Collaborative Governance",
-    "term": "spring 24",
+    "term": "Spring",
+    "year": "2024",
     "fileFormats": [
       "PDF",
       "TEX"

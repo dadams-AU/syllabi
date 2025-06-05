@@ -13,6 +13,7 @@
     let currentlyDisplayedSyllabi = [];
     let activeFilters = { // Object to store active filters
         term: [],
+        year: [],
         level: [], // Course level (e.g., 100, 200)
         tags: []
     };
@@ -111,7 +112,8 @@
             return;
         }
 
-        const terms = [...new Set(syllabi.map(s => s.term).filter(t => t))].sort();
+        const terms = [...new Set(syllabi.map(s => s.term).filter(t => t && t !== "Undated"))].sort();
+        const years = [...new Set(syllabi.map(s => s.year).filter(y => y))].sort((a, b) => b - a);
         const levels = [...new Set(syllabi.map(s => {
             const code = s.courseCode || "";
             const match = code.match(/^\D*(\d)/); // Match first digit after optional non-digits
@@ -135,6 +137,12 @@
         };
 
         termFiltersContainer.innerHTML = "";
+        // Insert year filters after clearing term container
+        const yearFiltersContainer = document.getElementById("year-filters-container");
+        if (yearFiltersContainer) {
+            yearFiltersContainer.innerHTML = "";
+            years.forEach(year => yearFiltersContainer.appendChild(createCheckbox("year", year, year)));
+        }
         terms.forEach(term => termFiltersContainer.appendChild(createCheckbox("term", term, term)));
 
         levelFiltersContainer.innerHTML = "";
@@ -210,6 +218,10 @@
         // Term filter
         if (activeFilters.term.length > 0) {
             filtered = filtered.filter(syllabus => activeFilters.term.includes(syllabus.term));
+        }
+        // Year filter
+        if (activeFilters.year.length > 0) {
+            filtered = filtered.filter(syllabus => activeFilters.year.includes(syllabus.year));
         }
         // Level filter (extract starting digit for level)
         if (activeFilters.level.length > 0) {
@@ -330,5 +342,7 @@
         renderSyllabusCards,
         applyAllFilters
     };
+
+    
 
 })();
