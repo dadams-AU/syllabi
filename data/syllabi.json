@@ -1,17 +1,77 @@
 [
   {
+    "courseCode": "POSC 521",
+    "title": "MPA Capstone",
+    "term": "2023-24 Fall",
+    "fileFormats": ["TEX"],
+    "path": "POSC 521 MPA Capstone/2023-24 Fall/new_521_syllabus.tex",
+    "tags": [
+      "500-level",
+      "POSC",
+      "fall",
+      "public admin",
+      "graduate"
+    ],
+    "description": "Syllabus for POSC 521 - 2023-24 Fall."
+  },
+  {
+    "courseCode": "POSC 521",
+    "title": "MPA Capstone",
+    "term": "Hybrid",
+    "fileFormats": ["TEX"],
+    "path": "POSC 521 MPA Capstone/POSC 521 as Hybrid/posc521_hybrid_syllabus.tex",
+    "tags": [
+      "500-level",
+      "POSC",
+      "hybrid",
+      "public admin",
+      "graduate"
+    ],
+    "description": "Hybrid syllabus for POSC 521."
+  },
+  {
+    "courseCode": "POSC 521",
+    "title": "MPA Capstone",
+    "term": "2024-25 Fall",
+    "fileFormats": ["TEX"],
+    "path": "POSC 521 MPA Capstone/2024-25 Fall/posc521_2024_fall.tex",
+    "tags": [
+      "500-level",
+      "POSC",
+      "fall",
+      "public admin",
+      "graduate"
+    ],
+    "description": "Syllabus for POSC 521 - 2024-25 Fall."
+  },
+  {
+    "courseCode": "POSC 521",
+    "title": "MPA Capstone",
+    "term": "2024-25 Spring",
+    "fileFormats": ["TEX"],
+    "path": "POSC 521 MPA Capstone/2024-25 Spring/POSC521_2025_Spring.tex",
+    "tags": [
+      "500-level",
+      "POSC",
+      "spring",
+      "public admin",
+      "graduate"
+    ],
+    "description": "Syllabus for POSC 521 - 2024-25 Spring."
+  },
+  {
     "courseCode": "CRJU POSC 320",
     "title": "Introduction to Public Administration",
     "term": "2024-25 Intersession",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "CRJU_POSC 320 Intro PA/2024-25 Intersession/CRJU-POSC_320.pdf",
+    "fileFormats": ["TEX"],
+    "path": "CRJU_POSC 320 Intro PA/2024-25 Intersession/CRJU-POSC_320.tex",
     "tags": [
       "300-level",
       "CRJU",
-      "POSC"
+      "POSC",
+      "intersession",
+      "public admin",
+      "undergraduate"
     ],
     "description": "Syllabus for CRJU POSC 320 - 2024-25 Intersession."
   },
@@ -19,15 +79,15 @@
     "courseCode": "CRJU POSC 320",
     "title": "Introduction to Public Administration",
     "term": "2023-24 Intersession",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "CRJU_POSC 320 Intro PA/2023-24 Intersession/CRJU-POSC_320.pdf",
+    "fileFormats": ["TEX"],
+    "path": "CRJU_POSC 320 Intro PA/2023-24 Intersession/CRJU-POSC_320.tex",
     "tags": [
       "300-level",
       "CRJU",
-      "POSC"
+      "POSC",
+      "intersession",
+      "public admin",
+      "undergraduate"
     ],
     "description": "Syllabus for CRJU POSC 320 - 2023-24 Intersession."
   },
@@ -35,45 +95,105 @@
     "courseCode": "CRJU POSC 320",
     "title": "Introduction to Public Administration",
     "term": "2024 Summer",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "CRJU_POSC 320 Intro PA/2024 Summer/CRJU-POSC_320.pdf",
+    "fileFormats": ["TEX"],
+    "path": "CRJU_POSC 320 Intro PA/2024 Summer/CRJU-POSC_320.tex",
     "tags": [
       "300-level",
       "CRJU",
-      "POSC"
+      "POSC",
+      "summer",
+      "public admin",
+      "undergraduate"
     ],
     "description": "Syllabus for CRJU POSC 320 - 2024 Summer."
   },
   {
-    "courseCode": "POSC 315",
-    "title": "Introduction to Public Policy",
-    "term": "2024-25 Spring",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 315 Intro Policy/2024-25 Spring/posc315_spring_2025.pdf",
+    "courseCode": "POSC 428",
+    "title": "Environmental Policy",
+    "term": "",
+    "fileFormats": ["TEX"],
+    "path": "POSC 428/Enviro Policy Syllabus.tex",
     "tags": [
-      "300-level",
-      "POSC"
+      "400-level",
+      "POSC",
+      "policy",
+      "environment",
+      "undergraduate"
     ],
-    "description": "Syllabus for POSC 315 - 2024-25 Spring."
+    "description": "Syllabus for POSC 428 - Environmental Policy."
+  },
+  {
+    "courseCode": "POSC 588",
+    "title": "Collaborative Governance",
+    "term": "Hybrid Proposal",
+    "fileFormats": ["TEX"],
+    "path": "POSC 588 Collab Gov/hybrid proposal/POSC_588_Syllabus_Proposal.tex",
+    "tags": [
+      "500-level",
+      "POSC",
+      "hybrid",
+      "collaborative governance",
+      "graduate"
+    ],
+    "description": "Hybrid proposal syllabus for POSC 588."
+  },
+  {
+    "courseCode": "POSC 588",
+    "title": "Collaborative Governance",
+    "term": "2023-24 Spring",
+    "fileFormats": ["TEX"],
+    "path": "POSC 588 Collab Gov/spring_24/POSC_588_Spring24.tex",
+    "tags": [
+      "500-level",
+      "POSC",
+      "spring",
+      "collaborative governance",
+      "graduate"
+    ],
+    "description": "Syllabus for POSC 588 - 2023-24 Spring."
+  },
+  {
+    "courseCode": "POSC 509",
+    "title": "MPA Foundations",
+    "term": "2022-23 Spring",
+    "fileFormats": ["TEX"],
+    "path": "POSC 509 MPA Foundations/2022-23 Spring/syllabus_posc509_sp23.tex",
+    "tags": [
+      "500-level",
+      "POSC",
+      "spring",
+      "public admin",
+      "graduate"
+    ],
+    "description": "Syllabus for POSC 509 - 2022-23 Spring."
+  },
+  {
+    "courseCode": "POSC 509",
+    "title": "MPA Foundations",
+    "term": "2023-24 Spring",
+    "fileFormats": ["TEX"],
+    "path": "POSC 509 MPA Foundations/spring 24/POSC_509_Spring24.tex",
+    "tags": [
+      "500-level",
+      "POSC",
+      "spring",
+      "public admin",
+      "graduate"
+    ],
+    "description": "Syllabus for POSC 509 - 2023-24 Spring."
   },
   {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
     "term": "2023-24 Fall",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 315 Intro Policy/2023-24 Fall/posc_315_2401.pdf",
+    "fileFormats": ["TEX"],
+    "path": "POSC 315 Intro Policy/2023-24 Fall/posc_315_2401.tex",
     "tags": [
       "300-level",
-      "POSC"
+      "POSC",
+      "fall",
+      "policy",
+      "undergraduate"
     ],
     "description": "Syllabus for POSC 315 - 2023-24 Fall."
   },
@@ -81,178 +201,86 @@
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
     "term": "2022-23 Spring",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 315 Intro Policy/2022-23 Spring/posc315_sp23_syllabus.pdf",
+    "fileFormats": ["TEX"],
+    "path": "POSC 315 Intro Policy/2022-23 Spring/posc315_sp23_syllabus.tex",
     "tags": [
       "300-level",
-      "POSC"
+      "POSC",
+      "spring",
+      "policy",
+      "undergraduate"
     ],
     "description": "Syllabus for POSC 315 - 2022-23 Spring."
   },
   {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
-    "term": "2025 Summer",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.pdf",
+    "term": "2024-25 Fall",
+    "fileFormats": ["TEX"],
+    "path": "POSC 315 Intro Policy/2024-25 Fall/posc315_fall_2024.tex",
     "tags": [
       "300-level",
-      "POSC"
+      "POSC",
+      "fall",
+      "policy",
+      "undergraduate"
+    ],
+    "description": "Syllabus for POSC 315 - 2024-25 Fall."
+  },
+  {
+    "courseCode": "POSC 315",
+    "title": "Introduction to Public Policy",
+    "term": "2025 Summer",
+    "fileFormats": ["TEX"],
+    "path": "POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.tex",
+    "tags": [
+      "300-level",
+      "POSC",
+      "summer",
+      "policy",
+      "undergraduate"
     ],
     "description": "Syllabus for POSC 315 - 2025 Summer."
   },
   {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
-    "term": "2024-25 Fall",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 315 Intro Policy/2024-25 Fall/posc315_fall_2024.pdf",
+    "term": "2024-25 Spring",
+    "fileFormats": ["TEX"],
+    "path": "POSC 315 Intro Policy/2024-25 Spring/posc315_spring_2025.tex",
     "tags": [
       "300-level",
-      "POSC"
+      "POSC",
+      "spring",
+      "policy",
+      "undergraduate"
     ],
-    "description": "Syllabus for POSC 315 - 2024-25 Fall."
+    "description": "Syllabus for POSC 315 - 2024-25 Spring."
   },
   {
-    "courseCode": "POSC 428",
-    "title": "Environmental Policy",
-    "term": "Undated",
-    "fileFormats": [
-      "PDF"
-    ],
-    "path": "POSC 428/Enviro Policy Syllabus-accessible.pdf",
+    "courseCode": "POSC 315",
+    "title": "Introduction to Public Policy",
+    "term": "Asynchronous Proposal",
+    "fileFormats": ["TEX"],
+    "path": "POSC 315 Intro Policy/asynch proposal/posc315_asynch_proposal.tex",
     "tags": [
-      "400-level",
-      "POSC"
+      "300-level",
+      "POSC",
+      "asynchronous",
+      "policy",
+      "undergraduate"
     ],
-    "description": "Syllabus for POSC 428."
+    "description": "Asynchronous proposal syllabus for POSC 315."
   },
   {
-    "courseCode": "POSC 428",
-    "title": "Environmental Policy",
-    "term": "Undated",
-    "fileFormats": [
-      "PDF"
-    ],
-    "path": "POSC 428/Enviro Policy Syllabus Check.pdf",
+    "courseCode": "TEMPLATE",
+    "title": "Syllabus Template",
+    "term": "",
+    "fileFormats": ["TEX"],
+    "path": "template/syllabus.tex",
     "tags": [
-      "400-level",
-      "POSC"
+      "template"
     ],
-    "description": "Syllabus for POSC 428."
-  },
-  {
-    "courseCode": "POSC 428",
-    "title": "Environmental Policy",
-    "term": "Undated",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 428/Enviro Policy Syllabus.pdf",
-    "tags": [
-      "400-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 428."
-  },
-  {
-    "courseCode": "POSC 509",
-    "title": "MPA Foundations",
-    "term": "spring 24",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 509 MPA Foundations/spring 24/POSC_509_Spring24.pdf",
-    "tags": [
-      "500-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 509 - spring 24."
-  },
-  {
-    "courseCode": "POSC 509",
-    "title": "MPA Foundations",
-    "term": "2022-23 Spring",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 509 MPA Foundations/2022-23 Spring/syllabus_posc509_sp23.pdf",
-    "tags": [
-      "500-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 509 - 2022-23 Spring."
-  },
-  {
-    "courseCode": "POSC 521",
-    "title": "MPA Capstone",
-    "term": "2024-25 Spring",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 521 MPA Capstone/2024-25 Spring/POSC521_2025_Spring.pdf",
-    "tags": [
-      "500-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 521 - 2024-25 Spring."
-  },
-  {
-    "courseCode": "POSC 521",
-    "title": "MPA Capstone",
-    "term": "2023-24 Fall",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 521 MPA Capstone/2023-24 Fall/new_521_syllabus.pdf",
-    "tags": [
-      "500-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 521 - 2023-24 Fall."
-  },
-  {
-    "courseCode": "POSC 521",
-    "title": "MPA Capstone",
-    "term": "2024-25 Fall",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 521 MPA Capstone/2024-25 Fall/posc521_2024_fall.pdf",
-    "tags": [
-      "500-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 521 - 2024-25 Fall."
-  },
-  {
-    "courseCode": "POSC 588",
-    "title": "Collaborative Governance",
-    "term": "spring 24",
-    "fileFormats": [
-      "PDF",
-      "TEX"
-    ],
-    "path": "POSC 588 Collab Gov/spring_24/POSC_588_Spring24.pdf",
-    "tags": [
-      "500-level",
-      "POSC"
-    ],
-    "description": "Syllabus for POSC 588 - spring 24."
+    "description": "General syllabus template."
   }
 ]
