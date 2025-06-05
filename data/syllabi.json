@@ -1,92 +1,258 @@
 [
   {
+    "courseCode": "CRJU POSC 320",
+    "title": "Introduction to Public Administration",
+    "term": "2024-25 Intersession",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "CRJU_POSC 320 Intro PA/2024-25 Intersession/CRJU-POSC_320.pdf",
+    "tags": [
+      "300-level",
+      "CRJU",
+      "POSC"
+    ],
+    "description": "Syllabus for CRJU POSC 320 - 2024-25 Intersession."
+  },
+  {
+    "courseCode": "CRJU POSC 320",
+    "title": "Introduction to Public Administration",
+    "term": "2023-24 Intersession",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "CRJU_POSC 320 Intro PA/2023-24 Intersession/CRJU-POSC_320.pdf",
+    "tags": [
+      "300-level",
+      "CRJU",
+      "POSC"
+    ],
+    "description": "Syllabus for CRJU POSC 320 - 2023-24 Intersession."
+  },
+  {
+    "courseCode": "CRJU POSC 320",
+    "title": "Introduction to Public Administration",
+    "term": "2024 Summer",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "CRJU_POSC 320 Intro PA/2024 Summer/CRJU-POSC_320.pdf",
+    "tags": [
+      "300-level",
+      "CRJU",
+      "POSC"
+    ],
+    "description": "Syllabus for CRJU POSC 320 - 2024 Summer."
+  },
+  {
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
-    "term": "Summer 2025",
-    "instructor": "David Adams",
-    "fileFormats": ["PDF"],
-    "tags": ["Public Policy", "Undergraduate"],
-    "description": "Overview of policy cycles and analysis techniques."
+    "term": "2024-25 Spring",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 315 Intro Policy/2024-25 Spring/posc315_spring_2025.pdf",
+    "tags": [
+      "300-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 315 - 2024-25 Spring."
   },
   {
-    "courseCode": "CRJU 101",
-    "title": "Intro to Criminal Justice",
-    "term": "Fall 2024",
-    "instructor": "Sarah Miller",
-    "fileFormats": ["PDF", "DOCX"],
-    "tags": ["Criminal Justice", "Undergraduate", "Core"],
-    "description": "A foundational look at the criminal justice system."
+    "courseCode": "POSC 315",
+    "title": "Introduction to Public Policy",
+    "term": "2023-24 Fall",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 315 Intro Policy/2023-24 Fall/posc_315_2401.pdf",
+    "tags": [
+      "300-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 315 - 2023-24 Fall."
   },
   {
-    "courseCode": "ART 250",
-    "title": "Pixel Art Fundamentals",
-    "term": "Spring 2025",
-    "instructor": "Mike Chen",
-    "fileFormats": ["PDF"],
-    "tags": ["Art", "Digital Media", "Retro"],
-    "description": "Learn the basics of creating 8-bit and 16-bit art."
+    "courseCode": "POSC 315",
+    "title": "Introduction to Public Policy",
+    "term": "2022-23 Spring",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 315 Intro Policy/2022-23 Spring/posc315_sp23_syllabus.pdf",
+    "tags": [
+      "300-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 315 - 2022-23 Spring."
   },
   {
-    "courseCode": "HIST 305",
-    "title": "History of Video Games",
-    "term": "Fall 2024",
-    "instructor": "Dr. Retro",
-    "fileFormats": ["PDF"],
-    "tags": ["History", "Gaming", "Elective"],
-    "description": "From Pong to modern consoles, a historical journey."
+    "courseCode": "POSC 315",
+    "title": "Introduction to Public Policy",
+    "term": "2025 Summer",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 315 Intro Policy/2025 Summer/posc315_summer_2025.pdf",
+    "tags": [
+      "300-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 315 - 2025 Summer."
   },
   {
-    "courseCode": "ENG 100",
-    "title": "Basic Composition",
-    "term": "Summer 2025",
-    "instructor": "Jane Doe",
-    "fileFormats": ["DOCX"],
-    "tags": ["English", "Core", "Undergraduate"],
-    "description": "Developing fundamental writing skills."
+    "courseCode": "POSC 315",
+    "title": "Introduction to Public Policy",
+    "term": "2024-25 Fall",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 315 Intro Policy/2024-25 Fall/posc315_fall_2024.pdf",
+    "tags": [
+      "300-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 315 - 2024-25 Fall."
   },
   {
-    "courseCode": "CS 501",
-    "title": "Advanced Web Development",
-    "term": "Spring 2025",
-    "instructor": "Alex Nguyen",
-    "fileFormats": ["PDF"],
-    "tags": ["Computer Science", "Graduate", "Web"],
-    "description": "Deep dive into modern web technologies and frameworks."
+    "courseCode": "POSC 428",
+    "title": "Environmental Policy",
+    "term": "Undated",
+    "fileFormats": [
+      "PDF"
+    ],
+    "path": "POSC 428/Enviro Policy Syllabus-accessible.pdf",
+    "tags": [
+      "400-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 428."
   },
   {
-    "courseCode": "MUS 110",
-    "title": "Chiptune and Synthwave Creation",
-    "term": "Fall 2024",
-    "instructor": "Synth Lord",
-    "fileFormats": ["PDF"],
-    "tags": ["Music", "Retro", "Elective"],
-    "description": "Composing music with a retro electronic feel."
+    "courseCode": "POSC 428",
+    "title": "Environmental Policy",
+    "term": "Undated",
+    "fileFormats": [
+      "PDF"
+    ],
+    "path": "POSC 428/Enviro Policy Syllabus Check.pdf",
+    "tags": [
+      "400-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 428."
   },
   {
-    "courseCode": "PHIL 420",
-    "title": "Ethics in Technology",
-    "term": "Summer 2025",
-    "instructor": "Eleanor Vance",
-    "fileFormats": ["PDF", "DOCX"],
-    "tags": ["Philosophy", "Technology", "Graduate"],
-    "description": "Examining the ethical implications of emerging technologies."
+    "courseCode": "POSC 428",
+    "title": "Environmental Policy",
+    "term": "Undated",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 428/Enviro Policy Syllabus.pdf",
+    "tags": [
+      "400-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 428."
   },
   {
-    "courseCode": "GD 220",
-    "title": "Retro UI/UX Design",
-    "term": "Spring 2025",
-    "instructor": "Max Power",
-    "fileFormats": ["PDF"],
-    "tags": ["Graphic Design", "UX", "Retro", "Undergraduate"],
-    "description": "Principles of user interface design with a nostalgic twist."
+    "courseCode": "POSC 509",
+    "title": "MPA Foundations",
+    "term": "spring 24",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 509 MPA Foundations/spring 24/POSC_509_Spring24.pdf",
+    "tags": [
+      "500-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 509 - spring 24."
   },
   {
-    "courseCode": "MATH 099",
-    "title": "Arcade Game Mathematics",
-    "term": "Fall 2024",
-    "instructor": "Prof. Vector",
-    "fileFormats": ["PDF"],
-    "tags": ["Mathematics", "Gaming", "Fun"],
-    "description": "The underlying math that powers classic arcade games."
+    "courseCode": "POSC 509",
+    "title": "MPA Foundations",
+    "term": "2022-23 Spring",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 509 MPA Foundations/2022-23 Spring/syllabus_posc509_sp23.pdf",
+    "tags": [
+      "500-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 509 - 2022-23 Spring."
+  },
+  {
+    "courseCode": "POSC 521",
+    "title": "MPA Capstone",
+    "term": "2024-25 Spring",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 521 MPA Capstone/2024-25 Spring/POSC521_2025_Spring.pdf",
+    "tags": [
+      "500-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 521 - 2024-25 Spring."
+  },
+  {
+    "courseCode": "POSC 521",
+    "title": "MPA Capstone",
+    "term": "2023-24 Fall",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 521 MPA Capstone/2023-24 Fall/new_521_syllabus.pdf",
+    "tags": [
+      "500-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 521 - 2023-24 Fall."
+  },
+  {
+    "courseCode": "POSC 521",
+    "title": "MPA Capstone",
+    "term": "2024-25 Fall",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 521 MPA Capstone/2024-25 Fall/posc521_2024_fall.pdf",
+    "tags": [
+      "500-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 521 - 2024-25 Fall."
+  },
+  {
+    "courseCode": "POSC 588",
+    "title": "Collaborative Governance",
+    "term": "spring 24",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "POSC 588 Collab Gov/spring_24/POSC_588_Spring24.pdf",
+    "tags": [
+      "500-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 588 - spring 24."
   }
 ]

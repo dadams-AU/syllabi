@@ -199,7 +199,7 @@ body {
 
 
 /* Download Button Styling */
-#cardGrid button { /* General button styling within cards */
+#cardGrid .retro-button { /* General button styling within cards */
   font-family: var(--font-secondary);
   padding: 0.75rem 1rem;
   border-radius: 0.25rem; /* Slightly less rounded than card for a bit of contrast */
@@ -210,12 +210,12 @@ body {
 }
 
 /* Light Mode Button */
-:root[data-theme="light"] #cardGrid button {
+:root[data-theme="light"] #cardGrid .retro-button {
   background-color: var(--accent1);
   color: var(--bg); /* Text color (off-white for neon green) */
   border-color: var(--accent1);
 }
-:root[data-theme="light"] #cardGrid button:hover {
+:root[data-theme="light"] #cardGrid .retro-button:hover {
   background-color: var(--accent2); /* Example: flip to other accent on hover */
   border-color: var(--accent2);
   color: var(--bg);
@@ -223,23 +223,23 @@ body {
 }
 
 /* Dark Mode Button (Inverted Outline) */
-:root[data-theme="dark"] #cardGrid button {
+:root[data-theme="dark"] #cardGrid .retro-button {
   background-color: transparent;
   color: var(--accent1);
   border: 2px solid var(--accent1);
 }
-:root[data-theme="dark"] #cardGrid button:hover {
+:root[data-theme="dark"] #cardGrid .retro-button:hover {
   background-color: var(--accent1);
   color: var(--bg); /* Text color (jet-black for teal bg) */
   transform: scale(1.05);
 }
 
 /* Button Press Animation */
-#cardGrid button:active {
+#cardGrid .retro-button:active {
   transform: scale(0.95);
   /* For dark mode, flip outline thickness (already 2px, can make it thicker or change color) */
 }
-:root[data-theme="dark"] #cardGrid button:active {
+:root[data-theme="dark"] #cardGrid .retro-button:active {
    border-width: 3px; /* Example: thicker border on press */
 }
 

@@ -37,7 +37,7 @@
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-accent1 focus:text-base">Skip to main content</a>
 
     <header class="container mx-auto px-4 py-6 flex justify-between items-center">
-        <h1 class="text-3xl font-secondary" style="color: var(--accent1);">Syllabus Arcade</h1>
+        <h1 class="text-3xl font-secondary" style="color: var(--accent1);">Syllabus Repository</h1><p class="text-lg font-primary" style="color: var(--fg); margin-left: 1rem; align-self: center;">David P. Adams - Cal State Fullerton</p>
         <button id="themeToggle" aria-label="Toggle theme" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-accent1">
             <svg id="icon-sun" width="24" height="24" viewBox="0 0 8 8" class="retro-icon hidden">
                 <!-- 8x8 pixel sun -->
@@ -91,20 +91,19 @@
                     <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="tags" value="Retro"> <span>Retro</span></label>
                     <label class="flex items-center space-x-2"><input type="checkbox" class="form-checkbox" data-filter-group="tags" value="Graduate"> <span>Graduate</span></label>
                 </div>
-                 <button id="mobile-filter-toggle" class="md:hidden mt-4 p-2 w-full rounded" style="background-color: var(--accent1); color: var(--bg);">Toggle Filters</button>
+                 <button id="mobile-filter-toggle" class="md:hidden mt-4 p-2 w-full rounded" style="background-color: var(--accent1); color: var(--bg);" aria-controls="filter-panel" aria-expanded="false">Toggle Filters</button>
             </nav>
         </aside>
 
         <main id="main-content" class="w-full md:w-3/4 lg:w-4/5">
             <div class="mb-6">
-                <input type="search" id="search-bar" placeholder="Search by course code, title, or instructor..." class="w-full p-3 rounded-lg focus:ring-2 focus:ring-accent1 focus:outline-none" style="background-color: var(--bg-alt); border: 1px solid var(--accent1);">
+                <input type="search" id="search-bar" aria-label="Search syllabi by course code, title, or keyword" placeholder="Search by course code, title, or keyword..." class="w-full p-3 rounded-lg focus:ring-2 focus:ring-accent1 focus:outline-none" style="background-color: var(--bg-alt); border: 1px solid var(--accent1);">
             </div>
             <div class="mb-6 flex justify-end">
-                <select id="sort-dropdown" class="p-3 rounded-lg focus:ring-2 focus:ring-accent1 focus:outline-none" style="background-color: var(--bg-alt); border: 1px solid var(--accent1);">
+                <select id="sort-dropdown" aria-label="Sort syllabi" class="p-3 rounded-lg focus:ring-2 focus:ring-accent1 focus:outline-none" style="background-color: var(--bg-alt); border: 1px solid var(--accent1);">
                     <option value="newest">Sort by: Newest First</option>
                     <option value="oldest">Sort by: Oldest First</option>
                     <option value="code_asc">Sort by: Course Code A-Z</option>
-                    <option value="instructor_asc">Sort by: Instructor A-Z</option>
                 </select>
             </div>
             <div id="cardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -115,8 +114,9 @@
     </div>
 
     <footer class="container mx-auto px-4 py-8 text-center mt-12">
-        <p class="font-secondary" style="color: var(--accent2);">Your Syllabus Arcade—Load Up & Learn.</p>
+        <p class="font-secondary" style="color: var(--accent2);">Browse Course Syllabi</p>
         <p class="text-sm mt-2">&copy; <span id="copyright-year"></span> RetroModern UI. All Rights Reserved.</p>
+<p class='text-sm mt-4'><a href='template.html' class='hover:text-accent1' style='color: var(--fg); text-decoration: underline;'>View TeX Template</a></p>
     </footer>
 
     <script>

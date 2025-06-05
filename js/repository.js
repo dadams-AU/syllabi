@@ -3,6 +3,7 @@
     const syllabiDataPath = 'data/syllabi.json';
     const searchBar = document.getElementById('search-bar');
     const filterPanel = document.getElementById('filter-panel'); // Added filterPanel
+    const sortDropdown = document.getElementById("sort-dropdown"); // Added for sorting
     const mobileFilterToggleButton = document.getElementById('mobile-filter-toggle'); // Added mobile toggle button
 
     let allSyllabi = [];
@@ -34,7 +35,7 @@
         const subtext = document.createElement('p');
         subtext.className = 'text-sm font-primary mb-1';
         subtext.style.color = 'var(--fg)';
-        subtext.textContent = `Term: ${syllabus.term} | Instructor: ${syllabus.instructor}`;
+        subtext.textContent = `Term: ${syllabus.term}`;
         card.appendChild(subtext);
 
         const description = document.createElement('p');
@@ -57,16 +58,49 @@
             card.appendChild(tagsContainer);
         }
 
-        const downloadButton = document.createElement('button');
-        downloadButton.className = 'w-full font-secondary py-2 px-4 rounded focus:outline-none';
-        downloadButton.textContent = syllabus.fileFormats && syllabus.fileFormats.length > 1 ? 'DOWNLOAD OPTIONS' : 'DOWNLOAD';
-        downloadButton.setAttribute('data-course-code', syllabus.courseCode);
-        card.appendChild(downloadButton);
+        const downloadLink = document.createElement("a");
+        downloadLink.className = "retro-button block w-full text-center font-secondary py-2 px-4 rounded focus:outline-none"; // Added retro-button class
+        downloadLink.style.textDecoration = "none";
+        downloadLink.href = syllabus.path; // Path from syllabi.json
+        let buttonText = "DOWNLOAD PDF";
+        // syllabus.fileFormats might contain ["PDF", "TEX"]
+        // For now, syllabus.path directly points to the PDF version from the JSON generation step.
+        // If TEX is primary or choice is needed, JSON structure or this logic needs adjustment.
+        downloadLink.textContent = buttonText;
+        downloadLink.setAttribute("download", syllabus.path.split("/").pop()); // Set download attribute with filename
+        card.appendChild(downloadLink);
 
         return card;
     }
 
     // Function to render syllabus cards to the grid
+
+    // --- Helper function for sorting by term ---
+    function termToComparable(termStr) {
+        if (!termStr || typeof termStr !== "string") return 0;
+        const parts = termStr.toLowerCase().split(" ");
+        let year, seasonOrder;
+
+        // Handle "YYYY-YY Season" like "2023-24 Intersession" -> treat as start year (2023)
+        const yearRangeMatch = termStr.match(/(\d{4})-\d{2}/);
+        if (yearRangeMatch) {
+            year = parseInt(yearRangeMatch[1]);
+        } else {
+            // Find year part (e.g., 2024, 2025)
+            const yearPart = parts.find(p => /^\d{4}$/.test(p));
+            year = yearPart ? parseInt(yearPart) : 0;
+        }
+
+        // Determine season order (higher number = later in year)
+        if (termStr.toLowerCase().includes("spring")) seasonOrder = 1;
+        else if (termStr.toLowerCase().includes("summer")) seasonOrder = 2;
+        else if (termStr.toLowerCase().includes("fall")) seasonOrder = 3;
+        else if (termStr.toLowerCase().includes("intersession") || termStr.toLowerCase().includes("winter")) seasonOrder = 0; // Winter/Intersession before Spring
+        else seasonOrder = 0; // Default for unknown terms
+
+        return year * 10 + seasonOrder; // e.g., Fall 2024 -> 20243, Spring 2025 -> 20251
+    }
+
     function renderSyllabusCards(syllabiToRender) {
         if (!cardGrid) {
             console.error('Error: cardGrid element not found.');
@@ -87,6 +121,32 @@
     }
 
     // --- Combined Filtering Logic (Search and Checkbox Filters) ---
+
+    // --- Sorting Functionality ---
+    function sortSyllabi(syllabiArray, sortByValue) {
+        const sortedArray = [...syllabiArray]; // Work on a copy
+
+        switch (sortByValue) {
+            case "newest":
+                sortedArray.sort((a, b) => termToComparable(b.term) - termToComparable(a.term));
+                break;
+            case "oldest":
+                sortedArray.sort((a, b) => termToComparable(a.term) - termToComparable(b.term));
+                break;
+            case "code_asc":
+                sortedArray.sort((a, b) => a.courseCode.localeCompare(b.courseCode));
+                break;
+            // Add Z-A for course code if needed, requires new option in HTML
+            // case "code_desc":
+            //    sortedArray.sort((a, b) => b.courseCode.localeCompare(a.courseCode));
+            //    break;
+            default:
+                // Default sort or no sort if value is unknown
+                break;
+        }
+        return sortedArray;
+    }
+
     function applyAllFilters() {
         let filtered = [...allSyllabi];
 
@@ -97,7 +157,6 @@
                 return (
                     syllabus.courseCode.toLowerCase().includes(lowerCaseSearchTerm) ||
                     syllabus.title.toLowerCase().includes(lowerCaseSearchTerm) ||
-                    syllabus.instructor.toLowerCase().includes(lowerCaseSearchTerm) ||
                     (syllabus.tags && syllabus.tags.some(tag => tag.toLowerCase().includes(lowerCaseSearchTerm)))
                 );
             });
@@ -127,6 +186,9 @@
         }
 
         currentlyDisplayedSyllabi = filtered;
+        if (sortDropdown && sortDropdown.value) {
+            currentlyDisplayedSyllabi = sortSyllabi(currentlyDisplayedSyllabi, sortDropdown.value);
+        }
         renderSyllabusCards(currentlyDisplayedSyllabi);
     }
 
@@ -160,33 +222,18 @@
         });
     }
 
-    // Mobile Filter Panel Toggle
-    if (mobileFilterToggleButton && filterPanel) {
-        // Hide panel by default on mobile if it's not already styled by Tailwind for that
-        // filterPanel.classList.add('hidden'); // Or use Tailwind's `md:block` etc.
 
-        mobileFilterToggleButton.addEventListener('click', () => {
-            // Assuming the filter panel's main content div is the first child or has a specific ID/class
-            const filterContent = filterPanel.querySelector('div'); // Adjust if structure is different
-            if (filterContent) {
-                 filterContent.classList.toggle('hidden'); // Toggle visibility of content
-                 // Or toggle a class on filterPanel itself if it controls padding/border
-            }
-            // Change button text
-            if (filterContent && filterContent.classList.contains('hidden')) {
-                mobileFilterToggleButton.textContent = 'Show Filters';
-            } else {
-                mobileFilterToggleButton.textContent = 'Hide Filters';
+    // Event listener for sort dropdown
+    if (sortDropdown) {
+        sortDropdown.addEventListener("change", () => {
+            // Re-sort and render the currently filtered list
+            if (currentlyDisplayedSyllabi.length > 0) {
+                const sorted = sortSyllabi(currentlyDisplayedSyllabi, sortDropdown.value);
+                renderSyllabusCards(sorted);
+                 // Update currentlyDisplayedSyllabi to reflect the new sort order for subsequent operations if any
+                 currentlyDisplayedSyllabi = sorted;
             }
         });
-        // Initial state for mobile: hide filters if screen is small
-        // This is better handled by Tailwind's responsive classes (e.g. hidden md:block for filterContent)
-        // For JS solution:
-        // if (window.innerWidth < 768) { // md breakpoint
-        //    const filterContent = filterPanel.querySelector('div');
-        //    if (filterContent) filterContent.classList.add('hidden');
-        //    mobileFilterToggleButton.textContent = 'Show Filters';
-        // }
     }
 
 
@@ -202,6 +249,7 @@
             // For now, filters are static in HTML.
 
             currentlyDisplayedSyllabi = [...allSyllabi];
+            // applyAllFilters will now handle the initial sort based on sortDropdown.value
             applyAllFilters(); // Apply any default or persisted filters on load
             console.log('Syllabi data loaded and initial filters applied.');
         } catch (error) {
