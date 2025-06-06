@@ -1,132 +1,139 @@
-\documentclass[12pt, letterpaper]{article}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[margin=1in]{geometry}
-\usepackage[sfdefault]{roboto}
-\usepackage{xcolor}
-\usepackage{url}
-\usepackage[utf8]{inputenc}
-\usepackage{tabularx}
-\usepackage{booktabs}
-\usepackage[longnamesfirst]{natbib}
-\bibpunct{(}{)}{;}{a}{}{,}
-\frenchspacing
-\usepackage{multicol}
-\usepackage{eso-pic}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{setspace}
-\usepackage{paralist}
-\usepackage{quoting}
-\usepackage{comment}
-\usepackage{enumitem}
-\usepackage{fancyhdr}
-\usepackage{graphicx}
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt}
-\fancyhead{}
-\fancyfoot{}
-\fancyfoot[C]{\thepage}
+% Accessible and Customizable LaTeX Syllabus Template
+% CSU Fullerton | Public Administration | David P. Adams
 
-\usepackage{float}
-\usepackage{bookmark}
-\renewcommand{\thesection}{\arabic{section}.}
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
-\usepackage{etoolbox}
-\patchcmd{\thebibliography}{\section*{\refname}}{\section{\refname}}{}{}
-\usepackage{hyperref}
+\documentclass[11pt]{article}
+
+% ------------ Packages for Accessibility & Structure ------------
+\usepackage[utf8]{inputenc} % Encoding
+\usepackage[T1]{fontenc}    % Better font rendering
+\usepackage[main=english]{babel} % Language tagging
+\usepackage{geometry}       % Margin control
+\geometry{margin=1in}
+
+\usepackage[tagged]{accessibility} % Tagged PDF for screen readers
+\usepackage{hyperref}       % PDF metadata and clickable links
+\usepackage{graphicx}       % Image inclusion with alt text
+\usepackage{enumitem}       % Better control over lists
+\usepackage{booktabs}       % Professional tables
+\usepackage{xcolor}         % Accessible color options
+\usepackage{titlesec}       % Custom section formatting
+\usepackage{parskip}        % Space between paragraphs
+
+% ------------ Metadata for PDF Output ------------
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=blue,
+  pdftitle={POSC 315: Introduction to Public Policy Syllabus},
+  pdfauthor={David P. Adams},
+  pdfsubject={CSU Fullerton Public Administration},
+  pdfkeywords={syllabus, public policy, CSU Fullerton, accessibility},
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
 }
 
+% ------------ Section Style (Accessible & Editable) ------------
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
 
+% ------------ Custom Command for Syllabus Fields ------------
+\newcommand{\syllabusField}[2]{\textbf{#1:} #2\par\medskip}
 
 \begin{document}
-\title{\textbf{Syllabus Template}}
 
-\author{Public Administration 590 -- Fall 2023}
-\date{Asynchronous Online Course}
+\begin{center}
+  {\LARGE\textbf{POSC 315: Introduction to Public Policy}}\\[0.5em]
+  {\large California State University, Fullerton}\\
+  {\large Division of Politics, Administration \& Justice}\\[1em]
+  \includegraphics[width=0.2\textwidth, alt={CSUF logo}]{csuf_logo.png}
+\end{center}
+\vspace{1em}
 
-    \maketitle
-
-
-\subsection*{Professor:}
-
-\subsubsection*{Contact Information:}
-
-\begin{itemize}
-	\item Office: 
-	\item Phone/SMS: 
-	\item website: 
-	\item email: 
-	\item Office Hours:
-\end{itemize}
-
-\section*{Catalog Description}
+% ------------ Course Information ------------
+\syllabusField{Instructor}{Dr. David P. Adams}
+\syllabusField{Email}{\href{mailto:dpadams@fullerton.edu}{dpadams@fullerton.edu}}
+\syllabusField{Office Hours}{MW 2–4 PM or by appointment}
+\syllabusField{Term}{Fall 2025}
+\syllabusField{Class Times}{Monday/Wednesday 5:30–6:45 PM}
+\syllabusField{Location}{Zoom (link provided via Canvas)}
 
 \section*{Course Description}
+This course introduces the policy process, including agenda-setting, formulation, implementation, and evaluation. We examine the actors, institutions, and ideas that shape public policy at all levels of government.
 
-\section*{Student Learning Objectives}
+\section*{Course Objectives}
+\begin{itemize}[leftmargin=1.5em]
+  \item Analyze the stages of the policy process
+  \item Understand the roles of institutions and stakeholders
+  \item Evaluate competing policy frameworks
+  \item Communicate policy analysis clearly and concisely
+\end{itemize}
 
-\section*{Course Materials}
+\section*{Required Texts}
+\begin{itemize}[leftmargin=1.5em]
+  \item Birkland, Thomas A. (2020). \textit{An Introduction to the Policy Process}, 5th ed. Routledge.
+  \item Supplementary readings available on Canvas
+\end{itemize}
 
-\section*{Required Text}
-
-\section*{Prequisites}
-
-\section*{General Education Information}
-
-\section*{University Student Policies}
-
-\section*{Course Student Policies}
-
-\section*{Course Structure}
-
-\section*{Course Requirements}
-
-\section*{Grades}
-
-\subsection*{Grading Scale and Grade Weights}  
-The grading scale is shown in Table~\ref{tab:grading-scale}. Grades will be given based on Table~\ref{tab:grade-weights} weights.
-
-\begin{table}[ht]
-\centering
-\caption{Grading Scale}
-\begin{tabular}{llll}
+\section*{Assessment}
+\begin{tabular}{@{}llr@{}}
 \toprule
-\textbf{Grade} & \textbf{Percentage} & \textbf{Grade} & \textbf{Percentage} \\ \hline
-        A+ & 98.0 -- 100  & C+ & 78.0 -- 79.9 \\
-        A  & 92.0 -- 97.9 & C  & 72.0 -- 77.9 \\
-        A- & 90.0 -- 91.9 & C- & 70.0 -- 71.9 \\
-        B+ & 88.0 -- 89.9 & D+ & 68.0 -- 69.9 \\
-        B  & 82.0 -- 87.9 & D  & 62.0 -- 67.9 \\
-        B- & 80.0 -- 81.9 & D- & 60.0 -- 61.9 \\
-           &              & F  & Below 59.9   \\
+Assignment & Description & Weight \\
+\midrule
+Weekly Quizzes & Based on readings & 20\% \\
+Policy Brief & 5-page memo with citations & 30\% \\
+Midterm Exam & Take-home essay & 20\% \\
+Final Project & Group presentation & 30\% \\
 \bottomrule
 \end{tabular}
-\label{tab:grading-scale}
-\end{table}
 
-\begin{table}[ht]
-    \centering
-    \caption{Grade Weights}
-    \begin{tabular}{ll}
-        \toprule
-    \textbf{Assignment} & \textbf{Percentage} \\
-    \midrule
-    Discussion Posts & 20\% \\
-    \bottomrule
-    \end{tabular}
-    \label{tab:grade-weights}
-    \end{table}
+\section*{Grading Scale}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Letter Grade & Percentage Range \\
+\midrule
+A & 93--100\% \\
+A-- & 90--92\% \\
+B+ & 87--89\% \\
+B & 83--86\% \\
+B-- & 80--82\% \\
+C+ & 77--79\% \\
+C & 73--76\% \\
+C-- & 70--72\% \\
+D+ & 67--69\% \\
+D & 63--66\% \\
+D-- & 60--62\% \\
+F & 59\% and below \\
+\bottomrule
+\end{tabular}
 
-\section*{Course Schedule}
+\section*{Accessibility Statement}
+CSUF is committed to providing equal access. If you have a disability and require accommodations, please contact the Disability Support Services office and notify me as early as possible.
 
+\section*{Academic Integrity}
+Academic honesty is expected. Plagiarism or cheating will result in disciplinary action. Familiarize yourself with CSUF’s policy on academic dishonesty.
 
+\section*{University Policies}
+Please refer to the university’s syllabus policies website at 
+\href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{\url{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}} 
+for important campus-wide policies on academic integrity, disability accommodations, emergency procedures, and student conduct. These policies are in effect for all courses at CSU Fullerton.
+
+\section*{Tentative Schedule}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{Week 1:} What is Public Policy?
+  \item \textbf{Week 2:} Theories of the Policy Process
+  \item \textbf{Week 3:} Institutions and Governance
+  \item \textbf{Week 4:} Policy Design and Tools
+  \item \textbf{...}
+  \item \textbf{Finals Week:} Group Project Presentations
+\end{itemize}
+
+\section*{Support Services}
+Free resources are available to help you succeed:
+\begin{itemize}[leftmargin=1.5em]
+  \item Writing Center
+  \item Academic Advising
+  \item Counseling and Psychological Services
+\end{itemize}
+
+\vfill
+\noindent\textit{Last updated: \today. This syllabus may be adapted as needed to support student learning and institutional requirements.}
 
 \end{document}
