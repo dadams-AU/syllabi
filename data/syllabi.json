@@ -118,7 +118,7 @@
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
     "term": "Fall",
-    "year": "2025",
+    "year": "2024",
     "fileFormats": [
       "PDF",
       "TEX"
@@ -128,7 +128,7 @@
       "300-level",
       "POSC"
     ],
-        "description": "Syllabus for CRJU POSC 320 - 2025 Summer."
+        "description": "Syllabus for POSC 315 - 2024 Fall."
   },
   {
     "courseCode": "CRJU POSC 320",
@@ -139,13 +139,13 @@
       "PDF",
       "TEX"
     ],
-    "path": "https://raw.githubusercontent.com/dadams-AU/syllabi/main/CRJU_POSC%20320%20Intro%20PA 2025%20Summer/CRJU-POSC_320.pdf",
+    "path": "https://raw.githubusercontent.com/dadams-AU/syllabi/main/CRJU_POSC%20320%20Intro%20PA/2025%20Summer/CRJU-POSC_320.pdf",
     "tags": [
       "300-level",
       "CRJU",
       "POSC"
     ],
-    "description": "Syllabus for POSC 315 - 2024 Fall."
+    "description": "Syllabus for POSC 320 - 2025 Summer."
   },
   {
     "courseCode": "POSC 509",
