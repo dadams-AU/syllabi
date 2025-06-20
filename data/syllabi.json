@@ -14,7 +14,7 @@
       "CRJU",
       "POSC"
     ],
-    "description": "Syllabus for CRJU POSC 320 - 2024-25 Intersession."
+    "description": "Syllabus for CRJU POSC 320 - 2025 Intersession."
   },
   {
     "courseCode": "CRJU POSC 320",
@@ -31,7 +31,7 @@
       "CRJU",
       "POSC"
     ],
-    "description": "Syllabus for CRJU POSC 320 - 2023-24 Intersession."
+    "description": "Syllabus for CRJU POSC 320 - 2024 Intersession."
   },
   {
     "courseCode": "CRJU POSC 320",
@@ -64,7 +64,7 @@
       "300-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 315 - 2024-25 Spring."
+    "description": "Syllabus for POSC 315 - 2025 Spring."
   },
   {
     "courseCode": "POSC 315",
@@ -80,7 +80,7 @@
       "300-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 315 - 2023-24 Fall."
+    "description": "Syllabus for POSC 315 - 2023 Fall."
   },
   {
     "courseCode": "POSC 315",
@@ -96,7 +96,7 @@
       "300-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 315 - 2022-23 Spring."
+    "description": "Syllabus for POSC 315 - 2023 Spring."
   },
   {
     "courseCode": "POSC 315",
@@ -128,7 +128,24 @@
       "300-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 315 - 2024-25 Fall."
+        "description": "Syllabus for CRJU POSC 320 - 2025 Summer."
+  },
+  {
+    "courseCode": "CRJU POSC 320",
+    "title": "Introduction to Public Administration",
+    "term": "Summer",
+    "year": "2025",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "https://raw.githubusercontent.com/dadams-AU/syllabi/main/CRJU_POSC%20320%20Intro%20PA 2025%20Summer/CRJU-POSC_320.pdf",
+    "tags": [
+      "300-level",
+      "CRJU",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 315 - 2024 Fall."
   },
   {
     "courseCode": "POSC 509",
@@ -144,7 +161,7 @@
       "500-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 509 - spring 24."
+    "description": "Syllabus for POSC 509 - 2024 Spring."
   },
   {
     "courseCode": "POSC 509",
@@ -160,7 +177,7 @@
       "500-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 509 - 2022-23 Spring."
+    "description": "Syllabus for POSC 509 - 2023 Spring."
   },
   {
     "courseCode": "POSC 521",
@@ -176,7 +193,7 @@
       "500-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 521 - 2024-25 Spring."
+    "description": "Syllabus for POSC 521 - 2025 Spring."
   },
   {
     "courseCode": "POSC 521",
@@ -192,7 +209,7 @@
       "500-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 521 - 2023-24 Fall."
+    "description": "Syllabus for POSC 521 - 2024 Fall."
   },
   {
     "courseCode": "POSC 521",
@@ -208,7 +225,7 @@
       "500-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 521 - 2024-25 Fall."
+    "description": "Syllabus for POSC 521 - 2024 Fall."
   },
   {
     "courseCode": "POSC 588",
@@ -224,6 +241,6 @@
       "500-level",
       "POSC"
     ],
-    "description": "Syllabus for POSC 588 - spring 24."
+    "description": "Syllabus for POSC 588 - 2024 Spring."
   }
 ]
