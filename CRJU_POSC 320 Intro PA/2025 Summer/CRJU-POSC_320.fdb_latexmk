@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1750460214.11385 "/home/dadams/Repos/syllabi/CRJU_POSC 320 Intro PA/2025 Summer/CRJU-POSC_320.tex" "CRJU-POSC_320.pdf" "CRJU-POSC_320" 1750460214.58574 0
-  "/home/dadams/Repos/syllabi/CRJU_POSC 320 Intro PA/2025 Summer/CRJU-POSC_320.tex" 1750460213.89651 27992 5981daed531835f64e5b494472e8fa73 ""
+["pdflatex"] 1750462114.66396 "/home/dadams/Repos/syllabi/CRJU_POSC 320 Intro PA/2025 Summer/CRJU-POSC_320.tex" "CRJU-POSC_320.pdf" "CRJU-POSC_320" 1750462115.08312 0
+  "/home/dadams/Repos/syllabi/CRJU_POSC 320 Intro PA/2025 Summer/CRJU-POSC_320.tex" 1750462114.01503 30576 6a39c387eb201244d9d3c25c0d567e5a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1742685315 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1742685315 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -89,8 +89,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1749350860 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1749350799 2008237 a5c1bf1e464f9697aed012031d1c9047 ""
-  "CRJU-POSC_320.aux" 1750460214.52886 6514 6ce691a1ba2a344288bf2a92ca01716d "pdflatex"
-  "CRJU-POSC_320.tex" 1750460213.89651 27992 5981daed531835f64e5b494472e8fa73 ""
+  "CRJU-POSC_320.aux" 1750462115.03704 6856 51780cc81747f4f56166df55f1619e3d "pdflatex"
+  "CRJU-POSC_320.tex" 1750462114.01503 30576 6a39c387eb201244d9d3c25c0d567e5a ""
   "csuf_logo.png" 1750458700.58713 13469 65e84d6a6dac7b4f7efd8b3d60de417e ""
   (generated)
   "CRJU-POSC_320.aux"

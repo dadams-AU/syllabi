@@ -17,6 +17,10 @@
 \usepackage[scaled]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
+% Prevent \paragraph{} from indenting
+\usepackage{titlesec}
+\titlespacing*{\paragraph}{0pt}{1ex plus .2ex minus .2ex}{1em}
+
 
 \begin{document}
 
@@ -59,7 +63,7 @@ Public administration plays an important role in our everyday lives. What do pub
 
 \vspace*{1em}
 
-\noindent This course is an introduction to the study and practice---the science and art---of public administration. Students will be acquainted with the theoretical and practical aspects of public administration in the American political setting. Topics include organizational theory and practice, decision making, systems analysis, performance evaluation, and administrative and managerial improvement, among others. The emphasis is placed on understanding the roles and responsibilities of public administrators in a democratic political system. 
+\paragraph{} This course is an introduction to the study and practice---the science and art---of public administration. Students will be acquainted with the theoretical and practical aspects of public administration in the American political setting. Topics include organizational theory and practice, decision making, systems analysis, performance evaluation, and administrative and managerial improvement, among others. The emphasis is placed on understanding the roles and responsibilities of public administrators in a democratic political system. 
 	
 
 \section{Student Learning Objectives}
@@ -162,8 +166,8 @@ All course announcements and communications will be sent via \emph{Canvas} and u
 
 \subsection*{Due Dates}
 All assignments are due by 11:59 p.m. on the specified due date. Save for extenuating circumstances, late assignments will not be accepted unless prior arrangements have been made with the professor. Students are responsible for submitting assignments on time. Failure to submit an assignment on time may result in a failing grade for the assignment. 
-
-\paragraph{}Students are expected to plan ahead and manage their time effectively to ensure that assignments are submitted on time. If you are having trouble meeting a deadline, please contact the professor as soon as possible to discuss the situation.
+\vspace{1ex}
+\paragraph{} Students are expected to plan ahead and manage their time effectively to ensure that assignments are submitted on time. If you are having trouble meeting a deadline, please contact the professor as soon as possible to discuss the situation.
 
 \subsection*{Alternative Procedures for Submitting Work}
 Students are expected to submit all assignments via \emph{Canvas}. If you cannot submit an assignment via \emph{Canvas}, please get in touch with the professor to discuss alternative submission procedures.
@@ -186,37 +190,42 @@ Plagiarism is a serious violation of academic integrity and will not be tolerate
 \subsection*{AI-Generated Text and Tool Usage Policy}
 
 \subsubsection*{Permissible Use of AI Tools}
-\textbf{Definition of AI Tools:} In this course, AI tools refer to any software or platform that generates or assists in generating text, ideas, research references, or content creation. This includes, but is not limited to, large language models like OpenAI’s ChatGPT-4, Anthropic’s Claude, AI-based research tools like RefWorks or EndNote, and writing assistants like Grammarly.
+\begin{description}
+    \item[]\textbf{Definition of AI Tools:} In this course, AI tools refer to any software or platform that generates or assists in generating text, ideas, research references, or content creation. This includes, but is not limited to, large language models like OpenAI's ChatGPT-4, Anthropic's Claude, AI-based research tools like RefWorks or EndNote, and writing assistants like Grammarly.
 
-\vspace{1ex}
-
-\noindent\textbf{Permissible Use Cases:} Students are allowed to use AI tools for brainstorming, generating ideas, checking grammar, and summarizing content. However, AI tools should not be used to produce final drafts of assignments or significant portions of text that are submitted as original work. If AI tools are used, their contributions must be appropriately cited and disclosed.
+    \item[]\textbf{Permissible Use Cases:} Students are allowed to use AI tools for brainstorming, generating ideas, checking grammar, and summarizing content. However, AI tools should not be used to produce final drafts of assignments or significant portions of text that are submitted as original work. If AI tools are used, their contributions must be appropriately cited and disclosed.
+\end{description}
 
 \subsubsection*{Ethical Considerations}
-\textbf{Academic Integrity:} The use of AI tools must adhere to the highest standards of academic integrity. This means that while these tools can support your work, they cannot replace your own analysis, critical thinking, and original writing. Misuse of AI-generated content is a form of academic dishonesty and will be treated as such under the university's policies.
 
-\vspace{1ex}
-
-\noindent\textbf{Required Disclosures:} Students must disclose their use of AI tools in any assignments. This disclosure should include a brief explanation of how the tool was used and how the student ensured the integrity of their work. For example, a note might state, ``I used ChatGPT to generate initial ideas for this essay, but all writing and analysis are my own.'' This transparency is crucial for maintaining academic integrity and ensuring that the work submitted is genuinely reflective of the student's understanding and effort.
+\begin{description}
+    \item[]\textbf{Required Disclosures:} Students must disclose their use of AI tools in any assignments. This disclosure should include a brief explanation of how the tool was used and how the student ensured the integrity of their work. For example, a note might state, ``I used ChatGPT to generate initial ideas for this essay, but all writing and analysis are my own.'' This transparency is crucial for maintaining academic integrity and ensuring that the work submitted is genuinely reflective of the student's understanding and effort.
+    \item[] \textbf{Academic Integrity:} The use of AI tools must adhere to the highest standards of academic integrity. This means that while these tools can support your work, they cannot replace your own analysis, critical thinking, and original writing. Misuse of AI-generated content is a form of academic dishonesty and will be treated as such under the university's policies.
+\end{description}
 
 \subsubsection*{Plagiarism and Originality}
-\textbf{AI Detection Tools:} Assignments will be checked for originality using advanced AI detection software. Any submission found to contain unoriginal content generated by AI without proper citation will be subject to the university's academic dishonesty policy. Submitting AI-generated text as your own work, without attribution, is considered plagiarism.
-
-\vspace{1ex}
+\begin{description}
+    \item[] \textbf{Plagiarism Definition:} Plagiarism is defined as the use of someone else's work, ideas, or intellectual property without proper attribution. This includes using AI-generated text without appropriate citation or passing off AI-generated content as one's own original work.
+    \item[] \textbf{Originality Requirement:} All assignments must be the student's original work. While AI tools can assist in generating ideas or checking grammar, the final submission must reflect the student's own understanding and analysis. Students are expected to synthesize information from various sources, including AI-generated content, into their own unique expression of ideas.
+    \item[] \textbf{Citation of AI-Generated Content:} If AI tools are used to generate text or ideas, students must cite these contributions appropriately. For example, if a student uses ChatGPT to generate a summary of a topic, they should include a citation such as: ``Summary generated by ChatGPT, OpenAI, [date of use].'' This ensures that the use of AI tools is transparent and does not mislead about the originality of the work.
+    \item[] \textbf{AI Detection Tools:} Assignments will be checked for originality using advanced AI detection software. Any submission found to contain unoriginal content generated by AI without proper citation will be subject to the university's academic dishonesty policy. Submitting AI-generated text as your own work, without attribution, is considered plagiarism.
+\end{description}
 
 \subsubsection*{Guidance and Resources}
-\textbf{Ethical AI Usage Resources:} Students are encouraged to take advantage of available resources on responsible AI usage. This includes online tutorials, ethical guidelines, and citation practices. Workshops or additional materials on how to use AI tools responsibly may be provided throughout the course.
-
-\vspace{1ex}
-
-\noindent\textbf{Continuous Policy Review:} This AI policy will be reviewed and updated regularly to keep pace with technological advancements. Students are encouraged to provide feedback on this policy to ensure it aligns with their educational goals and the course's academic standards.
+\begin{description}
+    \item[] \textbf{Ethical AI Usage Resources:} Students are encouraged to take advantage of available resources on responsible AI usage. This includes online tutorials, ethical guidelines, and citation practices. Workshops or additional materials on how to use AI tools responsibly may be provided throughout the course.
+    \item[] \textbf{Support for AI Tool Use:} If you are unsure how to use AI tools ethically or effectively, please reach out to the professor for guidance. The goal is to enhance your learning experience while maintaining the integrity of your academic work.
+    \item[] \textbf{Continuous Policy Review:} This AI policy will be reviewed and updated regularly to keep pace with technological advancements. Students are encouraged to provide feedback on this policy to ensure it aligns with their educational goals and the course's academic standards.
+    \item[] \textbf{Unacceptable Use:} A student uses ChatGPT to generate an entire essay and submits it as their own work without attribution. This would be considered a violation of the academic integrity policy and could result in a failing grade or further disciplinary action.
+\end{description}
 
 \subsubsection*{Example Scenarios}
-\textbf{Acceptable Use:} A student uses Grammarly to check the grammar and clarity of their essay. The student does not need to disclose this use unless Grammarly significantly altered the content. Another student uses ChatGPT to brainstorm ideas but writes the essay independently, only citing the AI where directly quoted or paraphrased.
-
-\vspace{1ex}
-
-\noindent\textbf{Unacceptable Use:} A student uses ChatGPT to generate an entire essay and submits it as their own work without attribution. This would be considered a violation of the academic integrity policy and could result in a failing grade or further disciplinary action.
+\begin{description}
+    \item[] \textbf{Acceptable Use:} A student uses Grammarly to check the grammar and clarity of their essay. The student does not need to disclose this use unless Grammarly significantly altered the content. Another student uses ChatGPT to brainstorm ideas but writes the essay independently, only citing the AI where directly quoted or paraphrased.
+    \item[] \textbf{Acceptable Use:} A student uses an AI tool to summarize a complex journal article to help understand the main points, then writes their own summary in their own words for an assignment, noting in a footnote: ``I used Perplexity AI to generate a summary of Smith (2022) to aid my understanding.''
+    \item[] \textbf{Unacceptable Use:} A student uses ChatGPT to generate an entire essay and submits it as their own work without attribution. This would be considered a violation of the academic integrity policy and could result in a failing grade or further disciplinary action.
+    \item[] \textbf{Unacceptable Use:} A student copies several paragraphs from an AI-generated answer found online and pastes them into their assignment without citation or modification. This constitutes plagiarism and academic dishonesty.
+\end{description}
 
 \subsection*{Participation}
 
@@ -250,16 +259,16 @@ Each week will include a discussion. Students are expected to participate in all
 \subsection*{Policy Brief Project}
 
 Over the course of this term, you will complete a Policy Brief Project, a scaffolded assignment that builds on the topics and concepts covered each week. This project challenges you to analyze a real-world issue in public administration and propose actionable solutions. The project is broken into five components: problem identification and research foundation (Week 1), stakeholder analysis and context (Week 2), organizational theory application (Week 3), management challenges and solutions (Week 4), and final recommendations with executive summary (Week 5).
-
-\noindent Each step provides structured guidance to help you apply course material effectively and create a professional, evidence-based document. Students will work in Google Docs with tracked changes enabled, allowing for continuous development and instructor monitoring of the writing process. By the end of the course, you will have a polished, 7-10 page policy brief that demonstrates your ability to synthesize research, critically analyze complex administrative issues, and communicate recommendations clearly to policy makers.
-
-\noindent The project requires integration of specific concepts from the Kettl textbook each week, use of current sources (2020 or later), and incremental development that can be verified through revision history. Detailed instructions and rubrics for each stage will be provided in \emph{Canvas}.
+\vspace{1ex}
+\paragraph{}Each step provides structured guidance to help you apply course material effectively and create a professional, evidence-based document. Students will work in Google Docs with tracked changes enabled, allowing for continuous development and instructor monitoring of the writing process. By the end of the course, you will have a polished, 7-10 page policy brief that demonstrates your ability to synthesize research, critically analyze complex administrative issues, and communicate recommendations clearly to policy makers.
+\vspace{1ex}
+\paragraph{}The project requires integration of specific concepts from the Kettl textbook each week, use of current sources (2020 or later), and incremental development that can be verified through revision history. Detailed instructions and rubrics for each stage will be provided in \emph{Canvas}.
 
 \subsection*{Research Logs}
 
 Each week of the Policy Brief Project, you will complete a brief Research Log (2-3 sentences) documenting your learning process and research discoveries. These logs serve as metacognitive tools to help you reflect on how you approach complex problems, what you learn from your research process, and how your understanding evolves over time.
-
-\noindent Research logs encourage you to think about your thinking---examining not just what you found, but how you found it, what surprised you, what challenged your assumptions, and how new information connects to course concepts. This reflective practice develops critical thinking skills essential for effective public administration and helps you become more aware of your own learning strategies. The logs also provide evidence of your genuine engagement with course materials and research sources throughout the project development.
+\vspace{1ex}
+\paragraph{}Research logs encourage you to think about your thinking---examining not just what you found, but how you found it, what surprised you, what challenged your assumptions, and how new information connects to course concepts. This reflective practice develops critical thinking skills essential for effective public administration and helps you become more aware of your own learning strategies. The logs also provide evidence of your genuine engagement with course materials and research sources throughout the project development.
 
 \subsection*{Quizzes}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.6.7)  20 JUN 2025 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.6.7)  20 JUN 2025 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -263,12 +263,12 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 ) (/usr/share/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 21.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 25.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 21.
+(Font)              scaled to size 10.40245pt on input line 25.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count299
@@ -276,24 +276,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./CRJU-POSC_320.aux)
 \openout1 = `CRJU-POSC_320.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -348,7 +348,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 21.
+Package hyperref Info: Link coloring ON on input line 25.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
  (/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -358,50 +358,50 @@ Package caption Info: End \AtBeginDocument code.
 <csuf_logo.png, id=4, 513.41812pt x 83.31125pt>
 File: csuf_logo.png Graphic file (type png)
 <use csuf_logo.png>
-Package pdftex.def Info: csuf_logo.png  used on input line 24.
+Package pdftex.def Info: csuf_logo.png  used on input line 28.
 (pdftex.def)             Requested size: 216.81pt x 35.18115pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 25.
+(Font)              scaled to size 16.41594pt on input line 29.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 25.
+(Font)              scaled to size 16.41594pt on input line 29.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 26.
+(Font)              scaled to size 11.39996pt on input line 30.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 27.
+(Font)              scaled to size 9.49997pt on input line 31.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 37.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 40.
+(Font)              scaled to size 10.40245pt on input line 41.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 44.
  (/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 40.
+(Font)              scaled to size 10.40245pt on input line 44.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 52.
+(Font)              scaled to size 13.67995pt on input line 56.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 52.
+(Font)              scaled to size 13.67995pt on input line 56.
 
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc} <./csuf_logo.png>]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 85.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 89.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 10.40245pt on input line 85.
+(Font)              scaled to size 10.40245pt on input line 89.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 96.
+(Font)              scaled to size 11.39996pt on input line 100.
 
 
 [2]
 
 [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 142.
+(Font)              <10.95> on input line 146.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 142.
+(Font)              <8> on input line 146.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 142.
+(Font)              <6> on input line 146.
 
 
 [4]
@@ -420,25 +420,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [11]
 
-[12] (./CRJU-POSC_320.aux)
+[12]
+
+[13] (./CRJU-POSC_320.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12021 strings out of 475171
- 190082 string characters out of 5767096
- 603815 words of memory out of 5000000
- 34837 multiletter control sequences out of 15000+600000
+ 12025 strings out of 475171
+ 190182 string characters out of 5767096
+ 602754 words of memory out of 5000000
+ 34840 multiletter control sequences out of 15000+600000
  576967 words of font info for 65 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,8n,79p,867b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,867b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on CRJU-POSC_320.pdf (12 pages, 83529 bytes).
+Output written on CRJU-POSC_320.pdf (13 pages, 85703 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
