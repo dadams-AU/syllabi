@@ -1,414 +1,437 @@
-% POSC 320 -- Summer 2025
+% Simplified accessibility setup - compatible with all LaTeX distributions
+\documentclass[11pt]{scrartcl} % KOMA-script for better structure
 
-\documentclass[11pt, letterpaper]{article}
-\usepackage[margin=1.25in]{geometry}
-\usepackage{xcolor}
-\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
-\usepackage{url}
-\usepackage{graphicx}
-\usepackage{bookmark}
-\usepackage{enumitem}
-\usepackage{caption}
-\usepackage{longtable}
-\usepackage{booktabs}
-\frenchspacing
-\usepackage{titlesec}
-\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{1em}{}
-\usepackage[scaled]{helvet}
+% Language and Encoding
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+
+% Font and Typography - Using Roboto for better readability
+\usepackage[sfdefault]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
 
-% Prevent \paragraph{} from indenting
-\usepackage{titlesec}
-\titlespacing*{\paragraph}{0pt}{1ex plus .2ex minus .2ex}{1em}
+% Enhanced hyperlinks with accessibility features
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\hypersetup{
+  pdftitle={CRJU/POSC 320: Introduction to Public Administration - Summer 2025},
+  pdfauthor={David P. Adams, Ph.D.},
+  pdfsubject={Course Syllabus - Introduction to Public Administration},
+  pdfkeywords={Public Administration, Criminal Justice, CSU Fullerton, Syllabus, CRJU 320, POSC 320, Government, Policy},
+  pdfcreator={LaTeX with Accessibility Features},
+  pdflang={en-US}
+}
 
+% Layout and Design
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{array, booktabs, longtable}
+\usepackage{xcolor}
+\usepackage{caption}
+
+% Enhanced list formatting for accessibility
+\setlist{leftmargin=*}
+\setlist[itemize]{label=\textbullet}
+\setlist[enumerate]{label=\arabic*.}
+
+% Use KOMA-Script sectioning - no numbering for clean appearance
+\setcounter{secnumdepth}{0}
+\setkomafont{section}{\large\bfseries}
+\setkomafont{subsection}{\normalsize\bfseries}
+\setkomafont{subsubsection}{\normalsize\bfseries}
+
+% Document metadata and structure
+\title{\textbf{CRJU/POSC 320: Introduction to Public Administration}\\ 
+       \large Summer Session 2025 --- Asynchronous Online\\
+       \normalsize June 30 -- August 1, 2025}
+\author{Professor David P. Adams, Ph.D.\\
+        Division of Politics, Administration, and Justice\\
+        California State University, Fullerton}
+\date{}
 
 \begin{document}
 
+\maketitle
+
+% Add university logo with proper alt text
 \begin{center}
-    \includegraphics[width=0.5\textwidth]{csuf_logo.png}\\[1em]
-    {\LARGE\bfseries CRJU/POSC 320: Introduction to Public Administration}\\[0.5em]
-    {\large Summer 2025}\\
-    {\small Asynchronous Online}\\
-    {June 30 - August 1, 2025}\\[1em]
-    {\large Professor: David P. Adams, Ph.D.}\\[0.25em]
-    {\small Division of Politics, Administration, and Justice}\\
-    {California State University, Fullerton}
+\includegraphics[width=0.4\textwidth]{csuf_logo.png}
 \end{center}
 
-\vspace{1em}
+\section{Contact Information and Office Hours}
 
+\textbf{Professor:} David P. Adams, Ph.D.\\
+\textbf{Office:} Gordon Hall 516\\
+\textbf{Phone/Text:} \href{tel:+16572784770}{(657) 278-4770}\\
+\textbf{Email:} \href{mailto:dpadams@fullerton.edu}{dpadams@fullerton.edu}\\
+\textbf{Website:} \href{https://dadams.io}{dadams.io}\\
+\textbf{Zoom Office:} \href{https://fullerton.zoom.us/j/3347502369}{Join Zoom Office Hours}
 
-\subsubsection*{Contact Information:}
-
+\subsection{Office Hours Schedule}
 \begin{itemize}
-    \item Office: Gordon Hall 516
-    \item Phone/Text: \href{tel:+16572784770}{(657) 278-4770}
-    \item Zoom: \href{https://fullerton.zoom.us/j/3347502369}{\texttt{https://fullerton.zoom.us/j/3347502369}}
-    \item website: \href{https://dadams.io}{\texttt{dadams.io}}
-    \item email: \href{mailto:dpadams@fullerton.edu}{\texttt{dpadams@fullerton.edu}}
-    \item Office Hours:
-        \begin{itemize}
-            \item Tuesdays 9:30 -- 10:30 a.m. and 7:00 -- 8:00 p.m. on \href{https://discord.com/channels/1128747433636135113/1154048074172354600}{Discord Office Hours Channel}
-            \item Feel free to schedule meetings throughout the week: \href{https://dadams.io/appointments}{\texttt{dadams.io/appointments}}
-        \end{itemize}  
+\item \textbf{Regular Hours:} Tuesdays 9:30--10:30 AM and 7:00--8:00 PM
+\item \textbf{Platform:} \href{https://discord.com/channels/1128747433636135113/1154048074172354600}{Discord Office Hours Channel}
+\item \textbf{Appointments:} Schedule flexible meetings at \href{https://dadams.io/appointments}{dadams.io/appointments}
 \end{itemize}
 
-\section{Catalog Description}
+\subsection{Response Time Expectations}
+I will respond to emails, Discord posts, and Canvas messages within 24 hours during weekdays. If you don't receive a response within 24 hours, please send a follow-up message. After 48 hours without response, contact me by phone or text.
 
+\section{Course Overview}
+
+\subsection{Catalog Description}
 Introduces public administration through current trends and problems of public sector agencies in such areas as organization behavior, public budgeting, personnel, planning and policy making. Examples and cases from the Criminal Justice field. (POSC 320 and CRJU 320 are the same course.)
 
-\section{Course Description}
+\subsection{Course Description}
+Public administration impacts our daily lives in countless ways. This course explores what public administrators do, how decisions are made, and how political environments shape administrative actions. We examine how public administrators respond to citizen demands and international pressures while balancing core values of accountability, efficiency, and equity.
 
-Public administration plays an important role in our everyday lives. What do public administrators do? What makes this important field of government work? How are decisions made and how does the political environment impact those decisions? Our public administrators have to respond to various demands from United States residents and deal with situations and demands from abroad. The values we share interact and compete for the way our administrators create and implement policy. The core values of public administration include accountability, efficiency, and equity. We'll explore these topics and more as we engage in our class together. 
-
-\vspace*{1em}
-
-\paragraph{} This course is an introduction to the study and practice---the science and art---of public administration. Students will be acquainted with the theoretical and practical aspects of public administration in the American political setting. Topics include organizational theory and practice, decision making, systems analysis, performance evaluation, and administrative and managerial improvement, among others. The emphasis is placed on understanding the roles and responsibilities of public administrators in a democratic political system. 
-	
+This course introduces both the science and art of public administration. Students will explore theoretical and practical aspects of public administration in the American political system, including organizational theory, decision making, systems analysis, performance evaluation, and administrative improvement. Emphasis is placed on understanding the roles and responsibilities of public administrators in a democratic society.
 
 \section{Student Learning Objectives}
+Upon successful completion of this course, students will be able to:
 
 \begin{enumerate}
-    \item Display a broad understanding of public administration and its role in a democratic society. 
-
-    \item Demonstrate knowledge of the concepts and theories in public administration. 
-    
-    \item Identify complex problems that face public organizations.
-
-    \item Exhibit critical thinking by interpreting information, comparing ideas, and developing opinions. 
-    
-    \item Contrast public and private administration with their corresponding benefits and shortfalls. 
-
-    \item Demonstrate effective written communication skills. 
-
+\item Display broad understanding of public administration and its role in democratic society
+\item Demonstrate knowledge of core concepts and theories in public administration
+\item Identify complex problems facing public organizations
+\item Exhibit critical thinking by interpreting information, comparing ideas, and developing informed opinions
+\item Contrast public and private administration, including their benefits and limitations
+\item Demonstrate effective written communication skills
 \end{enumerate}
 
-\section{Required Text}
+\section{Required Materials}
 
+\subsection{Textbook}
+Kettl, Daniel F. 2023. \emph{Politics of the Administrative Process} (9th ed.). Washington, D.C.: CQ Press.
+
+\subsection{Additional Resources}
+Supplemental readings and multimedia content will be posted to Canvas throughout the course.
+
+\section{Prerequisites and General Education}
+
+\subsection{Prerequisites}
 \begin{itemize}
-    \item Kettl, Daniel F. 2023. \emph{Politics of the Administrative Process} (9th ed.) Washington, D.C.: CQ Press.
-    \item Additional readings posted to Canvas
+\item POSC 100 (American Government)
+\item Completion of G.E. Category D.1
 \end{itemize}
 
-\section{Prequisites}
+\textbf{Important:} If you have not completed these prerequisites, you should not be enrolled in this course.
 
-POSC 100 and completion of G.E. Category D.1.  If you have not already taken and passed this course or its equivalent, you should not be enrolled in POSC/CRJU 320.
+\subsection{General Education Requirements Satisfied}
+This course satisfies General Education Explorations in Social Sciences subarea D.4 for students using Catalog Years 2018 and later. Writing assignments meet UPS 411.201 requirements for complex data organization, careful evaluation, and remediation feedback.
 
-\section{General Education Information}
-
-
-\subsection*{Requirements Satisfied}
-
-	This course satisfies General Education Explorations in Social Sciences subarea D.4 for those using Catalog Years 2018 and later. The writing assignments in this course, including the policy memo papers and current event summaries described below, meet the requirement of UPS 411.201: 
-	\begin{quote}Writing assignments in General Education courses shall involve the organization and expression of complex data or ideas and careful and timely evaluations of writing so that deficiencies are identified, and suggestions for improvement and/or for means of remediation are offered. Evaluations of the student's writing competence shall determine the final course grade\ldots .\end{quote}
-
-\subsection*{General Education Student Learning Goals}
-
-	Students completing courses in this subarea shall encounter the following learning goals:
-
+\subsection{General Education Student Learning Goals}
+Students will:
 \begin{enumerate}
-	\item Examine problems, issues, and themes in the social sciences in greater depth; in a variety of cultural, historical, and geographical contexts; and from different disciplinary and interdisciplinary perspectives.
-	\item Analyze and critically evaluate the application of social science concepts and theories to particular historical, contemporary, and future problems or themes, such as economic and environmental sustainability, globalization, poverty, and social justice.
-	\item Analyze and critically evaluate constructs of cultural differentiation, including ethnicity, gender, race, class, and sexual orientation, and their effects on the individual and society.
-	\item Apply theories and concepts from the social sciences to address historical, contemporary, and future problems confronting communities at different geographical scales, from local to global.
+\item Examine social science problems in greater depth across cultural, historical, and geographical contexts
+\item Analyze and evaluate social science concepts applied to historical, contemporary, and future problems
+\item Critically evaluate constructs of cultural differentiation and their societal effects
+\item Apply social science theories to address community problems from local to global scales
 \end{enumerate}
 
-\section{Technical Competencies}
+\section{Technical Requirements and Support}
 
-Students are expected to have the following technical competencies to succeed in this course:
+\subsection{Required Technical Competencies}
 \begin{itemize}
-    \item Basic computer skills, including the ability to navigate the internet, use email, and create and save documents.
-    \item Proficiency in using \emph{Canvas}, including submitting assignments, participating in discussions, and accessing course materials.
-    \item Ability to use word processing software, such as Microsoft Word or Google Docs, to create and format documents.
-    \item Access to a reliable computer and internet connection.
-    \item Ability to use Zoom for virtual meetings and discussions.
-    \item Basic knowledge of online communication tools, such as email and discussion boards.
-    \item Ability to use online research tools and databases to find academic sources.
+\item Basic computer skills and internet navigation
+\item Proficiency with Canvas (assignments, discussions, materials access)
+\item Word processing software (Microsoft Word or Google Docs)
+\item Reliable computer and internet connection
+\item Zoom for virtual meetings
+\item Email and online discussion board usage
+\item Online research tools and academic databases
 \end{itemize}
 
-\section{Technical Problems}
+\subsection{Technical Support Resources}
 
-\subsection*{University IT Help Desk}
+\subsubsection{University IT Help Desk}
+Contact me immediately to document technical problems, then contact:
+\begin{itemize}
+\item \textbf{Phone:} \href{tel:+16572788888}{(657) 278-8888}
+\item \textbf{Email:} \href{mailto:StudentITHelpDesk@fullerton.edu}{StudentITHelpDesk@fullerton.edu}
+\item \textbf{Location:} Pollak Library North Student Genius Center
+\item \textbf{Online:} \href{http://my.fullerton.edu/}{my.fullerton.edu}, then click ``Online IT Help'' and then ``Live Chat''
+\end{itemize}
 
-Contact the instructor immediately to document the problem if you encounter any technical difficulties. Then contact the \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{Student IT Help Desk} for assistance. You can also call the Student IT Help Desk at \href{tel:+16572788888}{(657) 278-8888}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, visit them at the Pollak Library North \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}, or log on to the \href{http://my.fullerton.edu/}{my.fullerton.edu} portal and click ``Online IT Help'' followed by ``Live Chat''.
+\subsubsection{Canvas Support}
+\begin{itemize}
+\item \textbf{Hotline:} \href{tel:+18553027528}{(855) 302-7528} (24/7)
+\item \textbf{Community:} \href{https://community.canvaslms.com/docs/DOC-10720-67952720329}{Canvas Community}
+\item \textbf{In Canvas:} Click ``Help'' then ``Report a Problem''
+\item \textbf{Live Chat:} \href{https://cases.canvaslms.com/liveagentchat?chattype=student&sfid=001A000000YzcwQIAR}{Student Support Live Chat} (24/7)
+\end{itemize}
 
-\subsection*{Canvas Support}
+\section{Course Policies}
 
-If you encounter any technical difficulties with Canvas, call the Canvas Support Hotline at \href{tel:+18553027528}{855-302-7528}, visit the \href{https://community.canvaslms.com/docs/DOC-10720-67952720329}{Canvas Community}, or click the ``Help'' button in the lower left corner of Canvas and select ``Report a Problem''. The \href{https://cases.canvaslms.com/liveagentchat?chattype=student&sfid=001A000000YzcwQIAR}{Student Support Live Chat} is available 24 hours a day, 7 days a week.
+\subsection{Communication Expectations}
+\begin{itemize}
+\item All course announcements sent via Canvas and university email
+\item Students must check Canvas and email daily
+\item Ensure Canvas notifications are enabled
+\item Use professional communication standards
+\end{itemize}
 
-\subsection*{Response Time} 
+\subsection{Assignment Submission and Due Dates}
+\begin{itemize}
+\item All assignments due by 11:59 PM on specified dates
+\item Submit all work via Canvas unless alternative arrangements made
+\item Late assignments not accepted without prior arrangement
+\item Contact professor immediately if deadline challenges arise
+\item Students responsible for retaining copies of all submitted work
+\end{itemize}
 
-I will strive to respond to all student emails, Discord posts, and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you are still awaiting a response within 24 hours, please send a follow-up message. If you are still waiting to receive a response within 48 hours, please send another follow-up message and contact me via phone or text at \href{tel:+16572784770}{(657) 278-4770}.
+\subsection{Participation Standards}
+Students must:
+\begin{itemize}
+\item Complete all assigned readings and videos
+\item Participate professionally in all discussions
+\item Follow university netiquette policies
+\item Maintain respectful, academic discourse
+\end{itemize}
 
+\subsection{Academic Integrity Policy}
+This course maintains the highest academic integrity standards. Academic dishonesty includes but is not limited to:
+\begin{itemize}
+\item Cheating and plagiarism
+\item Fabrication of information
+\item Facilitating others' academic dishonesty
+\item Unauthorized resubmission of previous work
+\end{itemize}
 
-\section{University Student Policies}
+Violations will be subject to sanctions under \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{UPS 300.021 Academic Dishonesty Policy}.
 
-In accordance with UPS 300.00, students must be familiar with certain policies applicable to all courses. Please review these policies as needed and visit this Cal State Fullerton website \url{https://fdc.fullerton.edu/teaching/student-info-syllabi.html} for links to the following information:
+\subsection{AI Tool Usage Policy}
 
+\subsubsection{Permitted Uses}
+AI tools (ChatGPT, Claude, Grammarly, etc.) may be used for:
+\begin{itemize}
+\item Brainstorming and idea generation
+\item Grammar and style checking
+\item Content summarization for understanding
+\item Research assistance
+\end{itemize}
+
+\subsubsection{Required Practices}
+\begin{itemize}
+\item \textbf{Disclosure Required:} Document all AI tool usage
+\item \textbf{Proper Citation:} Cite AI-generated content appropriately
+\item \textbf{Original Analysis:} Final work must reflect your understanding
+\item \textbf{Academic Integrity:} AI cannot replace your critical thinking
+\end{itemize}
+
+\subsubsection{Unacceptable Uses}
+\begin{itemize}
+\item Submitting AI-generated content as original work
+\item Using AI to complete entire assignments
+\item Failing to disclose AI assistance
+\item Copying AI output without attribution
+\end{itemize}
+
+\subsubsection{Citation Examples}
+\begin{itemize}
+\item \textbf{Acceptable:} ``I used ChatGPT to brainstorm initial ideas, but all analysis and writing are my own.''
+\item \textbf{Proper Citation:} ``Summary generated by ChatGPT, OpenAI, [date of use].''
+\item \textbf{Unacceptable:} Submitting AI-generated essays without attribution
+\end{itemize}
+
+\subsection{Written Work Standards}
+All submissions must demonstrate:
+\begin{itemize}
+\item Professional formatting and presentation
+\item Proper grammar, spelling, and punctuation
+\item Appropriate citation style
+\item Original analysis and critical thinking
+\end{itemize}
+
+Assignments will be checked using plagiarism and AI detection software.
+
+\section{Course Structure and Delivery}
+
+\subsection{Delivery Method}
+Asynchronous online via Canvas. Students must log in daily for announcements and updates.
+
+\subsection{Course Organization}
+The course consists of 10 modules over 5 weeks, with each module including:
+\begin{itemize}
+\item Video lectures (available on Canvas and YouTube)
+\item Required readings from textbook and supplemental materials
+\item Interactive quizzes
+\item Discussion forums
+\end{itemize}
+
+\section{Major Assignments}
+
+\subsection{Policy Brief Project (45\% of grade)}
+A scaffolded, professional writing project developing over five weeks:
+
+\subsubsection{Project Components}
 \begin{enumerate}
-    \item   University learning goals and program learning outcomes.
-    \item	Learning objectives for each General Education (GE) category.
-    \item	Guidelines for appropriate online behavior (netiquette).
-    \item	Students' rights to accommodations for documented special needs.
-    \item   Campus student support measures, including Counseling \& Psychological Services, Title IV and Gender Equity, Diversity Initiatives and Resource Centers, and Basic Needs Services.
-    \item   Disability Support Services (DSS) information.
-    \item	Academic integrity (refer to UPS 300.021).
-    \item	Actions to take during an emergency.
-    \item	Library services information.
-    \item	Student Information Technology Services, including details on technical competencies and resources required for all students.
-    \item	Software privacy and accessibility statements.
+\item \textbf{Week 1:} Problem identification and research foundation
+\item \textbf{Week 2:} Stakeholder analysis and contextual framework
+\item \textbf{Week 3:} Organizational theory application
+\item \textbf{Week 4:} Management challenges and solution development
+\item \textbf{Week 5:} Final recommendations and executive summary
 \end{enumerate}
 
-\section{Course Student Policies}
+\subsubsection{Project Requirements}
+\begin{itemize}
+\item 7--10 pages, professional policy brief format
+\item Integration of Kettl textbook concepts
+\item Current sources (2020 or later)
+\item Google Docs with tracked changes for process monitoring
+\item Evidence-based recommendations for policy makers
+\end{itemize}
 
-\subsection*{Course Communication}
-All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email. Students are also responsible for ensuring that their \emph{Canvas} notifications are set to receive messages from the course. Students are expected to check \emph{Canvas} and their email at least once daily.
+\subsection{Research Logs (10\% of grade)}
+Weekly 2--3 sentence reflections documenting:
+\begin{itemize}
+\item Learning process discoveries
+\item Research methodology insights
+\item Connection between new information and course concepts
+\item Evolution of understanding over time
+\end{itemize}
 
-\subsection*{Due Dates}
-All assignments are due by 11:59 p.m. on the specified due date. Save for extenuating circumstances, late assignments will not be accepted unless prior arrangements have been made with the professor. Students are responsible for submitting assignments on time. Failure to submit an assignment on time may result in a failing grade for the assignment. 
-\vspace{1ex}
-\paragraph{} Students are expected to plan ahead and manage their time effectively to ensure that assignments are submitted on time. If you are having trouble meeting a deadline, please contact the professor as soon as possible to discuss the situation.
+These metacognitive tools develop critical thinking and self-awareness essential for effective public administration.
 
-\subsection*{Alternative Procedures for Submitting Work}
-Students are expected to submit all assignments via \emph{Canvas}. If you cannot submit an assignment via \emph{Canvas}, please get in touch with the professor to discuss alternative submission procedures.
+\section{Assessment and Grading}
 
-\subsection*{Retention of Student Work}
-Students are responsible for retaining copies of all assignments submitted for this course. Students are also responsible for retaining copies of all graded assignments returned by the professor.
-
-\subsection*{Extra Credit}
-There is no extra credit available in this course. Students are expected to complete all assigned work to the best of their ability. Failure to complete assigned work may result in a failing grade for the course.
-
-\subsection*{Academic Integrity}
-Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy on academic dishonesty and to adhere to this policy in all aspects of this course. Any student who has questions about the policy should ask the professor for clarification.
-
-\subsection*{Written Work}
-All written work must be submitted in a professional format, including proper grammar, spelling, and punctuation. Written work must also be properly cited using the appropriate citation style. Students are expected to follow the guidelines for written work provided by the professor and to seek clarification if they have questions about the requirements. Assignments that do not meet these standards may be subject to point deductions or resubmission requirements.
-
-\subsection*{Plagiarism}
-Plagiarism is a serious violation of academic integrity and will not be tolerated in this course. Plagiarism includes, but is not limited to, copying and pasting text from sources without proper citation, paraphrasing text from sources without proper citation, and submitting work that is not your own. Students are expected to properly cite all sources used in their work and to submit original work. Failure to do so may result in a failing grade for the assignment and further disciplinary action. Written work will be checked for plagiarism using plagiarism detection software. If you are unsure whether your work constitutes plagiarism, consult the professor before submitting.
-
-\subsection*{AI-Generated Text and Tool Usage Policy}
-
-\subsubsection*{Permissible Use of AI Tools}
-\begin{description}
-    \item[]\textbf{Definition of AI Tools:} In this course, AI tools refer to any software or platform that generates or assists in generating text, ideas, research references, or content creation. This includes, but is not limited to, large language models like OpenAI's ChatGPT-4, Anthropic's Claude, AI-based research tools like RefWorks or EndNote, and writing assistants like Grammarly.
-
-    \item[]\textbf{Permissible Use Cases:} Students are allowed to use AI tools for brainstorming, generating ideas, checking grammar, and summarizing content. However, AI tools should not be used to produce final drafts of assignments or significant portions of text that are submitted as original work. If AI tools are used, their contributions must be appropriately cited and disclosed.
-\end{description}
-
-\subsubsection*{Ethical Considerations}
-
-\begin{description}
-    \item[]\textbf{Required Disclosures:} Students must disclose their use of AI tools in any assignments. This disclosure should include a brief explanation of how the tool was used and how the student ensured the integrity of their work. For example, a note might state, ``I used ChatGPT to generate initial ideas for this essay, but all writing and analysis are my own.'' This transparency is crucial for maintaining academic integrity and ensuring that the work submitted is genuinely reflective of the student's understanding and effort.
-    \item[] \textbf{Academic Integrity:} The use of AI tools must adhere to the highest standards of academic integrity. This means that while these tools can support your work, they cannot replace your own analysis, critical thinking, and original writing. Misuse of AI-generated content is a form of academic dishonesty and will be treated as such under the university's policies.
-\end{description}
-
-\subsubsection*{Plagiarism and Originality}
-\begin{description}
-    \item[] \textbf{Plagiarism Definition:} Plagiarism is defined as the use of someone else's work, ideas, or intellectual property without proper attribution. This includes using AI-generated text without appropriate citation or passing off AI-generated content as one's own original work.
-    \item[] \textbf{Originality Requirement:} All assignments must be the student's original work. While AI tools can assist in generating ideas or checking grammar, the final submission must reflect the student's own understanding and analysis. Students are expected to synthesize information from various sources, including AI-generated content, into their own unique expression of ideas.
-    \item[] \textbf{Citation of AI-Generated Content:} If AI tools are used to generate text or ideas, students must cite these contributions appropriately. For example, if a student uses ChatGPT to generate a summary of a topic, they should include a citation such as: ``Summary generated by ChatGPT, OpenAI, [date of use].'' This ensures that the use of AI tools is transparent and does not mislead about the originality of the work.
-    \item[] \textbf{AI Detection Tools:} Assignments will be checked for originality using advanced AI detection software. Any submission found to contain unoriginal content generated by AI without proper citation will be subject to the university's academic dishonesty policy. Submitting AI-generated text as your own work, without attribution, is considered plagiarism.
-\end{description}
-
-\subsubsection*{Guidance and Resources}
-\begin{description}
-    \item[] \textbf{Ethical AI Usage Resources:} Students are encouraged to take advantage of available resources on responsible AI usage. This includes online tutorials, ethical guidelines, and citation practices. Workshops or additional materials on how to use AI tools responsibly may be provided throughout the course.
-    \item[] \textbf{Support for AI Tool Use:} If you are unsure how to use AI tools ethically or effectively, please reach out to the professor for guidance. The goal is to enhance your learning experience while maintaining the integrity of your academic work.
-    \item[] \textbf{Continuous Policy Review:} This AI policy will be reviewed and updated regularly to keep pace with technological advancements. Students are encouraged to provide feedback on this policy to ensure it aligns with their educational goals and the course's academic standards.
-    \item[] \textbf{Unacceptable Use:} A student uses ChatGPT to generate an entire essay and submits it as their own work without attribution. This would be considered a violation of the academic integrity policy and could result in a failing grade or further disciplinary action.
-\end{description}
-
-\subsubsection*{Example Scenarios}
-\begin{description}
-    \item[] \textbf{Acceptable Use:} A student uses Grammarly to check the grammar and clarity of their essay. The student does not need to disclose this use unless Grammarly significantly altered the content. Another student uses ChatGPT to brainstorm ideas but writes the essay independently, only citing the AI where directly quoted or paraphrased.
-    \item[] \textbf{Acceptable Use:} A student uses an AI tool to summarize a complex journal article to help understand the main points, then writes their own summary in their own words for an assignment, noting in a footnote: ``I used Perplexity AI to generate a summary of Smith (2022) to aid my understanding.''
-    \item[] \textbf{Unacceptable Use:} A student uses ChatGPT to generate an entire essay and submits it as their own work without attribution. This would be considered a violation of the academic integrity policy and could result in a failing grade or further disciplinary action.
-    \item[] \textbf{Unacceptable Use:} A student copies several paragraphs from an AI-generated answer found online and pastes them into their assignment without citation or modification. This constitutes plagiarism and academic dishonesty.
-\end{description}
-
-\subsection*{Participation}
-
-Students are expected to participate in all course activities. This includes completing all assigned readings, watching all assigned videos, and participating in all discussions. Students are expected to participate in discussions in a professional and respectful manner. Students are expected to be familiar with the university policy on netiquette and to adhere to this policy in all aspects of this course. Any student who has questions about the policy should ask the professor for clarification. 
-
-\subsection*{Netiquette}
-Students are expected to adhere to the university's policy on netiquette. The university's policy on netiquette is as follows:
-\begin{quote}Netiquette refers to a set of behaviors that are appropriate for online activity (e.g., social media, email, discussions, presentations). All personnel at Cal State Fullerton are expected to demonstrate appropriate online behavior at all times. A good summary of netiquette can be found in the \href{https://canvashelp.fullerton.edu/m/Student/l/1336786-student-what-is-netiquette}{CSUF Canvas self-help guides}, which adapts ten rules to the online course situation from the website for the book \href{http://www.albion.com/netiquette/corerules.html}{Netiquette by Virginia Shea} and other sources referenced at the bottom of the guide.\end{quote}
-
-\section{Course Delivery}
-
-This course will be delivered asynchronously online via \emph{Canvas}. Students are expected to log on to \emph{Canvas} at least once daily to check for announcements and updates. Students are also expected to check their university email at least once daily.
-
-\section{Course Structure}
-
-This course is divided into 10 modules. Each module will include a video lecture, assigned readings, a discussion, and a writing assignment. 
-
-\section{Course Requirements}
-
-\subsection*{Video Lectures and Quizzes}
-
-Each module will include a video lecture. Students are expected to watch each video lecture and complete the corresponding quiz. Video lectures will be available on \emph{Canvas} and on YouTube. Quizzes will be administered via \emph{Canvas}.
-
-\subsection*{Readings}
-
-Each module will include assigned readings. Students are expected to complete all assigned readings. Readings consist of the textbook material covered in each module and additional readings posted to \emph{Canvas}.
-
-\subsection*{Discussions}
-
-Each week will include a discussion. Students are expected to participate in all discussions. Discussions will be administered via \emph{Canvas}. Instructions for each discussion will be posted to \emph{Canvas}.
-\subsection*{Policy Brief Project}
-
-Over the course of this term, you will complete a Policy Brief Project, a scaffolded assignment that builds on the topics and concepts covered each week. This project challenges you to analyze a real-world issue in public administration and propose actionable solutions. The project is broken into five components: problem identification and research foundation (Week 1), stakeholder analysis and context (Week 2), organizational theory application (Week 3), management challenges and solutions (Week 4), and final recommendations with executive summary (Week 5).
-\vspace{1ex}
-\paragraph{}Each step provides structured guidance to help you apply course material effectively and create a professional, evidence-based document. Students will work in Google Docs with tracked changes enabled, allowing for continuous development and instructor monitoring of the writing process. By the end of the course, you will have a polished, 7-10 page policy brief that demonstrates your ability to synthesize research, critically analyze complex administrative issues, and communicate recommendations clearly to policy makers.
-\vspace{1ex}
-\paragraph{}The project requires integration of specific concepts from the Kettl textbook each week, use of current sources (2020 or later), and incremental development that can be verified through revision history. Detailed instructions and rubrics for each stage will be provided in \emph{Canvas}.
-
-\subsection*{Research Logs}
-
-Each week of the Policy Brief Project, you will complete a brief Research Log (2-3 sentences) documenting your learning process and research discoveries. These logs serve as metacognitive tools to help you reflect on how you approach complex problems, what you learn from your research process, and how your understanding evolves over time.
-\vspace{1ex}
-\paragraph{}Research logs encourage you to think about your thinking---examining not just what you found, but how you found it, what surprised you, what challenged your assumptions, and how new information connects to course concepts. This reflective practice develops critical thinking skills essential for effective public administration and helps you become more aware of your own learning strategies. The logs also provide evidence of your genuine engagement with course materials and research sources throughout the project development.
-
-\subsection*{Quizzes}
-
-Each module will include a quiz. Quizzes will be administered via \emph{Canvas}. Quizzes will cover the material presented in the video lectures and assigned readings for each module.
-
-\section{Grades}
-
-\subsection*{Grading Scale and Grade Weights}  
-
-The grading scale is shown in Table~\ref{tab:grading-scale}. Grades will be given based on Table~\ref{tab:grade-weights} weights.
-
+\subsection{Grade Distribution}
 \begin{table}[ht]
+\caption{Course Grade Weights}
 \centering
-\caption{Grading Scale}
+\begin{tabular}{>{\raggedright}p{0.6\textwidth}r}
+\toprule
+\textbf{Assignment Category} & \textbf{Weight} \\
+\midrule
+Video Lectures and Quizzes & 30\% \\
+Discussion Participation & 15\% \\
+Policy Brief Project & 45\% \\
+Research Logs & 10\% \\
+\bottomrule
+\end{tabular}
+\label{tab:grade-weights}
+\end{table}
+
+\subsection{Grading Scale}
+\begin{table}[ht]
+\caption{Letter Grade Scale}
+\centering
 \begin{tabular}{llll}
 \toprule
-\textbf{Grade} & \textbf{Percentage} & \textbf{Grade} & \textbf{Percentage} \\ \hline
-        A+ & 98.0 -- 100  & C+ & 78.0 -- 79.9 \\
-        A  & 92.0 -- 97.9 & C  & 72.0 -- 77.9 \\
-        A- & 90.0 -- 91.9 & C- & 70.0 -- 71.9 \\
-        B+ & 88.0 -- 89.9 & D+ & 68.0 -- 69.9 \\
-        B  & 82.0 -- 87.9 & D  & 62.0 -- 67.9 \\
-        B- & 80.0 -- 81.9 & D- & 60.0 -- 61.9 \\
-           &              & F  & Below 59.9   \\
+\textbf{Grade} & \textbf{Range} & \textbf{Grade} & \textbf{Range} \\
+\midrule
+A+ & 98.0--100   & C+ & 78.0--79.9 \\
+A  & 92.0--97.9  & C  & 72.0--77.9 \\
+A- & 90.0--91.9  & C- & 70.0--71.9 \\
+B+ & 88.0--89.9  & D+ & 68.0--69.9 \\
+B  & 82.0--87.9  & D  & 62.0--67.9 \\
+B- & 80.0--81.9  & D- & 60.0--61.9 \\
+   &             & F  & Below 59.9 \\
 \bottomrule
 \end{tabular}
 \label{tab:grading-scale}
 \end{table}
 
-\begin{table}[ht]
-    \centering
-    \caption{Grade Weights}
-    \begin{tabular}{ll}
-        \toprule
-    \textbf{Assignment} & \textbf{Percentage} \\
-    \midrule
-    Video Lectures and Quizzes & 30\% \\
-    Discussions & 15\% \\
-    Policy Brief Project & 45\% \\
-    Research Logs & 10\% \\
-    \bottomrule
-    \end{tabular}
-    \label{tab:grade-weights}
-    \end{table}
-
-\subsection*{Grade Disputes}
-
-If you have a question about a grade, please contact the professor via email or \emph{Canvas} message. Please include a detailed explanation of your question and a copy of the assignment in question. Please allow up to 48 hours for a response. 
+\subsection{Grade Disputes}
+Contact me via email or Canvas with detailed questions about grades. Include the assignment in question and allow up to 48 hours for response. No extra credit opportunities are available.
 
 \section{Course Schedule}
 
-\subsection*{Week 1: Introduction and Foundations (June 30 - July 6)}
-
+\subsection{Week 1: Introduction and Foundations (June 30--July 6)}
+\textbf{Modules 1--2}
 \begin{itemize}
-    \item \textbf{Module 1:} Course Introduction and Overview
-        \begin{itemize}
-            \item Introduction video
-            \item What is Public Administration?
-        \end{itemize}
-    \item \textbf{Module 2:} The Foundations of Public Administration
-        \begin{itemize}
-            \item Video 1: Basic Concepts
-            \item Video 2: Historical Context
-        \end{itemize}
-    \item \textbf{Discussion:} Importance of Public Administration
-    \item \textbf{Policy Brief Project:} Problem Statement \& Research Foundation
-    \item \textbf{Research Log:} Week 1 reflection on research process
+\item Course introduction and overview
+\item What is public administration?
+\item Historical foundations and basic concepts
+\item \textbf{Discussion:} Importance of public administration in daily life
+\item \textbf{Policy Brief:} Problem statement and research foundation
+\item \textbf{Research Log:} Week 1 learning reflection
 \end{itemize}
 
-\subsection*{Week 2: Government Functions and Organizational Theory (July 7 - July 13)}
-
+\subsection{Week 2: Government Functions and Organization (July 7--13)}
+\textbf{Modules 3--4}
 \begin{itemize}
-    \item \textbf{Module 3:} Government Functions
-        \begin{itemize}
-            \item Video 1: What Government Does
-            \item Video 2: How Government Functions
-        \end{itemize}
-    \item \textbf{Module 4:} Organizational Theory
-        \begin{itemize}
-            \item Video 1: Basics of Organizational Theory
-            \item Video 2: Application in Public Administration
-        \end{itemize}
-    \item \textbf{Discussion:} Real-world examples of government functions
-    \item \textbf{Policy Brief Project:} Stakeholder Analysis \& Context
-    \item \textbf{Research Log:} Week 2 reflection on stakeholder research
+\item Government functions and operations
+\item Organizational theory foundations
+\item Applications in public administration
+\item \textbf{Discussion:} Real-world examples of government functions
+\item \textbf{Policy Brief:} Stakeholder analysis and context
+\item \textbf{Research Log:} Week 2 stakeholder research reflection
 \end{itemize}
 
-\subsection*{Week 3: Executive Branch and Human Capital (July 14 - July 20)}
-
+\subsection{Week 3: Executive Branch and Human Capital (July 14--20)}
+\textbf{Modules 5--6}
 \begin{itemize}
-    \item \textbf{Module 5:} The Executive Branch and Organization Problems
-        \begin{itemize}
-            \item Video 1: Structure of the Executive Branch
-            \item Video 2: Common Organizational Problems
-        \end{itemize}
-    \item \textbf{Module 6:} Human Capital in Government
-        \begin{itemize}
-            \item Video 1: The Civil Service
-            \item Video 2: Human Capital Management
-        \end{itemize}
-    \item \textbf{Discussion:} Challenges in managing human capital in public sector
-    \item \textbf{Policy Brief Project:} Organizational Theory Application
-    \item \textbf{Research Log:} Week 3 reflection on organizational analysis
+\item Executive branch structure and organization
+\item Common organizational problems
+\item Civil service and human capital management
+\item \textbf{Discussion:} Public sector human capital challenges
+\item \textbf{Policy Brief:} Organizational theory application
+\item \textbf{Research Log:} Week 3 organizational analysis reflection
 \end{itemize}
 
-\subsection*{Week 4: Decision Making, Budgeting, and Implementation (July 21 - July 27)}
-
+\subsection{Week 4: Decision Making and Implementation (July 21--27)}
+\textbf{Modules 7--8}
 \begin{itemize}
-    \item \textbf{Module 7:} Decision Making and Budgeting
-        \begin{itemize}
-            \item Video 1: Decision Making in Public Administration
-            \item Video 2: Budgeting Process
-        \end{itemize}
-    \item \textbf{Module 8:} Implementation and Performance
-        \begin{itemize}
-            \item Video 1: Strategies for Effective Implementation
-            \item Video 2: Measuring Performance in Public Sector
-        \end{itemize}
-    \item \textbf{Discussion:} Budgeting challenges in public sector
-    \item \textbf{Policy Brief Project:} Management Challenges \& Solutions
-    \item \textbf{Research Log:} Week 4 reflection on solution development
+\item Decision making in public administration
+\item Budgeting processes and challenges
+\item Implementation strategies
+\item Performance measurement
+\item \textbf{Discussion:} Public sector budgeting challenges
+\item \textbf{Policy Brief:} Management challenges and solutions
+\item \textbf{Research Log:} Week 4 solution development reflection
 \end{itemize}
 
-\subsection*{Week 5: Regulation, Accountability, and Course Wrap-Up (July 28 - August 1)}
-
+\subsection{Week 5: Regulation and Accountability (July 28--August 1)}
+\textbf{Modules 9--10}
 \begin{itemize}
-    \item \textbf{Module 9:} Regulation and the Courts
-        \begin{itemize}
-            \item Video 1: Role of Regulation
-            \item Video 2: Public Administration and the Judiciary
-        \end{itemize}
-    \item \textbf{Module 10:} Accountability and Oversight
-        \begin{itemize}
-            \item Video 1: Concepts of Accountability
-            \item Video 2: Mechanisms for Oversight
-        \end{itemize}
-    \item \textbf{Discussion:} Balancing regulation and innovation
-    \item \textbf{Policy Brief Project:} Final Recommendations \& Polish (Due Friday, August 1)
-    \item \textbf{Research Log:} Final reflection on learning through the project
-    \item \textbf{Course Wrap-Up:} Summary video, feedback, and next steps
+\item Role of regulation in public administration
+\item Public administration and the judiciary
+\item Accountability concepts and mechanisms
+\item Oversight and democratic governance
+\item \textbf{Discussion:} Balancing regulation and innovation
+\item \textbf{Policy Brief:} Final recommendations and polish (Due Friday, August 1)
+\item \textbf{Research Log:} Final learning reflection
+\item \textbf{Course Wrap-Up:} Summary and next steps
 \end{itemize}
+
+\section{University Resources and Policies}
+
+\subsection{Required University Policy Review}
+Students must familiarize themselves with policies at: \\
+\url{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}
+
+Key areas include:
+\begin{itemize}
+\item University learning goals and program outcomes
+\item General Education category objectives
+\item Online behavior guidelines (netiquette)
+\item Accommodation rights for documented special needs
+\item Campus support services (Counseling, Title IV, Basic Needs)
+\item Disability Support Services information
+\item Academic integrity policies (UPS 300.021)
+\item Emergency procedures
+\item Library and IT services
+\item Software privacy and accessibility statements
+\end{itemize}
+
+\subsection{Support Services}
+\begin{itemize}
+\item \textbf{\href{https://www.fullerton.edu/caps/}{Counseling \& Psychological Services}} -- confidential mental health support
+\item \textbf{\href{https://www.fullerton.edu/titleix/}{Title IX and Gender Equity Resources}} -- support for discrimination and harassment issues
+\item \textbf{\href{https://www.fullerton.edu/dirc/}{Diversity Initiatives and Resource Centers}} -- multicultural support and programming
+\item \textbf{\href{https://www.fullerton.edu/basicneeds/}{Basic Needs Services}} -- food, housing, and financial assistance
+\item \textbf{\href{https://www.fullerton.edu/dss/}{Disability Support Services (DSS)}} -- accommodations and accessibility services
+\item \textbf{\href{https://www.library.fullerton.edu/}{Library Research Support}} -- research assistance and academic resources
+\end{itemize}
+
+
+\section{Accessibility and Accommodations}
+
+This syllabus and all course materials have been designed with accessibility in mind. Students with documented disabilities should contact Disability Support Services to discuss accommodations. All course videos include captions, and alternative formats for course materials are available upon request.
+
+\vspace{1em}
+\hrule
+\vspace{0.5em}
+\textbf{Commitment to Excellence:} This course represents my commitment to outstanding, accessible education. I welcome feedback on how we can continue improving the learning experience for all students.
 
 \end{document}

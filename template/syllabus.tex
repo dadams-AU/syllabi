@@ -1,139 +1,416 @@
-% Accessible and Customizable LaTeX Syllabus Template
-% CSU Fullerton | Public Administration | David P. Adams
+% Accessible Syllabus Template - CSU Fullerton
+% Created by David P. Adams, Ph.D. for public use
+% Based on accessibility best practices and KOMA-Script
+% Compatible with all major LaTeX distributions
+%
+% USAGE INSTRUCTIONS:
+% 1. Replace ALL CAPS placeholders with your course information
+% 2. Examples: 
+%    COURSE NUMBER -> POSC 315
+%    INSTRUCTOR NAME -> Jane Smith  
+%    SEMESTER -> Fall, YEAR -> 2025
+%    DELIVERY MODE -> Asynchronous Online
+% 3. Remove sections that don't apply to your course
+% 4. Verify all CSU Fullerton URLs are current
+% 5. Add/modify course schedule as needed
+%
+% This template is designed for maximum accessibility and professional appearance
+% Compile with LuaLaTeX for best results
 
-\documentclass[11pt]{article}
+\documentclass[11pt]{scrartcl} % KOMA-script for better structure
 
-% ------------ Packages for Accessibility & Structure ------------
-\usepackage[utf8]{inputenc} % Encoding
-\usepackage[T1]{fontenc}    % Better font rendering
-\usepackage[main=english]{babel} % Language tagging
-\usepackage{geometry}       % Margin control
-\geometry{margin=1in}
+% Language and Encoding
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
 
-\usepackage[tagged]{accessibility} % Tagged PDF for screen readers
-\usepackage{hyperref}       % PDF metadata and clickable links
-\usepackage{graphicx}       % Image inclusion with alt text
-\usepackage{enumitem}       % Better control over lists
-\usepackage{booktabs}       % Professional tables
-\usepackage{xcolor}         % Accessible color options
-\usepackage{titlesec}       % Custom section formatting
-\usepackage{parskip}        % Space between paragraphs
+% Font and Typography - Using Roboto for better readability
+\usepackage[sfdefault]{roboto}
+\renewcommand{\familydefault}{\sfdefault}
 
-% ------------ Metadata for PDF Output ------------
+% Enhanced hyperlinks with accessibility features
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 \hypersetup{
-  pdftitle={POSC 315: Introduction to Public Policy Syllabus},
-  pdfauthor={David P. Adams},
-  pdfsubject={CSU Fullerton Public Administration},
-  pdfkeywords={syllabus, public policy, CSU Fullerton, accessibility},
-  colorlinks=true,
-  linkcolor=blue,
-  urlcolor=blue
+  pdftitle={COURSE NUMBER: COURSE TITLE - SEMESTER YEAR},
+  pdfauthor={INSTRUCTOR NAME, Ph.D.},
+  pdfsubject={Course Syllabus - COURSE TITLE},
+  pdfkeywords={COURSE KEYWORDS, CSU Fullerton, Syllabus},
+  pdfcreator={LaTeX with Accessibility Features},
+  pdflang={en-US}
 }
 
-% ------------ Section Style (Accessible & Editable) ------------
-\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+% Layout and Design
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{array, booktabs, longtable}
+\usepackage{xcolor}
+\usepackage{caption}
 
-% ------------ Custom Command for Syllabus Fields ------------
-\newcommand{\syllabusField}[2]{\textbf{#1:} #2\par\medskip}
+% Enhanced list formatting for accessibility
+\setlist{leftmargin=*}
+\setlist[itemize]{label=\textbullet}
+\setlist[enumerate]{label=\arabic*.}
+
+% Use KOMA-Script sectioning - no numbering for clean appearance
+\setcounter{secnumdepth}{0}
+\setkomafont{section}{\large\bfseries}
+\setkomafont{subsection}{\normalsize\bfseries}
+\setkomafont{subsubsection}{\normalsize\bfseries}
+
+% Document metadata and structure
+\title{\textbf{COURSE NUMBER: COURSE TITLE}\\ 
+       \large SEMESTER Session YEAR --- DELIVERY MODE\\
+       \normalsize START DATE -- END DATE}
+\author{Professor INSTRUCTOR NAME, Ph.D.\\
+        DEPARTMENT NAME\\
+        California State University, Fullerton}
+\date{}
 
 \begin{document}
 
+\maketitle
+
+% Add university logo with proper alt text
 \begin{center}
-  {\LARGE\textbf{POSC 315: Introduction to Public Policy}}\\[0.5em]
-  {\large California State University, Fullerton}\\
-  {\large Department of Political Science}\\[1em]
-  \includegraphics[width=0.2\textwidth, alt={CSUF logo}]{csuf_logo.png}
+\includegraphics[width=0.4\textwidth]{csuf_logo.png}
 \end{center}
+
+\section{Contact Information and Office Hours}
+
+\textbf{Professor:} INSTRUCTOR NAME, Ph.D.\\
+\textbf{Office:} OFFICE LOCATION\\
+\textbf{Phone/Text:} \href{tel:+1PHONE}{(PHONE)}\\
+\textbf{Email:} \href{mailto:EMAIL}{EMAIL}\\
+\textbf{Website:} \href{https://WEBSITE}{WEBSITE}\\
+\textbf{Zoom Office:} \href{https://ZOOM-LINK}{Join Zoom Office Hours}
+
+\subsection{Office Hours Schedule}
+\begin{itemize}
+\item \textbf{Regular Hours:} DAYS AND TIMES
+\item \textbf{Platform:} PLATFORM - Discord/Zoom/In-person
+\item \textbf{Appointments:} Schedule flexible meetings at \href{https://APPOINTMENT-LINK}{APPOINTMENT-LINK}
+\end{itemize}
+
+\subsection{Response Time Expectations}
+I will respond to emails, PLATFORM posts, and Canvas messages within 24 hours during weekdays. If you don't receive a response within 24 hours, please send a follow-up message. After 48 hours without response, contact me by phone or text.
+
+\section{Course Overview}
+
+\subsection{Catalog Description}
+INSERT OFFICIAL CATALOG DESCRIPTION HERE
+
+\subsection{Course Description}
+INSERT EXPANDED COURSE DESCRIPTION - EXPLAIN THE IMPORTANCE AND RELEVANCE OF THE SUBJECT MATTER TO STUDENTS' LIVES AND CAREERS
+
+\section{Student Learning Objectives}
+Upon successful completion of this course, students will be able to:
+
+\begin{enumerate}
+\item LEARNING OBJECTIVE 1
+\item LEARNING OBJECTIVE 2
+\item LEARNING OBJECTIVE 3
+\item LEARNING OBJECTIVE 4
+\item LEARNING OBJECTIVE 5
+\item LEARNING OBJECTIVE 6
+\end{enumerate}
+
+\section{Required Materials}
+
+\subsection{Textbook}
+AUTHOR, FIRST NAME. YEAR. \emph{BOOK TITLE} (EDITION). CITY: PUBLISHER.
+
+\subsection{Additional Resources}
+Supplemental readings and multimedia content will be posted to Canvas throughout the course.
+
+\section{Prerequisites and General Education}
+
+\subsection{Prerequisites}
+\begin{itemize}
+\item PREREQUISITE 1
+\item PREREQUISITE 2
+\end{itemize}
+
+\textbf{Important:} If you have not completed these prerequisites, you should not be enrolled in this course.
+
+\subsection{General Education Requirements Satisfied}
+IF APPLICABLE: This course satisfies General Education CATEGORY for students using Catalog Years YEAR and later. Writing assignments meet UPS 411.201 requirements for complex data organization, careful evaluation, and remediation feedback.
+
+\subsection{General Education Student Learning Goals}
+IF APPLICABLE: Include the relevant GE learning goals here
+
+\section{Technical Requirements and Support}
+
+\subsection{Required Technical Competencies}
+\begin{itemize}
+\item Basic computer skills and internet navigation
+\item Proficiency with Canvas (assignments, discussions, materials access)
+\item Word processing software (Microsoft Word or Google Docs)
+\item Reliable computer and internet connection
+\item PLATFORM for virtual meetings
+\item Email and online discussion board usage
+\item Online research tools and academic databases
+\end{itemize}
+
+\subsection{Technical Support Resources}
+
+\subsubsection{University IT Help Desk}
+Contact me immediately to document technical problems, then contact:
+\begin{itemize}
+\item \textbf{Phone:} \href{tel:+16572788888}{(657) 278-8888}
+\item \textbf{Email:} \href{mailto:StudentITHelpDesk@fullerton.edu}{StudentITHelpDesk@fullerton.edu}
+\item \textbf{Location:} Pollak Library North Student Genius Center
+\item \textbf{Online:} \href{http://my.fullerton.edu/}{my.fullerton.edu}, then click ``Online IT Help'' and then ``Live Chat''
+\end{itemize}
+
+\subsubsection{Canvas Support}
+\begin{itemize}
+\item \textbf{Hotline:} \href{tel:+18553027528}{(855) 302-7528} (24/7)
+\item \textbf{Community:} \href{https://community.canvaslms.com/docs/DOC-10720-67952720329}{Canvas Community}
+\item \textbf{In Canvas:} Click ``Help'' then ``Report a Problem''
+\item \textbf{Live Chat:} \href{https://cases.canvaslms.com/liveagentchat?chattype=student&sfid=001A000000YzcwQIAR}{Student Support Live Chat} (24/7)
+\end{itemize}
+
+\section{Course Policies}
+
+\subsection{Communication Expectations}
+\begin{itemize}
+\item All course announcements sent via Canvas and university email
+\item Students must check Canvas and email daily
+\item Ensure Canvas notifications are enabled
+\item Use professional communication standards
+\end{itemize}
+
+\subsection{Assignment Submission and Due Dates}
+\begin{itemize}
+\item All assignments due by 11:59 PM on specified dates
+\item Submit all work via Canvas unless alternative arrangements made
+\item Late assignments not accepted without prior arrangement
+\item Contact professor immediately if deadline challenges arise
+\item Students responsible for retaining copies of all submitted work
+\end{itemize}
+
+\subsection{Participation Standards}
+Students must:
+\begin{itemize}
+\item Complete all assigned readings and videos
+\item Participate professionally in all discussions
+\item Follow university netiquette policies
+\item Maintain respectful, academic discourse
+\end{itemize}
+
+\subsection{Academic Integrity Policy}
+This course maintains the highest academic integrity standards. Academic dishonesty includes but is not limited to:
+\begin{itemize}
+\item Cheating and plagiarism
+\item Fabrication of information
+\item Facilitating others' academic dishonesty
+\item Unauthorized resubmission of previous work
+\end{itemize}
+
+Violations will be subject to sanctions under \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{UPS 300.021 Academic Dishonesty Policy}.
+
+\subsection{AI Tool Usage Policy}
+
+\subsubsection{Permitted Uses}
+AI tools (ChatGPT, Claude, Grammarly, etc.) may be used for:
+\begin{itemize}
+\item Brainstorming and idea generation
+\item Grammar and style checking
+\item Content summarization for understanding
+\item Research assistance
+\end{itemize}
+
+\subsubsection{Required Practices}
+\begin{itemize}
+\item \textbf{Disclosure Required:} Document all AI tool usage
+\item \textbf{Proper Citation:} Cite AI-generated content appropriately
+\item \textbf{Original Analysis:} Final work must reflect your understanding
+\item \textbf{Academic Integrity:} AI cannot replace your critical thinking
+\end{itemize}
+
+\subsubsection{Unacceptable Uses}
+\begin{itemize}
+\item Submitting AI-generated content as original work
+\item Using AI to complete entire assignments
+\item Failing to disclose AI assistance
+\item Copying AI output without attribution
+\end{itemize}
+
+\subsubsection{Citation Examples}
+\begin{itemize}
+\item \textbf{Acceptable:} ``I used ChatGPT to brainstorm initial ideas, but all analysis and writing are my own.''
+\item \textbf{Proper Citation:} ``Summary generated by ChatGPT, OpenAI, [date of use].''
+\item \textbf{Unacceptable:} Submitting AI-generated essays without attribution
+\end{itemize}
+
+\subsection{Written Work Standards}
+All submissions must demonstrate:
+\begin{itemize}
+\item Professional formatting and presentation
+\item Proper grammar, spelling, and punctuation
+\item Appropriate citation style
+\item Original analysis and critical thinking
+\end{itemize}
+
+Assignments will be checked using plagiarism and AI detection software.
+
+\section{Course Structure and Delivery}
+
+\subsection{Delivery Method}
+DESCRIPTION OF COURSE DELIVERY - ONLINE/HYBRID/IN-PERSON
+
+\subsection{Course Organization}
+DESCRIPTION OF HOW THE COURSE IS ORGANIZED - MODULES, WEEKS, ETC.
+
+\section{Major Assignments}
+
+\subsection{Assignment Name (Percentage\% of grade)}
+Description of major assignment goes here.
+
+\subsubsection{Assignment Components}
+\begin{enumerate}
+\item \textbf{Component 1:} Description here
+\item \textbf{Component 2:} Description here  
+\item \textbf{Component 3:} Description here
+\end{enumerate}
+
+\subsubsection{Assignment Requirements}
+\begin{itemize}
+\item Requirement 1
+\item Requirement 2
+\item Requirement 3
+\end{itemize}
+
+% End of assignment section
+
+\section{Assessment and Grading}
+
+\subsection{Grade Distribution}
+\begin{table}[ht]
+\caption{Course Grade Weights}
+\centering
+\begin{tabular}{>{\raggedright}p{0.6\textwidth}r}
+\toprule
+\textbf{Assignment Category} & \textbf{Weight} \\
+\midrule
+ASSIGNMENT TYPE 1 & PERCENTAGE\% \\
+ASSIGNMENT TYPE 2 & PERCENTAGE\% \\
+ASSIGNMENT TYPE 3 & PERCENTAGE\% \\
+ASSIGNMENT TYPE 4 & PERCENTAGE\% \\
+\bottomrule
+\end{tabular}
+\label{tab:grade-weights}
+\end{table}
+
+\subsection{Grading Scale}
+\begin{table}[ht]
+\caption{Letter Grade Scale}
+\centering
+\begin{tabular}{llll}
+\toprule
+\textbf{Grade} & \textbf{Range} & \textbf{Grade} & \textbf{Range} \\
+\midrule
+A+ & 98.0--100   & C+ & 78.0--79.9 \\
+A  & 92.0--97.9  & C  & 72.0--77.9 \\
+A- & 90.0--91.9  & C- & 70.0--71.9 \\
+B+ & 88.0--89.9  & D+ & 68.0--69.9 \\
+B  & 82.0--87.9  & D  & 62.0--67.9 \\
+B- & 80.0--81.9  & D- & 60.0--61.9 \\
+   &             & F  & Below 59.9 \\
+\bottomrule
+\end{tabular}
+\label{tab:grading-scale}
+\end{table}
+
+\subsection{Grade Disputes}
+Contact me via email or Canvas with detailed questions about grades. Include the assignment in question and allow up to 48 hours for response. No extra credit opportunities are available.
+
+\section{Course Schedule}
+
+\subsection{Week 1: Topic Name (Dates)}
+\textbf{Module Information}
+\begin{itemize}
+\item Learning activity 1
+\item Learning activity 2
+\item \textbf{Discussion:} Discussion topic
+\item \textbf{Assignment:} Assignment due
+\end{itemize}
+
+\subsection{Week 2: Topic Name (Dates)}
+\textbf{Module Information}
+\begin{itemize}
+\item Learning activity 1
+\item Learning activity 2
+\item \textbf{Discussion:} Discussion topic
+\item \textbf{Assignment:} Assignment due
+\end{itemize}
+
+\subsection{Week 3: Topic Name (Dates)}
+\textbf{Module Information}
+\begin{itemize}
+\item Learning activity 1
+\item Learning activity 2
+\item \textbf{Discussion:} Discussion topic
+\item \textbf{Assignment:} Assignment due
+\end{itemize}
+
+\subsection{Week 4: Topic Name (Dates)}
+\textbf{Module Information}
+\begin{itemize}
+\item Learning activity 1
+\item Learning activity 2
+\item \textbf{Discussion:} Discussion topic
+\item \textbf{Assignment:} Assignment due
+\end{itemize}
+
+\subsection{Week 5: Topic Name (Dates)}
+\textbf{Module Information}
+\begin{itemize}
+\item Learning activity 1
+\item Learning activity 2
+\item \textbf{Discussion:} Discussion topic
+\item \textbf{Assignment:} Assignment due
+\end{itemize}
+
+% Continue this pattern for all weeks of the course, adjusting topics and assignments as necessary.
+
+\section{University Resources and Policies}
+
+\subsection{Required University Policy Review}
+Students must familiarize themselves with policies at: \\
+\url{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}
+
+Key areas include:
+\begin{itemize}
+\item University learning goals and program outcomes
+\item General Education category objectives
+\item Online behavior guidelines (netiquette)
+\item Accommodation rights for documented special needs
+\item Campus support services (Counseling, Title IV, Basic Needs)
+\item Disability Support Services information
+\item Academic integrity policies (UPS 300.021)
+\item Emergency procedures
+\item Library and IT services
+\item Software privacy and accessibility statements
+\end{itemize}
+
+\subsection{Support Services}
+\begin{itemize}
+\item \textbf{\href{https://www.fullerton.edu/caps/}{Counseling \& Psychological Services}} -- confidential mental health support
+\item \textbf{\href{https://www.fullerton.edu/titleix/}{Title IX and Gender Equity Resources}} -- support for discrimination and harassment issues
+\item \textbf{\href{https://www.fullerton.edu/dirc/}{Diversity Initiatives and Resource Centers}} -- multicultural support and programming
+\item \textbf{\href{https://www.fullerton.edu/basicneeds/}{Basic Needs Services}} -- food, housing, and financial assistance
+\item \textbf{\href{https://www.fullerton.edu/dss/}{Disability Support Services (DSS)}} -- accommodations and accessibility services
+\item \textbf{\href{https://www.library.fullerton.edu/}{Library Research Support}} -- research assistance and academic resources
+\end{itemize}
+
+\section{Accessibility and Accommodations}
+
+This syllabus and all course materials have been designed with accessibility in mind. Students with documented disabilities should contact Disability Support Services to discuss accommodations. All course videos include captions, and alternative formats for course materials are available upon request.
+
 \vspace{1em}
-
-% ------------ Course Information ------------
-\syllabusField{Instructor}{Dr. David P. Adams}
-\syllabusField{Email}{\href{mailto:dpadams@fullerton.edu}{dpadams@fullerton.edu}}
-\syllabusField{Office Hours}{MW 2–4 PM or by appointment}
-\syllabusField{Term}{Fall 2025}
-\syllabusField{Class Times}{Monday/Wednesday 5:30–6:45 PM}
-\syllabusField{Location}{Zoom (link provided via Canvas)}
-
-\section*{Course Description}
-This course introduces the policy process, including agenda-setting, formulation, implementation, and evaluation. We examine the actors, institutions, and ideas that shape public policy at all levels of government.
-
-\section*{Course Objectives}
-\begin{itemize}[leftmargin=1.5em]
-  \item Analyze the stages of the policy process
-  \item Understand the roles of institutions and stakeholders
-  \item Evaluate competing policy frameworks
-  \item Communicate policy analysis clearly and concisely
-\end{itemize}
-
-\section*{Required Texts}
-\begin{itemize}[leftmargin=1.5em]
-  \item Birkland, Thomas A. (2019). *An Introduction to the Policy Process*, 5th ed. Routledge.
-  \item Supplementary readings available on Canvas
-\end{itemize}
-
-\section*{Assessment}
-\begin{tabular}{@{}llr@{}}
-\toprule
-Assignment & Description & Weight \\
-\midrule
-Weekly Quizzes & Based on readings & 20\% \\
-Policy Brief & 5-page memo with citations & 30\% \\
-Midterm Exam & Take-home essay & 20\% \\
-Final Project & Group presentation & 30\% \\
-\bottomrule
-\end{tabular}
-
-\section*{Grading Scale}
-\begin{tabular}{@{}ll@{}}
-\toprule
-Letter Grade & Percentage Range \\
-\midrule
-A & 93--100\% \\
-A-- & 90--92\% \\
-B+ & 87--89\% \\
-B & 83--86\% \\
-B-- & 80--82\% \\
-C+ & 77--79\% \\
-C & 73--76\% \\
-C-- & 70--72\% \\
-D+ & 67--69\% \\
-D & 63--66\% \\
-D-- & 60--62\% \\
-F & 59\% and below \\
-\bottomrule
-\end{tabular}
-
-\section*{Accessibility Statement}
-CSUF is committed to providing equal access. If you have a disability and require accommodations, please contact the Disability Support Services office and notify me as early as possible.
-
-\section*{Academic Integrity}
-Academic honesty is expected. Plagiarism or cheating will result in disciplinary action. Familiarize yourself with CSUF’s policy on academic dishonesty.
-
-\section*{University Policies}
-Please refer to the university’s syllabus policies website at
-\url{https://fdc.fullerton.edu/teaching/student-info-syllabi.html} for important campus-wide policies on academic integrity, disability accommodations, emergency procedures, and student conduct.\\
-These policies are in effect for all courses at CSU Fullerton.
-
-\section*{Tentative Schedule}
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Week 1:} What is Public Policy?
-  \item \textbf{Week 2:} Theories of the Policy Process
-  \item \textbf{Week 3:} Institutions and Governance
-  \item \textbf{Week 4:} Policy Design and Tools
-  \item \textbf{...}
-  \item \textbf{Finals Week:} Group Project Presentations
-\end{itemize}
-
-\section*{Support Services}
-Free resources are available to help you succeed:
-\begin{itemize}[leftmargin=1.5em]
-  \item Writing Center
-  \item Academic Advising
-  \item Counseling and Psychological Services
-\end{itemize}
-
-\vfill
-\noindent\textit{Last updated: \today. This syllabus may be adapted as needed to support student learning and institutional requirements.}
+\hrule
+\vspace{0.5em}
+\textbf{Commitment to Excellence:} This course represents my commitment to outstanding, accessible education. I welcome feedback on how we can continue improving the learning experience for all students.
 
 \end{document}
