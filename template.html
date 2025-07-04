@@ -64,7 +64,6 @@
         <pre id="tex-template-content">
 % Accessible Syllabus Template - CSU Fullerton
 % Created by David P. Adams, Ph.D. for public use
-% Based on accessibility best practices and KOMA-Script
 % Compatible with all major LaTeX distributions
 %
 % USAGE INSTRUCTIONS:
@@ -80,53 +79,51 @@
 %
 % This template is designed for maximum accessibility and professional appearance
 % Compile with LuaLaTeX for best results
+\documentclass[12pt]{article}
 
-\documentclass[11pt]{scrartcl} % KOMA-script for better structure
-
-% Language and Encoding
+% Language and accessibility
 \usepackage[english]{babel}
+\usepackage[tagged, highstructure]{accessibility}
+\usepackage[pdfusetitle, pdflang=en-US]{hyperref}
+
+% Layout and fonts
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{lmodern}
+\usepackage{setspace}
+\onehalfspacing
 
-% Font and Typography - Using Roboto for better readability
-\usepackage[sfdefault]{roboto}
-\renewcommand{\familydefault}{\sfdefault}
-
-% Enhanced hyperlinks with accessibility features
-\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
-\hypersetup{
-  pdftitle={COURSE NUMBER: COURSE TITLE - SEMESTER YEAR},
-  pdfauthor={INSTRUCTOR NAME, Ph.D.},
-  pdfsubject={Course Syllabus - COURSE TITLE},
-  pdfkeywords={COURSE KEYWORDS, CSU Fullerton, Syllabus},
-  pdfcreator={LaTeX with Accessibility Features},
-  pdflang={en-US}
-}
-
-% Layout and Design
-\usepackage[margin=1in]{geometry}
+% Lists and sections
 \usepackage{enumitem}
+%\usepackage{titlesec}
+
+% Tables and figures
 \usepackage{graphicx}
 \usepackage{array, booktabs, longtable}
 \usepackage{xcolor}
 \usepackage{caption}
 
-% Enhanced list formatting for accessibility
-\setlist{leftmargin=*}
-\setlist[itemize]{label=\textbullet}
-\setlist[enumerate]{label=\arabic*.}
+% Hyperlinks with accessibility
+\hypersetup{
+  unicode=true,
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  pdfauthor={Dr. David P. Adams},
+  pdftitle={POSC 123: Course Title},
+  pdfsubject={California State University, Fullerton Syllabus},
+  pdfkeywords={CSUF, Syllabus, Public Administration, MPA}
+}
 
-% Use KOMA-Script sectioning - no numbering for clean appearance
-\setcounter{secnumdepth}{0}
-\setkomafont{section}{\large\bfseries}
-\setkomafont{subsection}{\normalsize\bfseries}
-\setkomafont{subsubsection}{\normalsize\bfseries}
-
-% Document metadata and structure
-\title{\textbf{COURSE NUMBER: COURSE TITLE}\\ 
-       \large SEMESTER Session YEAR --- DELIVERY MODE\\
-       \normalsize START DATE -- END DATE}
-\author{Professor INSTRUCTOR NAME, Ph.D.\\
-        DEPARTMENT NAME\\
+% Document title block
+\title{\textbf{POSC 123: Course Title} \\
+       \large Semester Session YEAR — Delivery Mode \\
+       \normalsize START DATE — END DATE}
+\author{Dr. David P. Adams \\
+        Department of Political Science \\
         California State University, Fullerton}
 \date{}
 
@@ -139,7 +136,7 @@
 \includegraphics[width=0.4\textwidth]{csuf_logo.png}
 \end{center}
 
-\section{Contact Information and Office Hours}
+\section*{Contact Information and Office Hours}
 
 \textbf{Professor:} INSTRUCTOR NAME, Ph.D.\\
 \textbf{Office:} OFFICE LOCATION\\
@@ -148,25 +145,25 @@
 \textbf{Website:} \href{https://WEBSITE}{WEBSITE}\\
 \textbf{Zoom Office:} \href{https://ZOOM-LINK}{Join Zoom Office Hours}
 
-\subsection{Office Hours Schedule}
+\subsection*{Office Hours Schedule}
 \begin{itemize}
 \item \textbf{Regular Hours:} DAYS AND TIMES
 \item \textbf{Platform:} PLATFORM - Discord/Zoom/In-person
 \item \textbf{Appointments:} Schedule flexible meetings at \href{https://APPOINTMENT-LINK}{APPOINTMENT-LINK}
 \end{itemize}
 
-\subsection{Response Time Expectations}
+\subsection*{Response Time Expectations}
 I will respond to emails, PLATFORM posts, and Canvas messages within 24 hours during weekdays. If you don't receive a response within 24 hours, please send a follow-up message. After 48 hours without response, contact me by phone or text.
 
-\section{Course Overview}
+\section*{Course Overview}
 
-\subsection{Catalog Description}
+\subsection*{Catalog Description}
 INSERT OFFICIAL CATALOG DESCRIPTION HERE
 
-\subsection{Course Description}
+\subsection*{Course Description}
 INSERT EXPANDED COURSE DESCRIPTION - EXPLAIN THE IMPORTANCE AND RELEVANCE OF THE SUBJECT MATTER TO STUDENTS' LIVES AND CAREERS
 
-\section{Student Learning Objectives}
+\section*{Student Learning Objectives}
 Upon successful completion of this course, students will be able to:
 
 \begin{enumerate}
@@ -178,17 +175,17 @@ Upon successful completion of this course, students will be able to:
 \item LEARNING OBJECTIVE 6
 \end{enumerate}
 
-\section{Required Materials}
+\section*{Required Materials}
 
-\subsection{Textbook}
+\subsection*{Textbook}
 AUTHOR, FIRST NAME. YEAR. \emph{BOOK TITLE} (EDITION). CITY: PUBLISHER.
 
-\subsection{Additional Resources}
+\subsection*{Additional Resources}
 Supplemental readings and multimedia content will be posted to Canvas throughout the course.
 
-\section{Prerequisites and General Education}
+\section*{Prerequisites and General Education}
 
-\subsection{Prerequisites}
+\subsection*{Prerequisites}
 \begin{itemize}
 \item PREREQUISITE 1
 \item PREREQUISITE 2
@@ -196,15 +193,15 @@ Supplemental readings and multimedia content will be posted to Canvas throughout
 
 \textbf{Important:} If you have not completed these prerequisites, you should not be enrolled in this course.
 
-\subsection{General Education Requirements Satisfied}
+\subsection*{General Education Requirements Satisfied}
 IF APPLICABLE: This course satisfies General Education CATEGORY for students using Catalog Years YEAR and later. Writing assignments meet UPS 411.201 requirements for complex data organization, careful evaluation, and remediation feedback.
 
-\subsection{General Education Student Learning Goals}
+\subsection*{General Education Student Learning Goals}
 IF APPLICABLE: Include the relevant GE learning goals here
 
-\section{Technical Requirements and Support}
+\section*{Technical Requirements and Support}
 
-\subsection{Required Technical Competencies}
+\subsection*{Required Technical Competencies}
 \begin{itemize}
 \item Basic computer skills and internet navigation
 \item Proficiency with Canvas (assignments, discussions, materials access)
@@ -215,9 +212,9 @@ IF APPLICABLE: Include the relevant GE learning goals here
 \item Online research tools and academic databases
 \end{itemize}
 
-\subsection{Technical Support Resources}
+\subsection*{Technical Support Resources}
 
-\subsubsection{University IT Help Desk}
+\subsubsection*{University IT Help Desk}
 Contact me immediately to document technical problems, then contact:
 \begin{itemize}
 \item \textbf{Phone:} \href{tel:+16572788888}{(657) 278-8888}
@@ -226,7 +223,7 @@ Contact me immediately to document technical problems, then contact:
 \item \textbf{Online:} \href{http://my.fullerton.edu/}{my.fullerton.edu}, then click ``Online IT Help'' and then ``Live Chat''
 \end{itemize}
 
-\subsubsection{Canvas Support}
+\subsubsection*{Canvas Support}
 \begin{itemize}
 \item \textbf{Hotline:} \href{tel:+18553027528}{(855) 302-7528} (24/7)
 \item \textbf{Community:} \href{https://community.canvaslms.com/docs/DOC-10720-67952720329}{Canvas Community}
@@ -234,9 +231,9 @@ Contact me immediately to document technical problems, then contact:
 \item \textbf{Live Chat:} \href{https://cases.canvaslms.com/liveagentchat?chattype=student&sfid=001A000000YzcwQIAR}{Student Support Live Chat} (24/7)
 \end{itemize}
 
-\section{Course Policies}
+\section*{Course Policies}
 
-\subsection{Communication Expectations}
+\subsection*{Communication Expectations}
 \begin{itemize}
 \item All course announcements sent via Canvas and university email
 \item Students must check Canvas and email daily
@@ -244,7 +241,7 @@ Contact me immediately to document technical problems, then contact:
 \item Use professional communication standards
 \end{itemize}
 
-\subsection{Assignment Submission and Due Dates}
+\subsection*{Assignment Submission and Due Dates}
 \begin{itemize}
 \item All assignments due by 11:59 PM on specified dates
 \item Submit all work via Canvas unless alternative arrangements made
@@ -253,7 +250,7 @@ Contact me immediately to document technical problems, then contact:
 \item Students responsible for retaining copies of all submitted work
 \end{itemize}
 
-\subsection{Participation Standards}
+\subsection*{Participation Standards}
 Students must:
 \begin{itemize}
 \item Complete all assigned readings and videos
@@ -262,7 +259,7 @@ Students must:
 \item Maintain respectful, academic discourse
 \end{itemize}
 
-\subsection{Academic Integrity Policy}
+\subsection*{Academic Integrity Policy}
 This course maintains the highest academic integrity standards. Academic dishonesty includes but is not limited to:
 \begin{itemize}
 \item Cheating and plagiarism
@@ -273,9 +270,9 @@ This course maintains the highest academic integrity standards. Academic dishone
 
 Violations will be subject to sanctions under \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{UPS 300.021 Academic Dishonesty Policy}.
 
-\subsection{AI Tool Usage Policy}
+\subsection*{AI Tool Usage Policy}
 
-\subsubsection{Permitted Uses}
+\subsubsection*{Permitted Uses}
 AI tools (ChatGPT, Claude, Grammarly, etc.) may be used for:
 \begin{itemize}
 \item Brainstorming and idea generation
@@ -284,7 +281,7 @@ AI tools (ChatGPT, Claude, Grammarly, etc.) may be used for:
 \item Research assistance
 \end{itemize}
 
-\subsubsection{Required Practices}
+\subsubsection*{Required Practices}
 \begin{itemize}
 \item \textbf{Disclosure Required:} Document all AI tool usage
 \item \textbf{Proper Citation:} Cite AI-generated content appropriately
@@ -292,7 +289,7 @@ AI tools (ChatGPT, Claude, Grammarly, etc.) may be used for:
 \item \textbf{Academic Integrity:} AI cannot replace your critical thinking
 \end{itemize}
 
-\subsubsection{Unacceptable Uses}
+\subsubsection*{Unacceptable Uses}
 \begin{itemize}
 \item Submitting AI-generated content as original work
 \item Using AI to complete entire assignments
@@ -300,14 +297,14 @@ AI tools (ChatGPT, Claude, Grammarly, etc.) may be used for:
 \item Copying AI output without attribution
 \end{itemize}
 
-\subsubsection{Citation Examples}
+\subsubsection*{Citation Examples}
 \begin{itemize}
 \item \textbf{Acceptable:} ``I used ChatGPT to brainstorm initial ideas, but all analysis and writing are my own.''
 \item \textbf{Proper Citation:} ``Summary generated by ChatGPT, OpenAI, [date of use].''
 \item \textbf{Unacceptable:} Submitting AI-generated essays without attribution
 \end{itemize}
 
-\subsection{Written Work Standards}
+\subsection*{Written Work Standards}
 All submissions must demonstrate:
 \begin{itemize}
 \item Professional formatting and presentation
@@ -318,38 +315,36 @@ All submissions must demonstrate:
 
 Assignments will be checked using plagiarism and AI detection software.
 
-\section{Course Structure and Delivery}
+\section*{Course Structure and Delivery}
 
-\subsection{Delivery Method}
+\subsection*{Delivery Method}
 DESCRIPTION OF COURSE DELIVERY - ONLINE/HYBRID/IN-PERSON
 
-\subsection{Course Organization}
+\subsection*{Course Organization}
 DESCRIPTION OF HOW THE COURSE IS ORGANIZED - MODULES, WEEKS, ETC.
 
-\section{Major Assignments}
+\section*{Major Assignments}
 
-\subsection{Assignment Name (Percentage\% of grade)}
+\subsection*{Assignment Name (Percentage\% of grade)}
 Description of major assignment goes here.
 
-\subsubsection{Assignment Components}
+\subsubsection*{Assignment Components}
 \begin{enumerate}
 \item \textbf{Component 1:} Description here
 \item \textbf{Component 2:} Description here  
 \item \textbf{Component 3:} Description here
 \end{enumerate}
 
-\subsubsection{Assignment Requirements}
+\subsubsection*{Assignment Requirements}
 \begin{itemize}
 \item Requirement 1
 \item Requirement 2
 \item Requirement 3
 \end{itemize}
 
-% End of assignment section
+\section*{Assessment and Grading}
 
-\section{Assessment and Grading}
-
-\subsection{Grade Distribution}
+\subsection*{Grade Distribution}
 \begin{table}[ht]
 \caption{Course Grade Weights}
 \centering
@@ -366,7 +361,7 @@ ASSIGNMENT TYPE 4 & PERCENTAGE\% \\
 \label{tab:grade-weights}
 \end{table}
 
-\subsection{Grading Scale}
+\subsection*{Grading Scale}
 \begin{table}[ht]
 \caption{Letter Grade Scale}
 \centering
@@ -386,11 +381,12 @@ B- & 80.0--81.9  & D- & 60.0--61.9 \\
 \label{tab:grading-scale}
 \end{table}
 
-\subsection{Grade Disputes}
+\subsection*{Grade Disputes}
 Contact me via email or Canvas with detailed questions about grades. Include the assignment in question and allow up to 48 hours for response. No extra credit opportunities are available.
 
-\section{Course Schedule}
-\subsection{Week 1: Course Introduction \& Syllabus Overview (Dates)}
+\section*{Course Schedule}
+
+\subsection*{Week 1: Course Introduction \& Syllabus Overview (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Review syllabus and course policies
@@ -399,7 +395,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Syllabus quiz due
 \end{itemize}
 
-\subsection{Week 2: Topic 1 -- Foundations (Dates)}
+\subsection*{Week 2: Topic 1 -- Foundations (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 1
@@ -408,7 +404,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Short response due
 \end{itemize}
 
-\subsection{Week 3: Topic 2 -- Core Concepts (Dates)}
+\subsection*{Week 3: Topic 2 -- Core Concepts (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 2
@@ -417,7 +413,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Case study write-up due
 \end{itemize}
 
-\subsection{Week 4: Topic 3 -- Applications (Dates)}
+\subsection*{Week 4: Topic 3 -- Applications (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 3
@@ -426,7 +422,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Application worksheet due
 \end{itemize}
 
-\subsection{Week 5: Topic 4 -- Research Methods (Dates)}
+\subsection*{Week 5: Topic 4 -- Research Methods (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 4
@@ -435,16 +431,16 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Research critique due
 \end{itemize}
 
-\subsection{Week 6: Topic 5 -- Data Analysis (Dates)}
+\subsection*{Week 6: Topic 5 -- Data Analysis (Dates)}
 \textbf{Module Information}
 \begin{itemize}
-\item Read Chapter 5
+\item Read Chapter 6
 \item Activity: Data interpretation
 \item \textbf{Discussion:} Data challenges
 \item \textbf{Assignment:} Data analysis exercise due
 \end{itemize}
 
-\subsection{Week 7: Topic 6 -- Ethics and Professionalism (Dates)}
+\subsection*{Week 7: Topic 6 -- Ethics and Professionalism (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 6
@@ -453,7 +449,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Ethics reflection due
 \end{itemize}
 
-\subsection{Week 8: Midterm Review \& Assessment (Dates)}
+\subsection*{Week 8: Midterm Review \& Assessment (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Review sessions and Q\&A
@@ -461,7 +457,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Midterm exam due
 \end{itemize}
 
-\subsection{Week 9: Topic 7 -- Diversity and Inclusion (Dates)}
+\subsection*{Week 9: Topic 7 -- Diversity and Inclusion (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 7
@@ -470,7 +466,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Inclusion project due
 \end{itemize}
 
-\subsection{Week 10: Topic 8 -- Technology and Society (Dates)}
+\subsection*{Week 10: Topic 8 -- Technology and Society (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 8
@@ -479,7 +475,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Technology analysis due
 \end{itemize}
 
-\subsection{Week 11: Topic 9 -- Policy and Regulation (Dates)}
+\subsection*{Week 11: Topic 9 -- Policy and Regulation (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 9
@@ -488,7 +484,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Policy brief due
 \end{itemize}
 
-\subsection{Week 12: Topic 10 -- Global Perspectives (Dates)}
+\subsection*{Week 12: Topic 10 -- Global Perspectives (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 10
@@ -497,7 +493,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Global analysis due
 \end{itemize}
 
-\subsection{Week 13: Topic 11 -- Future Directions (Dates)}
+\subsection*{Week 13: Topic 11 -- Future Directions (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 11
@@ -509,7 +505,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \subsection*{Thanksgiving Break (No Class)}
 \textbf{No class meetings or assignments this week. Enjoy your break!}
 
-\subsection{Week 14: Capstone Projects and Course Wrap-Up (Dates)}
+\subsection*{Week 14: Capstone Projects and Course Wrap-Up (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Capstone project presentations
@@ -518,7 +514,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Capstone project due
 \end{itemize}
 
-\subsection{Week 15: Final Exam Preparation (Dates)}
+\subsection*{Week 15: Final Exam Preparation (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Final exam review session
@@ -526,16 +522,16 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \item \textbf{Assignment:} Final exam study guide due
 \end{itemize}
 
-\subsection{Week 16: Final Exams (Dates)}
+\subsection*{Week 16: Final Exams (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Final exam period
 \item \textbf{Assignment:} Final exam due
 \end{itemize}
 
-\section{University Resources and Policies}
+\section*{University Resources and Policies}
 
-\subsection{Required University Policy Review}
+\subsection*{Required University Policy Review}
 Students must familiarize themselves with policies at: \\
 \url{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}
 
@@ -553,7 +549,22 @@ Key areas include:
 \item Software privacy and accessibility statements
 \end{itemize}
 
-\subsection{Support Services}
+\subsection*{Accessibility and Disability Support}
+Students with disabilities who need accommodations are encouraged to contact the \textbf{Disability Support Services (DSS)} office at (657) 278-3112 or \href{https://www.fullerton.edu/dss}{fullerton.edu/dss}. Let me know early in the semester how I can best support your learning.
+
+\subsection*{Title IX and Discrimination Policy}
+CSUF is committed to maintaining a safe learning environment. If you have experienced sexual harassment, discrimination, or violence, you may contact the \textbf{Title IX and Gender Equity Office} at (657) 278-2121 or \href{https://www.fullerton.edu/titleix}{fullerton.edu/titleix}.
+
+\subsection*{Student Privacy (FERPA)}
+In accordance with FERPA, I will not publicly disclose any student's grades or personal information. If any student work is shared as examples, all identifying information will be removed.
+
+\subsection*{Emergency Preparedness}
+Know evacuation routes and follow emergency instructions. More information is available at \href{https://www.fullerton.edu/emergencypreparedness}{fullerton.edu/emergencypreparedness}.
+
+\subsection*{Basic Needs Statement}
+Students who face challenges securing food or housing are encouraged to contact the \textbf{CSUF Basic Needs Center} at \href{https://www.fullerton.edu/basicneeds}{fullerton.edu/basicneeds} for support.
+
+\subsection*{Support Services}
 \begin{itemize}
 \item \textbf{\href{https://www.fullerton.edu/caps/}{Counseling \& Psychological Services}} -- confidential mental health support
 \item \textbf{\href{https://www.fullerton.edu/titleix/}{Title IX and Gender Equity Resources}} -- support for discrimination and harassment issues
@@ -562,15 +573,6 @@ Key areas include:
 \item \textbf{\href{https://www.fullerton.edu/dss/}{Disability Support Services (DSS)}} -- accommodations and accessibility services
 \item \textbf{\href{https://www.library.fullerton.edu/}{Library Research Support}} -- research assistance and academic resources
 \end{itemize}
-
-\section{Accessibility and Accommodations}
-
-This syllabus and all course materials have been designed with accessibility in mind. Students with documented disabilities should contact Disability Support Services to discuss accommodations. All course videos include captions, and alternative formats for course materials are available upon request.
-
-\vspace{1em}
-\hrule
-\vspace{0.5em}
-\textbf{Commitment to Excellence:} This course represents my commitment to outstanding, accessible education. I welcome feedback on how we can continue improving the learning experience for all students.
 
 \end{document}
         </pre>
