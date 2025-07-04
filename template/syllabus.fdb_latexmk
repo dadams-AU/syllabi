@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1751645898.30758 "/home/dadams/Repos/syllabi/template/syllabus.tex" "syllabus.pdf" "syllabus" 1751645898.8398 0
-  "/home/dadams/Repos/syllabi/template/syllabus.tex" 1751645897.59252 19304 67a7115707384a02da453332e9062194 ""
+["pdflatex"] 1751646763.95971 "/home/dadams/Repos/syllabi/template/syllabus.tex" "syllabus.pdf" "syllabus" 1751646764.45887 0
+  "/home/dadams/Repos/syllabi/template/syllabus.tex" 1751646763.247 19522 77104a1b79f2b9a7c4de32ac74550458 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1742685315 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1742685315 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -131,10 +131,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1749350860 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1749350799 2008237 a5c1bf1e464f9697aed012031d1c9047 ""
   "csuf_logo.png" 1750454194.89689 13469 65e84d6a6dac7b4f7efd8b3d60de417e ""
-  "pdfa.xmpi" 1751645898.58857 5471 0a047df7b5392af321052c449cc1e1c8 "pdflatex"
-  "syllabus.aux" 1751645898.76357 775 4fccd7823b135076bf6e40e90ffed5c6 "pdflatex"
-  "syllabus.out" 1751645898.67828 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "syllabus.tex" 1751645897.59252 19304 67a7115707384a02da453332e9062194 ""
+  "pdfa.xmpi" 1751646764.217 5471 c07134d03718089d6c0b7f4ca0943b18 "pdflatex"
+  "syllabus.aux" 1751646764.386 775 9c75334383ef1aa69f05431cff6e49dd "pdflatex"
+  "syllabus.out" 1751646764.30292 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "syllabus.tex" 1751646763.247 19522 77104a1b79f2b9a7c4de32ac74550458 ""
   "syllabus.xmpdata" 1751645790.34491 165 aef5573f297d675dfb978f469f20f35e ""
   (generated)
   "pdfa.xmpi"

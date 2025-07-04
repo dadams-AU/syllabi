@@ -291,14 +291,3 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy6.tfm
-INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
-INPUT syllabus.aux
-INPUT ./syllabus.out
-INPUT ./syllabus.out
-INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb

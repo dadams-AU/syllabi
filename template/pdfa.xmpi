@@ -58,10 +58,14 @@
    </pdfaExtension:schemas> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:pdf="http://ns.adobe.com/pdf/1.3/"> 
-   <pdf:Producer>pdfTeX</pdf:Producer> 
+   <pdf:Producer>LuaTeX</pdf:Producer> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"> 
    <dc:format>application/pdf</dc:format> 
+   <dc:title><rdf:Alt><rdf:li xml:lang="x-default">POSC 123 Course Title</rdf:li></rdf:Alt></dc:title>
+   <dc:creator><rdf:Seq><rdf:li>Dr. David P. Adams</rdf:li></rdf:Seq></dc:creator>
+   <dc:description><rdf:Alt><rdf:li xml:lang="x-default">California State University, Fullerton Syllabus</rdf:li></rdf:Alt></dc:description>
+   <dc:subject><rdf:Bag><rdf:li>CSUF, Syllabus, Public Administration</rdf:li></rdf:Bag></dc:subject>
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:prism="http://prismstandard.org/namespaces/basic/2.2/"> 
   </rdf:Description> 
@@ -73,15 +77,15 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
    <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool> 
-   <xmp:ModifyDate>2025-07-04T09:20:41-07:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2025-07-04T09:20:41-07:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2025-07-04T09:20:41-07:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2025-07-04T09:33:10-07:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2025-07-04T09:33:10-07:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2025-07-04T09:33:10-07:00</xmp:MetadataDate> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
-   <xmpMM:DocumentID>uuid:2CFEB030-A8C5-F961-6A74-092AF6194722</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:C2974BA4-3CC4-06D8-F42B-117CFC6CF57D</xmpMM:InstanceID> 
+   <xmpMM:DocumentID>uuid:87BFA171-AD8F-A2AB-CD8B-A7FECFAB3EC6</xmpMM:DocumentID> 
+   <xmpMM:InstanceID>uuid:780C9049-3DE0-17A7-2A48-0656778295AD</xmpMM:InstanceID> 
   </rdf:Description> 
  </rdf:RDF> 
 </x:xmpmeta> 
