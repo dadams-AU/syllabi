@@ -17,13 +17,25 @@
 % Compile with LuaLaTeX for best results
 \documentclass[12pt]{article}
 
-% Encoding and PDF/A
-\usepackage[utf8]{inputenc}  % harmless under LuaTeX, warning expected
-\usepackage[T1]{fontenc}
-\usepackage[a-1b]{pdfx}      % Handles PDF/A tagging and loads hyperref correctly
+% 🔧 Required for tagpdf to work properly
+\RequirePackage[
+  activate=all,
+  manage=true,
+]{pdfmanagement-testphase}
+
+\usepackage[compat=2023-11-01]{tagpdf}
+\tagpdfsetup{
+  activate-all,
+  uncompress,
+  tabsorder=structure,
+  log=all
+}
+\pdfvariable compresslevel 0
 
 % Language and layout
 \usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}  % harmless with LuaHBTeX
 \usepackage{geometry}
 \geometry{margin=1in}
 
@@ -42,18 +54,19 @@
 \usepackage{xcolor}
 \usepackage{caption}
 
-% Document metadata (safe with pdfx)
-\hypersetup{
-  pdftitle={POSC 123: Course Title},
-  pdfauthor={Dr. David P. Adams},
-  pdfsubject={California State University, Fullerton Syllabus},
-  pdfkeywords={CSUF, Syllabus, Public Administration, MPA},
+% Hyperlinks
+\usepackage[
+  unicode=true,
   colorlinks=true,
-  linkcolor=blue
-}
+  linkcolor=blue,
+  pdfauthor={Dr. David P. Adams},
+  pdftitle={POSC 123: Course Title},
+  pdfsubject={California State University, Fullerton Syllabus},
+  pdfkeywords={CSUF, Syllabus, Public Administration, MPA}
+]{hyperref}
 
 % Document title block
-\title{\textbf{POSC 123 Course Title} \\
+\title{\textbf{POSC 123: Course Title} \\
        \large Semester Session YEAR — Delivery Mode \\
        \normalsize START DATE — END DATE}
 \author{Dr. David P. Adams \\
@@ -61,8 +74,27 @@
         California State University, Fullerton}
 \date{}
 
+% Convenience macros
+\newcommand{\taggedsection}[1]{%
+  \phantomsection%
+  \tagstructbegin{tag=H1}%
+  \taggedsection{#1}%
+  \tagstructend%
+}
+\newcommand{\taggedsubsection}[1]{%
+  \phantomsection%
+  \tagstructbegin{tag=H2}%
+  \taggedsubsection{#1}%
+  \tagstructend%
+}
+\newcommand{\taggedpara}[1]{%
+  \tagstructbegin{tag=P}%
+  #1%
+  \tagstructend%
+}
 
 \begin{document}
+\tagpdfifactivetags{\tagstructbegin{tag=Document}}{}
 
 \maketitle
 
@@ -72,7 +104,7 @@
 \end{center}
 
 \phantomsection
-\section*{Contact Information and Office Hours}
+\taggedsection{Contact Information and Office Hours}
 
 \textbf{Professor:} INSTRUCTOR NAME, Ph.D.\\
 \textbf{Office:} OFFICE LOCATION\\
@@ -82,7 +114,7 @@
 \textbf{Zoom Office:} \href{https://ZOOM-LINK}{Join Zoom Office Hours}
 
 \phantomsection
-\subsection*{Office Hours Schedule}
+\taggedsubsection{Office Hours Schedule}
 \begin{itemize}
 \item \textbf{Regular Hours:} DAYS AND TIMES
 \item \textbf{Platform:} PLATFORM - Discord/Zoom/In-person
@@ -90,22 +122,22 @@
 \end{itemize}
 
 \phantomsection
-\subsection*{Response Time Expectations}
+\taggedsubsection{Response Time Expectations}
 I will respond to emails, PLATFORM posts, and Canvas messages within 24 hours during weekdays. If you don't receive a response within 24 hours, please send a follow-up message. After 48 hours without response, contact me by phone or text.
 
 \phantomsection
-\section*{Course Overview}
+\taggedsection{Course Overview}
 
 \phantomsection
-\subsection*{Catalog Description}
+\taggedsubsection{Catalog Description}
 INSERT OFFICIAL CATALOG DESCRIPTION HERE
 
 \phantomsection
-\subsection*{Course Description}
+\taggedsubsection{Course Description}
 INSERT EXPANDED COURSE DESCRIPTION - EXPLAIN THE IMPORTANCE AND RELEVANCE OF THE SUBJECT MATTER TO STUDENTS' LIVES AND CAREERS
 
 \phantomsection
-\section*{Student Learning Objectives}
+\taggedsection{Student Learning Objectives}
 Upon successful completion of this course, students will be able to:
 
 \begin{enumerate}
@@ -118,21 +150,21 @@ Upon successful completion of this course, students will be able to:
 \end{enumerate}
 
 \phantomsection
-\section*{Required Materials}
+\taggedsection{Required Materials}
 
 \phantomsection
-\subsection*{Textbook}
+\taggedsubsection{Textbook}
 AUTHOR, FIRST NAME. YEAR. \emph{BOOK TITLE} (EDITION). CITY: PUBLISHER.
 
 \phantomsection
-\subsection*{Additional Resources}
+\taggedsubsection{Additional Resources}
 Supplemental readings and multimedia content will be posted to Canvas throughout the course.
 
 \phantomsection
-\section*{Prerequisites and General Education}
+\taggedsection{Prerequisites and General Education}
 
 \phantomsection
-\subsection*{Prerequisites}
+\taggedsubsection{Prerequisites}
 \begin{itemize}
 \item PREREQUISITE 1
 \item PREREQUISITE 2
@@ -141,18 +173,18 @@ Supplemental readings and multimedia content will be posted to Canvas throughout
 \textbf{Important:} If you have not completed these prerequisites, you should not be enrolled in this course.
 
 \phantomsection
-\subsection*{General Education Requirements Satisfied}
+\taggedsubsection{General Education Requirements Satisfied}
 IF APPLICABLE: This course satisfies General Education CATEGORY for students using Catalog Years YEAR and later. Writing assignments meet UPS 411.201 requirements for complex data organization, careful evaluation, and remediation feedback.
 
 \phantomsection
-\subsection*{General Education Student Learning Goals}
+\taggedsubsection{General Education Student Learning Goals}
 IF APPLICABLE: Include the relevant GE learning goals here
 
 \phantomsection
-\section*{Technical Requirements and Support}
+\taggedsection{Technical Requirements and Support}
 
 \phantomsection
-\subsection*{Required Technical Competencies}
+\taggedsubsection{Required Technical Competencies}
 \begin{itemize}
 \item Basic computer skills and internet navigation
 \item Proficiency with Canvas (assignments, discussions, materials access)
@@ -164,7 +196,7 @@ IF APPLICABLE: Include the relevant GE learning goals here
 \end{itemize}
 
 \phantomsection
-\subsection*{Technical Support Resources}
+\taggedsubsection{Technical Support Resources}
 
 \subsubsection*{University IT Help Desk}
 Contact me immediately to document technical problems, then contact:
@@ -184,10 +216,10 @@ Contact me immediately to document technical problems, then contact:
 \end{itemize}
 
 \phantomsection
-\section*{Course Policies}
+\taggedsection{Course Policies}
 
 \phantomsection
-\subsection*{Communication Expectations}
+\taggedsubsection{Communication Expectations}
 \begin{itemize}
 \item All course announcements sent via Canvas and university email
 \item Students must check Canvas and email daily
@@ -196,7 +228,7 @@ Contact me immediately to document technical problems, then contact:
 \end{itemize}
 
 \phantomsection
-\subsection*{Assignment Submission and Due Dates}
+\taggedsubsection{Assignment Submission and Due Dates}
 \begin{itemize}
 \item All assignments due by 11:59 PM on specified dates
 \item Submit all work via Canvas unless alternative arrangements made
@@ -206,7 +238,7 @@ Contact me immediately to document technical problems, then contact:
 \end{itemize}
 
 \phantomsection
-\subsection*{Participation Standards}
+\taggedsubsection{Participation Standards}
 Students must:
 \begin{itemize}
 \item Complete all assigned readings and videos
@@ -216,7 +248,7 @@ Students must:
 \end{itemize}
 
 \phantomsection
-\subsection*{Academic Integrity Policy}
+\taggedsubsection{Academic Integrity Policy}
 This course maintains the highest academic integrity standards. Academic dishonesty includes but is not limited to:
 \begin{itemize}
 \item Cheating and plagiarism
@@ -228,7 +260,7 @@ This course maintains the highest academic integrity standards. Academic dishone
 Violations will be subject to sanctions under \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{UPS 300.021 Academic Dishonesty Policy}.
 
 \phantomsection
-\subsection*{AI Tool Usage Policy}
+\taggedsubsection{AI Tool Usage Policy}
 
 \subsubsection*{Permitted Uses}
 AI tools (ChatGPT, Claude, Grammarly, etc.) may be used for:
@@ -263,7 +295,7 @@ AI tools (ChatGPT, Claude, Grammarly, etc.) may be used for:
 \end{itemize}
 
 \phantomsection
-\subsection*{Written Work Standards}
+\taggedsubsection{Written Work Standards}
 All submissions must demonstrate:
 \begin{itemize}
 \item Professional formatting and presentation
@@ -275,21 +307,21 @@ All submissions must demonstrate:
 Assignments will be checked using plagiarism and AI detection software.
 
 \phantomsection
-\section*{Course Structure and Delivery}
+\taggedsection{Course Structure and Delivery}
 
 \phantomsection
-\subsection*{Delivery Method}
+\taggedsubsection{Delivery Method}
 DESCRIPTION OF COURSE DELIVERY - ONLINE/HYBRID/IN-PERSON
 
 \phantomsection
-\subsection*{Course Organization}
+\taggedsubsection{Course Organization}
 DESCRIPTION OF HOW THE COURSE IS ORGANIZED - MODULES, WEEKS, ETC.
 
 \phantomsection
-\section*{Major Assignments}
+\taggedsection{Major Assignments}
 
 \phantomsection
-\subsection*{Assignment Name (Percentage\% of grade)}
+\taggedsubsection{Assignment Name (Percentage\% of grade)}
 Description of major assignment goes here.
 
 \subsubsection*{Assignment Components}
@@ -309,10 +341,10 @@ Description of major assignment goes here.
 % End of assignment section*
 
 \phantomsection
-\section*{Assessment and Grading}
+\taggedsection{Assessment and Grading}
 
 \phantomsection
-\subsection*{Grade Distribution}
+\taggedsubsection{Grade Distribution}
 \begin{table}[ht]
 \caption{Course Grade Weights}
 \centering
@@ -330,7 +362,7 @@ ASSIGNMENT TYPE 4 & PERCENTAGE\% \\
 \end{table}
 
 \phantomsection
-\subsection*{Grading Scale}
+\taggedsubsection{Grading Scale}
 \begin{table}[ht]
 \caption{Letter Grade Scale}
 \centering
@@ -351,13 +383,13 @@ B- & 80.0--81.9  & D- & 60.0--61.9 \\
 \end{table}
 
 \phantomsection
-\subsection*{Grade Disputes}
+\taggedsubsection{Grade Disputes}
 Contact me via email or Canvas with detailed questions about grades. Include the assignment in question and allow up to 48 hours for response. No extra credit opportunities are available.
 
 \phantomsection
-\section*{Course Schedule}
+\taggedsection{Course Schedule}
 \phantomsection
-\subsection*{Week 1: Course Introduction \& Syllabus Overview (Dates)}
+\taggedsubsection{Week 1: Course Introduction \& Syllabus Overview (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Review syllabus and course policies
@@ -367,7 +399,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 2: Topic 1 -- Foundations (Dates)}
+\taggedsubsection{Week 2: Topic 1 -- Foundations (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 1
@@ -377,7 +409,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 3: Topic 2 -- Core Concepts (Dates)}
+\taggedsubsection{Week 3: Topic 2 -- Core Concepts (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 2
@@ -387,7 +419,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 4: Topic 3 -- Applications (Dates)}
+\taggedsubsection{Week 4: Topic 3 -- Applications (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 3
@@ -397,7 +429,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 5: Topic 4 -- Research Methods (Dates)}
+\taggedsubsection{Week 5: Topic 4 -- Research Methods (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 4
@@ -407,7 +439,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 6: Topic 5 -- Data Analysis (Dates)}
+\taggedsubsection{Week 6: Topic 5 -- Data Analysis (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 5
@@ -417,7 +449,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 7: Topic 6 -- Ethics and Professionalism (Dates)}
+\taggedsubsection{Week 7: Topic 6 -- Ethics and Professionalism (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 6
@@ -427,7 +459,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 8: Midterm Review \& Assessment (Dates)}
+\taggedsubsection{Week 8: Midterm Review \& Assessment (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Review sessions and Q\&A
@@ -436,7 +468,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 9: Topic 7 -- Diversity and Inclusion (Dates)}
+\taggedsubsection{Week 9: Topic 7 -- Diversity and Inclusion (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 7
@@ -446,7 +478,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 10: Topic 8 -- Technology and Society (Dates)}
+\taggedsubsection{Week 10: Topic 8 -- Technology and Society (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 8
@@ -456,7 +488,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 11: Topic 9 -- Policy and Regulation (Dates)}
+\taggedsubsection{Week 11: Topic 9 -- Policy and Regulation (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 9
@@ -466,7 +498,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 12: Topic 10 -- Global Perspectives (Dates)}
+\taggedsubsection{Week 12: Topic 10 -- Global Perspectives (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 10
@@ -476,7 +508,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 13: Topic 11 -- Future Directions (Dates)}
+\taggedsubsection{Week 13: Topic 11 -- Future Directions (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Read Chapter 11
@@ -489,7 +521,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \textbf{No class meetings or assignments this week. Enjoy your break!}
 
 \phantomsection
-\subsection*{Week 14: Capstone Projects and Course Wrap-Up (Dates)}
+\taggedsubsection{Week 14: Capstone Projects and Course Wrap-Up (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Capstone project presentations
@@ -499,7 +531,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 15: Final Exam Preparation (Dates)}
+\taggedsubsection{Week 15: Final Exam Preparation (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Final exam review session
@@ -508,7 +540,7 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\subsection*{Week 16: Final Exams (Dates)}
+\taggedsubsection{Week 16: Final Exams (Dates)}
 \textbf{Module Information}
 \begin{itemize}
 \item Final exam period
@@ -516,10 +548,10 @@ Contact me via email or Canvas with detailed questions about grades. Include the
 \end{itemize}
 
 \phantomsection
-\section*{University Resources and Policies}
+\taggedsection{University Resources and Policies}
 
 \phantomsection
-\subsection*{Required University Policy Review}
+\taggedsubsection{Required University Policy Review}
 Students must familiarize themselves with policies at: \\
 \url{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}
 
@@ -538,27 +570,27 @@ Key areas include:
 \end{itemize}
 
 \phantomsection
-\subsection*{Accessibility and Disability Support}
+\taggedsubsection{Accessibility and Disability Support}
 Students with disabilities who need accommodations are encouraged to contact the \textbf{Disability Support Services (DSS)} office at (657) 278-3112 or \href{https://www.fullerton.edu/dss}{fullerton.edu/dss}. Let me know early in the semester how I can best support your learning.
 
 \phantomsection
-\subsection*{Title IX and Discrimination Policy}
+\taggedsubsection{Title IX and Discrimination Policy}
 CSUF is committed to maintaining a safe learning environment. If you have experienced sexual harassment, discrimination, or violence, you may contact the \textbf{Title IX and Gender Equity Office} at (657) 278-2121 or \href{https://www.fullerton.edu/titleix}{fullerton.edu/titleix}.
 
 \phantomsection
-\subsection*{Student Privacy (FERPA)}
+\taggedsubsection{Student Privacy (FERPA)}
 In accordance with FERPA, I will not publicly disclose any student's grades or personal information. If any student work is shared as examples, all identifying information will be removed.
 
 \phantomsection
-\subsection*{Emergency Preparedness}
+\taggedsubsection{Emergency Preparedness}
 Know evacuation routes and follow emergency instructions. More information is available at \href{https://www.fullerton.edu/emergencypreparedness}{fullerton.edu/emergencypreparedness}.
 
 \phantomsection
-\subsection*{Basic Needs Statement}
+\taggedsubsection{Basic Needs Statement}
 Students who face challenges securing food or housing are encouraged to contact the \textbf{CSUF Basic Needs Center} at \href{https://www.fullerton.edu/basicneeds}{fullerton.edu/basicneeds} for support.
 
 \phantomsection
-\subsection*{Support Services}
+\taggedsubsection{Support Services}
 \begin{itemize}
 \item \textbf{\href{https://www.fullerton.edu/caps/}{Counseling \& Psychological Services}} -- confidential mental health support
 \item \textbf{\href{https://www.fullerton.edu/titleix/}{Title IX and Gender Equity Resources}} -- support for discrimination and harassment issues
@@ -569,4 +601,6 @@ Students who face challenges securing food or housing are encouraged to contact 
 \end{itemize}
 
 
+\tagpdfifactivetags{\tagstructend}{}  % Closes Document tag
 \end{document}
+% End of document
