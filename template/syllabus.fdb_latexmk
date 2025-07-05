@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1751687678.48706 "/home/dadams/Repos/syllabi/template/syllabus.tex" "syllabus.pdf" "syllabus" 1751687679.02841 0
-  "/home/dadams/Repos/syllabi/template/syllabus.tex" 1751687677.71179 19172 d22602e57e003770038b1e7d948ccd0f ""
+["pdflatex"] 1751687724.59504 "/home/dadams/Repos/syllabi/template/syllabus.tex" "syllabus.pdf" "syllabus" 1751687725.1423 0
+  "/home/dadams/Repos/syllabi/template/syllabus.tex" 1751687724.41458 19181 87d0c7c97b998238a0ca68b70eb62e1f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -114,9 +114,9 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1751650717 3599647 6f5b5fa18efed646169321a22eaf44df ""
   "/usr/local/texlive/2025/texmf.cnf" 1751650624.68062 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "csuf_logo.png" 1750454194.89689 13469 65e84d6a6dac7b4f7efd8b3d60de417e ""
-  "syllabus.aux" 1751687678.98379 4592 7ed942fe9f726a6639ea92540b4f7f22 "pdflatex"
-  "syllabus.out" 1751687678.78057 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "syllabus.tex" 1751687677.71179 19172 d22602e57e003770038b1e7d948ccd0f ""
+  "syllabus.aux" 1751687725.09906 4592 7ed942fe9f726a6639ea92540b4f7f22 "pdflatex"
+  "syllabus.out" 1751687724.89806 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "syllabus.tex" 1751687724.41458 19181 87d0c7c97b998238a0ca68b70eb62e1f ""
   (generated)
   "syllabus.aux"
   "syllabus.log"
