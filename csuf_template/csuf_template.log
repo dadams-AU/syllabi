@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.4)  12 JUL 2025 11:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.4)  12 JUL 2025 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/dadams/Repos/syllabi/template_2/template_2.tex
-(/home/dadams/Repos/syllabi/template_2/template_2.tex
+**/home/dadams/Repos/syllabi/csuf_template/csuf_template.tex
+(/home/dadams/Repos/syllabi/csuf_template/csuf_template.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -368,8 +368,8 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count335
-) (./template_2.aux)
-\openout1 = `template_2.aux'.
+) (./csuf_template.aux)
+\openout1 = `csuf_template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
@@ -390,9 +390,9 @@ LaTeX Font Info:    ... okay on input line 54.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
 Package hyperref Info: Link coloring ON on input line 54.
- (./template_2.out) (./template_2.out)
+ (./csuf_template.out) (./csuf_template.out)
 \@outlinefile=\write3
-\openout3 = `template_2.out'.
+\openout3 = `csuf_template.out'.
 
 
 *geometry* driver: auto-detecting
@@ -513,18 +513,13 @@ Overfull \hbox (1.97568pt too wide) in paragraph at lines 137--156
 [3]
 
 [4]
-Overfull \hbox (38.15985pt too wide) in paragraph at lines 177--186
- [][][][] 
- []
-
-
 
 [5]
 
 [6]
 
 [7]
-Overfull \hbox (11.71591pt too wide) in paragraph at lines 283--284
+Overfull \hbox (11.71591pt too wide) in paragraph at lines 293--294
 [][][]$[]$ []\T1/phv/m/n/12 (delete this sec-tion if it does
  []
 
@@ -536,11 +531,11 @@ pdfTeX warning (\pdfobj): invalid object number being ignored
 
 [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 352.
+(Font)              <17.28> on input line 362.
 
 
 [10]
-Overfull \hbox (32.13658pt too wide) in paragraph at lines 375--375
+Overfull \hbox (32.13658pt too wide) in paragraph at lines 385--385
 [][][]$[]$ 
  []
 
@@ -549,62 +544,57 @@ Overfull \hbox (32.13658pt too wide) in paragraph at lines 375--375
 [11]
 
 [12]
-Underfull \hbox (badness 4886) in paragraph at lines 455--455
-[]|[][][]\T1/phv/b/n/12 Readings, Screen-
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 466--467
+[]|[][][][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
-[]|[][][]\T1/phv/b/n/12 Assignments
- []
-
-
-Underfull \hbox (badness 5802) in paragraph at lines 471--471
+Underfull \hbox (badness 5802) in paragraph at lines 482--482
 []|[][][]\T1/phv/m/n/12 Midterm Exam
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 489--489
+Underfull \hbox (badness 2302) in paragraph at lines 500--500
 []|[][][]\T1/phv/m/n/12 Final Exam or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--489
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
 \T1/phv/m/n/12 other as-sess-
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 489--490
+Underfull \hbox (badness 1496) in paragraph at lines 500--501
 []|[][][]\T1/phv/m/n/12 Due no ear-lier
  []
 
 \c@ClassMap=\count342
 
 
-[13] (./template_2.aux)
+[13] (./csuf_template.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
-Package rerunfilecheck Info: File `template_2.out' has not changed.
+Package rerunfilecheck Info: File `csuf_template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13610 strings out of 467888
- 218865 string characters out of 5434062
- 660598 words of memory out of 5000000
- 41952 multiletter control sequences out of 15000+600000
+ 13614 strings out of 467888
+ 218977 string characters out of 5434062
+ 662616 words of memory out of 5000000
+ 41956 multiletter control sequences out of 15000+600000
  675401 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,117p,1280b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,117p,1286b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): Page 14 has been referenced but does not exist!
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on template_2.pdf (13 pages, 889867 bytes).
+Output written on csuf_template.pdf (13 pages, 889309 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 333 compressed objects within 4 object streams
+ 369 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
  29 named destinations out of 1000 (max. 500000)
- 890 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 906 words of extra memory for PDF output out of 10000 (max. 10000000)
 

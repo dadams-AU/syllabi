@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1752343866.66636 "/home/dadams/Repos/syllabi/template_2/template_2.tex" "template_2.pdf" "template_2" 1752343867.27191 0
-  "/home/dadams/Repos/syllabi/template_2/template_2.tex" 1752343866.4213 33783 0a9302f4b463088823659a737e9f4930 ""
+["pdflatex"] 1752350358.70121 "/home/dadams/Repos/syllabi/csuf_template/csuf_template.tex" "csuf_template.pdf" "csuf_template" 1752350359.30283 0
+  "/home/dadams/Repos/syllabi/csuf_template/csuf_template.tex" 1752350358.5102 33737 3b20a41afb38376400936cebf0151548 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -113,13 +113,13 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1751650628 5523539 cbe340ff87ac4cfddcdc6361a84e52ac ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1751650717 3599647 6f5b5fa18efed646169321a22eaf44df ""
   "/usr/local/texlive/2025/texmf.cnf" 1751650624.68062 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "csuf_logo.png" 1752338515.31058 13469 65e84d6a6dac7b4f7efd8b3d60de417e ""
-  "template_2.aux" 1752343867.21771 4841 b445f93d1120c7669cc78bd2aac0f7b1 "pdflatex"
-  "template_2.out" 1752343867.0474 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "template_2.tex" 1752343866.4213 33783 0a9302f4b463088823659a737e9f4930 ""
+  "csuf_logo.png" 1752337454.027 13469 65e84d6a6dac7b4f7efd8b3d60de417e ""
+  "csuf_template.aux" 1752350359.25221 4833 bd8bae7f2088575fd1c754db13d64c5a "pdflatex"
+  "csuf_template.out" 1752350359.07358 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "csuf_template.tex" 1752350358.5102 33737 3b20a41afb38376400936cebf0151548 ""
   (generated)
-  "template_2.aux"
-  "template_2.log"
-  "template_2.out"
-  "template_2.pdf"
+  "csuf_template.aux"
+  "csuf_template.log"
+  "csuf_template.out"
+  "csuf_template.pdf"
   (rewritten before read)
