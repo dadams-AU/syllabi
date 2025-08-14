@@ -26,7 +26,7 @@ A repository of LaTeX-formatted syllabi for undergraduate and graduate Public Po
 
 ## 📋 Template
 
-Access the [LaTeX template](https://github.com/dadams-AU/syllabi/tree/main/template) and [preview the output](https://raw.githubusercontent.com/dadams-AU/syllabi/main/template/syllabus.pdf) to start building your own accessible syllabus.
+Access the [LaTeX template repository](https://github.com/dadams-AU/csuf-syllabus) and [preview the output](https://raw.githubusercontent.com/dadams-AU/csuf-syllabus/main/csuf_template_shell/csuf_template_shell.pdf) to start building your own accessible syllabus.
 
 ### ♿ Accessibility Features (2025 Update)
 
@@ -57,9 +57,6 @@ All improvements support compliance with university and Section 508 accessibilit
 ├── POSC 588 Collab Gov/
 ├── README.md
 ├── syllabi.code-workspace
-└── template/
-    ├── syllabus.pdf
-    └── syllabus.tex
 ```
 
 ---
