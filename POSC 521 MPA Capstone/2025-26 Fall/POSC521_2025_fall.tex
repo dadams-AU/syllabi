@@ -1,123 +1,169 @@
-\documentclass[12pt, letterpaper]{article}
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[margin=1.15in]{geometry}
-\usepackage{xcolor}
+%% Syllabus - POSC 521: MPA Capstone Seminar
+%% Author: David P. Adams
+%% Semester: Fall 2025
+\DocumentMetadata{
+  pdfstandard=UA-2,               % PDF/UA-2 standard for accessibility
+  pdfversion=2.0,                 % PDF version 2.0
+  lang=en-US                      % Document language set to US English
+}
+
+% Document class and font size
+\documentclass[12pt]{article}     % Standard article class with 12pt font size
+
+% Language settings
+\usepackage[american]{babel}      % Set language to American English
+
+% Fonts setup (requires LuaLaTeX)
+\usepackage{fontspec}             % Enables custom font selection
+\setmainfont{TeX Gyre Heros}      % Main font: TeX Gyre Heros (sans-serif)
+\setsansfont{TeX Gyre Heros}      % Sans-serif font: TeX Gyre Heros
+\setmonofont{TeX Gyre Cursor}     % Monospace font: TeX Gyre Cursor
+
+% Page layout and spacing
+\usepackage{geometry}             % Adjust page margins
+\usepackage{xcolor}               % Enable color definitions
+\geometry{margin=1in}             % Set 1-inch margins
+\usepackage{setspace}             % Control line spacing
+\onehalfspacing                   % Set line spacing to 1.5
+
+% List, graphics, table, and caption settings
+\usepackage{enumitem}             % Enhanced list customization
+\setlist[itemize]{                % Default settings for itemized lists
+  itemsep=0pt,                    % No extra space between items
+  parsep=0pt,                     % No extra space between paragraphs
+  topsep=0.25\baselineskip        % Small space before the list
+}
+\newlist{flatlist}{itemize}{1}    % Define a bulletless, flush-left list
+\setlist[flatlist]{               % Settings for flatlist
+  label={},                       % No bullet or label
+  leftmargin=0pt,                 % No left margin
+  itemsep=0pt, parsep=0pt,        % No extra spacing
+  topsep=0pt                      % No space before the list
+}
+\usepackage{graphicx}             % Include graphics
+\usepackage{array, booktabs, longtable} % Enhanced table formatting
+\usepackage{caption}              % Customize captions
+\usepackage{tabularray}           % Modern table package
+\UseTblrLibrary{booktabs}         % Use booktabs for better table rules
 \usepackage{colortbl}
-\usepackage{url}
-\usepackage[utf8]{inputenc}
-\usepackage{tabularx}
-\usepackage{booktabs}
-\frenchspacing
-\usepackage{multicol}
-\usepackage{eso-pic}
-\usepackage[longnamesfirst]{natbib}
-\bibpunct{(}{)}{;}{a}{}{,}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{setspace}
-\usepackage{paralist}
-\usepackage{quoting}
-\usepackage{comment}
-\usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{bookmark}
+
+% Accessibility tagging
+\usepackage{tagpdf}               % Enable PDF tagging for accessibility
+\tagpdfsetup{
+  activate-all=true,              % Activate all tagging features
+  interwordspace=true             % Improve word boundary info for assistive tech
+}
+
+% Section Styling
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
-\usepackage{hyperref}
+
+% Bibliography
+\usepackage[longnamesfirst]{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}
+
+% Hyperlinks and PDF metadata
+\usepackage[
+  pdfusetitle,                    % Use \title and \author for PDF metadata
+  pdflang=en-US,                  % Set PDF language to US English
+  pdfstartview=FitH,              % Open PDF with horizontal fit
+  pdfdisplaydoctitle=true         % Display document title in PDF viewer
+]{hyperref}
+
 \hypersetup{
-    colorlinks=true,
-        linkcolor=blue,
-        filecolor=magenta,      
-        urlcolor=cyan,
-        citecolor=purple,
+  unicode=true,                   % Enable Unicode support
+  colorlinks=true,                % Use colored links
+  linkcolor=blue,                 % Color for internal links
+  urlcolor=blue,                  % Color for URLs
+  citecolor=blue,                 % Color for citations
+  pdftitle={POSC 521: MPA Capstone Seminar: COURSE TITLE}, % PDF title
+  pdfauthor={David P. Adams},          % PDF author metadata
+  pdfsubject={California State University, Fullerton Course Syllabus}, % PDF subject
+  pdfkeywords={CSUF, Syllabus, MPA, Public Administration}, % PDF keywords
+  pdfborderstyle={/S/U/W 1}       % Underline links in PDF
 }
-\usepackage[scaled]{helvet} 
-\renewcommand*\familydefault{\sfdefault}
-\newenvironment{boldnumlist}
-{\begin{enumerate}[label=\textbf{\arabic*.}]}
-{\end{enumerate}}
+\urlstyle{same}                   % Use the same font style for URLs
 
+% Document title and metadata
+\title{\textbf{\Huge{POSC 521}} \\ \textit{MPA Capstone Seminar}: \\
+Public Administration Theory} % Course title
+\author{}                         % Leave author blank (info in body)
+\date{\Large{Fall 2025}}              % Term and year of the course
+
+% Accessibility enhancements
+\setlistdepth{3}                  % Ensure consistent list tagging depth
+% Example for alt text: \includegraphics[width=2.75in, alt={Cal State Fullerton wordmark}]{csuf_logo.png}
+
+% Begin the document
 \begin{document}
-\title{\includegraphics[width=8cm]{Images/stacked.png} \\ \textbf{Introduction to Public Administration}}
 
-\title{MPA Capstone Seminar: \\ Public Administration Theory}
-\author{POSC 521 — Spring 2025}
-\date{Tuesdays at 7:00 in Humanities 413}
 
 \maketitle
-        \subsection*{Session Schedule:}
-                            
-        \begin{multicols}{2}
-        \subsubsection*{In-Person Sessions}
-        \begin{itemize}[leftmargin=*]
-            \item August 26
-            \item September 2, 9, 16, 23, 30
-            \item October 7, 14, 21, 28
-            \item December 9
-        \end{itemize}
-                            
-        \columnbreak
-                            
-        \subsubsection*{Asynchronous Online Sessions}
-        \begin{itemize}[leftmargin=*]
-            \item November 3, 11, 15
-            \item December 2, 14
-        \end{itemize}
-        \end{multicols}
+% ========== CSUF HEADER (OPTIONAL) ==========
+\begin{center}
+    \includegraphics[width=2.75in, alt={Cal State Fullerton wordmark}]{csuf_logo.png}
+\end{center}
 
 
+% ========== SECTION 1: FACULTY INFORMATION ==========
+\section{Faculty Information}
+% Replace placeholders with your information
+\noindent \textbf{Instructor:} David P. Adams, Ph.D. \\
+\noindent \textbf{Office:} Gordon Hall 521 \\
+\noindent \textbf{Phone/Text:} (657) 278-4770 \\
+\noindent \textbf{Website:} \href{https://dadams.io}{dadams.io}
+\noindent \textbf{Email:} dpadams@fullerton.edu \\
+\noindent \textbf{Office hours:} Tuesdays at 5:30, by \href{https://dadams.io/appointments}{appointment}
 
-                    \subsection*{Professor: David P. Adams, Ph.D.}
+% ========== SECTION 2: COURSE COMMUNICATION ==========
+\section{Course Communication}
+All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email. Students are also responsible for ensuring that their \emph{Canvas} notifications are set to receive messages from the course. Students are expected to check \emph{Canvas} and their email at least once daily.
 
-                    \subsubsection*{Contact Information:}
-                    
-                    \begin{itemize}
-                            \item Office: 516 Gordon Hall
-                            \item Phone/SMS: (657) 278-4770
-                            \item Zoom Meeting ID: 334 750 2369 or \href{https://fullerton.zoom.us/j/3347502369}{\texttt{fullerton.zoom.us/j/3347502369}} 
-                            \item website: \href{https://dadams.io}{\texttt{dadams.io}}
-                            \item email: \href{dpadams@fullerton.edu}{\texttt{dpadams@fullerton.edu}}
-                            \item Office hours: Tuesdays \& Thursdays from 9:30 to 11:00, Tuesdays from 5:30 to 6:30, and by \href{https://dadams.io/appointments}{appointment}.
-                            \item Schedule meetings throughout the week: \href{https://dadams.io/appointments}{\texttt{dadams.io/appointments}}
-                    \end{itemize}
-                    
-                    \section{Catalog Description}
-                    Concepts, models and ideologies of public administration within the larger political system. Course restricted to students in their final six units of graduate work.
-                    
-                    \section{Course Description}
-                    The capstone seminar in the Master of Public Administration program at Cal State Fullerton examines concepts, models, and ideologies of public administration within the larger political system.
 
-                    \section{Course Prerequisites}
-                    This course is restricted to students in their final six units of graduate work in the MPA program. Students must have completed all other required courses in the MPA program before enrolling in this course.
-                    
-                    \section{Course Objectives}
-                    This course is designed to accomplish five interrelated objectives:
-                    
-                    \begin{enumerate}
-                            \item \textbf{Theory Examination}: We will delve into the most important theories and literature in public administration, fostering a deep understanding of the field.
-                            \item \textbf{Literature Review}: You will complete a literature review in your concentration area, allowing you to specialize and delve deeper into a specific aspect of public administration. This preparation will be crucial for the general concentration portion of the comprehensive exams.
-                            \item \textbf{Writing Skills}: This course will enhance your writing skills, focusing on clear, concise, and effective communication. This preparation will be crucial for the general theory portion of the comprehensive exams.
-                            \item \textbf{Critical Thinking}: You will develop your critical thinking skills, learning to analyze and evaluate complex arguments and theories. This preparation will be crucial for the general theory portion of the comprehensive exams.
-                            \item \textbf{Professional Development}: This course will help you develop the skills and knowledge necessary for a successful career in public administration. You will learn about the latest trends and issues in the field and how to navigate the challenges of public service.
-                    
-                    \end{enumerate}
-    
-\section{University-wide Student Learning Outcomes}
-    As a capstone course in the MPA program, this course is designed to help students achieve the following university-wide student learning outcomes:
-    \begin{enumerate}
-        \item Knowledge, skills, and professional dispositions including higher order competence in disciplinary perspectives and interdisciplinary points of view;
-        \item The ability to access, analyze, synthesize, and evaluate complex information from multiple sources and in new situations and settings;
-        \item Advanced communication skills;
-        \item The ability to work independently and in collaboration with others as artists, practitioners, researchers, and/or scholars;
-        \item The ability to determine and apply appropriate methods and technologies to address problems that affect their communities; 
-        \item A commitment to social justice and ethical leadership within diverse communities and an interdependent global community.
-    \end{enumerate}
+% ========== SECTION 3: TECHNICAL PROBLEMS ==========
+\section{Technical Problems}
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then, contact: \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone (657) 278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{student genius center}, online chat - log into \href{http://my.fullerton.edu}{portal}; click ``Online IT Help''; click ``Live Chat.''
 
-    \section{Course Materials}
-    \subsection*{Required Texts}
+\vspace{0.5em}
+\noindent \textbf{\underline{For issues with Canvas}}: Canvas Support Hotline = (657) 278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides with AI Assistant}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\vspace{0.5em}
+\noindent \textbf{Alternative plan for submitting work:} Students are expected to submit all assignments via \emph{Canvas}. If you cannot submit an assignment via \emph{Canvas}, please contact the professor to discuss alternative submission procedures.
+
+\vspace{0.5em}
+\noindent \textbf{Response time:} I will strive to respond to all student emails and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you do not receive a response within 24 hours, please send a follow-up message. If you do not receive a response within 48 hours, please send another follow-up message and contact me via phone or SMS text at (657) 278-4770.
+
+% ========== SECTION 4: COURSE INFORMATION ==========
+\section{Course Information}
+    \subsubsection*{In-Person Sessions}
+    \begin{itemize}[leftmargin=*]
+        \item August 26
+        \item September 2, 9, 16, 23, 30
+        \item October 7, 14, 21, 28
+        \item December 9
+    \end{itemize}
+
+    \subsubsection*{Asynchronous Online Sessions}
+    \begin{itemize}[leftmargin=*]
+        \item November 3, 11, 15
+        \item December 2, 14
+    \end{itemize}
+
+	\subsection {Course requisite(s):}
+		\begin{itemize}
+			\item POSC 509: Public Administration Foundations
+		\end{itemize}
+
+	\subsection*{Catalog description:} 
+		Concepts, models and ideologies of public administration within the larger political system. Course restricted to students in their final six units of graduate work.
+
+	\subsection*{Additional description:}
+		The capstone seminar in the Master of Public Administration program at Cal State Fullerton examines concepts, models, and ideologies of public administration within the larger political system.
+
+
+	\subsection*{Course Materials}
+	\subsubsection*{Required Texts}
     \begin{itemize}
         \item \textbf{Denhardt and Denhardt}. \textit{The New Public Service: Serving, Not Steering}. 4th ed. Routledge, 2015.
         \item \textbf{Lipsky, Michael}. \textit{Street-Level Bureaucracy: Dilemmas of the Individual in Public Services}. Russell Sage Foundation, 2010.
@@ -125,164 +171,116 @@
         \item \textbf{McGhee, Heather}. \textit{The Sum of Us: What Racism Costs Everyone and How We Can Prosper Together}. One World, 2021.
     \end{itemize}
 
-\subsection*{Additional Readings}
 
-\noindent Additional readings are indicated on the course schedule and in the references section of this document. These readings and a \texttt{.bib} file are located in a shared DropBox folder. Please contact the professor if you need access to the folder.
+\vspace{1em}
+\noindent \textbf{Student Learning Outcomes:}
+                   \begin{enumerate}
+                        \item \textbf{Analyze and evaluate public administration theories and literature:} Demonstrate a deep understanding of foundational and contemporary theories in public administration and their application within the larger political system.
+                        \item \textbf{Conduct a literature review in a concentration area:} Synthesize and critically evaluate scholarly literature to develop expertise in a specific aspect of public administration.
+                        \item \textbf{Develop advanced writing skills:} Produce clear, concise, and effective written communication tailored to academic and professional contexts in public administration.
+                        \item \textbf{Apply critical thinking skills:} Analyze and evaluate complex arguments, theories, and practices in public administration to address real-world challenges.
+                        \item \textbf{Demonstrate professional readiness:} Integrate knowledge of trends, issues, and ethical considerations in public administration to prepare for a successful career in public service.
+                  \end{enumerate}
 
-\section{Technical Requirements}
+% ========== SECTION 5: GRADING POLICIES AND STANDARDS ==========
+\section{Grading Policies and Standards}
 
-\subsection*{Pollak Library Resources}
+\subsection*{Grading Scale and Weights}
 
-The Pollak Library provides a wide range of resources and services to support your research and learning. These resources include books, journals, databases, and research guides. You can access the library's resources online through the \href{http://www.library.fullerton.edu/}{Pollak Library website}. The library also offers research assistance through the \href{http://www.library.fullerton.edu/research/}{Research Assistance Program}. You can also access the \href{http://www.library.fullerton.edu/about/guidelines/online-instruction-guidelines.php}{library's online instruction guidelines} for help with online learning.
+\noindent \textbf{Grading scale:}
 
-\subsection*{Canvas}
+The grading scale is shown in Table~\ref{tab:grading-scale}. Grades will be given based on the weights in Table~\ref{tab:grade-weights}.
+\begin{center}
+\begin{table}[h]
+  \caption{Grade scale}
+  \label{tab:grading-scale}
+  \centering
+  \begin{tblr}{
+    colspec = {l c l c},
+    rowhead = 1,             
+    row{1} = {font=\bfseries, bg=gray!20},
+  }
+  Grade & Percent    & Grade & Percent \\
+  A+    & 98.0--100.0& C+    & 77.0--79.9 \\
+  A     & 93.0--97.9 & C     & 73.0--76.9 \\
+  A-    & 90.0--92.9 & C-    & 70.0--72.9 \\
+  B+    & 87.0--89.9 & D+    & 67.0--69.9 \\
+  B     & 83.0--86.9 & D     & 63.0--66.9 \\
+  B-    & 80.0--82.9 & D-    & 60.0--62.9 \\
+        &            & F     & 0.0--59.9 \\
+  \end{tblr}
+\end{table}
 
-This course will use \href{https://csufullerton.instructure.com/}{Canvas} as a learning management system. You will use \emph{Canvas} to access course materials, submit assignments, participate in discussions, and communicate with the professor and your classmate. You are responsible for checking \emph{Canvas} regularly for announcements, assignments, and other course materials. You are also responsible for ensuring that your \emph{Canvas} notifications are set to receive messages from the course. 
+\end{center}
 
-\subsection*{Zoom}
-This course may include synchronous online sessions using \href{https://fullerton.zoom.us/}{Zoom}. You are responsible for ensuring that you have the necessary equipment and internet connection to participate in these sessions. 
+\vspace{1em}
+\noindent \textbf{Required Course Assignments:}
 
-\subsection*{Minimum Technical Requirements}
+The due dates for the course requirements are as follows:
+    \begin{itemize}
+        \item Weekly Readings Assignments:
+        \begin{itemize}
+            \item Annotated Bibliography: Due each Monday by 11:59 p.m. (Weeks 1--9, excluding Thanksgiving week)
+            \item Rough Draft Synthesis Paper: Due each Tuesday by 7:00 p.m. (Weeks 1--9)
+            \item Final Synthesis Paper: Due each Friday by 11:59 p.m. (Weeks 1--9)
+            \item Personal Reflection: Due each Friday by 11:59 p.m. (Weeks 1--9)
+        \end{itemize}
+        \item Practice Comprehensive Exam Response:
+        \begin{itemize}
+            \item Distributed in Week 10 (Sunday, 10/26)
+            \item Due on Saturday, 11/1 by 11:59 p.m.
+        \end{itemize}
+        \item MPA Comprehensive General Area Essay Exam:
+        \begin{itemize}
+            \item Distributed on Friday, 11/7 at 8:00 a.m.
+            \item Due on Thursday, 11/13 by 4:59 p.m.
+        \end{itemize}
+        \item Concentration Area Paper:
+        \begin{itemize}
+            \item Topic Selection: Due Week 13 (Sunday, 11/23)
+            \item Literature Review Draft: Due Week 14 (Sunday, 12/7)
+            \item Workshop Participation: Week 15 (Tuesday, 12/9)
+            \item Final Draft: Due Tuesday, 12/16 by 9:00 p.m.
+        \end{itemize}
+    \end{itemize}
 
-To participate in this course, you will need the following minimum technical requirements:
-\begin{itemize}
-    \item A computer or tablet with a reliable internet connection
-    \item A webcam and microphone
-    \item A modern web browser (Chrome, Firefox, Safari, or Edge)
-    \item Microsoft Word or a compatible word processing program
-    \item Adobe Acrobat Reader or a compatible PDF reader
-\end{itemize}
-
-
-\noindent Long- and short-term computer and internet access loans are available through the \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}.
-
-\section{Technical Problems}
-
-\subsection*{University IT Help Desk}
-
-Contact the instructor immediately to document the problem if you encounter any technical difficulties. Then contact the \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{Student IT Help Desk} for assistance. You can also call the Student IT Help Desk at (657) 278-8888, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, visit them at the Pollak Library North \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}, or log on to the \href{http://my.fullerton.edu/}{my.fullerton.edu} portal and click ``Online IT Help'' followed by ``Live Chat''.
-
-\subsection*{Canvas Support}
-
-If you encounter any technical difficulties with Canvas, call the Canvas Support Hotline at 855-302-7528, visit the \href{https://community.canvaslms.com/docs/DOC-10720-67952720329}{Canvas Community}, or click the ``Help'' button in the lower left corner of Canvas and select ``Report a Problem''. The \href{https://cases.canvaslms.com/liveagentchat?chattype=student&sfid=001A000000YzcwQIAR}{Student Support Live Chat} is available 24 hours a day, 7 days a week.
-
-
-\section{University Student Policies}
-
-In accordance with UPS 300.00, students must be familiar with certain policies applicable to all courses. Please review these policies as needed and visit this Cal State Fullerton website \texttt{\href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}} for links to the following information:
-
-\begin{enumerate}
-    \item   University learning goals and program learning outcomes.
-    \item	Learning objectives for each General Education (GE) category.
-    \item	Guidelines for appropriate online behavior (netiquette).
-    \item	Students' rights to accommodations for documented special needs.
-    \item   Campus student support measures, including Counseling \& Psychological Services, Title IV and Gender Equity, Diversity Initiatives and Resource Centers, and Basic Needs Services.
-    \item	Academic integrity (refer to UPS 300.021).
-    \item	Actions to take during an emergency.
-    \item	Library services information.
-    \item	Student Information Technology Services, including details on technical competencies and resources required for all students.
-    \item	Software privacy and accessibility statements.
-\end{enumerate}
-
-\section{Course Student Policies}
-
-\subsection*{Course Communication}
-All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email. Students are also responsible for ensuring that their \emph{Canvas} notifications are set to receive messages from the course. Students are expected to check \emph{Canvas} and their email at least once daily.
-
-\subsubsection*{Response Time}I will strive to respond to all student emails and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you do not receive a response within 24 hours, please send a follow-up message. If you do not receive a response within 48 hours, please send another follow-up message and contact me via phone or SMS text at (657) 278-4770.
-
-\subsection*{Due Dates}
-All assignments are due on the date specified in the course schedule. Late assignments will only be accepted if prior arrangements have been made with the professor. Students must submit all assignments on time and in the correct format. Failure to submit an assignment on time may result in a grade penalty.
-
-\subsection*{Alternative Procedures for Submitting Work}
-Students are expected to submit all assignments via \emph{Canvas}. If you cannot submit an assignment via \emph{Canvas}, please contact the professor to discuss alternative submission procedures.
-
-\subsection*{Extra Credit}
-Extra credit opportunities will not be offered in this course. All students will be graded based on the same criteria and standards.
-
-\subsection*{Attendance}
-Students are expected to attend all in-person sessions. If you are unable to attend a session, please notify the professor in advance. If you miss a session, you are responsible for obtaining the information and materials covered in the session.
-
-\subsection*{Retention of Student Work}
-Students are responsible for retaining copies of all assignments submitted in this course. Students should keep copies of all assignments until the end of the semester and verify that their assignments have been graded and returned before discarding them.
-
-\subsection*{Academic Integrity}
-Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy on academic dishonesty and to adhere to this policy in all aspects of this course. Any student who has questions about the policy should ask the professor for clarification.
-
-\subsection*{Plagiarism}
-Plagiarism is a serious violation of academic integrity and will not be tolerated in this course. Plagiarism includes, but is not limited to, copying and pasting text from sources without proper citation, paraphrasing text from sources without proper citation, and submitting work that is not your own. Students are expected to properly cite all sources used in their work and to submit original work. Failure to do so may result in a failing grade for the assignment and further disciplinary action.
-
-\subsection*{Written Work}
-All written work must be submitted in a professional format, including proper grammar, spelling, and punctuation. Written work must also be properly cited using the appropriate citation style. Students are expected to follow the guidelines for written work provided by the professor and to seek clarification if they have questions about the requirements.
-\subsection*{Artificial Intelligence Policy}
-
-\subsubsection*{Definition of Generative AI}
-
-\noindent For this course, generative AI refers to systems capable of producing human-like text, images, data analysis, or other content. Examples include:
-
-\begin{itemize}
-    \item Large Language Models (e.g., GPT-4, GPT-5, Claude, Gemini, TitanGPT)
-    \item Text-to-image or multimodal generators (e.g., DALL·E, Midjourney)
-    \item AI writing assistants and summarizers
-    \item Automated coding, data, or content generators
-\end{itemize}
-
-\subsubsection*{AI Use Policy}
-
-AI is permitted and encouraged as a learning tool, under the following guidelines:
-
-\begin{itemize}
-    \item \textbf{Allowed}: Using AI for feedback on annotated bibliographies, synthesis drafts, and reflections (see assignments for sample prompts).
-    \item \textbf{Allowed}: Using AI to brainstorm questions, highlight gaps, or check clarity and organization.
-    \item \textbf{Not Allowed}: Submitting AI-generated text as your own work or asking AI to rewrite your assignments.
-    \item \textbf{Optional}: Students may choose whether or not to use AI tools for any assignment in this course. All work can be completed successfully without AI assistance. This optional approach applies to all course requirements, regardless of specific AI-related instructions in individual assignments.
-\end{itemize}
-
-\subsubsection*{Rationale for AI Policy}
-
-This policy is designed to ensure AI use strengthens—not substitutes—your academic work:
-
-\begin{enumerate}
-    \item Promotes critical engagement with public administration theory by using AI as a feedback partner.
-    \item Enhances literature review and writing by highlighting missing connections or blind spots.
-    \item Builds professional literacy with tools already common in public service organizations.
-    \item Develops ethical judgment by practicing responsible use of emerging technologies.
-    \item Encourages sustainability awareness in balancing AI's benefits with its environmental costs.
-\end{enumerate}
-
-\subsubsection*{Ethics and Responsible Use}
-
-\noindent Students are expected to engage with AI responsibly:
-
-\begin{itemize}
-    \item \textbf{Authorship}: All substantive writing must be your own. AI may provide critique, but not draft or rewrite.
-    \item \textbf{Citation}: When AI meaningfully informs your work, cite it (e.g., ``ChatGPT (GPT-5) [AI model], feedback received [date]``).
-    \item \textbf{Bias Awareness}: AI outputs reflect biases. Evaluate them critically for fairness and accuracy.
-    \item \textbf{Sustainability}: Be mindful of AI's environmental footprint and use tools thoughtfully.
-\end{itemize}
-
-\subsubsection*{Repercussions for Misuse}
-
-\begin{itemize}
-    \item Misuse includes submitting AI-generated work as your own, failing to cite AI contributions, or relying on AI instead of demonstrating your own analysis.
-    \item Consequences may include revision requirements, grade penalties, or formal academic integrity proceedings.
-\end{itemize}
-
-\subsubsection*{Assessment of AI Use}
-
-AI use will be assessed not by how often you use it, but by how thoughtfully you integrate it into your learning:
-
-\begin{itemize}
-    \item Evidence of revision and improvement based on AI or peer feedback.
-    \item Student reflections on the usefulness and limitations of AI.
-    \item Quality of class participation, showing independent engagement with readings and theory.
-    \item Final projects that demonstrate original critical thinking, even if AI supported the drafting process.
-\end{itemize}
-
-\noindent The goal is to treat AI as a \textit{feedback partner}---a tool to sharpen your analysis, deepen your questions, and strengthen your voice in public administration.
+\begin{center}
+\begin{table}[h]
+  \caption{Assignment weighting}
+  \label{tab:grade-weights}
+  \centering
+  \begin{tblr}{
+    colspec = {l c},
+    rowhead = 1,                 
+    row{1} = {font=\bfseries, bg=gray!20},
+  }
+    Assignment & Weight \\      
+    Weekly Readings Assignments & 30\% \\
+    Reading Discussion Facilitation & 5\% \\
+    Practice Comprehensive Exam Response & 5\% \\
+    MPA Comprehensive General Area Essay Exam & 35\% \\
+    Concentration Area Paper & 20\% \\
+  Total            & 100\%      \\
+  \end{tblr}
+\end{table}
+\end{center}
 
 
-\section{Course Requirements}
+	\subsection*{Attendance and Participation policy:}
+Students are expected to attend all in-person sessions. If you are unable to attend a session, please notify the professor in advance. If you miss a session, you are responsible for obtaining the information and materials covered in the session. If you miss a session, you will not be able to participate in mandatory class activities. This may have an impact on your graded materials. 
+
+	\subsection*{Make-up and late submission policy:}
+		All assignments are due on the date specified in the course schedule. Late assignments will only be accepted if prior arrangements have been made with the professor. Students must submit all assignments on time and in the correct format. Failure to submit an assignment on time may result in a grade penalty.
+
+	\subsection*{Authentication of student work:}
+        Students may be required to submit their work to a plagiarism detection service. This may include submitting drafts and final versions of assignments. Students should be aware that their work may be checked for authenticity and originality. Cal State Fullerton uses Turnitin\copyright. 
+	\subsection*{Extra credit:}
+		Extra credit opportunities will not be offered in this course. All students will be graded based on the same criteria and standards.
+
+	\subsection*{Retention of student work:}
+		Students are responsible for retaining copies of all assignments submitted in this course. Students should keep copies of all assignments until the end of the semester and verify that their assignments have been graded and returned before discarding them.
+
+\section{Detailed Course Requirements}
 
 \subsection*{1) Weekly Readings Assignment}
 
@@ -339,7 +337,7 @@ Each week includes the following components:
     \begin{itemize}
         \item \textbf{Purpose}: Deepen understanding of the week's readings through collaborative discussion and refine synthesis thinking.
         \item \textbf{Activity}: Analyze key themes, patterns, and contradictions in the readings; discuss insights from rough drafts.
-        \item \textbf{Special Workshops}: In Weeks 3, 6, and 9, class will include structured peer review workshops in addition to regular discussion.
+        \item \textbf{Special Workshops}: In Weeks 2, 6, and 8, class will include structured peer review workshops in addition to regular discussion.
     \end{itemize}
 
     \item \textbf{Final Synthesis Paper \& Reflection (Due Friday Night)}
@@ -372,31 +370,26 @@ In addition to regular class discussion, structured peer review workshops will o
     \item \textbf{Week 8}: Final comprehensive exam preparation and synthesis refinement
 \end{itemize}
 
-\paragraph*{AI Use and Academic Integrity:} AI may be used to provide feedback, raise questions, or suggest additional angles for analysis. It may \textbf{not} be used to draft or rewrite your work. All writing must remain your own. Please read the \textbf{Artificial Intelligence Policy} section of this syllabus for more details on how to use AI responsibly in this course and refer to Table
+\paragraph*{AI Use and Academic Integrity:} AI may be used to provide feedback, raise questions, or suggest additional angles for analysis. It may \textbf{not} be used to draft or rewrite your work. All writing must remain your own. Please read the \textbf{Artificial Intelligence Policy} section of this syllabus for more details on how to use AI responsibly in this course and refer to Table \ref{tab:ai-guidelines} and the more detailed guidelines provided below.
 
 \begin{center}
-\begin{table}[h!]
-\centering
-\caption{Guidelines for Responsible AI Use in the Course}
-\label{tab:ai-guidelines}
-\begin{tabular}{|p{6cm}|p{6cm}|}
-\hline
-\rowcolor{gray!20} 
-\textbf{AI Use: Do's} & \textbf{AI Use: Don'ts} \\
-\hline
-Use AI to \textbf{give feedback} on your writing (clarity, gaps, connections). & Use AI to \textbf{write or rewrite} your assignments. \\
-\hline
-Ask AI to \textbf{suggest questions} for discussion or reflection. & Copy/paste AI text and submit it as your own work. \\
-\hline
-Cite AI when it meaningfully shaped your thinking (e.g., ``ChatGPT feedback, 9/10/25''). & Omit citation when AI influenced your work. \\
-\hline
-Use AI to \textbf{check organization, coherence, or flow}. & Rely on AI without engaging critically with course readings. \\
-\hline
-Be mindful of \textbf{biases and sustainability impacts}. & Treat AI outputs as authoritative without evaluation. \\
-\hline
-Remember: \textbf{Your voice, analysis, and synthesis must remain central.} & Assume AI can replace your own critical thinking. \\
-\hline
-\end{tabular}
+\begin{table}[h]
+    \caption{Guidelines for Responsible AI Use in the Course}
+    \label{tab:ai-guidelines}
+    \centering
+    \begin{tblr}{
+        colspec = {X[6,l] X[6,l]},
+        rowhead = 1,             
+        row{1} = {font=\bfseries, bg=gray!20}
+    }
+    AI Use: Do's & AI Use: Don'ts \\
+    Use AI to \textbf{give feedback} on your writing (clarity, gaps, connections). & Use AI to \textbf{write or rewrite} your assignments. \\
+    Ask AI to \textbf{suggest questions} for discussion or reflection. & Copy/paste AI text and submit it as your own work. \\
+    Cite AI when it meaningfully shaped your thinking (e.g., ``ChatGPT feedback, 9/10/25''). & Omit citation when AI influenced your work. \\
+    Use AI to \textbf{check organization, coherence, or flow}. & Rely on AI without engaging critically with course readings. \\
+    Be mindful of \textbf{biases and sustainability impacts}. & Treat AI outputs as authoritative without evaluation. \\
+    Remember: \textbf{Your voice, analysis, and synthesis must remain central.} & Assume AI can replace your own critical thinking. \\
+    \end{tblr}
 \end{table}
 \end{center}
 
@@ -538,78 +531,144 @@ This capstone project allows students to deepen their understanding of their MPA
 \end{itemize}
 \noindent This assignment is designed to help you synthesize your learning in the MPA program and apply it to a specific area of public administration. By engaging with \textit{The Sum of Us} and other relevant literature, you will develop a deeper understanding of how equity and exclusion affect public administration and how you can contribute to creating a more equitable and inclusive society.
 
-\section{Course Requirements Due Dates}
+% ========== SECTION 8: ACADEMIC INTEGRITY ==========
+	\section{Academic Integrity}
+	Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy on academic dishonesty and to adhere to this policy in all aspects of this course. Any student who has questions about the policy should ask the professor for clarification.
+	
+	\subsection*{Plagiarism}
+	Plagiarism is a serious violation of academic integrity and will not be tolerated in this course. Plagiarism includes, but is not limited to, copying and pasting text from sources without proper citation, paraphrasing text from sources without proper citation, and submitting work that is not your own. Students are expected to properly cite all sources used in their work and to submit original work. Failure to do so may result in a failing grade for the assignment and further disciplinary action.
+	
+	\subsection*{Written Work}
+	All written work must be submitted in a professional format, including proper grammar, spelling, and punctuation. Written work must also be properly cited using the appropriate citation style. Students are expected to follow the guidelines for written work provided by the professor and to seek clarification if they have questions about the requirements.
 
-The due dates for the course requirements are as follows:
-    \begin{itemize}
-        \item Weekly Readings Assignments:
-        \begin{itemize}
-            \item Annotated Bibliography: Due each Monday by 11:59 p.m. (Weeks 1–9, excluding Thanksgiving week)
-            \item Rough Draft Synthesis Paper: Due each Tuesday by 7:00 p.m. (Weeks 1–9)
-            \item Final Synthesis Paper: Due each Friday by 11:59 p.m. (Weeks 1–9)
-            \item Personal Reflection: Due each Friday by 11:59 p.m. (Weeks 1–9)
-        \end{itemize}
-        \item Practice Comprehensive Exam Response:
-        \begin{itemize}
-            \item Distributed in Week 10 (Sunday, 10/26)
-            \item Due on Saturday, 11/1 by 11:59 p.m.
-        \end{itemize}
-        \item MPA Comprehensive General Area Essay Exam:
-        \begin{itemize}
-            \item Distributed on Friday, 11/7 at 8:00 a.m.
-            \item Due on Thursday, 11/13 by 4:59 p.m.
-        \end{itemize}
-        \item Concentration Area Paper:
-        \begin{itemize}
-            \item Topic Selection: Due Week 13 (Sunday, 11/23)
-            \item Literature Review Draft: Due Week 14 (Sunday, 12/7)
-            \item Workshop Participation: Week 15 (Tuesday, 12/9)
-            \item Final Draft: Due Tuesday, 12/16 by 9:00 p.m.
-        \end{itemize}
-    \end{itemize}
+	\subsection*{Artificial Intelligence (AI) Policy}
 
-\section{Grades}
+	\subsubsection*{Definition of Generative AI}
+	
+	\noindent For this course, generative AI refers to systems capable of producing human-like text, images, data analysis, or other content. Examples include:
+	
+	\begin{itemize}
+	    \item Large Language Models (e.g., GPT-4, GPT-5, Claude, Gemini, TitanGPT)
+	    \item Text-to-image or multimodal generators (e.g., DALL-E, Midjourney)
+	    \item AI writing assistants and summarizers
+	    \item Automated coding, data, or content generators
+	\end{itemize}
+	
+	\subsubsection*{AI Use Policy}
+	
+	AI is permitted and encouraged as a learning tool, under the following guidelines:
+	
+	\begin{itemize}
+	    \item \textbf{Allowed}: Using AI for feedback on annotated bibliographies, synthesis drafts, and reflections (see assignments for sample prompts).
+	    \item \textbf{Allowed}: Using AI to brainstorm questions, highlight gaps, or check clarity and organization.
+	    \item \textbf{Not Allowed}: Submitting AI-generated text as your own work or asking AI to rewrite your assignments.
+	    \item \textbf{Optional}: Students may choose whether or not to use AI tools for any assignment in this course. All work can be completed successfully without AI assistance. This optional approach applies to all course requirements, regardless of specific AI-related instructions in individual assignments.
+	\end{itemize}
+	
+	\subsubsection*{Rationale for AI Policy}
+	
+	This policy is designed to ensure AI use strengthens—not substitutes—your academic work:
+	
+	\begin{enumerate}
+	    \item Promotes critical engagement with public administration theory by using AI as a feedback partner.
+	    \item Enhances literature review and writing by highlighting missing connections or blind spots.
+	    \item Builds professional literacy with tools already common in public service organizations.
+	    \item Develops ethical judgment by practicing responsible use of emerging technologies.
+	    \item Encourages sustainability awareness in balancing AI's benefits with its environmental costs.
+	\end{enumerate}
+	
+	\subsubsection*{Ethics and Responsible Use}
+	
+	\noindent Students are expected to engage with AI responsibly:
+	
+	\begin{itemize}
+	    \item \textbf{Authorship}: All substantive writing must be your own. AI may provide critique, but not draft or rewrite.
+	    \item \textbf{Citation}: When AI meaningfully informs your work, cite it (e.g., ``ChatGPT (GPT-5) [AI model], feedback received [date]``).
+	    \item \textbf{Bias Awareness}: AI outputs reflect biases. Evaluate them critically for fairness and accuracy.
+	    \item \textbf{Sustainability}: Be mindful of AI's environmental footprint and use tools thoughtfully.
+	\end{itemize}
+	
+	\subsubsection*{Repercussions for Misuse}
+	
+	\begin{itemize}
+	    \item Misuse includes submitting AI-generated work as your own, failing to cite AI contributions, or relying on AI instead of demonstrating your own analysis.
+	    \item Consequences may include revision requirements, grade penalties, or formal academic integrity proceedings.
+	\end{itemize}
+	
+	\subsubsection*{Assessment of AI Use}
+	
+	AI use will be assessed not by how often you use it, but by how thoughtfully you integrate it into your learning:
+	
+	\begin{itemize}
+	    \item Evidence of revision and improvement based on AI or peer feedback.
+	    \item Student reflections on the usefulness and limitations of AI.
+	    \item Quality of class participation, showing independent engagement with readings and theory.
+	    \item Final projects that demonstrate original critical thinking, even if AI supported the drafting process.
+	\end{itemize}
+	
+	\noindent The goal is to treat AI as a \textit{feedback partner}---a tool to sharpen your analysis, deepen your questions, and strengthen your voice in public administration.
 
+% ========== SECTION 8: TECHNICAL COMPETENCIES (DELETE IF NOT APPLICABLE) ==========
+\section{Technical Requirements}
 
-\subsection*{Grading Scale and Grade Weights}  
+	\subsection*{Pollak Library Resources}
+	
+	The Pollak Library provides a wide range of resources and services to support your research and learning. These resources include books, journals, databases, and research guides. You can access the library's resources online through the \href{http://www.library.fullerton.edu/}{Pollak Library website}. The library also offers research assistance through the \href{http://www.library.fullerton.edu/research/}{Research Assistance Program}. You can also access the \href{http://www.library.fullerton.edu/about/guidelines/online-instruction-guidelines.php}{library's online instruction guidelines} for help with online learning.
+	
+	\subsection*{Canvas}
+	
+	This course will use \href{https://csufullerton.instructure.com/}{Canvas} as a learning management system. You will use \emph{Canvas} to access course materials, submit assignments, participate in discussions, and communicate with the professor and your classmate. You are responsible for checking \emph{Canvas} regularly for announcements, assignments, and other course materials. You are also responsible for ensuring that your \emph{Canvas} notifications are set to receive messages from the course. 
+	
+	\subsection*{Zoom}
+	This course may include synchronous online sessions using \href{https://fullerton.zoom.us/}{Zoom}. You are responsible for ensuring that you have the necessary equipment and internet connection to participate in these sessions. 
+	
+	\subsection*{Minimum Technical Requirements}
+	
+	To participate in this course, you will need the following minimum technical requirements:
+	\begin{itemize}
+	    \item A computer or tablet with a reliable internet connection
+	    \item A webcam and microphone
+	    \item A modern web browser (Chrome, Firefox, Safari, or Edge)
+	    \item Microsoft Word or a compatible word processing program
+	    \item Adobe Acrobat Reader or a compatible PDF reader
+	\end{itemize}
+	
+	
+	\noindent Long- and short-term computer and internet access loans are available through the \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}.
 
-The grading scale is shown in Table~\ref{tab:grading-scale}. Grades will be given based on the weights in Table~\ref{tab:grade-weights}.
+% ========== SECTION 9: STUDENT RESOURCES WEBSITE ==========
+\section{Student Resources Website}
+It is the student's responsibility to read and understand the required and important \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{student information for course syllabi}. Included is information about:
 
-\begin{table}[h]
-\centering
-\caption{Grading Scale}
-\begin{tabular}{llll}
-\toprule
-\textbf{Grade} & \textbf{Percentage} & \textbf{Grade} & \textbf{Percentage} \\
-\midrule
-A+ & 98.0 -- 100 & B- & 80.0 -- 81.9\\
-A & 92.0 -- 97.9 & C+ & 78.0 -- 79.9\\
-A- & 90.0 -- 91.9 & C & 72.0 -- 77.9\\
-B+ & 88.0 -- 89.9 & C- & 70.0 -- 71.9\\
-B & 82.0 -- 87.9 & D & 60.0 -- 69.9\\
-D- & 50.0 -- 59.9 & F & 0 -- 49.9\\
+\begin{itemize}
+\item University learning goals
+\item General Education learning objectives
+\item Netiquette/appropriate online behavior
+\item Students' rights to accommodations
+\item Campus student support resources
+\item Academic integrity
+\item Emergency preparedness/what to do
+\item Library services
+\item Student IT services and competencies
+\item Software privacy and accessibility
+\item Accessibility statement
+\item Diversity statement
+\item Land acknowledgment
+\item Final exam schedule
+\item Semester calendar
+\end{itemize}
 
-\bottomrule
-\end{tabular}
-\label{tab:grading-scale}
-\end{table}
+% ========== SECTION 10: CLASSROOM MANAGEMENT ==========
+\section{Classroom Management}
+\subsection*{Classroom Policies}
+\begin{itemize}
+    \item \textbf{Attendance:} Regular attendance is crucial for success in this course. If you must miss a class, please notify me in advance and make arrangements to catch up on missed material.
+    \item \textbf{Participation:} Active participation in class discussions is expected. Please come prepared to engage with the readings and contribute to group activities.
+    \item \textbf{Technology Use:} Laptops and tablets are allowed for note-taking and accessing course materials. However, please refrain from using your devices for non-class-related activities during class.
+    \item \textbf{Respectful Communication:} Treat your classmates and instructor with respect. Disagreements are natural, but please express them constructively and courteously.
+\end{itemize}
 
-\begin{table}[h!]
-    \centering
-    \caption{Grade Weights}
-    \begin{tabular}{ll}
-        \toprule
-    \textbf{Assignment} & \textbf{Percentage} \\
-    \midrule
-    Weekly Readings Assignments & 30\% \\
-    Reading Discussion Facilitation & 5\% \\
-    Practice Comprehensive Exam Response & 5\% \\
-    MPA Comprehensive General Area Essay Exam & 35\% \\
-    Concentration Area Paper & 20\% \\
-    \bottomrule
-    \end{tabular}
-    \label{tab:grade-weights}
-\end{table}
+% ========== SECTION 13: CALENDAR/SCHEDULE ==========
 
 \section{Course Schedule}
 
@@ -816,7 +875,7 @@ D- & 50.0 -- 59.9 & F & 0 -- 49.9\\
             \singlespace
             \bibliographystyle{apsr}
             \bibliography{521_students}
-
+\vspace{1cm}
 % updated date and time
 \begin{flushright}
 Updated: \today
