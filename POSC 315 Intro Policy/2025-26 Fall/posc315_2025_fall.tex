@@ -1,0 +1,411 @@
+% POSC 315 Fall 2025 - Asynchronous Online
+% Document metadata for PDF accessibility and compliance
+\DocumentMetadata{
+  pdfstandard=UA-2,               % PDF/UA-2 standard for accessibility
+  pdfversion=2.0,                 % PDF version 2.0
+  lang=en-US                      % Document language set to US English
+}
+
+% Document class and font size
+\documentclass[12pt]{article}     % Standard article class with 12pt font size
+
+% Language settings
+\usepackage[american]{babel}      % Set language to American English
+
+% ================================
+% FONT SETTINGS
+% ================================
+
+\usepackage{fontspec}
+
+% === Recommended (Sans-serif body text) ===
+\IfFontExistsTF{TeX Gyre Heros}{
+  \setmainfont{TeX Gyre Heros} % Default to sans-serif
+}{
+  \setmainfont{Latin Modern Sans} % Fallback sans
+}
+
+% Monospaced font (for code, etc.)
+\IfFontExistsTF{TeX Gyre Cursor}{
+  \setmonofont{TeX Gyre Cursor}
+}{
+  \setmonofont{Latin Modern Mono}
+}
+
+% Page layout and spacing
+\usepackage{geometry}             % Adjust page margins
+\geometry{margin=1in}             % Set 1-inch margins
+\usepackage{setspace}             % Control line spacing
+\onehalfspacing                   % Set line spacing to 1.5
+
+% List, graphics, table, and caption settings
+\usepackage{enumitem}             % Enhanced list customization
+\setlist[itemize]{                % Default settings for itemized lists
+  itemsep=0pt,                    % No extra space between items
+  parsep=0pt,                     % No extra space between paragraphs
+  topsep=0.25\baselineskip        % Small space before the list
+}
+\newlist{flatlist}{itemize}{1}    % Define a bulletless, flush-left list
+\setlist[flatlist]{               % Settings for flatlist
+  label={},                       % No bullet or label
+  leftmargin=0pt,                 % No left margin
+  itemsep=0pt, parsep=0pt,        % No extra spacing
+  topsep=0pt                      % No space before the list
+}
+\usepackage{graphicx}             % Include graphics
+\usepackage{array, booktabs, longtable} % Enhanced table formatting
+\usepackage{caption}              % Customize captions
+\usepackage{tabularray}           % Modern table package
+\UseTblrLibrary{booktabs}         % Use booktabs for better table rules
+
+% Tagging for accessibility
+\IfFileExists{tagpdf-base.sty}{
+  \usepackage{tagpdf}
+  \tagpdfsetup{activate-all=true, interwordspace=true}
+}{
+  \newcommand\tagpdfsetup[1]{}
+}
+
+% Hyperlinks and PDF metadata
+\usepackage[
+  pdfusetitle,                    % Use \title and \author for PDF metadata
+  pdflang=en-US,                  % Set PDF language to US English
+  pdfstartview=FitH,              % Open PDF with horizontal fit
+  pdfdisplaydoctitle=true         % Display document title in PDF viewer
+]{hyperref}
+
+\hypersetup{
+  unicode=true,                   % Enable Unicode support
+  colorlinks=true,                % Use colored links
+  linkcolor=blue,                 % Color for internal links
+  urlcolor=blue,                  % Color for URLs
+  citecolor=blue,                 % Color for citations
+  pdftitle={POSC 315: Introduction to Public Policy}, % PDF title
+  pdfauthor={David P. Adams, Ph.D.},          % PDF author metadata
+  pdfsubject={California State University, Fullerton Course Syllabus}, % PDF subject
+  pdfkeywords={CSUF, Syllabus, Political Science, Public Policy}, % PDF keywords
+  pdfborderstyle={/S/U/W 1}       % Underline links in PDF
+}
+\urlstyle{same}                   % Use the same font style for URLs
+
+% Document title and metadata
+\title{POSC 315, \textit{Introduction to Public Policy}} % Course title
+\author{}                         % Leave author blank (info in body)
+\date{Fall 2025}                  % Term and year of the course
+
+% Accessibility enhancements
+\setlistdepth{3}                  % Ensure consistent list tagging depth
+
+% Begin the document
+\begin{document}
+
+\maketitle
+
+% ========== SECTION 1: FACULTY INFORMATION ==========
+\section*{Faculty Information}
+\noindent \textbf{Instructor:} David P. Adams, Ph.D. \\
+\noindent \textbf{Office:} Gordon Hall 516 \\
+\noindent \textbf{Phone:} (657) 278-4770 \\
+\noindent \textbf{Email:} dpadams@fullerton.edu \\
+\noindent \textbf{Website:} \href{https://dadams.io}{dadams.io} \\
+\noindent \textbf{Office hours:} Tuesdays 9:30--10:30 a.m. and 7:00--8:00 p.m. on \href{https://discord.com/channels/1128747433636135113/1154048074172354600}{Discord Office Hours Channel}; schedule individual appointments at \href{https://dadams.io/appointments}{dadams.io/appointments}
+
+% ========== SECTION 2: COURSE COMMUNICATION ==========
+\section*{Course Communication}
+All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email at least once daily. Please ensure your \emph{Canvas} notifications are set to receive messages from the course.
+
+For questions and support, use the course Discord server for the fastest response. For private matters, email me at dpadams@fullerton.edu. I strive to respond within 24 hours on weekdays.
+
+% ========== SECTION 3: TECHNICAL PROBLEMS ==========
+\section*{Technical Problems}
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then, contact: \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone (657) 278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{student genius center}, online chat - log into \href{http://my.fullerton.edu}{portal}; click ``Online IT Help''; click ``Live Chat.''
+
+\vspace{0.5em}
+\noindent \textbf{\underline{For issues with Canvas}}: Canvas Support Hotline = (657) 278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides with AI Assistant}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\vspace{0.5em}
+\noindent \textbf{Alternative plan for submitting work:} If you cannot submit an assignment via Canvas, email it to me immediately at dpadams@fullerton.edu with documentation of the technical issue.
+
+\vspace{0.5em}
+\noindent \textbf{Response time:} I will strive to respond to all student emails, Discord posts, and Canvas messages within 24 hours, except on weekends and holidays. If you have not received a response within 24 hours, please send a follow-up message. If still no response within 48 hours, please text or call (657) 278-4770.
+
+% ========== SECTION 4: COURSE INFORMATION ==========
+\section*{Course Information}
+\noindent \textbf{Prefix, number, title:} POSC 315, \textit{Introduction to Public Policy} \\
+\noindent \textbf{Meeting times with modality:} Fully online (100\% online), asynchronous
+
+\vspace{0.5em}
+\begin{flatlist}
+\item \textbf{Course requisite(s):} None
+\item \textbf{Catalog description:} Federal domestic policymaking. Structure, functions, and relationships among American national institutions, including executive, legislative and judicial branches, media, political parties, and pressure groups.
+\item \textbf{Additional description:} This course explores the processes and key players in creating public policy in the United States. We examine the various official and unofficial influences on the policy process and the limitations imposed by institutional and structural factors. Students will gain a deeper appreciation for the complexities surrounding agenda setting, policy making, implementation, and evaluation in the American political system.
+\item \textbf{Policy regarding the use of generative AI:} Students may use AI tools for brainstorming, generating ideas, checking grammar, and summarizing content. However, AI tools should not be used to produce final drafts of assignments or significant portions of text submitted as original work. If AI tools are used, their contributions must be appropriately cited and disclosed in a note stating how the tool was used. All writing and analysis must be your own. Submitting AI-generated text as your own work without attribution is considered plagiarism.
+\item \textbf{Course materials and equipment:} ~
+\item \textbf{Required text(s):} Birkland, T. A. (2020). \emph{An Introduction to the Policy Process: Theories, Concepts, and Models of Public Policy Making} (5th ed.). Routledge. ISBN: 978-0367333286
+\item \textbf{Other course materials and equipment:} Reliable computer and internet connection, access to Canvas and Discord
+\end{flatlist}
+
+\vspace{1em}
+\noindent \textbf{Student Learning Outcomes:}
+\begin{enumerate}
+\item Discuss and explain the key features of the public policy-making process in the United States
+\item Recognize and describe the distinct stages of the public policy process
+\item Describe the various internal and external actors that influence public policy, their interactions, and their impact on the policy process
+\item Articulate the historical and contemporary structures and institutions that facilitate, expand, or constrain the public policy process
+\item Differentiate and describe the various theories that attempt to explain the drivers and influences leading to public policy change or maintaining the status quo
+\item Apply knowledge of the policy process to analyze specific policy domains impacted by multiple policy actors and diverse elements of the policy process
+\end{enumerate}
+
+% ========== SECTION 5: GRADING POLICIES AND STANDARDS ==========
+\section*{Grading Policies and Standards}
+
+% Part a: Grading Scale
+\noindent \textbf{a. Grading scale:}
+
+\begin{center}
+\begin{table}[h]
+  \caption{Grade scale}
+  \centering
+  \begin{tblr}{
+    colspec = {l c l c},
+    rowhead = 1,
+    row{1} = {font=\bfseries},
+  }
+  Grade & Percent    & Grade & Percent \\
+  A+    & 97.0--100.0& C+    & 77.0--79.9 \\
+  A     & 93.0--96.9 & C     & 73.0--76.9 \\
+  A-    & 90.0--92.9 & C-    & 70.0--72.9 \\
+  B+    & 87.0--89.9 & D+    & 67.0--69.9 \\
+  B     & 83.0--86.9 & D     & 63.0--66.9 \\
+  B-    & 80.0--82.9 & D-    & 60.0--62.9 \\
+        &            & F     & 0.0--59.9 \\
+  \end{tblr}
+\end{table}
+\end{center}
+
+% Part b: Required Course Assignments
+\vspace{1em}
+\noindent \textbf{b. Required Course Assignments:}
+
+\begin{center}
+\begin{table}[h]
+  \caption{Assignment weighting}
+  \centering
+  \begin{tblr}{
+    colspec = {l c},
+    rowhead = 1,
+    row{1} = {font=\bfseries},
+  }
+  Assignment                          & Percentage \\
+  Module Quizzes                      & 25\% \\
+  Policy Process Analysis Paper       & 60\% \\
+  \quad Topic Selection \& Proposal   & \quad 5\% \\
+  \quad Annotated Bibliography        & \quad 5\% \\
+  \quad Literature Review              & \quad 10\% \\
+  \quad Draft Analysis                 & \quad 15\% \\
+  \quad Final Paper                    & \quad 15\% \\
+  \quad Peer Reviews (via Kritik)     & \quad 10\% \\
+  Discussion Participation             & 15\% \\
+  Total                               & 100\% \\
+  \end{tblr}
+\end{table}
+\end{center}
+
+\noindent \textbf{Module Quizzes (25\% of Final Grade):} Each module includes a quiz at the end of the video content to assess understanding of key concepts. Quizzes consist of multiple-choice questions and must be completed by Sunday at 11:59 p.m. of each week.
+
+\vspace{0.5em}
+\noindent \textbf{Policy Process Analysis Paper (60\% of Final Grade):} This scaffolded writing project analyzes a specific policy issue through the lens of policy process theories. The final paper (10--12 pages) applies theories to understand the selected policy issue's development, implementation, and/or impact. Peer reviews are conducted through Kritik at each stage.
+
+\vspace{0.5em}
+\noindent \textbf{Discussion Participation (15\% of Final Grade):} Weekly participation in Canvas discussions and Discord conversations demonstrates engagement with course material and peers.
+
+% Part c: Attendance and Participation
+\vspace{1em}
+\noindent \textbf{c. Attendance and Participation policy:}
+As an asynchronous online course, ``attendance'' means regular engagement with course materials, timely submission of assignments, and active participation in discussions. Students should log into Canvas at least 3--4 times per week and complete all module activities by the weekly deadlines.
+
+% Part d: Examination dates
+\vspace{1em}
+\noindent \textbf{d. Examination dates:}
+No traditional exams in this course. Assessment occurs through weekly module quizzes and the scaffolded writing project.
+
+% Part e: Make-up and late submission policy
+\vspace{1em}
+\noindent \textbf{e. Make-up and late submission policy:}
+Late assignments will be penalized 5\% per day unless prior arrangements are made. Module quizzes cannot be made up due to their weekly release schedule. The final paper deadline is firm---no late submissions accepted without documented emergency.
+
+% Part f: Authentication of student work
+\vspace{1em}
+\noindent \textbf{f. Authentication of student work:}
+All written work will be checked for originality using Turnitin. Students may be asked to discuss their work via Zoom to verify authorship. Kritik peer reviews help establish familiarity with each student's writing style.
+
+% Part g: Extra credit
+\vspace{1em}
+\noindent \textbf{g. Extra credit:}
+No extra credit offered. Focus your efforts on the assigned work.
+
+% Part h: Retention of student work
+\vspace{1em}
+\noindent \textbf{h. Retention of student work:}
+Keep copies of all submitted work. I may retain exemplary student work (anonymized) for future teaching purposes with student permission.
+
+% ========== SECTION 6: ACADEMIC INTEGRITY ==========
+\section*{Academic Integrity}
+Students must adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). 
+
+Academic dishonesty includes but is not limited to: cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. All written work will be checked using plagiarism detection software. 
+
+First offense typically results in assignment failure; second offense may result in course failure. When in doubt about citation or collaboration policies, ask before submitting.
+
+% ========== SECTION 7: TECHNICAL COMPETENCIES ==========
+\section*{Technical Competencies}
+Students need:
+\begin{itemize}
+\item Proficiency with Canvas, including submitting assignments, participating in discussions, and accessing course materials
+\item Ability to use Discord for class discussions and office hours
+\item Experience with Kritik platform for peer review assignments (training provided)
+\item Skills in word processing, online research, and proper citation formatting
+\item Ability to stream video content for module lectures and documentaries
+\end{itemize}
+
+% ========== SECTION 8: STUDENT RESOURCES WEBSITE ==========
+\section*{Student Resources Website}
+It is the student's responsibility to read and understand the required and important \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{student information for course syllabi}. Included is information about:
+
+\begin{itemize}
+\item University learning goals
+\item General Education learning objectives
+\item Netiquette/appropriate online behavior
+\item Students' rights to accommodations
+\item Campus student support resources
+\item Academic integrity
+\item Emergency preparedness
+\item Library services
+\item Student IT services and competencies
+\item Software privacy and accessibility
+\item Accessibility statement
+\item Diversity statement
+\item Land acknowledgement
+\item Final exam schedule
+\item Semester calendar
+\end{itemize}
+
+% ========== SECTION 9: CLASSROOM MANAGEMENT ==========
+\section*{Course Policies}
+\noindent \textbf{Netiquette:} Maintain professional and respectful communication in all course interactions. Review CSUF's netiquette guidelines on the student resources website.
+
+\vspace{0.5em}
+\noindent \textbf{Module Schedule:} New modules release each Monday at 12:01 a.m. All module activities (videos, readings, quizzes, discussions) are due by Sunday at 11:59 p.m.
+
+\vspace{0.5em}
+\noindent \textbf{Kritik Peer Reviews:} Peer review assignments use the Kritik platform. You'll evaluate peers' work and provide constructive feedback. Your peer review quality is graded. Training materials provided in Week 1.
+
+% ========== SECTION 10: GE REQUIREMENTS ==========
+\section*{General Education Requirements}
+\noindent \textbf{GE requirement(s) that this course meets:} General Education Explorations in Social Sciences subarea D.5
+
+\vspace{0.5em}
+\noindent \textbf{How the GE writing requirement will be met and assessed:}
+The scaffolded Policy Process Analysis Paper and peer reviews meet the writing requirement of UPS 411.201. Writing assignments involve organization and expression of complex data and ideas with careful evaluation and feedback at each stage. Writing competence determines a significant portion of the final grade.
+
+\vspace{0.5em}
+\noindent \textbf{GE grading standard:}
+A grade of ``D'' (1.0) or higher is required to meet this General Education requirement. A grade of ``D-'' (0.7) or below will not satisfy this General Education requirement.
+
+\vspace{0.5em}
+\noindent \textbf{GE Student Learning Goals:}
+Students completing courses in this subarea shall:
+\begin{enumerate}
+\item Examine problems, issues, and themes in the social sciences in greater depth; in a variety of cultural, historical, and geographical contexts; and from different disciplinary and interdisciplinary perspectives
+\item Analyze and critically evaluate the application of social science concepts and theories to particular historical, contemporary, and future problems or themes, such as economic and environmental sustainability, globalization, poverty, and social justice
+\item Analyze and critically evaluate constructs of cultural differentiation, including ethnicity, gender, race, class, and sexual orientation, and their effects on the individual and society
+\item Apply theories and concepts from the social sciences to address historical, contemporary, and future problems confronting communities at different geographical scales, from local to global
+\end{enumerate}
+
+% ========== SECTION 11: CALENDAR/SCHEDULE ==========
+\section*{Calendar of Topics / Schedule of Classes}
+
+\noindent \textbf{Week 1, 8/25--8/31}\\
+Topic(s): Introduction to the Policy Process\\
+Reading(s): Syllabus; Birkland Ch. 1; American Regime Values (Canvas)\\
+Assignment(s) Due: Introductions on Discord; Kritik platform setup\\
+
+\noindent \textbf{Week 2, 9/1--9/7}\\
+Topic(s): Elements of the Policy-Making System; Policy Process Theories\\
+Reading(s): Birkland Ch. 2; Theory readings on Canvas\\
+Assignment(s) Due: Module quiz; Discussion post\\
+
+\noindent \textbf{Week 3, 9/8--9/14}\\
+Topic(s): Historical Context \& Structure of US Policy Making\\
+Reading(s): Birkland Ch. 3\\
+Assignment(s) Due: Module quiz; Discussion post\\
+
+\noindent \textbf{Week 4, 9/15--9/21}\\
+Topic(s): Official Policy Actors\\
+Reading(s): Birkland Ch. 4\\
+Assignment(s) Due: Module quiz; \textbf{Topic Selection \& Proposal}\\
+
+\noindent \textbf{Week 5, 9/22--9/28}\\
+Topic(s): Unofficial Policy Actors I\\
+Reading(s): Birkland Ch. 5\\
+Assignment(s) Due: Module quiz; \textbf{Peer Review of Proposals (Kritik)}\\
+
+\noindent \textbf{Week 6, 9/29--10/5}\\
+Topic(s): Unofficial Policy Actors II; Social Movements\\
+Reading(s): Letter from Birmingham Jail (Canvas)\\
+Assignment(s) Due: Module quiz; Discussion post\\
+
+\noindent \textbf{Week 7, 10/6--10/12}\\
+Topic(s): Documentary 1 \& Discussion\\
+Reading(s): Documentary viewing guide (Canvas)\\
+Assignment(s) Due: Documentary reflection; \textbf{Annotated Bibliography}\\
+
+\noindent \textbf{Week 8, 10/13--10/19}\\
+Topic(s): Agenda Setting, Power, and Problem Definition\\
+Reading(s): Birkland Ch. 6\\
+Assignment(s) Due: Module quiz; \textbf{Peer Review of Bibliographies (Kritik)}\\
+
+\noindent \textbf{Week 9, 10/20--10/26}\\
+Topic(s): Policy Typologies and Frameworks\\
+Reading(s): Birkland Ch. 7\\
+Assignment(s) Due: Module quiz; Discussion post\\
+
+\noindent \textbf{Week 10, 10/27--11/2}\\
+Topic(s): Policy Decision Making and Analysis\\
+Reading(s): Birkland Ch. 8; Analysis readings (Canvas)\\
+Assignment(s) Due: Module quiz; \textbf{Literature Review}\\
+
+\noindent \textbf{Week 11, 11/3--11/9}\\
+Topic(s): Policy Design and Tools\\
+Reading(s): Birkland Ch. 9\\
+Assignment(s) Due: Module quiz; \textbf{Peer Review of Literature Reviews (Kritik)}\\
+
+\noindent \textbf{Week 12, 11/10--11/16}\\
+Topic(s): Policy Implementation\\
+Reading(s): Birkland Ch. 10 (first half)\\
+Assignment(s) Due: Module quiz; Discussion post\\
+
+\noindent \textbf{Week 13, 11/17--11/23}\\
+Topic(s): Policy Failure and Learning\\
+Reading(s): Birkland Ch. 10 (second half)\\
+Assignment(s) Due: Module quiz; \textbf{Draft Analysis Paper}\\
+
+\noindent \textbf{Thanksgiving Break, 11/24--11/30}\\
+No new content---use this time to work on peer reviews and final paper\\
+
+\noindent \textbf{Week 14, 12/1--12/7}\\
+Topic(s): Documentary 2 \& Discussion\\
+Reading(s): Documentary viewing guide (Canvas)\\
+Assignment(s) Due: Documentary reflection; \textbf{Peer Review of Draft Papers (Kritik)}\\
+
+\noindent \textbf{Week 15, 12/8--12/14}\\
+Topic(s): Policy Evaluation and Science\\
+Reading(s): Birkland Ch. 11\\
+Assignment(s) Due: Module quiz; Final paper preparation\\
+
+\noindent \textbf{Week 16, 12/15--12/19}\\
+Topic(s): Course Wrap-up and Synthesis\\
+Reading(s): None\\
+Assignment(s) Due: \textbf{Final Policy Process Analysis Paper due Thursday 12/18 at 11:59 p.m.}
+
+\end{document}
