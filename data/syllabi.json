@@ -70,6 +70,23 @@
     "courseCode": "POSC 315",
     "title": "Introduction to Public Policy",
     "term": "Fall",
+    "year": "2025",
+    "fileFormats": [
+      "PDF",
+      "TEX"
+    ],
+    "path": "https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20315%20Intro%20Policy/2025-26%20Fall/posc315_2025_fall.pdf",
+    "tags": [
+      "300-level",
+      "POSC"
+    ],
+    "description": "Syllabus for POSC 315 - 2025 Fall."
+  }
+  },
+  {
+    "courseCode": "POSC 315",
+    "title": "Introduction to Public Policy",
+    "term": "Fall",
     "year": "2024",
     "fileFormats": [
       "PDF",
