@@ -57,6 +57,9 @@
 \usepackage{caption}              % Customize captions
 \usepackage{tabularray}           % Modern table package
 \UseTblrLibrary{booktabs}         % Use booktabs for better table rules
+\usepackage{colortbl}
+\usepackage{xcolor}               % Color support
+
 
 % Tagging for accessibility
 \IfFileExists{tagpdf-base.sty}{
@@ -177,7 +180,7 @@ If you encounter any technical difficulties, contact the instructor immediately 
   \begin{tblr}{
     colspec = {l c l c},
     rowhead = 1,
-    row{1} = {font=\bfseries},
+    row{1} = {font=\bfseries, bg=gray!20},
   }
   Grade & Percent    & Grade & Percent \\
   A+    & 97.0--100.0& C+    & 77.0--79.9 \\
@@ -202,7 +205,7 @@ If you encounter any technical difficulties, contact the instructor immediately 
   \begin{tblr}{
     colspec = {l c},
     rowhead = 1,
-    row{1} = {font=\bfseries},
+    row{1} = {font=\bfseries, bg=gray!20},
   }
   Assignment                          & Percentage \\
   Module Quizzes (weekly)             & 25\% \\
