@@ -174,9 +174,13 @@ See `LICENSE` for details.
 ## 📬 Contact
 
 **David P. Adams, Ph.D.**
+
 Associate Professor of Public Administration
+
 California State University, Fullerton
+
 📧 [dpadams@fullerton.edu](mailto:dpadams@fullerton.edu)
+
 🌐 [https://dadams.io](https://dadams.io)
 
 ---
