@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adams Syllabi Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Adams Syllabi Collection</h1>
+        <p class="subtitle">LaTeX-formatted syllabi for undergraduate and graduate courses in Public Administration and Public Policy at <a href="https://fullerton.edu">Cal State Fullerton</a></p>
+        <p class="subtitle">CSUF-compliant, accessibility-ready LaTeX syllabus templates included</p>
+        <p class="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="License: CC BY-NC-SA 4.0">
+            </a>
+        </p>
+    </header>
+
+    <main>
+        <section class="quick-links">
+            <h2><i class="fas fa-link"></i> Quick Links</h2>
+            <ul>
+                <li><i class="fas fa-globe"></i> <strong>Browse syllabi on the web:</strong> <a href="https://syllabi.dadams.io">https://syllabi.dadams.io</a></li>
+                <li><i class="fas fa-laptop-code"></i> <strong>This repository:</strong> <a href="https://github.com/dadams-AU/syllabi">https://github.com/dadams-AU/syllabi</a></li>
+                <li><i class="fas fa-toolbox"></i> <strong>Template (bundled here):</strong> <a href="template/">template/</a></li>
+                <li><i class="fas fa-rotate"></i> <strong>Upstream template source:</strong> <a href="https://github.com/CSUF-MPA/csuf-syllabus">https://github.com/CSUF-MPA/csuf-syllabus</a> (reference)</li>
+            </ul>
+        </section>
+
+        <section class="syllabi">
+            <h2><i class="fas fa-book"></i> Available Syllabi</h2>
+            
+            <h3><i class="fas fa-graduation-cap"></i> Undergraduate</h3>
+            <ul>
+                <li><a href="POSC%20315%20Intro%20Policy/"><strong>POSC 315</strong> · Introduction to Public Policy</a></li>
+                <li><a href="CRJU_POSC%20320%20Intro%20PA/"><strong>POSC/CRJU 320</strong> · Introduction to Public Administration</a></li>
+            </ul>
+
+            <h3><i class="fas fa-graduation-cap"></i> Graduate (MPA)</h3>
+            <ul>
+                <li><a href="POSC%20509%20MPA%20Foundations/"><strong>POSC 509</strong> · Foundations of Public Administration</a></li>
+                <li><a href="POSC%20521%20MPA%20Capstone/"><strong>POSC 521</strong> · Public Administration Theory (MPA Capstone)</a></li>
+                <li><a href="POSC%20588%20Collab%20Gov/"><strong>POSC 588</strong> · Collaborative Governance</a></li>
+            </ul>
+        </section>
+
+        <section class="accessibility">
+            <h2><i class="fas fa-universal-access"></i> Accessibility (2025 Update)</h2>
+            <p>The template in <code>template/</code> is configured for <strong>PDF/UA</strong> accessibility and CSUF compliance:</p>
+            <ul>
+                <li><strong>Tagged PDFs</strong> via <code>tagpdf</code> and <code>pdfmanagement-testphase</code> (compile with <strong>LuaLaTeX</strong>)</li>
+                <li><strong>Semantic structure</strong> using <code>scrartcl</code> (KOMA-Script)</li>
+                <li><strong>Accessible sans-serif fonts</strong> (default Roboto; options include Noto Sans, Inter)</li>
+                <li><strong>Proper headings, captions, alt text, and document metadata</strong></li>
+                <li><strong>High contrast</strong> with no reliance on color alone</li>
+                <li><strong>Logical reading order</strong> for assistive technologies</li>
+            </ul>
+            <p>These practices align with Section 508 and university accessibility standards.</p>
+        </section>
+
+        <section class="quick-start">
+            <h2><i class="fas fa-rocket"></i> Quick Start</h2>
+            
+            <h3>Option A — Overleaf (fastest)</h3>
+            <ol>
+                <li>Zip and upload <code>template/csuf_template/</code> to Overleaf <strong>or</strong> import from GitHub.</li>
+                <li>In Overleaf: <strong>Menu → Compiler → LuaLaTeX</strong>.</li>
+                <li>Open <code>csuf_template.tex</code> and click <strong>Recompile</strong> (first build may take ~3–15s).</li>
+                <li>Edit the course/instructor blocks and export the tagged PDF.</li>
+            </ol>
+
+            <h3>Option B — Local LaTeX (advanced)</h3>
+            <pre><code># Clone this syllabi repo or pull just the template directory
+git clone https://github.com/dadams-AU/syllabi.git
+cd syllabi/template/csuf_template
+lualatex csuf_template.tex</code></pre>
+
+            <h4>Requirements</h4>
+            <ul>
+                <li><strong>LuaLaTeX</strong> (XeLaTeX/PDFLaTeX won't produce proper tagging)</li>
+                <li>TeX distribution: TeX Live 2023+, MacTeX, or MiKTeX</li>
+                <li>Packages: <code>tagpdf</code>, <code>pdfmanagement-testphase</code>, <code>fontspec</code>, <code>tex-gyre</code></li>
+                <li><code>csuf_logo.png</code> present in the template directory</li>
+            </ul>
+        </section>
+
+        <section class="usage">
+            <h2><i class="fas fa-puzzle-piece"></i> Using This Repo</h2>
+            
+            <h3>Browse or copy an existing syllabus</h3>
+            <p>Each course folder includes:</p>
+            <ul>
+                <li><code>syllabus.tex</code> — LaTeX source</li>
+                <li><code>syllabus.pdf</code> — compiled, accessible PDF</li>
+            </ul>
+
+            <h3>Create a new syllabus from the template</h3>
+            <ol>
+                <li>Copy <code>template/csuf_template/</code> into your course folder.</li>
+                <li>Update the <strong>course block</strong>, <strong>instructor details</strong>, <strong>schedule</strong>, and <strong>policies</strong>.</li>
+                <li>Compile with <strong>LuaLaTeX</strong> to preserve PDF/UA tagging.</li>
+                <li>(Optional) Use <code>csuf_template_shell/</code> if you prefer a minimal starting point.</li>
+            </ol>
+        </section>
+
+        <section class="license">
+            <h2><i class="fas fa-file-contract"></i> License</h2>
+            <p><strong>Creative Commons BY-NC-SA 4.0</strong></p>
+            <p>You may share and adapt with attribution, <strong>no commercial use</strong>, and <strong>share alike</strong>.</p>
+            <p>See <a href="LICENSE">LICENSE</a> for details.</p>
+        </section>
+
+        <section class="contact">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <p><strong>David P. Adams, Ph.D.</strong><br>
+            Associate Professor of Public Administration<br>
+            California State University, Fullerton</p>
+            <p>
+                <i class="fas fa-envelope"></i> <a href="mailto:dpadams@fullerton.edu">dpadams@fullerton.edu</a><br>
+                <i class="fas fa-globe"></i> <a href="https://dadams.io">https://dadams.io</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p><em>Contributions: feedback and suggestions are welcome in issues; direct PRs are not currently accepted.</em></p>
+    </footer>
+</body>
+</html>

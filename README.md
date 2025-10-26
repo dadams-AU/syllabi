@@ -46,7 +46,6 @@ These practices align with Section 508 and university accessibility standards.
 ## 🗂️ Repository Structure
 
 ```
-
 .
 ├── CNAME
 ├── LICENSE
@@ -54,15 +53,14 @@ These practices align with Section 508 and university accessibility standards.
 ├── README.md
 ├── syllabi.code-workspace
 ├── template/
-│   ├── csuf\_template/         # Full, ready-to-use accessible syllabus
-│   └── csuf\_template\_shell/   # Minimal shell for rapid customization
-├── CRJU\_POSC 320 Intro PA/
+│   ├── csuf_template/         # Full, ready-to-use accessible syllabus
+│   └── csuf_template_shell/   # Minimal shell for rapid customization
+├── CRJU_POSC 320 Intro PA/
 ├── POSC 315 Intro Policy/
 ├── POSC 428/
 ├── POSC 509 MPA Foundations/
 ├── POSC 521 MPA Capstone/
 └── POSC 588 Collab Gov/
-
 ````
 
 ---
