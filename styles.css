@@ -1,5 +1,9 @@
 /* Tailwind CDN utilities still apply; this is for your custom overrides */
 
+body {
+    font-family: 'Google Sans Flex', sans-serif;
+}
+
 /* ========== HERO PATTERN ========== */
 .hero-pattern {
     background-color: #f7fafc !important;
