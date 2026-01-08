@@ -1,0 +1,645 @@
+% CSUF Accessible Syllabus Shell (adopted)
+% Compile with LuaLaTeX for best accessibility support
+\DocumentMetadata{
+    pdfstandard=UA-2,
+    pdfversion=2.0,
+    lang=en-US
+}
+
+\documentclass[12pt]{article}
+
+\usepackage[american]{babel}
+
+% ================================
+% FONT SETTINGS (LuaLaTeX)
+% ================================
+\usepackage{fontspec}
+\IfFontExistsTF{TeX Gyre Heros}{
+    \setmainfont{TeX Gyre Heros}
+}{
+    \setmainfont{Latin Modern Sans}
+}
+\IfFontExistsTF{TeX Gyre Cursor}{
+    \setmonofont{TeX Gyre Cursor}
+}{
+    \setmonofont{Latin Modern Mono}
+}
+
+% Page layout and spacing
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{
+    itemsep=0pt,
+    parsep=0pt,
+    topsep=0.25\baselineskip
+}
+\newlist{flatlist}{itemize}{1}
+\setlist[flatlist]{
+    label={},
+    leftmargin=0pt,
+    itemsep=0pt, parsep=0pt,
+    topsep=0pt
+}
+\setlistdepth{3}
+
+% Tables and graphics
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array, booktabs, longtable}
+\usepackage{caption}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+% Tagging for accessibility (if available)
+\IfFileExists{tagpdf-base.sty}{
+    \usepackage{tagpdf}
+
+    	\tagpdfsetup{activate-all=true, interwordspace=true}
+}{
+    \newcommand\tagpdfsetup[1]{}
+}
+
+% Citations / bibliography
+\usepackage[longnamesfirst]{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}
+
+% Hyperlinks and PDF metadata
+\usepackage[
+    pdfusetitle,
+    pdflang=en-US,
+    pdfstartview=FitH,
+    pdfdisplaydoctitle=true
+]{hyperref}
+\hypersetup{
+    unicode=true,
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={POSC 588: Collaborative Governance},
+    pdfauthor={David P. Adams},
+    pdfsubject={California State University, Fullerton Course Syllabus},
+    pdfkeywords={CSUF, Syllabus, POSC 588, Collaborative Governance, Public Administration},
+    pdfborderstyle={/S/U/W 1}
+}
+\urlstyle{same}
+
+% Document title and metadata
+\title{POSC 588, \textit{Collaborative Governance}}
+\author{}
+\date{Spring 2026}
+
+\begin{document}
+% ========== CSUF HEADER (OPTIONAL) ==========
+% Keep the logo with the title and tighten vertical spacing so it doesn't
+% get stranded on page 1 by itself.
+\makeatletter
+\renewcommand{\maketitle}{%
+    \begin{center}
+        \includegraphics[width=2.25in, alt={Cal State Fullerton wordmark}]{../spring_24/csuf_logo.png}\par
+        \vspace{0.75em}
+        {\LARGE \@title\par}
+        \vspace{0.25em}
+        {\large \@date\par}
+    \end{center}
+    \vspace{1em}
+}
+\makeatother
+
+\maketitle
+
+% ========== SECTION 1: FACULTY INFORMATION ==========
+\section*{Faculty Information}
+\noindent \textbf{Instructor:} David P. Adams, Ph.D. \\
+\noindent \textbf{Office:} 516 Gordon Hall \\
+\noindent \textbf{Phone/Text:} (657) 278-4770 \\
+\noindent \textbf{Email:} \href{mailto:dpadams@fullerton.edu}{dpadams@fullerton.edu} \\
+\noindent \textbf{Website:} \href{https://dadams.io}{dadams.io} \\
+\noindent \textbf{Office hours:} Tuesdays \& Thursdays from 9:30 to 11:00, Thursdays from 5:30 to 6:30, and by \href{https://dadams.io/appt}{appointment}. \\
+\noindent \textbf{Schedule meetings throughout the week:} \href{https://dadams.io/appt}{dadams.io/appt}
+
+% ========== SECTION 2: COURSE COMMUNICATION ==========
+\section*{Course Communication}
+All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email. Students are also responsible for ensuring that their \emph{Canvas} notifications are set to receive messages from the course. Students are expected to check \emph{Canvas} and their email at least once daily.
+
+\vspace{0.5em}
+\noindent \textbf{Response time:} I will strive to respond to all student emails and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you are still awaiting a response within 24 hours, please send a follow-up message. If you are still waiting to receive a response within 48 hours, please send another follow-up message and contact me via phone or SMS at (657) 278-4770.
+
+% ========== SECTION 3: TECHNICAL PROBLEMS ==========
+\section*{Technical Problems}
+
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then, contact: \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone (657) 278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{student genius center}, online chat - log into \href{http://my.fullerton.edu}{portal}; click ``Online IT Help''; click ``Live Chat.''
+
+\vspace{0.5em}
+\noindent \textbf{\underline{For issues with Canvas}}: Canvas Support Hotline = (657) 278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides with AI Assistant}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\vspace{0.5em}
+\noindent \textbf{Alternative plan for submitting work:} If you cannot submit an assignment via \emph{Canvas}, contact the professor as soon as possible to document the issue and arrange an alternative submission method.
+
+\vspace{0.5em}
+\noindent \textbf{Response time:} I will strive to respond to messages about technical problems within 24 hours, except on weekends and holidays.
+
+% ========== SECTION 4: COURSE INFORMATION ==========
+\section*{Course Information}
+\noindent \textbf{Prefix, number, title:} POSC 588, \textit{Collaborative Governance} \\
+\noindent \textbf{Meeting times with modality, day(s), time(s), and location (if synchronous):} In-Person, Tuesdays at 7:00 p.m., McCarthy Hall 213
+
+\vspace{0.5em}
+\begin{flatlist}
+\item \textbf{Zoom:} none
+\item \textbf{Course requisite(s):} none
+\item \textbf{Catalog description:} This course introduces core topics in collaborative and networked public management, including federalism, intergovernmental relations, public-private partnerships, contracts, interlocal agreements, and network governance.
+\item \textbf{Additional description:} See the Course Description section below.
+\item \textbf{Policy regarding the use of generative AI:} See the \emph{Policy on the Use of Generative AI and Other Technology} section below.
+\item \textbf{Course materials and equipment:} Canvas; access to course readings and course documents
+\item \textbf{Required text(s):} Agranoff (2012); Emerson \& Nabatchi (2015); Henderson (2015); O'Leary \& Bingham (eds.) (2009)
+\item \textbf{Other course materials and equipment:} none
+\end{flatlist}
+
+\section*{Course Description}
+
+{\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
+This course examines collaborative governance across public, nonprofit, and private sectors, with attention to federalism, intergovernmental relations, contracts, interlocal agreements, and network governance.
+
+Many of the hardest public problems (housing, homelessness, wildfire, water, public safety, health, climate) are too big for any one organization to solve alone. Agencies, nonprofits, and firms increasingly work through partnerships, networks, and shared-service arrangements to get results.
+
+You will learn how collaborative arrangements form, how they actually function in the wild, why they fail, and how managers can redesign them to produce results rather than meetings.
+}
+
+\section*{Student Learning Outcomes}
+{\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
+Collaborative governance can produce real public value, but it is also difficult to build and sustain. This course focuses on the management challenges that show up once you actually try to collaborate across boundaries.
+
+By the end of the course, students will be able to:
+
+\begin{enumerate}
+    \item Explain why networks have become central to public management;
+    \item Distinguish managing hierarchies from managing networks;
+    \item Apply practical tools for improving collaborative governance;
+    \item Assess collaborative performance and recommend action.
+\end{enumerate}
+}
+
+
+\section*{Required Texts}
+
+There are four books for this course:
+
+\begin{enumerate}[leftmargin=!,labelindent=5pt,itemindent=-15pt]
+    \item Agranoff, Robert. 2012. \emph{Collaborating to Manage: A Primer for the Public Sector}. Washington, DC: Georgetown University Press. 
+    \item Emerson, Kirk and Tina Nabatchi. 2015. \emph{Collaborative Governance Regimes}. Washington, DC: Georgetown University Press.
+    \item  Henderson, Alexander C. 2015. \emph{Municipal Shared Services and Consolidation: A Public Solutions Handbook}. New York: Routledge. 
+    \item O'Leary, Rosemary and Lisa B. Bingham, eds. 2009. \emph{The Collaborative Public Manager: New Ideas for the Twenty-First Century}. Washington, DC: Georgetown University Press.
+\end{enumerate}
+
+\subsection*{Additional Readings}
+
+In addition to the above texts, several additional readings, including articles, book chapters, and case studies, are posted on Canvas and are noted in the course schedule at the end of this document. 
+
+
+\section*{Student Resources Website}
+It is the student's responsibility to read and understand the required and important \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{student information for course syllabi}. Included is information about:
+
+\begin{itemize}
+\item University learning goals
+\item General Education learning objectives
+\item Netiquette/appropriate online behavior
+\item Students' rights to accommodations
+\item Campus student support resources
+\item Academic integrity
+\item Emergency preparedness/what to do
+\item Library services
+\item Student IT services and competencies
+\item Software privacy and accessibility
+\item Accessibility statement
+\item Diversity statement
+\item Land acknowledgement
+\item Final exam schedule
+\item Semester calendar
+\end{itemize}
+
+\section*{Course Requirements}
+
+\subsection*{Course Format: Flipped and Studio}
+This course follows a flipped-classroom-and-studio format. Class meetings are 2--2.5 hours. You will do a short pre-class package so that our in-person time can focus on application, practice, and problem-solving (the part you cannot get from a slide deck).
+
+\subsection*{Weekly Rhythm}
+Our weekly rhythm is intentionally consistent so you always know what to expect.
+
+\noindent \textbf{Before class (60--90 minutes):}
+\begin{itemize}
+    \item Complete the assigned readings.
+    \item Submit a \textbf{Pre-Class Brief} (completion credit). The brief is short and structured---it checks that you (1) have key terms straight, (2) can diagnose what is happening in a case, and (3) can make and defend a practical management decision.
+\end{itemize}
+
+\noindent \textbf{In class (120--150 minutes):}
+\begin{itemize}
+    \item 15 minutes: opening frame and \emph{``What is the managerial problem today?''}
+    \item 35 minutes: guided discussion (student facilitation)
+    \item 60 minutes: case lab / negotiation / simulation block
+    \item 10 minutes: exit ticket (what changed in your thinking, and what you would do Monday morning)
+\end{itemize}
+
+\subsection*{Three Asynchronous Work Weeks}
+Three weeks are structured asynchronous \emph{work weeks} (not ``go figure it out''). These replace in-person meetings and are designed to move your team project forward.
+\begin{itemize}
+    \item \textbf{Week 4 (Async):} regime formation, stakeholder/power mapping, and team formation
+    \item \textbf{Week 8 (Async):} group charter and governance design sprint
+    \item \textbf{Week 12 (Async):} performance and accountability dashboard build, plus peer critique
+\end{itemize}
+
+\subsection*{Graded Work (100 points)}
+Graded work is designed to keep the course application-focused while making expectations clear and manageable.
+
+\begin{itemize}
+    \item \textbf{Pre-Class Briefs (10 x 1 pt) = 10.} Completion credit.
+    \item \textbf{Discussion Facilitation (5) = 5.} Teams of 2--3 facilitate one class discussion.
+    \item \textbf{Stakeholder and Power Map (10) = 10.} Due Week 4 (Async).
+    \item \textbf{Case Memos (3 x 10 pts) = 30.} Short, structured memos using a repeating template:
+    \begin{enumerate}
+        \item Memo 1: Diagnose the CGR (components and failure points)
+        \item Memo 2: Design intervention (governance model and agreements)
+        \item Memo 3: Performance plan (measures, reporting, and accountability)
+    \end{enumerate}
+    \item \textbf{Signature Simulation and Reflection (15) = 15.} Reflection connects actions to theory.
+    \item \textbf{Group ``Collaboration Design Dossier'' and Briefing (30) = 30.} Briefing Week 15; revised final dossier due Week 16 (finals week) based on briefing feedback.
+\end{itemize}
+
+
+% ========== SECTION 5: GRADING POLICIES AND STANDARDS ==========
+\section*{Grading Policies and Standards}
+
+\noindent \textbf{a. Grading scale:}
+\begin{center}
+\begin{table}[h]
+    \caption{Grade scale}
+    \label{tab:grading-scale}
+    \centering
+    \begin{tblr}{
+        colspec = {l c l c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Grade & Percent & Grade & Percent \\
+    A+    & 98.0--100.0 & C+ & 77.0--79.9 \\
+    A     & 93.0--97.9  & C  & 73.0--76.9 \\
+    A-    & 90.0--92.9  & C- & 70.0--72.9 \\
+    B+    & 87.0--89.9  & D+ & 67.0--69.9 \\
+    B     & 83.0--86.9  & D  & 63.0--66.9 \\
+    B-    & 80.0--82.9  & D- & 60.0--62.9 \\
+          &             & F  & 0.0--59.9 \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\vspace{1em}
+\noindent \textbf{b. Required Course Assignments:}
+\begin{center}
+\begin{table}[h]
+    \caption{Assignment weighting}
+    \label{tab:grade-weights}
+    \centering
+    \begin{tblr}{
+        colspec = {X[l] c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Assignment & Weight \\
+    Pre-Class Briefs & 10\% \\
+    Discussion Facilitation (team) & 5\% \\
+    Stakeholder and Power Map & 10\% \\
+    Case Memos (3) & 30\% \\
+    Signature Simulation + Reflection & 15\% \\
+    Group Collaboration Design Dossier + Briefing (incl. revised final dossier) & 30\% \\
+    Total & 100\% \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\begin{center}
+\begin{table}[h]
+    \caption{Graded items and points}
+    \centering
+    \begin{tblr}{
+        colspec = {X[l] Q[c,wd=1.6cm] X[l]},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Assignment & Pts & Due \\
+    Pre-Class Briefs (10 $\times$ 1 pt) & 10 & Before class (10 selected weeks) \\
+    Discussion Facilitation (team) & 5 & Assigned week (in class) \\
+    Stakeholder and Power Map & 10 & Week 4 (Async) \\
+    Case Memo 1: Diagnose the CGR & 10 & Week 6 \\
+    Case Memo 2: Design intervention & 10 & Week 9 \\
+    Case Memo 3: Performance plan & 10 & Week 12 (Async) \\
+    Signature Simulation + Reflection & 15 & Simulation Week 11; reflection due Week 12 \\
+    Group Collaboration Design Dossier + Briefing & 30 & Briefing Week 15; revised final dossier due Week 16 \\
+    	\textbf{Total} & \textbf{100} & \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\vspace{1em}
+\noindent \textbf{c. Attendance and Participation policy:}
+Students are expected to attend all in-person sessions. If you are unable to attend a session, please notify the professor in advance. If you miss a session, you are responsible for obtaining the information and materials covered in the session. If you miss a session, you will not be able to participate in mandatory class activities. This may have an impact on your graded materials.
+
+\vspace{1em}
+\noindent \textbf{d. Examination dates:}
+No traditional exams in this course. Finals-week assessment is the revised final dossier due in Week 16.
+
+\vspace{1em}
+\noindent \textbf{e. Make-up and late submission policy:}
+All assignments are due on the date specified in the course schedule. Late work is not accepted without prior approval from the professor.
+
+\vspace{0.5em}
+\noindent \textbf{Alternative procedures for submitting work:}
+Students are expected to submit all assignments via \emph{Canvas}. If you cannot submit an assignment via \emph{Canvas}, please get in touch with the professor to discuss alternative submission procedures.
+
+\vspace{1em}
+\noindent \textbf{f. Authentication of student work:}
+Students may be required to submit their work to a plagiarism detection service. This may include submitting drafts and final versions of assignments. Students should be aware that their work may be checked for authenticity and originality. Cal State Fullerton uses Turnitin\copyright.
+
+\vspace{1em}
+\noindent \textbf{g. Extra credit:}
+There are no extra credit assignments in this course.
+
+\vspace{1em}
+\noindent \textbf{h. Retention of student work:}
+Work submitted for a grade in this course, either as a hardcopy or through the Canvas course site, shall be retained for a reasonable time after the semester is completed not to exceed the last day of the subsequent semester. Exam material is exempt from this policy; however, students have the right to review their work in the presence of the faculty member. (UPS 320.005)
+
+% ========== SECTION 6: ACADEMIC INTEGRITY ==========
+\section*{Academic Integrity}
+Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy on academic dishonesty and to adhere to this policy in all aspects of this course. Any student who has questions about the policy should ask the professor for clarification.
+
+% ========== SECTION 7: POLICY ON THE USE OF GENERATIVE AI ==========
+\section*{Policy on the Use of Generative AI and Other Technology}
+Generative AI tools may be used as a learning aid (e.g., brainstorming, outlining, or feedback on clarity), but may not be used to draft or rewrite submitted work. All analysis, synthesis, and writing must be your own. If AI meaningfully shaped your work, disclose and cite it (e.g., ``ChatGPT (GPT-5.2), personal communication, [date]''). Misuse of AI may be treated as academic dishonesty.
+
+% ========== SECTION 8: TECHNICAL COMPETENCIES ==========
+\section*{Technical Competencies}
+Students need:
+\begin{itemize}
+\item Proficiency with Canvas, including submitting assignments and accessing course materials
+\item Ability to use university email and Canvas messages for course communication
+\item Basic skills in word processing and exporting to PDF when needed
+\end{itemize}
+
+% ========== SECTION 9: CALENDAR OF TOPICS / SCHEDULE OF CLASSES ==========
+\section*{Calendar of Topics / Schedule of Classes}
+
+We will follow the schedule below as closely as possible. If we need to adjust pace or sequencing, you will get advance notice in class and on \emph{Canvas}.
+
+\subsection*{1/20 -- Week 1: Why Collaboration (and Why It's Harder Than It Looks)}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Collaboration autopsy (what broke, why) and course simulation preview
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{EmersonNabatchi2015}: Introduction and Chapter 1
+            \item \citet{Agranoff2012}: Chapter 1
+            \item \citet{AnsellGash2008} (baseline model)
+            \item \textbf{Supplement:} \citet{brown2016} (complex contracts and relational governance)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 1 (due before class)
+        \end{itemize}
+
+\subsection*{1/27 -- Week 2: Starting a Regime: System Context, Drivers, Formation}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Driver diagnosis lab (what is pushing actors to the table?)
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{EmersonNabatchi2015}: Chapter 2
+            \item \citet{OLeary2009}: Chapter 3 (incentives/obstacles)
+            \item \citet{EmersonNabatchiBalogh2012}
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 2 (due before class)
+        \end{itemize}
+
+\subsection*{2/3 -- Week 3: Dynamics: Engagement, Motivation, Capacity for Joint Action}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Stakeholder mapping workshop and trust vs. transaction mini-simulation
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{EmersonNabatchi2015}: Chapter 3
+            \item \citet{Agranoff2012}: Chapter 2 (intergovernmental and collaborative management)
+            \item \citet{Henderson2015}: Chapter 2 (costs of cooperation)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 3 (due before class)
+        \end{itemize}
+
+\subsection*{2/10 -- Week 4: ASYNC WORK WEEK (Required)}
+    \subsubsection*{Theme}
+        Build the map, form the team, and pick the problem.
+    \subsubsection*{Readings (lighter but foundational)}
+        \begin{itemize}
+            \item \citet{EmersonNabatchi2015}: Chapter 2 (skim) and Chapter 3 (recap)
+            \item \citet{OLeary2009}: Chapter 4 (partner selection)
+        \end{itemize}
+    \subsubsection*{Deliverables}
+        \begin{itemize}
+            \item Stakeholder and power map (individual) \emph{(graded)}
+            \item Team formation and one-page problem pitch (group) \emph{(required milestone)}
+            \item Short CGR formation memo (who convenes, why now, what leverage) \emph{(required milestone)}
+        \end{itemize}
+
+\subsection*{2/17 -- Week 5: Agreements: MOUs, Contracts, Relational Governance}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Negotiation lab: draft six MOU clauses under real-world constraints
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{Agranoff2012}: Chapter 4 (forging external agreements)
+            \item \citet{OLeary2009}: Chapter 8 (relational contracting)
+            \item \citet{Henderson2015}: Chapter 6 (managing interlocal contracts)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 4 (due before class)
+        \end{itemize}
+
+\subsection*{2/24 -- Week 6: Managing Connections and Networks (the Daily Grind)}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Choose a governance structure (lead org vs. shared vs. NAO) and defend it
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{Agranoff2012}: Chapters 5--6
+            \item \citet{ProvanKenis2008} (network governance forms)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 5 (due before class)
+            \item Case Memo 1 (due)
+        \end{itemize}
+
+\subsection*{3/3 -- Week 7: Barriers: Conflict, Veto Players, Culture, and ``Soft Sabotage''}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Barrier diagnosis and intervention planning (what can you change, and what can you not?)
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{Agranoff2012}: Chapter 7
+            \item \citet{Henderson2015}: Chapter 3 (communities/culture)
+            \item \citet{Thomson2006} (collaboration dimensions)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 6 (due before class)
+        \end{itemize}
+
+\subsection*{3/10 -- Week 8: ASYNC WORK WEEK (March)}
+    \subsubsection*{Theme}
+        Design sprint: turn your coalition into something you can actually govern.
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{EmersonNabatchi2015}: Chapter 4
+            \item \citet{Henderson2015}: Chapter 4 (service-level consolidation/sharing)
+        \end{itemize}
+    \subsubsection*{Deliverables (group)}
+        \begin{itemize}
+            \item Collaboration charter (purpose, scope, decision rules, membership) \emph{(dossier milestone)}
+            \item Governance design justification (tie to Provan \& Kenis and CGR) \emph{(dossier milestone)}
+            \item Risk register (capture, equity gaps, legal/fiscal stress, exit risks) \emph{(dossier milestone)}
+        \end{itemize}
+
+\subsection*{3/17 -- Week 9: Shared Services as Collaboration (Results, Not Romance)}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Case lab: should we share this service? (cost/quality/equity tradeoffs)
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{Henderson2015}: Chapter 7 (performance) and Chapter 10 (innovation/ASD)
+            \item \citet{Agranoff2012}: Chapter 3 (conductive public agencies)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 7 (due before class)
+            \item Case Memo 2 (due)
+        \end{itemize}
+
+\subsection*{3/24 -- Week 10: Failure Case: the Fire Authority That Didn't Happen}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Failure postmortem and redesign the collaboration (no fantasy fixes)
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{Henderson2015}: Chapter 8 (failed attempt fire authority)
+            \item \citet{Bryson2015} (cross-sector collaboration)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 8 (due before class)
+        \end{itemize}
+
+\subsection*{3/31 -- Spring Break: No Class}
+Spring Break is 3/30--4/3.
+
+\subsection*{4/7 -- Week 11: Signature OC/LA Basin Simulation (Tabletop)}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Full simulation and structured debrief using CGR components
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Simulation packet (minimal reading)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Simulation (participation)
+            \item Reflection assigned (due Week 12)
+        \end{itemize}
+
+\subsection*{4/14 -- Week 12: ASYNC WORK WEEK (Late April)}
+    \subsubsection*{Theme}
+        Performance and accountability: show evidence that the collaboration worked.
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{EmersonNabatchi2015}: Chapter 9 (performance assessment)
+            \item \citet{Agranoff2012}: Chapter 8 (new public organization)
+        \end{itemize}
+    \subsubsection*{Deliverables}
+        \begin{itemize}
+            \item Performance dashboard (measures, cadence, ownership) \emph{(dossier milestone)}
+            \item Accountability map (who answers to whom, for what, and when?) \emph{(dossier milestone)}
+            \item Peer critique on another team's dashboard \emph{(dossier milestone)}
+            \item Case Memo 3 (due)
+            \item Simulation Reflection (due)
+        \end{itemize}
+
+\subsection*{4/21 -- Week 13: Typologies and Matching the Regime to the Problem}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Fit test lab: diagnose mismatch between problem type and governance type
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{EmersonNabatchi2015}: Chapter 8 (typology)
+            \item \citet{OLeary2009}: Chapter 2 (resource sharing choices)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 9 (due before class)
+        \end{itemize}
+
+\subsection*{4/28 -- Week 14: Integration: Redesign Under Political Heat}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Rapid redesign clinic and guest speaker night (optional)
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item \citet{EmersonNabatchi2015}: Conclusion (recommendations)
+            \item \citet{OLeary2009}: Chapter 14 (future/paradoxes)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Pre-Class Brief 10 (due before class)
+        \end{itemize}
+
+\subsection*{5/5 -- Week 15: Final Briefings}
+    \subsubsection*{In Class}
+        \begin{itemize}
+            \item Dossiers due and 10--12 minute briefings, plus cross-exam
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Group Collaboration Design Dossier and Briefing (due)
+        \end{itemize}
+
+\subsection*{5/12 -- Week 16: Finals Week (No Class Meeting)}
+    \subsubsection*{Deliverable}
+        \begin{itemize}
+            \item Revised final dossier due (incorporate briefing feedback)
+        \end{itemize}
+
+\clearpage
+
+% ========== BIBLIOGRAPHY ==========
+\singlespace
+\bibliographystyle{apsr}
+\bibliography{588}
+
+
+
+\end{document}
