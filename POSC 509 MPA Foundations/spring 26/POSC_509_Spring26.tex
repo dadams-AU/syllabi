@@ -1,0 +1,435 @@
+% CSUF Accessible Syllabus Shell
+% This is a template for creating an accessible syllabus that meets
+% CSU Fullerton requirements and ADA/PDF-UA accessibility standards
+% 
+% Instructions:
+% 1. Replace all CAPS placeholders with your course information
+% 2. Delete sections marked as optional if they don't apply
+% 3. Compile with LuaLaTeX for best accessibility support
+% 4. Check accessibility using Adobe Acrobat's accessibility checker
+% 
+% ACCESSIBILITY NOTES:
+% - This template addresses common PDF accessibility issues:
+%   * Proper document title in PDF properties
+%   * Tagged annotations for links
+%   * Correct list structure tagging
+%   * Logical reading order (tab order)
+% - After compiling, run Adobe Acrobat's accessibility checker
+% - Fix any remaining issues using Acrobat's accessibility tools
+% 
+% Created by: David P. Adams, Ph.D.
+% License: CC BY-NC-SA 4.0
+% Document metadata for PDF accessibility and compliance
+\DocumentMetadata{
+  pdfstandard=UA-2,               % PDF/UA-2 standard for accessibility
+  pdfversion=2.0,                 % PDF version 2.0
+  lang=en-US                      % Document language set to US English
+}
+
+% Document class and font size
+\documentclass[12pt]{article}     % Standard article class with 12pt font size
+
+% Language settings
+\usepackage[american]{babel}      % Set language to American English
+
+% ================================
+% FONT SETTINGS
+% ================================
+
+\usepackage{fontspec}
+
+% === Recommended (Sans-serif body text) ===
+\IfFontExistsTF{TeX Gyre Heros}{
+  \setmainfont{TeX Gyre Heros} % Default to sans-serif
+}{
+  \setmainfont{Latin Modern Sans} % Fallback sans
+}
+
+% === Alternative (Serif body text) ===
+% Uncomment below to switch back to serif body text:
+% \IfFontExistsTF{TeX Gyre Termes}{
+%   \setmainfont{TeX Gyre Termes} % Default to serif
+% }{
+%   \setmainfont{Latin Modern Roman} % Fallback serif
+% }
+
+% Monospaced font (for code, etc.)
+\IfFontExistsTF{TeX Gyre Cursor}{
+  \setmonofont{TeX Gyre Cursor}
+}{
+  \setmonofont{Latin Modern Mono}
+}
+
+
+% Page layout and spacing
+\usepackage{geometry}             % Adjust page margins
+\geometry{margin=1in}             % Set 1-inch margins
+\usepackage{setspace}             % Control line spacing
+\onehalfspacing                   % Set line spacing to 1.5
+
+% List, graphics, table, and caption settings
+\usepackage{enumitem}             % Enhanced list customization
+\setlist[itemize]{                % Default settings for itemized lists
+  itemsep=0pt,                    % No extra space between items
+  parsep=0pt,                     % No extra space between paragraphs
+  topsep=0.25\baselineskip        % Small space before the list
+}
+\newlist{flatlist}{itemize}{1}    % Define a bulletless, flush-left list
+\setlist[flatlist]{               % Settings for flatlist
+  label={},
+  leftmargin=0pt,                 % No left margin
+  itemsep=0pt, parsep=0pt,        % No extra spacing
+  topsep=0pt                      % No space before the list
+}
+\usepackage{graphicx}             % Include graphics
+\usepackage{array, booktabs, longtable} % Enhanced table formatting
+\usepackage{caption}              % Customize captions
+\usepackage{tabularray}           % Modern table package
+\UseTblrLibrary{booktabs}         % Use booktabs for better table rules
+
+% Tagging for accessibility
+% Check if the tagpdf package is available
+\IfFileExists{tagpdf-base.sty}{
+  % If available, load the tagpdf package for accessibility tagging
+  \usepackage{tagpdf}
+  % Activate all tagging features and enable interword spacing for better accessibility
+  \tagpdfsetup{activate-all=true, interwordspace=true}
+}{
+  % If the tagpdf package is not installed, provide a fallback
+  % Define a dummy \tagpdfsetup command to avoid compilation errors
+  \newcommand\tagpdfsetup[1]{}
+}
+
+\usepackage[round]{natbib}
+\usepackage{quoting}
+\usepackage{comment}
+\usepackage{bookmark}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=magenta,
+    urlcolor=blue,
+    unicode=true,                   % Enable Unicode support
+    pdftitle={POSC 509: Foundations of Public Administration}, % PDF title
+    pdfauthor={David P. Adams, Ph.D.},          % PDF author metadata
+    pdfsubject={California State University, Fullerton Course Syllabus}, % PDF subject
+    pdfkeywords={CSUF, Syllabus, Public Administration}, % PDF keywords
+    pdfborderstyle={/S/U/W 1}       % Underline links in PDF
+}
+\urlstyle{same}                   % Use the same font style for URLs
+
+% Document title and metadata
+\title{POSC 509, \textit{Foundations of Public Administration}} % Course title
+\author{}                         % Leave author blank (info in body)
+\date{Spring 2026}              % Term and year of the course
+
+% Accessibility enhancements
+\setlistdepth{3}                  % Ensure consistent list tagging depth
+% Example for alt text: \includegraphics[width=2.75in, alt={Cal State Fullerton worderton wordmark}]{csuf_logo.png}
+
+% Begin the document
+\begin{document}
+
+% ========== CSUF HEADER (OPTIONAL) ==========
+% Keep the logo with the title and tighten vertical spacing so it doesn't
+% get stranded on page 1 by itself.
+\makeatletter
+\renewcommand{\maketitle}{%
+    \begin{center}
+        \includegraphics[width=2.25in, alt={Cal State Fullerton wordmark}]{csuf_logo.png}\par
+        \vspace{0.75em}
+        {\LARGE \@title\par}
+        \vspace{0.25em}
+        {\large \@date\par}
+    \end{center}
+    \vspace{1em}
+}
+\makeatother
+
+\maketitle
+
+% ========== SECTION 1: FACULTY INFORMATION ==========
+\section*{Faculty Information}
+% Replace placeholders with your information
+\noindent \textbf{Instructor:} David P. Adams, Ph.D. \\
+\noindent \textbf{Office:} 516 Gordon Hall \\
+\noindent \textbf{Phone:} (657) 278-4770 \\
+\noindent \textbf{Email:} dpadams@fullerton.edu \\
+\noindent \textbf{Office hours:} Tuesdays \& Thursdays from 9:30 to 11:00, Thursdays from 5:30 to 6:30, and by \href{https://dadams.io/appt}{appointment}.
+
+% ========== SECTION 2: COURSE COMMUNICATION ==========
+\section*{Course Communication}
+All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email. Students are also responsible for ensuring that their \emph{Canvas} notifications are set to receive messages from the course. Students are expected to check \emph{Canvas} and their email at least once daily.
+
+% ========== SECTION 3: TECHNICAL PROBLEMS ==========
+\section*{Technical Problems}
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then, contact: \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone (657) 278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{student genius center}, online chat - log into \href{http://my.fullerton.edu}{portal}; click ``Online IT Help''; click ``Live Chat.''
+
+\vspace{0.5em}
+\noindent \textbf{\underline{For issues with Canvas}}: Canvas Support Hotline = (657) 278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides with AI Assistant}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\vspace{0.5em}
+\noindent \textbf{Alternative plan for submitting work:} Students are expected to submit all assignments via \emph{Canvas}. If you cannot submit an assignment via \emph{Canvas}, please get in touch with the professor to discuss alternative submission procedures.
+
+\vspace{0.5em}
+\noindent \textbf{Response time:} I will strive to respond to all student emails and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you are still awaiting a response within 24 hours, please send a follow-up message. If you are still waiting to receive a response within 48 hours, please send another follow-up message and contact me via phone or SMS at (657) 278-4770.
+
+% ========== SECTION 4: COURSE INFORMATION ==========
+\section*{Course Information}
+% Fill in all course details
+\noindent \textbf{Prefix, number, title:} POSC 509, \textit{Foundations of Public Administration} \\
+\noindent \textbf{Meeting times with modality, day(s), time(s), and location (if synchronous):} 
+In-Person, Tuesdays, 7:00 PM - 9:45 PM, Langsdorf Hall 401
+
+\vspace{0.5em}
+\begin{flatlist}
+\item \textbf{Course requisite(s):} Non-Public Administration/Political Science graduate students must obtain department permission to enroll.
+\item \textbf{Catalog description:} Introduction to the field of public administration. Topics include the history of the field, the legal and political environment of public administration, organizational theory and practice, decision-making, systems analysis, performance evaluation and administrative improvement.
+\item \textbf{Additional description:} This course is a graduate-level introduction to the study and practice---the science and art---of public administration. It is for graduate students in public administration who have yet to have an introductory course in public administration. It is meant to acquaint the student with the theoretical and practical aspects of public administration in the American political setting. Topics include organizational theory and practice, decision-making, systems analysis, performance evaluation, and administrative improvement. Emphasis is also placed on understanding the roles and responsibilities of public administrators in a democratic political system.
+\parskip=0.5\baselineskip
+\noindent The course begins with an introduction to the field of public administration, a discussion of the rise of the administrative state, and the role of federalism and intergovernmental politics. Numerous classic articles from early public administration scholarship will be introduced, and the student will gain an understanding of the relevance of public administration in theory through examination of a wide variety recent literature. The course will focus on the evaluation of public administration in theory and practice.
+\item \textbf{Course materials and equipment:} ~
+\item \textbf{Required text(s):} 
+    \begin{enumerate}
+        \item Ashworth, Kenneth. 2001. \emph{Caught Between the Dog and the Fireplug, or How to Survive Public Service}. Washington, D.C.: Georgetown Press. (\textit{Ashworth})
+        \item Guy, Mary E. and Todd L. Ely. 2022. \emph{Essentials of Public Service: An Introduction to Contemporary Public Administration}. 2nd ed. Irvine, CA: Melvin \& Leigh. (\textit{Essentials})
+        \item Doucette, Meriem and David Adams, eds. 2019. \emph{Ethics in Public Administration}. San Diego: Cognella. (\textit{Ethics})
+    \end{enumerate}
+\item \textbf{Other course materials and equipment:} In addition to the above texts, several additional readings, including articles, book chapters, and case studies, are posted on Canvas and are noted in the course schedule at the end of this document. 
+\end{flatlist}
+
+\vspace{1em}
+\noindent \textbf{Student Learning Outcomes:}
+The student should gain both a broad understanding of public administration as an academic discipline, as well as a better understanding the elements of public administration in practice. At the end of this course, students should be \underline{introduced} to concepts related to several of programmatic student learning outcome goals. In particular, at an introductory level, students will be able 
+	\begin{enumerate}
+		\item understand the nature, context, and foundations of public administration;
+		\item understand the importance of citizen engagement;
+		\item learn the skills necessary to be an effective public administrator;
+		\item synthesize relevant information to address public problems using major theories underlying the field of public administration, including those related to governance structures, federalism and intergovernmental relations, and intersectoral relations;
+		\item articulate and apply a public service perspective in the demonstration of knowledge related to the structures, components, goals, and objectives of the public sector;
+		\item effectively communicate and productively interact with diverse teams and diverse communities; and
+		\item articulate and appreciate the value of diversity in the public sector and the communities it serves.
+	\end{enumerate}
+
+% ========== SECTION 5: GRADING POLICIES AND STANDARDS ==========
+\section*{Grading Policies and Standards}
+
+% Part a: Grading Scale
+\noindent \textbf{a. Grading scale:}
+
+% Example grading scale - modify as needed
+\begin{center}
+\begin{table}[h]
+  \caption{Grade scale}
+  \centering
+  \begin{tblr}{
+    colspec = {l c l c},
+    rowhead = 1,                 % \leftarrow marks first row as table header
+    row{1} = {font=\bfseries},   % bold header text
+  }
+  Grade & Percent    & Grade & Percent \\
+    A+ & 98.0 – 100 & B- & 80.0 – 81.9\\
+    A & 92.0 – 97.9 & C+ & 78.0 – 79.9\\
+    A- & 90.0 – 91.9 & C & 72.0 – 77.9\\
+    B+ & 88.0 – 89.9 & C- & 70.0 – 71.9\\
+    B & 82.0 – 87.9 & & \\
+  \end{tblr}
+\end{table}
+
+\end{center}
+
+% Part b: Required Course Assignments
+\vspace{1em}
+\noindent \textbf{b. Required Course Assignments:}
+
+% Option 1: Use a table
+\begin{center}
+\begin{table}[h]
+  \caption{Assignment weighting}
+  \centering
+  \begin{tblr}{
+    colspec = {l c},
+    rowhead = 1,                 % marks first row as table header
+    row{1} = {font=\bfseries},   % bold header text
+  }
+        \textbf{Assignment} & \textbf{Points} \\
+        1. Memorandum & 5 \\
+        2. Student-led Reading Discussion & 7 \\
+        3. Paper 1 & 15 \\
+        4. Paper 2 & 20 \\
+        5. Budgeting Assignment & 18 \\
+        6. Program Evaluation Assignment & 10 \\
+        7. \emph{Ashworth} discussion & 10 \\
+        8. Final Response & 25 \\ 
+        \emph{Total} & \emph{100} \\
+  \end{tblr}
+\end{table}
+\end{center}
+
+The sections below outline assignments for this course and the ways in which they are graded. It is up to the student to carefully read each of the assignments, as well as to notice their due dates. 
+	\begin{enumerate}
+		
+		\item \textbf{Memorandum:} Following the advice in ``Skillbox: How to Write A Memorandum'' at the end of chapter 1 in \emph{Essentials} \citep{GUY2022} located on pages 24--25, write a no more than 500--600 word page memo based on the following prompt: \emph{Why am I here? Why do I want a career in public administration? What do I hope to get out of this course?} This assignment is worth 5\% of the student's grade. Turn in a hard copy of this assignment at the beginning of the week 5 class meeting.
+		
+		\item \textbf{Reading Presentation:} Each student will present a chapter from \emph{Ethics} \citep{DOUCETTE2020} or an another reading posted to \emph{Canvas} and lead a class discussion. Each class member should read the material. Students tasked with presentation and discussion should present the reading to the class in approximately 20 minutes. With the assistance of fellow classmates and the professor, the student will then be responsible for leading a class discussion and answering questions on the case for approximately 10 minutes. Students should prepare a short memo on the reading that they will distribute to the class; or, alternatively, students can create a PowerPoint presentation and distribute copies to the class. The memo or PowerPoint should briefly summarize and overview the chapter and then connect it to other readings from the from class. This will be 7\% of the student's overall grade. It will be assessed for thoroughness, familiarity with the reading, presentation style, and engagement with classmates.
+		
+	
+		\item \textbf{Papers}
+			\begin{itemize}
+				\item Papers are to be submitted on \emph{Canvas} according to the schedule below. Find the link on \emph{Canvas} and \underline{upload} a paper for each of the following questions:
+				\begin{enumerate}
+					\item \underline{Paper 1}: In about 500 words, describe your vision of the ideal public administrator. What are this person's goals? What characteristics and skills does this person possess that will make it possible to achieve those goals? Is there a public administrator you believe fits your vision? If so, who and how. \emph{Use the Essentials textbook and/or other sources to support your ideas.}
+					\item \underline{Paper 2}: In about 750--1,000 words, describe a real-life example of ethical misconduct in public contracting. How was it unethical? How was the misconduct discovered? What was the outcome? What type of solution is appropriate here? \emph{NOTE: for this paper, you must use a minimum of 3 sources (Essentials textbook and/or others).}
+				\end{enumerate}
+			\end{itemize}
+		\item \textbf{Budgeting Assignment:} This assignment is related to Chapter 6 in the \emph{Essentials} textbook. For this assignment you are tasked with 1) developing an inventory of nonprofits in the state that provide housing services, 2) limiting that pool of potential collaborators to those with substantial assets and experience, 3) prioritizing the potential partners based on income, and 4) presenting an aggregated overview of the identified partners. Specific instructions and details, as well as the data, are available on the Canvas module for this topic. 
+		
+		\item \textbf{Program Evaluation Assignment:} This assignment is located at the end of Chapter 14 in the \emph{Essentials} textbook. Read and follow the instructions in ``Skillbox: Essentials of Program Evaluation'' located on pages 368--372. For this assignment you are tasked with 1) writing a two-page memo that proposes an evaluation plan for a neighborhood policing program using the information in the Skillbox reading and the chapter and 2) find an existing program evaluation report online and write a one-page memo to the evaluated organization. 
+		
+		\item \textbf{Canvas Discussion on \emph{Caught Between the Dog and the Fireplug}:} This course includes a dynamic, 10-week structured discussion on \cite{ASHWORTH2001}, \emph{Caught Between the Dog and the Fireplug, or How to Survive Public Service.} Each week, as indicated on Canvas, we'll explore different themes from the book, ranging from the intricacies of public service and bureaucracy to ethical dilemmas and leadership challenges in public administration. These discussions are designed to not only deepen your understanding of key concepts in public administration but also to connect these ideas with real-world applications and your personal experiences. Through active participation, you'll gain valuable insights into the practical aspects of public service and develop skills essential for your future career in this field.
+		
+		\item \textbf{Final Response:} The final response essay will consist of six question prompts related to course readings and class discussion from the semester. Students will. Answer two of the six prompts, writing approximately 1,000 words for each response. The question prompts will be distributed in class in Week 15 and the students submission should be uploaded to \emph{Canvas} no later than 10:00 p.m. the following week. 
+	\end{enumerate}
+
+% Part c: Attendance and Participation
+\vspace{1em}
+\noindent \textbf{c. Attendance and Participation policy:}
+This course is designed to be highly interactive, and your active participation is essential. Students are expected to attend all classes, arrive on time, and be prepared to discuss the assigned readings. Your participation grade will be based on the quality and consistency of your contributions to class discussions. If you must miss a class, please notify the instructor in advance.
+
+% Part d: Examination dates
+\vspace{1em}
+\noindent \textbf{d. Examination dates:}
+No exams in this course.
+
+% Part e: Make-up and late submission policy
+\vspace{1em}
+\noindent \textbf{e. Make-up and late submission policy:}
+If you have concerns about meeting assignment deadlines, please get in touch with the professor in advance to discuss potential accommodation. Late work is not accepted without prior approval from the professor.
+
+% Part f: Authentication of student work
+\vspace{1em}
+\noindent \textbf{f. Authentication of student work:}
+Students are expected to submit their own original work. Any sources used must be properly cited. The instructor may use various methods to verify the authenticity of student work, including but not limited to plagiarism detection software.
+
+% Part g: Extra credit
+\vspace{1em}
+\noindent \textbf{g. Extra credit:}
+There are no extra credit assignments in this course. 
+
+% Part h: Retention of student work
+\vspace{1em}
+\noindent \textbf{h. Retention of student work:}
+The instructor will retain copies of all student work for one semester after the course ends.
+
+% ========== SECTION 7: ACADEMIC INTEGRITY ==========
+\section*{Academic Integrity}
+Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy on academic dishonesty and to adhere to this policy in all aspects of this course. Any student who has questions about the policy should ask the professor for clarification.
+
+% ========== SECTION 8A: POLICY ON THE USE OF GENERATIVE AI AND OTHER TECHNOLOGY ==========
+\section*{Policy on the Use of Generative AI and Other Technology}
+Students are encouraged to use generative AI and other emerging technologies as tools for learning and research. However, all work submitted must be your own. Any use of generative AI must be properly cited, and students are responsible for the accuracy and integrity of the information they submit.
+
+% ========== SECTION 9: STUDENT RESOURCES WEBSITE ==========
+\section*{Student Resources Website}
+It is the student's responsibility to read and understand the required and important \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{student information for course syllabi}. Included is information about:
+
+\begin{itemize}
+\item University learning goals
+\item General Education learning objectives
+\item Netiquette/appropriate online behavior
+\item Students' rights to accommodations
+\item Campus student support resources
+\item Academic integrity
+\item Emergency preparedness/what to do
+\item Library services
+\item Student IT services and competencies
+\item Software privacy and accessibility
+\item Accessibility statement
+\item Diversity statement
+\item Land acknowledgement
+\item Final exam schedule
+\item Semester calendar
+\end{itemize}
+
+% ========== SECTION 10: CLASSROOM MANAGEMENT ==========
+\section*{Classroom Management}
+Students are expected to be respectful of their classmates and the instructor. This includes arriving on time, turning off cell phones, and refraining from disruptive behavior. Laptops and other electronic devices may be used for note-taking and other course-related activities, but should not be a distraction to yourself or others.
+
+% ========== SECTION 13: CALENDAR/SCHEDULE ==========
+\section*{Calendar of Topics / Schedule of Classes}
+Note: On the schedule below, each particular reading is indicated for the class day on which it will be discussed.  
+
+\noindent \textbf{Week 1: January 20}\\
+Topic(s): Introduction and Overview, Student Presentations Overview, Basics about Graduate School and Using Library Website, Eras of Public Administration\\
+
+\noindent \textbf{Week 2: January 27}\\
+Reading(s): ``Running a Constitution'' ch. 1 in \emph{Essentials}, ``Citizen Engagement'' ch. 2 in \emph{Essentials}\\
+
+\noindent \textbf{Week 3: February 3}\\
+Reading(s): \citep{WILSON1887b}, ``The Savvy Administrator'' ch. 3 in \emph{Essentials}, ``Organizing Principles'' ch. 4 in \emph{Essentials}\\
+Student Presentation 1: \citep{DESLATTE2020}\\
+
+\noindent \textbf{Week 4: February 10}\\
+Topic(s): Organizing Principles Continued\\
+Reading(s): \citep{SIMON1946}\\
+Watch: YouTube videos linked on \emph{Canvas}\\
+Assignment(s) Due: Hard copy of Memorandum\\
+
+\noindent \textbf{Week 5: February 17}\\
+Reading(s): ``Human Resource Functions and Processes'' ch. 5 in \emph{Essentials}, ``Budgeting'' ch. 6 in \emph{Essentials}\\
+Student Presentations 2 \& 3: \citep{PERLMAN2016}, \citep{AFONSO2021}\\
+Assignment(s) Due: Paper 1 on \emph{Canvas}\\
+
+\noindent \textbf{Week 6: February 24}\\
+Reading(s): ``Digital Democracy'' ch. 7 in \emph{Essentials}\\
+Student Presentations 4 \& 5: \citep{YOUNG2020a}, \citep{KIM2021}\\
+
+\noindent \textbf{Week 7: March 3}\\
+Reading(s): ``Foundations of Ethics in Public Administration'' ch. 1 in \emph{Ethics}, ``What is Ethics'' ch. 2 in \emph{Ethics}, \citep{OLEARY2010}\\
+Student Presentation 6: \citep{HOLLIBAUGHJR.2020a}\\
+Assignment(s) Due: Budgeting Assignment on \emph{Canvas}\\
+
+\noindent \textbf{Week 8: March 10}\\
+Reading(s): ``Public Economics and Policy'' ch. 8 in \emph{Essentials}, ``Transparency'' ch. 10 in \emph{Essentials}\\
+
+\noindent \textbf{Week 9:  March 17}\\
+Reading(s): ``Public Integrity'' ch. 13 in \emph{Essentials}\\
+Student Presentations 7, 8, \& 9: Chapter 7 in \emph{Ethics}, Chapter 8 in \emph{Ethics}, Chapter 9 in \emph{Ethics}\\
+
+\noindent \textbf{Week 10: March 24}\\
+Topic(s): Decision Making\\
+Reading(s): \citep{SIMON1965}, \citep{Lindblom1959}, \citep{OSTROM1971}\\
+TBD: ``\textit{The Abilene Paradox}'': Video and Discussion\\
+
+\noindent \textbf{Spring Break: March 31}\\
+No Class\\
+
+\noindent \textbf{Week 11: April 7}\\
+Reading(s): ``Contracting'' ch. 11 in \emph{Essentials}, ``Legal Dimensions of Public Administration'' ch. 12 in \emph{Essentials}\\
+Student Presentations 10 \& 11: \citep{ZEEMERING2018}, \citep{CHRISTENSEN2011}\\
+Assignment(s) Due: Paper 2 on \emph{Canvas}\\
+
+\noindent \textbf{Week 12: April 14}\\
+Reading(s): ``Measuring and Managing for Performance'' ch. 14 in \emph{Essentials}, ``Public Services, Well Delivered'' ch. 15 in \emph{Essentials}, \citep{YOUNG2020b}\\
+
+\noindent \textbf{Week 13: April 21}\\
+Topic(s): Contemporary Public Administration: Representative Democracy and Intersectionality in Public Administration\\
+Student Presentations 12, 13, \& 14: \citep{Headly2021}, \citep{mccandless2022}, \citep{Zavattaro2022}\\
+Assignment(s) Due: Program Evaluation Assignment on \emph{Canvas}\\
+
+\noindent \textbf{Week 14: April 28}\\
+Topic(s): \textbf{Movie Night}, \textbf{Pot-Luck Dinner}\\
+\emph{Canvas} Brief Reading and Discussion Board for Movie\\
+
+\noindent \textbf{Week 15: May 5}\\
+Assignment(s) Due: \textbf{Final Response Due by 10:00 p.m.}\\
+
+% ========== BIBLIOGRAPHY ==========
+\vspace{2em}
+\singlespace
+\bibliographystyle{apsr}
+\bibliography{509}
+
+
+\end{document}
+
