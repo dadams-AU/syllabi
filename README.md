@@ -1,6 +1,6 @@
 # Adams Syllabi Collection
 
-A curated set of LaTeX-formatted syllabi for undergraduate and graduate courses in Public Administration and Public Policy at [Cal State Fullerton](https://fullerton.edu). The repository also ships with **CSUF-compliant, accessibility-ready LaTeX syllabus templates**.
+A curated set of LaTeX-formatted syllabi for undergraduate and graduate courses in Public Administration and Public Policy at [Cal State Fullerton](https://fullerton.edu). New syllabi are based on the [CSUF MPA syllabus template](https://github.com/CSUF-MPA/csuf-syllabus).
 
 ---
 
