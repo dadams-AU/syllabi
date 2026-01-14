@@ -328,3 +328,24 @@ TSWLatexianTemp*
 
 # Mac Ignored Files
 .DS_Store
+
+# Additional LaTeX patterns
+*.figlist
+*.makefile
+*.fdblatexmk
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
