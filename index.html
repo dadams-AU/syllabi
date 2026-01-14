@@ -85,51 +85,6 @@
             </ul>
         </section>
 
-        <section class="accessibility">
-            <h2><i class="fas fa-universal-access"></i> Accessibility (2025 Update)</h2>
-            <p>The template in <code>template/</code> is configured for <strong>PDF/UA</strong> accessibility and CSUF
-                compliance:</p>
-            <ul>
-                <li><strong>Tagged PDFs</strong> via <code>tagpdf</code> and <code>pdfmanagement-testphase</code>
-                    (compile with <strong>LuaLaTeX</strong>)</li>
-                <li><strong>Semantic structure</strong> using <code>scrartcl</code> (KOMA-Script)</li>
-                <li><strong>Accessible sans-serif fonts</strong> (default Roboto; options include Noto Sans, Inter)</li>
-                <li><strong>Proper headings, captions, alt text, and document metadata</strong></li>
-                <li><strong>High contrast</strong> with no reliance on color alone</li>
-                <li><strong>Logical reading order</strong> for assistive technologies</li>
-            </ul>
-            <p>These practices align with Section 508 and university accessibility standards.</p>
-        </section>
-
-        <section class="quick-start">
-            <h2><i class="fas fa-rocket"></i> Quick Start</h2>
-
-            <h3>Option A — Overleaf (fastest)</h3>
-            <ol>
-                <li>Zip and upload <code>template/csuf_template/</code> to Overleaf <strong>or</strong> import from
-                    GitHub.</li>
-                <li>In Overleaf: <strong>Menu → Compiler → LuaLaTeX</strong>.</li>
-                <li>Open <code>csuf_template.tex</code> and click <strong>Recompile</strong> (first build may take
-                    ~3–15s).</li>
-                <li>Edit the course/instructor blocks and export the tagged PDF.</li>
-            </ol>
-
-            <h3>Option B — Local LaTeX (advanced)</h3>
-            <pre><code># Clone this syllabi repo or pull just the template directory
-git clone https://github.com/dadams-AU/syllabi.git
-cd syllabi/template/csuf_template
-lualatex csuf_template.tex</code></pre>
-
-            <h4>Requirements</h4>
-            <ul>
-                <li><strong>LuaLaTeX</strong> (XeLaTeX/PDFLaTeX won't produce proper tagging)</li>
-                <li>TeX distribution: TeX Live 2023+, MacTeX, or MiKTeX</li>
-                <li>Packages: <code>tagpdf</code>, <code>pdfmanagement-testphase</code>, <code>fontspec</code>,
-                    <code>tex-gyre</code></li>
-                <li><code>csuf_logo.png</code> present in the template directory</li>
-            </ul>
-        </section>
-
         <section class="usage">
             <h2><i class="fas fa-puzzle-piece"></i> Using This Repo</h2>
 
