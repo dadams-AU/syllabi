@@ -2,9 +2,10 @@
 % Summer 2026 | David P. Adams
 % Compile with LuaLaTeX
 \DocumentMetadata{
-    pdfstandard=UA-2,
+    pdfstandard=ua-2,
     pdfversion=2.0,
-    lang=en-US
+    lang=en-US,
+    testphase={phase-III, math, table, firstaid, sec, title}
 }
 
 \documentclass[12pt]{article}
@@ -48,13 +49,11 @@
 \usepackage{tabularray}
 \UseTblrLibrary{booktabs}
 
-% Tagging for accessibility (if available)
-\IfFileExists{tagpdf-base.sty}{
-    \usepackage{tagpdf}
-    \tagpdfsetup{activate-all=true, interwordspace=true}
-}{
-    \newcommand\tagpdfsetup[1]{}
-}
+% Tagging for accessibility — testphase in \DocumentMetadata above
+% activates the kernel's tagging code; tagpdf provides supplementary
+% commands (interword space tagging, manual tag wrapping, etc.).
+\usepackage{tagpdf}
+\tagpdfsetup{interwordspace=true}
 
 % Hyperlinks and PDF metadata
 \usepackage[
