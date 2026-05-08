@@ -15,7 +15,7 @@ All Canvas API requests use:
 ```
 Authorization: Bearer $CANVAS_TOKEN
 Content-Type: application/json
-```kf
+```
 
 Base path for this course: `$CANVAS_BASE_URL/api/v1/courses/$COURSE_ID`
 
