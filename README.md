@@ -15,8 +15,8 @@ A curated set of LaTeX-formatted syllabi for undergraduate and graduate courses 
 ## 📚 Available Syllabi
 
 ### 🎓 Undergraduate
-- [**POSC 315** · Introduction to Public Policy](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy)
-- [**POSC/CRJU 320** · Introduction to Public Administration](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA)
+- [**POSC 315** · Introduction to Public Policy](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy) — Summer 2026 PDF: [posc315_summer_2026.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20315%20Intro%20Policy/2026%20Summer/posc315_summer_2026.pdf)
+- [**POSC/CRJU 320** · Introduction to Public Administration](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA) — Summer 2025 PDF: [CRJU-POSC_320.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/CRJU_POSC%20320%20Intro%20PA/2025%20Summer/CRJU-POSC_320.pdf)
 
 ### 🎓 Graduate (MPA)
 - [**POSC 509** · Foundations of Public Administration](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations) — Spring 2026 PDF: [POSC_509_Spring26.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20509%20MPA%20Foundations/spring%2026/POSC_509_Spring26.pdf)
