@@ -1,0 +1,712 @@
+% POSC 459 – Social Welfare Politics and Policy
+% Fall 2026 | David P. Adams
+% Compile with LuaLaTeX
+\DocumentMetadata{
+    pdfstandard=UA-2,
+    pdfversion=2.0,
+    lang=en-US
+}
+
+\documentclass[12pt]{article}
+
+\usepackage[american]{babel}
+
+% ================================
+% FONT SETTINGS (LuaLaTeX)
+% ================================
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+
+% Page layout and spacing
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{
+    itemsep=0pt,
+    parsep=0pt,
+    topsep=0.25\baselineskip
+}
+\newlist{flatlist}{itemize}{1}
+\setlist[flatlist]{
+    label={},
+    leftmargin=0pt,
+    itemsep=0pt, parsep=0pt,
+    topsep=0pt
+}
+\setlistdepth{3}
+
+% Tables and graphics
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array, booktabs, longtable}
+\usepackage{caption}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+% Tagging for accessibility (if available)
+\IfFileExists{tagpdf-base.sty}{
+    \usepackage{tagpdf}
+    \tagpdfsetup{activate-all=true, interwordspace=true}
+}{
+    \newcommand\tagpdfsetup[1]{}
+}
+
+% Hyperlinks and PDF metadata
+\usepackage[
+    pdfusetitle,
+    pdflang=en-US,
+    pdfstartview=FitH,
+    pdfdisplaydoctitle=true
+]{hyperref}
+\hypersetup{
+    unicode=true,
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={POSC 459: Social Welfare Politics and Policy},
+    pdfauthor={David P. Adams},
+    pdfsubject={California State University, Fullerton Course Syllabus},
+    pdfkeywords={CSUF, Syllabus, POSC 459, Social Welfare, Public Policy},
+    pdfborderstyle={/S/U/W 1}
+}
+\urlstyle{same}
+
+\title{POSC 459: Social Welfare Politics and Policy}
+\author{}
+\date{Fall 2026}
+
+\begin{document}
+
+% ========== CSUF HEADER ==========
+\makeatletter
+\renewcommand{\maketitle}{%
+    \begin{center}
+        \includegraphics[width=2.25in, alt={Cal State Fullerton wordmark}]{csuf_logo.png}\par
+        \vspace{0.75em}
+        {\LARGE \@title\par}
+        \vspace{0.25em}
+        {\large \@date\par}
+    \end{center}
+    \vspace{1em}
+}
+\makeatother
+
+\maketitle
+
+% ========== SECTION 1: FACULTY INFORMATION ==========
+\section*{Faculty Information}
+\noindent \textbf{Instructor:} David P. Adams, Ph.D. \\
+\noindent \textbf{Office:} 516 Gordon Hall \\
+\noindent \textbf{Phone/Text:} (657) 278-4770 \\
+\noindent \textbf{Email:} \href{mailto:dpadams@fullerton.edu}{dpadams@fullerton.edu} \\
+\noindent \textbf{Website:} \href{https://dadams.io}{dadams.io} \\
+\noindent \textbf{Office Hours:} Mondays and Wednesdays, [TBD], and by \href{https://dadams.io/appointments}{appointment}. \\
+\noindent \textbf{Schedule meetings:} \href{https://dadams.io/appointments}{dadams.io/appointments}
+
+% ========== SECTION 2: COURSE COMMUNICATION ==========
+\section*{Course Communication}
+All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email, and for ensuring that Canvas notifications are set to receive course messages. Students are expected to check \emph{Canvas} and their email at least once daily.
+
+\vspace{0.5em}
+\noindent \textbf{Response time:} I will strive to respond to all student emails and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you have not received a response within 24 hours, please send a follow-up message. If you are still waiting after 48 hours, contact me via phone or SMS at (657) 278-4770.
+
+% ========== SECTION 3: TECHNICAL PROBLEMS ==========
+\section*{Technical Problems}
+
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then contact: \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone (657) 278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{student genius center}, or online chat via the \href{http://my.fullerton.edu}{portal} (``Online IT Help'' then ``Live Chat'').
+
+\vspace{0.5em}
+\noindent \textbf{\underline{For issues with Canvas}}: Canvas Support Hotline = (657) 278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\vspace{0.5em}
+\noindent \textbf{Alternative submission:} If you cannot submit an assignment via \emph{Canvas}, contact the professor as soon as possible to document the issue and arrange an alternative.
+
+% ========== SECTION 4: COURSE INFORMATION ==========
+\section*{Course Information}
+\noindent \textbf{Prefix, number, title:} POSC 459, \textit{Social Welfare Politics and Policy} \\
+\noindent \textbf{Meeting times:} In-Person, Monday \& Wednesday, 1:00--2:15 p.m., [Room TBD] \\
+\noindent \textbf{Units:} 3 \quad \textbf{Schedule Code:} [TBD]
+
+\vspace{0.5em}
+\begin{flatlist}
+\item \textbf{Course requisite(s):} POSC 100 or graduate standing
+\item \textbf{Catalog description:} American social policies---welfare, Social Security, health care---and the political environment in which they exist. Origins, implementation, and reforms of current social policies, emphasizing questions of effectiveness and policy improvement.
+\item \textbf{Policy regarding the use of generative AI:} See the \emph{Policy on the Use of Generative AI and Other Technology} section below.
+\item \textbf{Course materials and equipment:} Canvas; access to course readings; laptop recommended
+\item \textbf{Required texts:} Howard (2007); Campbell (2014); Desmond (2023); plus ebook readings through Pollak Library (see \emph{Required Texts} below)
+\end{flatlist}
+
+% ========== SECTION 5: COURSE DESCRIPTION ==========
+\section*{Course Description}
+
+{\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
+This course is an intensive introduction to U.S. social welfare policy and politics. It has four parts: the big picture (who are the poor, and how did the welfare state develop?); the programs (social insurance, the safety net, tax expenditures); two case studies in major reform (welfare reform and the ACA); and the political forces that shape all of it (public opinion, interest groups, race, and gender).
+
+The course moves between levels of analysis. Comparative welfare state theory sits alongside individual family narratives; legislative history sits alongside street-level program design. Both matter. You cannot understand why TANF looks the way it does without understanding the politics that produced it, and you cannot evaluate whether the ACA succeeded without understanding what it was actually trying to accomplish.
+
+This course is taught from a political science and policy analysis perspective. Political science helps explain \emph{why} we get the policies we get; policy analysis helps evaluate \emph{whether those policies do what they claim}. Both lenses are at work throughout the semester.
+}
+
+% ========== SECTION 6: STUDENT LEARNING OUTCOMES ==========
+\section*{Student Learning Outcomes}
+
+{\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
+By the end of the semester, students will be able to:
+
+\begin{enumerate}
+    \item Describe the core architecture of the U.S. welfare state: social insurance, public assistance, tax expenditures, and public-private arrangements.
+    \item Trace the political development of major programs (Social Security, TANF, Medicaid, ACA) and connect that history to current policy debates.
+    \item Apply key concepts from political science and policy analysis to evaluate welfare programs: policy feedback, institutional design, interest group politics, and public opinion.
+    \item Analyze how race and gender have structured both program design and access to benefits.
+    \item Situate U.S. welfare policy within a comparative frame and explain the sources of American exceptionalism.
+    \item Construct an evidence-based policy argument using primary sources and scholarly literature.
+\end{enumerate}
+}
+
+% ========== SECTION 7: REQUIRED TEXTS ==========
+\section*{Required Texts}
+
+The following are available for purchase at the Titan bookstore:
+
+\begin{enumerate}
+    \item Howard, Christopher. 2007. \emph{The Welfare State Nobody Knows: Debunking Myths About U.S. Social Policy.} Princeton, NJ: Princeton University Press.
+    \item Campbell, Andrea Louise. 2014. \emph{Trapped in America's Safety Net: One Family's Struggle.} Chicago, IL: University of Chicago Press.
+    \item Desmond, Matthew. 2023. \emph{Poverty, by America.} New York, NY: Crown.
+\end{enumerate}
+
+\subsection*{Required Texts Available as Ebooks at Pollak Library}
+
+\begin{enumerate}
+    \item Rank, Mark Robert, Lawrence M. Eppard, and Heather E. Bullock. 2021. \emph{Poorly Understood: What America Gets Wrong About Poverty.} Oxford University Press. \\ \url{https://ebookcentral.proquest.com/lib/fullerton/detail.action?docID=6461413}
+    \item Howard, Christopher. 2022. \emph{Who Cares: The Social Safety Net in America.} Oxford University Press. \\ \url{https://ebookcentral.proquest.com/lib/fullerton/detail.action?pq-origsite=primo&docID=7099798}
+    \item Jacobs, Lawrence and Theda Skocpol. 2016. \emph{Healthcare Reform and American Politics: What Everyone Needs to Know}, 3rd ed. Oxford University Press. \\ \url{https://ebookcentral.proquest.com/lib/fullerton/detail.action?docID=4310736}
+    \item Beland, David, Kimberly J. Morgan, and Christopher Howard, eds. 2015. \emph{The Oxford Handbook of U.S. Social Policy.} Oxford University Press. \\ \url{https://ebookcentral.proquest.com/lib/fullerton/detail.action?docID=1825907}
+\end{enumerate}
+
+\subsection*{Additional Readings}
+
+Additional readings---articles, book chapters, policy documents, and documentary viewing guides---are posted on Canvas and noted in the course schedule. Canvas readings are required and carry equal weight to book readings.
+
+% ========== SECTION 8: STUDENT RESOURCES ==========
+\section*{Student Resources Website}
+It is the student's responsibility to read and understand the required and important \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{student information for course syllabi}. Included is information about:
+
+\begin{itemize}
+\item University learning goals and General Education learning objectives
+\item Students' rights to accommodations
+\item Campus student support resources and academic integrity
+\item Emergency preparedness; library and IT services
+\item Software privacy, accessibility statement, diversity statement, and land acknowledgement
+\item Final exam schedule and semester calendar
+\end{itemize}
+
+% ========== SECTION 9: COURSE REQUIREMENTS ==========
+\section*{Course Requirements}
+
+\subsection*{Course Format}
+This is an in-person lecture and discussion course meeting twice weekly for 75 minutes. Students complete assigned readings before class; class time is divided between lecture, structured discussion, and periodic documentary screenings. Three weeks are structured as asynchronous work weeks with no in-person meetings (see below).
+
+\subsection*{Three Asynchronous Weeks}
+Three weeks are designated asynchronous. There are no in-person meetings those weeks. Students complete assigned readings, watch a designated documentary, and submit a Canvas response by that Friday at 11:59 p.m. Specific instructions will be posted to Canvas in advance.
+
+\begin{itemize}
+    \item \textbf{Week 4 (Async):} Political development of the welfare state; \emph{Growing Up Poor in America}, Part 2
+    \item \textbf{Week 9 (Async):} Welfare reform; \emph{Two American Families}
+    \item \textbf{Week 14 (Async):} Public opinion and interest groups; term papers and grad outlines due
+\end{itemize}
+
+\subsection*{Graded Work}
+
+\begin{itemize}
+    \item \textbf{Required for all students (60\% total):} Attendance and Participation (10\%); Discussion Papers, 5 of 10 (10\%); Midterm Exam (20\%); Final Exam (20\%).
+    \item \textbf{Undergraduates only (40\% total):}
+    \begin{itemize}
+        \item \textbf{Policy Brief (20\%):} A 3--4 page analysis of one program: OASDI, SSI, TANF, Unemployment Insurance, Medicaid, Medicare, SNAP, or the EITC. Cover the program's stated purpose, who it serves, its major design features, and one significant reform debate. Academic writing conventions and source citations required.
+        \item \textbf{Term Paper (20\%):} A 6--8 page research paper building on the policy brief. Analyze the political and policy-relevant strengths and weaknesses of your program and develop a reform proposal, drawing on course concepts and the program's political history.
+    \end{itemize}
+    \item \textbf{Graduate students only (40\% total):}
+    \begin{itemize}
+        \item \textbf{Research Proposal (10\%):} Topic, research question, and preliminary bibliography.
+        \item \textbf{Introduction/Outline/Annotated Bibliography (10\%):} Substantial revision from the proposal with clear research design and sources.
+        \item \textbf{Final Research Paper (20\%):} A 10--15 page original research paper submitted during finals week.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Graduate Student Requirements}
+Graduate students complete all readings including graduate-only readings posted on Canvas. They take both the midterm and final exams and write five discussion papers. In place of the undergraduate policy brief and term paper, graduate students complete a scaffolded 10--15 page original research paper sequence with staged feedback and revision across three milestones:
+
+\begin{enumerate}
+    \item \textbf{Research Proposal (10\%)} (1--2 pages): Due Week 7, October 5.
+    \begin{itemize}
+        \item Identify policy topic, core research question, and why the question matters for welfare politics/policy.
+        \item Include a working thesis or argument direction.
+        \item Include a preliminary bibliography (minimum 6 credible sources, including scholarly sources).
+        \item Instructor feedback will focus on scope, feasibility, and argument focus.
+    \end{itemize}
+    \item \textbf{Introduction, Outline, and Annotated Bibliography (10\%):} Due Week 14, December 2.
+    \begin{itemize}
+        \item Revised introduction with clear thesis and paper roadmap.
+        \item Detailed section outline showing claim flow and supporting evidence for each section.
+        \item Annotated bibliography with brief annotations describing each source's argument and relevance to your project.
+        \item Substantial revision from the proposal is expected; this milestone should show a sharpened question and stronger evidence base.
+    \end{itemize}
+    \item \textbf{Final Research Paper (20\%)} (10--15 pages): Due during finals week.
+    \begin{itemize}
+        \item Original analysis that synthesizes course concepts, scholarly literature, and policy evidence.
+        \item Clear argument structure (thesis, evidence, analysis, counterargument/limitations, conclusion).
+        \item Proper citation and academic writing conventions.
+        \item The final submission should directly incorporate and respond to feedback from Milestones 1 and 2.
+    \end{itemize}
+\end{enumerate}
+
+% ========== SECTION 10: GRADING POLICIES ==========
+\section*{Grading Policies and Standards}
+
+\noindent \textbf{a. Grading scale:}
+\noindent See Table~\ref{tab:grading-scale} for the full letter-grade percentage scale used in this course.
+\begin{center}
+\begin{table}[h]
+    \caption{Grade scale}
+    \label{tab:grading-scale}
+    \centering
+    \begin{tblr}{
+        colspec = {l c l c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Grade & Percent & Grade & Percent \\
+    A+    & 98.0--100.0 & C+ & 77.0--79.9 \\
+    A     & 93.0--97.9  & C  & 73.0--76.9 \\
+    A-    & 90.0--92.9  & C- & 70.0--72.9 \\
+    B+    & 87.0--89.9  & D+ & 67.0--69.9 \\
+    B     & 83.0--86.9  & D  & 63.0--66.9 \\
+    B-    & 80.0--82.9  & D- & 60.0--62.9 \\
+          &             & F  & 0.0--59.9 \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\vspace{1em}
+\noindent \textbf{b. Required course assignments (undergraduate):}
+\noindent See Table~\ref{tab:ug-weights} for undergraduate assignment weights and due dates.
+\begin{center}
+\begin{table}[h]
+    \caption{Undergraduate assignment weighting}
+    \label{tab:ug-weights}
+    \centering
+    \begin{tblr}{
+        colspec = {X[l] c c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Assignment & Weight & Due \\
+    Attendance and Participation & 10\% & Ongoing \\
+    Discussion Papers (5 x 2\%) & 10\% & See schedule \\
+    Midterm Exam & 20\% & Wednesday, October 14 \\
+    Policy Brief & 20\% & Wednesday, October 28 \\
+    Term Paper & 20\% & Wednesday, December 2 \\
+    Final Exam & 20\% & Finals Week \\
+    \textbf{Total} & \textbf{100\%} & \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\noindent See Table~\ref{tab:grad-weights} for graduate assignment weights and due dates.
+\begin{center}
+\begin{table}[h]
+    \caption{Graduate assignment weighting}
+    \label{tab:grad-weights}
+    \centering
+    \begin{tblr}{
+        colspec = {X[l] c c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Assignment & Weight & Due \\
+    Attendance and Participation & 10\% & Ongoing \\
+    Discussion Papers (5 x 2\%) & 10\% & See schedule \\
+    Midterm Exam & 20\% & Wednesday, October 14 \\
+    Research Proposal & 10\% & Monday, October 5 \\
+    Introduction, Outline, and Annotated Bibliography & 10\% & Wednesday, December 2 \\
+    Final Research Paper & 20\% & Finals Week \\
+    Final Exam & 20\% & Finals Week \\
+    \textbf{Total} & \textbf{100\%} & \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\vspace{1em}
+\noindent \textbf{c. Attendance and participation policy:}
+Students are expected to attend all in-person sessions. If you are unable to attend, notify the professor in advance. You are responsible for obtaining any materials or information covered during absences. Participation in in-class activities cannot be made up.
+
+\vspace{1em}
+\noindent \textbf{d. Examination dates:}
+\begin{itemize}
+    \item Midterm Exam: Wednesday, October 14 (in-class)
+    \item Final Exam: Finals week; exact date and time assigned by Registrar (December 14--18)
+\end{itemize}
+
+\vspace{1em}
+\noindent \textbf{e. Make-up and late submission policy:}
+All assignments are due on the date specified in the course schedule. Extensions must be requested in writing before the due date and will be granted only for illness or other documented unforeseen circumstances. Late work without an approved extension loses one-third of a letter grade per calendar day.
+
+\vspace{0.5em}
+\noindent \textbf{Alternative procedures for submitting work:}
+Students are expected to submit all written work via \emph{Canvas}. Exams are taken in person. If you cannot submit via \emph{Canvas}, contact the professor immediately to arrange an alternative.
+
+\vspace{1em}
+\noindent \textbf{f. Authentication of student work:}
+Students may be required to submit their work to a plagiarism detection service. Cal State Fullerton uses Turnitin\copyright. Students should be aware that submitted work may be checked for authenticity and originality.
+
+\vspace{1em}
+\noindent \textbf{g. Extra credit:}
+There are no extra credit assignments in this course.
+
+\vspace{1em}
+\noindent \textbf{h. Retention of student work:}
+Work submitted for a grade, whether as a hard copy or through Canvas, shall be retained for a reasonable time after the semester ends, not to exceed the last day of the subsequent semester. Students have the right to review graded work in the presence of the instructor. (UPS 320.005)
+
+% ========== SECTION 11: ACADEMIC INTEGRITY ==========
+\section*{Academic Integrity}
+Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS\%20300/UPS\%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy and to adhere to it in all aspects of this course.
+
+% ========== SECTION 12: POLICY ON GENERATIVE AI ==========
+\section*{Policy on the Use of Generative AI and Other Technology}
+
+Generative AI (including large language models, image generators, and other tools) is permitted in this course, but use must be transparent, intentional, and in service of learning. The core principle is simple: \textbf{you must do the intellectual work of this course}. AI can amplify your thinking, but not replace it.
+
+\subsection*{Course-supported AI environment: PapyrusAI}
+
+This course uses \textbf{PapyrusAI} (\href{https://www.genaied.org/papyrusai.html}{genaied.org/papyrusai}) as the supported AI environment for graded writing. PapyrusAI is an instructor-configured, contained LLM environment: I build the modules, set the source materials the AI may draw on, and define how it interacts with you. Modules in this course are designed to \emph{coach}, not to write for you---they will ask questions, push back on weak claims, and point you to readings, but they will not produce paragraphs you can paste into an assignment.
+
+Specific PapyrusAI modules will accompany the policy brief, term paper, graduate research milestones, discussion papers, and the asynchronous-week documentary responses. \textbf{Access PapyrusAI from the left-hand navigation menu inside our Canvas course site}---no separate login or account setup is required. Use of these modules is encouraged but not required; they exist to make productive AI use easy to access and unproductive use harder to fall into.
+
+You may also use general-purpose AI tools (ChatGPT, Claude, Gemini, etc.) outside PapyrusAI subject to the rules below. The permitted/not-permitted list applies equally regardless of which tool you use.
+
+\subsection*{Permitted uses:}
+\begin{itemize}
+\item Brainstorming and outlining arguments
+\item Explaining concepts you don't understand (then explaining it back in your own words)
+\item Literature searching and summarizing sources
+\item Editing, proofreading, and revising your work
+\item Sanity-checking your analysis or logic
+\item Generating synthetic examples or test cases for your ideas
+\end{itemize}
+
+\subsection*{Not permitted:}
+\begin{itemize}
+\item Using AI to generate your analysis, arguments, or conclusions
+\item Submitting AI-generated text as your own writing
+\item Using AI to avoid engaging with course concepts or readings
+\item Letting AI do the intellectual heavy lifting (interpreting sources, building arguments, synthesizing ideas)
+\end{itemize}
+
+\subsection*{Baseline writing diagnostic:}
+During Week 2, you will complete a short in-class writing exercise (unaided, handwritten or in a locked-down Canvas window) responding to a course prompt. This is not graded for content and counts toward participation. Its purpose is to establish a baseline sample of your own writing voice early in the semester, before AI-supported assignments begin.
+
+\subsection*{Disclosure requirement:}
+If you use AI tools in ways beyond basic editing, you must disclose your use. For work completed inside a PapyrusAI course module, the module generates a transparency log you can attach to your submission---this satisfies disclosure automatically. For use outside PapyrusAI, include a brief note at the end of your assignment explaining what tools you used and how (e.g., ``I used Claude to help organize my outline and check the logic of my argument in Section 3''). This is not a confession---it's transparency about your process.
+
+\subsection*{What this means:}
+The goal of this course is for \emph{you} to learn to think like a policy analyst and to develop your own informed arguments about welfare policy. AI is a tool that can enhance that learning if used thoughtfully. Using it to avoid thinking will undermine your own education and violates academic integrity. Questions about what constitutes appropriate use? Ask before you submit.
+
+% ========== SECTION 13: TECHNICAL COMPETENCIES ==========
+\section*{Technical Competencies}
+Students need:
+\begin{itemize}
+\item Proficiency with Canvas, including submitting assignments and accessing course materials
+\item Ability to use university email and Canvas messages for course communication
+\item Basic word processing skills and ability to export documents to PDF
+\end{itemize}
+
+% ========== SECTION 14: COURSE SCHEDULE ==========
+\section*{Calendar of Topics / Schedule of Classes}
+
+We will follow the schedule below as closely as possible. If adjustments are needed, you will receive advance notice in class and on \emph{Canvas}.
+
+\vspace{0.5em}
+\noindent \textbf{Key:} (Pollak) = Pollak Library eBook
+\noindent \textbf{Reading structure:} Core Readings are required. Recommended Readings are optional but encouraged. Grad Extension Readings are required for graduate students.
+
+\vspace{0.5em}
+\noindent \textbf{Important dates:}
+\begin{itemize}
+    \item Midterm Exam: Wednesday, October 14 (in-class)
+    \item Graduate Research Proposals due: Monday, October 5
+    \item Policy Briefs due (undergraduates): Wednesday, October 28
+    \item Term Papers / Graduate Outlines due: Wednesday, December 2
+    \item Final Exam: Finals week, December 14--18 (Registrar-assigned)
+    \item Thanksgiving Break: November 23--27 (no class)
+    \item Async Weeks: Week 4 (Sep 14--16), Week 9 (Oct 19--21), Week 14 (Nov 30--Dec 2)
+\end{itemize}
+
+\bigskip
+
+% ======================== PART I ========================
+\noindent\rule{\textwidth}{0.6pt}
+\begin{center}\textbf{PART I: The Big Picture}\end{center}
+\noindent\rule{\textwidth}{0.6pt}
+
+\subsection*{8/24 -- Week 1: Introduction --- What Is the American Welfare State?}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Campbell, chapters 1--2: ``Trying to Make it in America'' \& ``Down the Rabbit Hole''
+            \item Desmond, chapter 1: ``The Kind of Problem Poverty Is''
+        \end{itemize}
+    \subsubsection*{Film (assigned for async viewing; Canvas response due Friday 8/28)}
+        \begin{itemize}
+            \item \emph{Growing Up Poor in America}, Part 1 (PBS Frontline, 2020, 54 min.) \\
+            \url{https://www.pbs.org/wgbh/frontline/documentary/growing-up-poor-in-america/}
+        \end{itemize}
+    \subsubsection*{Term paper / research paper introduction}
+        \begin{itemize}
+            \item Overview of the semester writing arc: undergraduates produce a policy brief (Week 10) building into a term paper (Week 14); graduate students produce a research proposal (Week 7), outline (Week 14), and final paper (finals week). Begin collecting reform-relevant observations from this week onward---race, gender, public opinion, and political-feedback themes recur throughout the course and matter for the paper.
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Idea Catcher} (open from Week 1, runs all semester). A lightweight journaling module where you log connections, surprises, and reform-relevant observations as you read. It will not write your paper. It will help you not arrive at Week 10 with a blank page.
+        \end{itemize}
+
+\subsection*{9/1 -- Week 2: Why Are So Many Americans Poor?}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Howard, chapter 2: ``Tracks of My Tiers''
+            \item Desmond, chapter 2: ``Why Haven't We Made More Progress?''
+            \item Rank et al., \emph{Poorly Understood}, Section 1: ``Who Are the Poor?'' pp.\ 15--49 (Pollak)
+        \end{itemize}
+    \subsubsection*{In-class activity}
+        \begin{itemize}
+            \item \textbf{Baseline writing diagnostic} (Wednesday September 3, in-class, $\sim$20 min, unaided). Short response to a course prompt; not graded for content, counts toward participation. See AI policy for purpose.
+        \end{itemize}
+
+\subsection*{9/7 -- Week 3: American Exceptionalism?}
+\emph{Monday September 7 is Labor Day --- no class. Wednesday September 9 only.}
+    \subsubsection*{Core Readings}
+        \begin{itemize}
+            \item Howard, chapter 1: ``She So Unusual''
+            \item Desmond, chapters 3--4: ``How We Undercut Workers'' \& ``How We Force the Poor to Pay More''
+        \end{itemize}
+    \subsubsection*{Grad Extension Readings}
+        \begin{itemize}
+            \item Esping-Andersen, Gosta. 1990. \emph{The Three Worlds of Welfare Capitalism}, chapter 1
+            \item Hacker, Jacob S. 2004. ``Privatizing Risk without Privatizing the Welfare State.'' \emph{APSR} 98(2): 243--260
+        \end{itemize}
+
+\subsection*{9/14 -- Week 4: \textbf{ASYNC} --- Political Development of the Welfare State}
+\emph{No in-person meetings. Complete readings and film by Friday, September 18. Canvas response due Friday 11:59 p.m.}
+    \subsubsection*{Core Readings}
+        \begin{itemize}
+            \item Howard, chapter 3: ``Twice in a Lifetime''
+            \item Pierson, Paul. 1995. \emph{Dismantling the Welfare State}, chapters 1--2
+        \end{itemize}
+    \subsubsection*{Grad Extension Readings}
+        \begin{itemize}
+            \item Pierson, Paul. 1993. ``When Effect Becomes Cause: Policy Feedback and Political Change.'' \emph{World Politics} 45(4): 595--628
+            \item Baumgartner, Frank and Bryan Jones. 2009. \emph{Agendas and Instability in American Politics}, 2nd ed., chapters 1--3
+        \end{itemize}
+    \subsubsection*{Film}
+        \begin{itemize}
+            \item \emph{Growing Up Poor in America}, Part 2 (PBS Frontline, 2021, 54 min.)
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Documentary Companion (Async I).} Pairs the film with Pierson and Howard ch.\ 3; prompts your own observations before generating the Canvas response prompt. Optional, encouraged.
+        \end{itemize}
+
+% ======================== PART II ========================
+\bigskip
+\noindent\rule{\textwidth}{0.6pt}
+\begin{center}\textbf{PART II: Programs of the Welfare State}\end{center}
+\noindent\rule{\textwidth}{0.6pt}
+
+\subsection*{9/21 -- Week 5: Social Security and Medicare}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Berkowitz, Edward D. and Larry DeWitt. ``Social Security,'' chapter 15 in \emph{Oxford Handbook} (Pollak)
+            \item Oberlander, Jonathan. ``Medicare,'' chapter 17 in \emph{Oxford Handbook} (Pollak)
+            \item Greszler, Rachel. 2021. ``Seven Hard Truths Americans Should Know about Social Security.'' Heritage Foundation Issue Brief 5212
+            \item Center on Budget and Policy Priorities. 2018. ``Top Ten Facts about Social Security''
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Policy brief topic selection due Monday September 21 (brief Canvas post)
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Policy Brief Scaffold} unlocks after topic selection. Per-program modules (OASDI, SSI, TANF, UI, Medicaid, Medicare, SNAP, EITC) walk you through stated purpose, beneficiaries, design features, and reform debate. Module asks questions; you write the brief.
+        \end{itemize}
+
+\subsection*{9/28 -- Week 6: The Safety Net, Part 1 --- TANF, SNAP, and the EITC}
+    \subsubsection*{Core Readings}
+        \begin{itemize}
+            \item Howard, chapter 5: ``Programs for the Poor are not Always Poor Programs''
+            \item Campbell, chapter 3: ``The Place of the Poor in the American Welfare State''
+            \item Desmond, chapter 5: ``How We Rely on Welfare''
+            \item Gitterman, Daniel. ``The Politics of Supporting Low-Wage Workers,'' chapter 21 in \emph{Oxford Handbook} (Pollak)
+        \end{itemize}
+    \subsubsection*{Recommended Readings}
+        \begin{itemize}
+            \item Gundersen, Craig. ``Food Assistance Programs and Food Security,'' chapter 22 in \emph{Oxford Handbook} (Pollak)
+        \end{itemize}
+
+\subsection*{10/5 -- Week 7: The Safety Net, Part 2 --- Housing, Income, and Medicaid}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Howard, \emph{Who Cares}, chapters 5--7: ``Income''; ``Food''; ``Housing'' (Pollak)
+            \item Grogan, Colleen M. and Christina M. Andrews. ``Medicaid,'' chapter 19 in \emph{Oxford Handbook} (Pollak)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item \textbf{Graduate Research Proposals due Monday October 5} (1--2 pages). Topic may be revised through the Week 14 outline milestone---scope feedback is the priority at this stage.
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Research Paper Coach} (grad) unlocks after proposal submission. Argues back against your thesis, probes evidence, and pushes you to articulate counterarguments. Will not draft paragraphs.
+        \end{itemize}
+
+\subsection*{10/12 -- Week 8: Midterm Review and Midterm Exam}
+\emph{Monday October 12: midterm review. Wednesday October 14: \textbf{MIDTERM EXAM} (in-class).}
+
+% ======================== PART III ========================
+\bigskip
+\noindent\rule{\textwidth}{0.6pt}
+\begin{center}\textbf{PART III: Case Studies in Reform}\end{center}
+\noindent\rule{\textwidth}{0.6pt}
+
+\subsection*{10/19 -- Week 9: \textbf{ASYNC} --- Welfare Reform}
+\emph{No in-person meetings. Complete readings and film by Friday, October 23. Canvas response due Friday 11:59 p.m.}
+    \subsubsection*{Core Readings}
+        \begin{itemize}
+            \item Campbell, chapters 4--5
+            \item Beland, Daniel and Alex Waddan. 2012. ``Welfare Reform,'' chapter 2 in \emph{The Politics of Policy Change}
+            \item Rank et al., \emph{Poorly Understood}, Section IV: ``Does Welfare Work?'' pp.\ 116--145 (Pollak)
+        \end{itemize}
+    \subsubsection*{Recommended Readings}
+        \begin{itemize}
+            \item Semuels, Alana. 2016. ``The End of Welfare as We Know It.'' \emph{The Atlantic}
+            \item Rector, Robert, Jamie Hall, and Leslie Ford. 2022. ``A Road Map for Conservative, Pro-Family Welfare Reform.'' Heritage Foundation
+        \end{itemize}
+    \subsubsection*{Grad Extension Readings}
+        \begin{itemize}
+            \item Soss, Joe and Sanford F. Schram. 2007. ``A Public Transformed? Welfare Reform as Policy Feedback.'' \emph{APSR} 101(1)
+        \end{itemize}
+    \subsubsection*{Film}
+        \begin{itemize}
+            \item \emph{Two American Families} (PBS Frontline, 2013, 60 min.) \\
+            \url{https://www.pbs.org/wgbh/frontline/documentary/two-american-families/}
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Documentary Companion (Async II).} Pairs the film with Campbell ch.\ 4--5 and Beland \& Waddan on welfare reform; helps you bridge family-level narrative to policy-feedback analysis.
+        \end{itemize}
+
+\subsection*{10/26 -- Week 10: Health Care Reform and the ACA}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Jacobs, Lawrence and Theda Skocpol. \emph{Healthcare Reform and American Politics}, chapters 1--4 (Pollak)
+            \item Hacker, Jacob. 2010. ``The Road to Somewhere: Why Health Reform Happened.'' \emph{Perspectives on Politics} 8(3): 861--876
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item \textbf{Policy Briefs due Wednesday October 28 (undergraduates)}
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Term Paper Dialectical Partner} (undergrad) unlocks after the brief is submitted. Argues back against your thesis, asks for evidence on each claim, and challenges counterarguments. Will not draft paragraphs.
+        \end{itemize}
+
+\subsection*{11/2 -- Week 11: Documentary Screening and Synthesis Discussion}
+\emph{This week steps back from the reading cycle for structured documentary discussion and synthesis across Parts I--III. Review your notes before class.}
+    \subsubsection*{Film (in-class or assigned in advance)}
+        \begin{itemize}
+            \item \emph{Poverty, Politics and Profit} (PBS Frontline, 2017, 54 min.) \\
+            \url{https://www.pbs.org/wgbh/frontline/documentary/poverty-politics-and-profit/}
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Discussion paper prompt 4 posted this week (tied to welfare reform and ACA units)
+        \end{itemize}
+
+% ======================== PART IV ========================
+\bigskip
+\noindent\rule{\textwidth}{0.6pt}
+\begin{center}\textbf{PART IV: Political Forces Shaping the Welfare State}\end{center}
+\noindent\rule{\textwidth}{0.6pt}
+
+\subsection*{11/9 -- Week 12: Race and the Welfare State, Part 1}
+\emph{Monday November 9 only --- November 11 is Veterans Day; no class.}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Howard, chapter 9: ``Race Still Matters''
+            \item Gilens, Martin. 1999. \emph{Why Americans Hate Welfare}, chapter 5 (skim chapters 1 and 3)
+        \end{itemize}
+
+\subsection*{11/16 -- Week 13: Race Part 2 and Gender and the Welfare State}
+    \subsubsection*{Core Readings}
+        \begin{itemize}
+            \item Michener, Jamil. 2020. ``Race, Politics and the Affordable Care Act.'' \emph{Journal of Health Politics, Policy and Law} 45(4): 547--566
+            \item Mettler, Suzanne. 1998. \emph{Dividing Citizens: Gender and Federalism in New Deal Public Policy}, chapters 1, 5--6
+        \end{itemize}
+    \subsubsection*{Recommended Readings}
+        \begin{itemize}
+            \item Morgan, Kimberly J. 2013. ``Policies for Work/Life Balance in the United States.'' \emph{Informations Sociales} 177: 60--71
+            \item Gornick, Janet C. and Natascia Boeri. ``Gender and Poverty,'' chapter 10 in \emph{Oxford Handbook} (Pollak)
+        \end{itemize}
+
+\begin{center}
+\vspace{0.5em}
+\noindent\rule{0.5\textwidth}{0.4pt}\\[0.25em]
+\textbf{Thanksgiving Break: November 23--27. No class.}\\[0.25em]
+\noindent\rule{0.5\textwidth}{0.4pt}
+\vspace{0.5em}
+\end{center}
+
+\subsection*{11/30 -- Week 14: \textbf{ASYNC} --- Public Opinion and Interest Groups}
+\emph{No in-person meetings. Canvas response due Friday December 4, 11:59 p.m.}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Howard, chapter 6: ``Shaq is Still Pretty Tall: Public Support for the American Welfare State''
+            \item Howard, chapter 7: ``The World According to AARP''
+            \item Desmond, chapter 6: ``How We Buy Opportunity''
+            \item Howard, \emph{Who Cares}: ``Business and Labor'' (Pollak)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item \textbf{Term Papers due Wednesday December 2 (undergraduates)}
+            \item \textbf{Graduate Introductions, Outlines, and Annotated Bibliographies due Wednesday December 2}
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Public Opinion \& Interest Groups (Async III).} Module ties Howard chs.\ 6--7 and Desmond ch.\ 6 to your paper topic, helping you locate the political-forces dimension in your own argument before submission.
+        \end{itemize}
+
+\subsection*{12/7 -- Week 15: Solutions and Course Synthesis}
+    \subsubsection*{Core Readings}
+        \begin{itemize}
+            \item Campbell, chapter 6: ``The Future of America's Means-Tested Programs''
+            \item Desmond, chapters 7--8
+        \end{itemize}
+    \subsubsection*{Recommended Readings}
+        \begin{itemize}
+            \item Desmond, chapters 9--10
+            \item Piven, Frances Fox and Lorraine C. Minnite. ``Poor People's Politics,'' chapter 33 in \emph{Oxford Handbook} (Pollak)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Wednesday December 9: Final exam review
+        \end{itemize}
+
+\subsection*{12/14 -- Week 16: Finals Week}
+    \subsubsection*{Deliverables}
+        \begin{itemize}
+            \item \textbf{Final Exam:} Date and time assigned by Registrar (December 14--18)
+            \item \textbf{Graduate Final Research Papers due:} Same date as Final Exam
+        \end{itemize}
+
+\end{document}
