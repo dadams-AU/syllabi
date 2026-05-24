@@ -1,0 +1,662 @@
+% POSC 427 – Metropolitan Governance and Policymaking
+% Spring 2027 | David P. Adams
+% Compile with LuaLaTeX
+\DocumentMetadata{
+    pdfstandard=UA-2,
+    pdfversion=2.0,
+    lang=en-US
+}
+
+\documentclass[12pt]{article}
+
+\usepackage[american]{babel}
+
+% ================================
+% FONT SETTINGS (LuaLaTeX)
+% ================================
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+
+% Page layout and spacing
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{
+    itemsep=0pt,
+    parsep=0pt,
+    topsep=0.25\baselineskip
+}
+\newlist{flatlist}{itemize}{1}
+\setlist[flatlist]{
+    label={},
+    leftmargin=0pt,
+    itemsep=0pt, parsep=0pt,
+    topsep=0pt
+}
+\setlistdepth{3}
+
+% Tables and graphics
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array, booktabs, longtable}
+\usepackage{caption}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+% Tagging for accessibility (if available)
+\IfFileExists{tagpdf-base.sty}{
+    \usepackage{tagpdf}
+    \tagpdfsetup{activate-all=true, interwordspace=true}
+}{
+    \newcommand\tagpdfsetup[1]{}
+}
+
+% Hyperlinks and PDF metadata
+\usepackage[
+    pdfusetitle,
+    pdflang=en-US,
+    pdfstartview=FitH,
+    pdfdisplaydoctitle=true
+]{hyperref}
+\hypersetup{
+    unicode=true,
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={POSC 427: Metropolitan Governance and Policymaking},
+    pdfauthor={David P. Adams},
+    pdfsubject={California State University, Fullerton Course Syllabus},
+    pdfkeywords={CSUF, Syllabus, POSC 427, Metropolitan Governance, Urban Politics, Public Policy},
+    pdfborderstyle={/S/U/W 1}
+}
+\urlstyle{same}
+
+\title{POSC 427: Metropolitan Governance and Policymaking}
+\author{}
+\date{Spring 2027}
+
+\begin{document}
+
+% ========== CSUF HEADER ==========
+\makeatletter
+\renewcommand{\maketitle}{%
+    \begin{center}
+        \includegraphics[width=2.25in, alt={Cal State Fullerton wordmark}]{csuf_logo.png}\par
+        \vspace{0.75em}
+        {\LARGE \@title\par}
+        \vspace{0.25em}
+        {\large \@date\par}
+    \end{center}
+    \vspace{1em}
+}
+\makeatother
+
+\maketitle
+
+% ========== SECTION 1: FACULTY INFORMATION ==========
+\section*{Faculty Information}
+\noindent \textbf{Instructor:} David P. Adams, Ph.D. \\
+\noindent \textbf{Office:} 516 Gordon Hall \\
+\noindent \textbf{Phone/Text:} (657) 278-4770 \\
+\noindent \textbf{Email:} \href{mailto:dpadams@fullerton.edu}{dpadams@fullerton.edu} \\
+\noindent \textbf{Website:} \href{https://dadams.io}{dadams.io} \\
+\noindent \textbf{Office Hours:} [TBD], and by \href{https://dadams.io/appointments}{appointment}. \\
+\noindent \textbf{Schedule meetings:} \href{https://dadams.io/appointments}{dadams.io/appointments}
+
+% ========== SECTION 2: COURSE COMMUNICATION ==========
+\section*{Course Communication}
+All course announcements and communications will be sent via \emph{Canvas} and university email. Students are responsible for regularly checking their \emph{Canvas} notifications and email, and for ensuring that Canvas notifications are set to receive course messages. Students are expected to check \emph{Canvas} and their email at least once daily.
+
+\vspace{0.5em}
+\noindent \textbf{Response time:} I will strive to respond to all student emails and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you have not received a response within 24 hours, please send a follow-up message. If you are still waiting after 48 hours, contact me via phone or SMS at (657) 278-4770.
+
+% ========== SECTION 3: TECHNICAL PROBLEMS ==========
+\section*{Technical Problems}
+
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then contact: \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone (657) 278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{student genius center}, or online chat via the \href{http://my.fullerton.edu}{portal} (``Online IT Help'' then ``Live Chat'').
+
+\vspace{0.5em}
+\noindent \textbf{\underline{For issues with Canvas}}: Canvas Support Hotline = (657) 278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\vspace{0.5em}
+\noindent \textbf{Alternative submission:} If you cannot submit an assignment via \emph{Canvas}, contact the professor as soon as possible to document the issue and arrange an alternative.
+
+% ========== SECTION 4: COURSE INFORMATION ==========
+\section*{Course Information}
+\noindent \textbf{Prefix, number, title:} POSC 427, \textit{Metropolitan Governance and Policymaking} \\
+\noindent \textbf{Meeting times:} In-Person, [Days TBD], [Time TBD], [Room TBD] \\
+\noindent \textbf{Units:} 3 \quad \textbf{Schedule Code:} [TBD]
+
+\vspace{0.5em}
+\begin{flatlist}
+\item \textbf{Course requisite(s):} POSC 100, upper-division standing, or graduate standing
+\item \textbf{Catalog description:} The governance, politics, and policymaking dynamics of metropolitan regions in the United States. Fragmentation, intergovernmental relations, regional coordination, institutional complexity, and collective action across urban and suburban jurisdictions, with attention to how metropolitan regions govern shared policy problems.
+\item \textbf{Policy regarding the use of generative AI:} See the \emph{Policy on the Use of Generative AI and Other Technology} section below.
+\item \textbf{Course materials and equipment:} Canvas; access to course readings; laptop recommended
+\item \textbf{Required texts:} Readings provided through Canvas and the Pollak Library; recommended background text Judd \& Hinze (see \emph{Required Texts} below)
+\end{flatlist}
+
+% ========== SECTION 5: COURSE DESCRIPTION ==========
+\section*{Course Description}
+
+{\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
+This course examines the governance, politics, and policymaking dynamics of metropolitan regions in the United States. Particular emphasis is placed on fragmentation, intergovernmental relations, regional coordination, institutional complexity, and collective action across urban and suburban jurisdictions.
+
+While the course engages classic urban politics scholarship, it places particular emphasis on metropolitan governance, institutional fragmentation, federalism, collaborative governance, and the institutional challenges associated with governing complex regional systems.
+
+Students will examine how metropolitan regions attempt to govern shared policy problems including housing, transportation, environmental governance, public safety, economic development, homelessness, and climate adaptation. The course uses Southern California as a recurring empirical case while situating metropolitan governance within broader debates in political science and public administration.
+
+The central question guiding the course is:
+
+\begin{quote}
+\textit{How do fragmented metropolitan systems govern shared regional problems under conditions of inequality, interdependence, and institutional complexity?}
+\end{quote}
+}
+
+% ========== SECTION 6: STUDENT LEARNING OUTCOMES ==========
+\section*{Student Learning Outcomes}
+
+{\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
+By the end of the semester, students will be able to:
+
+\begin{enumerate}
+    \item Explain major theories of metropolitan governance and urban politics.
+    \item Analyze the institutional consequences of metropolitan fragmentation.
+    \item Evaluate the strengths and limitations of polycentric governance systems.
+    \item Apply institutional and governance frameworks to metropolitan policy problems.
+    \item Assess how intergovernmental relations shape policymaking capacity.
+    \item Analyze metropolitan inequality and spatial governance challenges.
+    \item Develop evidence-based policy recommendations for regional governance problems.
+\end{enumerate}
+}
+
+% ========== SECTION 7: REQUIRED TEXTS ==========
+\section*{Required Texts}
+
+Selected readings are provided through Canvas, university library databases, and online resources. Canvas readings are required and carry equal weight to assigned book chapters.
+
+\subsection*{Recommended Background Text}
+
+\begin{itemize}
+    \item Judd, Dennis R., and Annika M. Hinze. \emph{City Politics: The Political Economy of Urban America.} Latest edition. New York, NY: Routledge.
+\end{itemize}
+
+\subsection*{Additional Readings}
+
+Additional readings---articles, book chapters, and policy documents---are posted on Canvas and noted in the course schedule. Graduate Reading selections are required for graduate students and recommended for undergraduates.
+
+% ========== SECTION 8: STUDENT RESOURCES ==========
+\section*{Student Resources Website}
+It is the student's responsibility to read and understand the required and important \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{student information for course syllabi}. Included is information about:
+
+\begin{itemize}
+\item University learning goals and General Education learning objectives
+\item Students' rights to accommodations
+\item Campus student support resources and academic integrity
+\item Emergency preparedness; library and IT services
+\item Software privacy, accessibility statement, diversity statement, and land acknowledgement
+\item Final exam schedule and semester calendar
+\end{itemize}
+
+% ========== SECTION 9: COURSE REQUIREMENTS ==========
+\section*{Course Requirements}
+
+\subsection*{Course Format}
+This is an in-person lecture and discussion course. Students complete assigned readings before class; class time is divided between lecture and structured discussion of metropolitan governance theory and Southern California cases.
+
+\subsection*{Graded Work}
+
+\begin{itemize}
+    \item \textbf{Undergraduates:}
+    \begin{itemize}
+        \item \textbf{Metropolitan Governance Profile (20\%):} A structured profile of one metropolitan region---its jurisdictions, governing institutions, and the principal regional bodies that coordinate (or fail to coordinate) shared problems.
+        \item \textbf{Institutional Mapping Memo (20\%):} A memo mapping the institutions, actors, and intergovernmental relationships that bear on one regional policy problem, with analysis of where fragmentation helps and hinders.
+        \item \textbf{Midterm Examination (20\%):} In-class examination covering Part I and the early Part II material.
+        \item \textbf{Final Metropolitan Policy Memo (25\%):} A policy memo developing evidence-based recommendations for a regional governance problem, building on the profile and mapping memo.
+        \item \textbf{Participation and Discussion (15\%):} Active, prepared engagement in class discussion.
+    \end{itemize}
+    \item \textbf{Graduate students:}
+    \begin{itemize}
+        \item \textbf{Institutional Mapping Memo (15\%):} As above.
+        \item \textbf{Graduate Analytical Memos (20\%):} Four short analytical memos engaging the graduate readings and metropolitan governance theory.
+        \item \textbf{Discussion Leadership (10\%):} Lead one class session's discussion of the assigned and graduate readings.
+        \item \textbf{Midterm Examination (20\%):} As above.
+        \item \textbf{Final Institutional Analysis Paper (25\%):} A 12--15 page original institutional analysis paper, in place of the undergraduate policy memo.
+        \item \textbf{Participation and Discussion (10\%):} As above.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Graduate Student Requirements}
+Graduate students complete additional theoretical readings (the Graduate Reading selections in the schedule and graduate-only readings posted on Canvas) and written analytical assignments designed to deepen engagement with metropolitan governance theory, institutional analysis, and collaborative governance. In place of the undergraduate Metropolitan Governance Profile and Final Metropolitan Policy Memo, graduate students complete four analytical memos, one discussion leadership assignment, and a scaffolded institutional analysis paper:
+
+\begin{enumerate}
+    \item \textbf{Graduate Analytical Memos (20\%):} Four short memos across the semester, each engaging a graduate reading and connecting theory to a metropolitan governance problem.
+    \item \textbf{Discussion Leadership (10\%):} Lead one session, framing the readings and guiding discussion.
+    \item \textbf{Final Institutional Analysis Paper (25\%)} (12--15 pages): Due during finals week. Original analysis synthesizing course theory, scholarly literature, and evidence on a metropolitan governance problem, with a clear argument structure and proper citation.
+\end{enumerate}
+
+% ========== SECTION 10: GRADING POLICIES ==========
+\section*{Grading Policies and Standards}
+
+\noindent \textbf{a. Grading scale:}
+\noindent See Table~\ref{tab:grading-scale} for the full letter-grade percentage scale used in this course.
+\begin{center}
+\begin{table}[h]
+    \caption{Grade scale}
+    \label{tab:grading-scale}
+    \centering
+    \begin{tblr}{
+        colspec = {l c l c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Grade & Percent & Grade & Percent \\
+    A+    & 98.0--100.0 & C+ & 77.0--79.9 \\
+    A     & 93.0--97.9  & C  & 73.0--76.9 \\
+    A-    & 90.0--92.9  & C- & 70.0--72.9 \\
+    B+    & 87.0--89.9  & D+ & 67.0--69.9 \\
+    B     & 83.0--86.9  & D  & 63.0--66.9 \\
+    B-    & 80.0--82.9  & D- & 60.0--62.9 \\
+          &             & F  & 0.0--59.9 \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\vspace{1em}
+\noindent \textbf{b. Required course assignments (undergraduate):}
+\noindent See Table~\ref{tab:ug-weights} for undergraduate assignment weights and due dates.
+\begin{center}
+\begin{table}[h]
+    \caption{Undergraduate assignment weighting}
+    \label{tab:ug-weights}
+    \centering
+    \begin{tblr}{
+        colspec = {X[l] c c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Assignment & Weight & Due \\
+    Metropolitan Governance Profile & 20\% & See schedule \\
+    Institutional Mapping Memo & 20\% & See schedule \\
+    Midterm Examination & 20\% & [TBD] \\
+    Final Metropolitan Policy Memo & 25\% & Finals Week \\
+    Participation and Discussion & 15\% & Ongoing \\
+    \textbf{Total} & \textbf{100\%} & \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\noindent See Table~\ref{tab:grad-weights} for graduate assignment weights and due dates.
+\begin{center}
+\begin{table}[h]
+    \caption{Graduate assignment weighting}
+    \label{tab:grad-weights}
+    \centering
+    \begin{tblr}{
+        colspec = {X[l] c c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Assignment & Weight & Due \\
+    Institutional Mapping Memo & 15\% & See schedule \\
+    Graduate Analytical Memos (4) & 20\% & See schedule \\
+    Discussion Leadership & 10\% & See schedule \\
+    Midterm Examination & 20\% & [TBD] \\
+    Final Institutional Analysis Paper & 25\% & Finals Week \\
+    Participation and Discussion & 10\% & Ongoing \\
+    \textbf{Total} & \textbf{100\%} & \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\vspace{1em}
+\noindent \textbf{c. Attendance and participation policy:}
+Students are expected to attend all in-person sessions. If you are unable to attend, notify the professor in advance. You are responsible for obtaining any materials or information covered during absences. Participation in in-class activities cannot be made up.
+
+\vspace{1em}
+\noindent \textbf{d. Examination dates:}
+\begin{itemize}
+    \item Midterm Examination: [date TBD] (in-class)
+    \item Final deliverables (policy memo / institutional analysis paper) due during finals week; exact date assigned by Registrar
+\end{itemize}
+
+\vspace{1em}
+\noindent \textbf{e. Make-up and late submission policy:}
+All assignments are due on the date specified in the course schedule. Extensions must be requested in writing before the due date and will be granted only for illness or other documented unforeseen circumstances. Late work without an approved extension loses one-third of a letter grade per calendar day.
+
+\vspace{0.5em}
+\noindent \textbf{Alternative procedures for submitting work:}
+Students are expected to submit all written work via \emph{Canvas}. Exams are taken in person. If you cannot submit via \emph{Canvas}, contact the professor immediately to arrange an alternative.
+
+\vspace{1em}
+\noindent \textbf{f. Authentication of student work:}
+Students may be required to submit their work to a plagiarism detection service. Cal State Fullerton uses Turnitin\copyright. Students should be aware that submitted work may be checked for authenticity and originality.
+
+\vspace{1em}
+\noindent \textbf{g. Extra credit:}
+There are no extra credit assignments in this course.
+
+\vspace{1em}
+\noindent \textbf{h. Retention of student work:}
+Work submitted for a grade, whether as a hard copy or through Canvas, shall be retained for a reasonable time after the semester ends, not to exceed the last day of the subsequent semester. Students have the right to review graded work in the presence of the instructor. (UPS 320.005)
+
+% ========== SECTION 11: ACADEMIC INTEGRITY ==========
+\section*{Academic Integrity}
+Students are expected to adhere to the highest standards of academic integrity. Any student found to have engaged in academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS\%20300/UPS\%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization. Students are expected to be familiar with the university's policy and to adhere to it in all aspects of this course.
+
+% ========== SECTION 12: POLICY ON GENERATIVE AI ==========
+\section*{Policy on the Use of Generative AI and Other Technology}
+
+Generative AI (including large language models, image generators, and other tools) is permitted in this course, but use must be transparent, intentional, and in service of learning. The core principle is simple: \textbf{you must do the intellectual work of this course}. AI can amplify your thinking, but not replace it.
+
+\subsection*{Course-supported AI environment: PapyrusAI}
+
+This course uses \textbf{PapyrusAI} (\href{https://www.genaied.org/papyrusai.html}{genaied.org/papyrusai}) as the supported AI environment for graded writing. PapyrusAI is an instructor-configured, contained LLM environment: I build the modules, set the source materials the AI may draw on, and define how it interacts with you. Modules in this course are designed to \emph{coach}, not to write for you---they will ask questions, push back on weak claims, and point you to readings, but they will not produce paragraphs you can paste into an assignment.
+
+Specific PapyrusAI modules accompany the metropolitan governance profile, institutional mapping memo, final policy memo, and graduate analytical memos and research paper. \textbf{Access PapyrusAI from the left-hand navigation menu inside our Canvas course site}---no separate login or account setup is required. Use of these modules is encouraged but not required; they exist to make productive AI use easy to access and unproductive use harder to fall into.
+
+You may also use general-purpose AI tools (ChatGPT, Claude, Gemini, etc.) outside PapyrusAI subject to the rules below. The permitted/not-permitted list applies equally regardless of which tool you use.
+
+\subsection*{Permitted uses:}
+\begin{itemize}
+\item Brainstorming and outlining arguments
+\item Explaining concepts you don't understand (then explaining it back in your own words)
+\item Literature searching and summarizing sources
+\item Editing, proofreading, and revising your work
+\item Sanity-checking your analysis or logic
+\item Generating synthetic examples or test cases for your ideas
+\end{itemize}
+
+\subsection*{Not permitted:}
+\begin{itemize}
+\item Using AI to generate your analysis, arguments, or conclusions
+\item Submitting AI-generated text as your own writing
+\item Using AI to avoid engaging with course concepts or readings
+\item Letting AI do the intellectual heavy lifting (interpreting sources, building arguments, synthesizing ideas)
+\end{itemize}
+
+\subsection*{Disclosure requirement:}
+If you use AI tools in ways beyond basic editing, you must disclose your use. For work completed inside a PapyrusAI course module, the module generates a transparency log you can attach to your submission---this satisfies disclosure automatically. For use outside PapyrusAI, include a brief note at the end of your assignment explaining what tools you used and how (e.g., ``I used Claude to help organize my outline and check the logic of my argument in Section 3''). This is not a confession---it's transparency about your process.
+
+\subsection*{What this means:}
+The goal of this course is for \emph{you} to learn to think like a policy analyst and to develop your own informed arguments about metropolitan governance. AI is a tool that can enhance that learning if used thoughtfully. Using it to avoid thinking will undermine your own education and violates academic integrity. Questions about what constitutes appropriate use? Ask before you submit.
+
+% ========== SECTION 13: TECHNICAL COMPETENCIES ==========
+\section*{Technical Competencies}
+Students need:
+\begin{itemize}
+\item Proficiency with Canvas, including submitting assignments and accessing course materials
+\item Ability to use university email and Canvas messages for course communication
+\item Basic word processing skills and ability to export documents to PDF
+\end{itemize}
+
+% ========== SECTION 14: COURSE SCHEDULE ==========
+\section*{Calendar of Topics / Schedule of Classes}
+
+We will follow the schedule below as closely as possible. If adjustments are needed, you will receive advance notice in class and on \emph{Canvas}.
+
+\vspace{0.5em}
+\noindent \textbf{Reading structure:} Readings are required for all students. Graduate Reading selections are required for graduate students and recommended for undergraduates.
+
+\bigskip
+
+% ======================== PART I ========================
+\noindent\rule{\textwidth}{0.6pt}
+\begin{center}\textbf{PART I: Foundations of Metropolitan Governance}\end{center}
+\noindent\rule{\textwidth}{0.6pt}
+
+\subsection*{Week 1 --- Introduction to Metropolitan Governance}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Urbanization and metropolitan regions
+            \item Governance versus government
+            \item Regional interdependence
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Judd and Hinze, chapters 1--2
+            \item Katz and Bradley, selections from \emph{The Metropolitan Revolution}
+        \end{itemize}
+    \subsubsection*{Graduate Reading}
+        \begin{itemize}
+            \item Savitch and Vogel, ``Metropolitan Consolidation versus Metropolitan Governance''
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Idea Catcher} (open from Week 1, runs all semester). A lightweight journaling module where you log connections, surprises, and governance puzzles as you read. It will not write your assignments---it will help you arrive at the profile and memo with material already in hand.
+        \end{itemize}
+
+\subsection*{Week 2 --- Federalism and Local Government}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Dillon's Rule
+            \item Home rule
+            \item Intergovernmental relations
+            \item Fiscal federalism
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Peterson, selections from \emph{City Limits}
+            \item Frug, selections from \emph{City Making}
+        \end{itemize}
+    \subsubsection*{Graduate Reading}
+        \begin{itemize}
+            \item Oates, ``An Essay on Fiscal Federalism''
+        \end{itemize}
+
+\subsection*{Week 3 --- Fragmentation, Regionalism, and Metropolitan Politics}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Metropolitan fragmentation
+            \item Consolidation debates
+            \item Regional governance
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Savitch and Adhikari, ``Fragmented Regionalism''
+            \item Orfield, selections from \emph{Metropolitics}
+        \end{itemize}
+    \subsubsection*{Graduate Reading}
+        \begin{itemize}
+            \item Ostrom, Tiebout, and Warren (1961)
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Metropolitan Governance Profile region selection due (brief Canvas post)
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Governance Profile Scaffold} unlocks after region selection. Walks you through identifying jurisdictions, governing institutions, and regional coordinating bodies. The module asks questions; you write the profile.
+        \end{itemize}
+
+\subsection*{Week 4 --- Polycentric Governance and Institutional Collective Action}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Polycentric systems
+            \item Institutional collective action
+            \item Coordination under fragmentation
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Oakerson, selections from \emph{Governing Local Public Economies}
+            \item Feiock, selections on Institutional Collective Action
+        \end{itemize}
+    \subsubsection*{Graduate Reading}
+        \begin{itemize}
+            \item Elinor Ostrom, selections from \emph{Understanding Institutional Diversity}
+        \end{itemize}
+
+\subsection*{Week 5 --- Power, Regimes, and Political Economy}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Urban regimes
+            \item Growth machine theory
+            \item Power and development
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Stone, selections from \emph{Regime Politics}
+            \item Logan and Molotch, ``The City as Growth Machine''
+        \end{itemize}
+    \subsubsection*{Graduate Reading}
+        \begin{itemize}
+            \item Dahl, selections from \emph{Who Governs?}
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item \textbf{Metropolitan Governance Profile due (undergraduates)}
+        \end{itemize}
+
+% ======================== PART II ========================
+\bigskip
+\noindent\rule{\textwidth}{0.6pt}
+\begin{center}\textbf{PART II: Governing Metropolitan Problems}\end{center}
+\noindent\rule{\textwidth}{0.6pt}
+
+\subsection*{Week 6 --- Metropolitan Inequality and Spatial Segregation}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Spatial inequality and segregation
+            \item Suburbanization and exclusion
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+
+\subsection*{Week 7 --- Housing and Land Use Governance}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Zoning and land use authority
+            \item Housing affordability and regional housing needs
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Institutional Mapping Companion} unlocks this week. Helps you identify the institutions, actors, and intergovernmental relationships bearing on your chosen policy problem, and probes where fragmentation helps and hinders.
+        \end{itemize}
+
+\subsection*{Week 8 --- Transportation and Regional Coordination}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Regional transportation governance
+            \item Metropolitan planning organizations
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item \textbf{Midterm Examination} (in-class, date TBD)
+            \item \textbf{Institutional Mapping Memo due}
+        \end{itemize}
+
+\subsection*{Week 9 --- Environmental and Climate Governance}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Regional environmental governance
+            \item Climate adaptation across jurisdictions
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+
+\subsection*{Week 10 --- Economic Development and Fiscal Competition}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Interjurisdictional competition
+            \item Economic development incentives
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Policy Memo Dialectical Partner} (undergrad) unlocks this week. Argues back against your recommendations, asks for evidence on each claim, and challenges counterarguments. Will not draft paragraphs. (Graduate students continue with the \textbf{Research Paper Coach}.)
+        \end{itemize}
+
+\subsection*{Week 11 --- Homelessness and Human Services Governance}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Continuums of care and regional service governance
+            \item Homelessness as a coordination problem
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+
+\subsection*{Week 12 --- Public Safety and Surveillance Governance}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Regional public safety coordination
+            \item Surveillance technology and data governance
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+
+% ======================== PART III ========================
+\bigskip
+\noindent\rule{\textwidth}{0.6pt}
+\begin{center}\textbf{PART III: Futures of Metropolitan Governance}\end{center}
+\noindent\rule{\textwidth}{0.6pt}
+
+\subsection*{Week 13 --- Smart Cities and Data Governance}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Smart-city initiatives
+            \item Data governance and accountability
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+
+\subsection*{Week 14 --- Metropolitan Resilience and Crisis Governance}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Resilience and crisis response
+            \item Governing under disruption
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+
+\subsection*{Week 15 --- Can Metropolitan Regions Govern Themselves?}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Synthesis across Parts I--III
+            \item Prospects for regional governance
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Readings: TBD
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Final Synthesis Studio.} Ties the course's governance frameworks to your own argument, helping you locate the institutional-design dimension in your policy memo or research paper before submission.
+        \end{itemize}
+
+\subsection*{Finals Week}
+    \subsubsection*{Deliverables}
+        \begin{itemize}
+            \item \textbf{Final Metropolitan Policy Memo due (undergraduates):} Date assigned by Registrar
+            \item \textbf{Final Institutional Analysis Paper due (graduate students):} Date assigned by Registrar
+        \end{itemize}
+
+\end{document}

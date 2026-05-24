@@ -1,0 +1,420 @@
+% POSC 427 (Independent Study) – Metropolitan Governance and Policymaking
+% Summer 2026 | David P. Adams
+% Compile with LuaLaTeX
+\DocumentMetadata{
+    pdfstandard=UA-2,
+    pdfversion=2.0,
+    lang=en-US
+}
+
+\documentclass[12pt]{article}
+
+\usepackage[american]{babel}
+
+% ================================
+% FONT SETTINGS (LuaLaTeX)
+% ================================
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+
+% Page layout and spacing
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{
+    itemsep=0pt,
+    parsep=0pt,
+    topsep=0.25\baselineskip
+}
+\newlist{flatlist}{itemize}{1}
+\setlist[flatlist]{
+    label={},
+    leftmargin=0pt,
+    itemsep=0pt, parsep=0pt,
+    topsep=0pt
+}
+\setlistdepth{3}
+
+% Tables and graphics
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array, booktabs, longtable}
+\usepackage{caption}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+% Tagging for accessibility (if available)
+\IfFileExists{tagpdf-base.sty}{
+    \usepackage{tagpdf}
+    \tagpdfsetup{activate-all=true, interwordspace=true}
+}{
+    \newcommand\tagpdfsetup[1]{}
+}
+
+% Hyperlinks and PDF metadata
+\usepackage[
+    pdfusetitle,
+    pdflang=en-US,
+    pdfstartview=FitH,
+    pdfdisplaydoctitle=true
+]{hyperref}
+\hypersetup{
+    unicode=true,
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={POSC 427 (Independent Study): Metropolitan Governance and Policymaking},
+    pdfauthor={David P. Adams},
+    pdfsubject={California State University, Fullerton Course Syllabus},
+    pdfkeywords={CSUF, Syllabus, POSC 427, Independent Study, Metropolitan Governance, Urban Politics},
+    pdfborderstyle={/S/U/W 1}
+}
+\urlstyle{same}
+
+\title{POSC 427 (Independent Study): Metropolitan Governance and Policymaking}
+\author{}
+\date{Summer 2026}
+
+\begin{document}
+
+% ========== CSUF HEADER ==========
+\makeatletter
+\renewcommand{\maketitle}{%
+    \begin{center}
+        \includegraphics[width=2.25in, alt={Cal State Fullerton wordmark}]{csuf_logo.png}\par
+        \vspace{0.75em}
+        {\LARGE \@title\par}
+        \vspace{0.25em}
+        {\large \@date\par}
+    \end{center}
+    \vspace{1em}
+}
+\makeatother
+
+\maketitle
+
+% ========== SECTION 1: FACULTY INFORMATION ==========
+\section*{Faculty Information}
+\noindent \textbf{Instructor:} David P. Adams, Ph.D. \\
+\noindent \textbf{Office:} 516 Gordon Hall \\
+\noindent \textbf{Phone/Text:} (657) 278-4770 \\
+\noindent \textbf{Email:} \href{mailto:dpadams@fullerton.edu}{dpadams@fullerton.edu} \\
+\noindent \textbf{Website:} \href{https://dadams.io}{dadams.io} \\
+\noindent \textbf{Office Hours / meetings:} By \href{https://dadams.io/appointments}{appointment} --- \href{https://dadams.io/appointments}{dadams.io/appointments}
+
+% ========== SECTION 2: COURSE COMMUNICATION ==========
+\section*{Course Communication}
+This is an independent study. All readings, assignments, and announcements are organized in \emph{Canvas}, and we will communicate via \emph{Canvas} and university email. Check both at least once daily during the five-week term.
+
+\vspace{0.5em}
+\noindent \textbf{Response time:} I will strive to respond to email and \emph{Canvas} messages within 24 hours, except on weekends and holidays. If you have not heard back within 24 hours, send a follow-up; after 48 hours, contact me via phone or SMS at (657) 278-4770.
+
+\vspace{0.5em}
+\noindent \textbf{Weekly check-in:} We will meet once each week (in person or by video) to discuss the week's readings, review your written work, and set goals for the following week. Meeting times are arranged at \href{https://dadams.io/appointments}{dadams.io/appointments}.
+
+% ========== SECTION 3: TECHNICAL PROBLEMS ==========
+\section*{Technical Problems}
+
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then contact: \href{http://www.fullerton.edu/it/students/helpdesk/index.php}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone (657) 278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{student genius center}, or online chat via the \href{http://my.fullerton.edu}{portal} (``Online IT Help'' then ``Live Chat'').
+
+\vspace{0.5em}
+\noindent \textbf{\underline{For issues with Canvas}}: Canvas Support Hotline = (657) 278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\vspace{0.5em}
+\noindent \textbf{Alternative submission:} If you cannot submit work via \emph{Canvas}, contact the professor as soon as possible to document the issue and arrange an alternative.
+
+% ========== SECTION 4: COURSE INFORMATION ==========
+\section*{Course Information}
+\noindent \textbf{Prefix, number, title:} POSC 427 (Independent Study), \textit{Metropolitan Governance and Policymaking} \\
+\noindent \textbf{Format:} Independent study, fully online/asynchronous with weekly instructor check-ins \\
+\noindent \textbf{Duration:} Five weeks, Summer 2026 \\
+\noindent \textbf{Units:} 3 \quad \textbf{Schedule Code:} [TBD]
+
+\vspace{0.5em}
+\begin{flatlist}
+\item \textbf{Course requisite(s):} Instructor consent; upper-division or graduate standing
+\item \textbf{Policy regarding the use of generative AI:} See the \emph{Policy on the Use of Generative AI and Other Technology} section below.
+\item \textbf{Course materials and equipment:} Canvas; access to course readings; laptop and reliable internet
+\end{flatlist}
+
+% ========== SECTION 5: OVERVIEW ==========
+\section*{Overview}
+
+{\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
+This five-week independent study introduces major theories and institutional frameworks associated with metropolitan governance and policymaking. The course focuses on fragmentation, polycentric governance, intergovernmental relations, and regional policy coordination.
+
+The independent study also serves as a pilot version of a future full-semester course on metropolitan governance (POSC 427). The central question guiding the work is:
+
+\begin{quote}
+\textit{How do fragmented metropolitan systems govern shared regional problems under conditions of inequality, interdependence, and institutional complexity?}
+\end{quote}
+}
+
+% ========== SECTION 6: STUDENT LEARNING OUTCOMES ==========
+\section*{Student Learning Outcomes}
+
+{\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
+By the end of the independent study, the student should be able to:
+
+\begin{enumerate}
+    \item Explain major approaches to metropolitan governance.
+    \item Analyze the institutional consequences of fragmentation.
+    \item Apply polycentric governance frameworks to metropolitan policy problems.
+    \item Evaluate regional governance challenges in Southern California.
+\end{enumerate}
+}
+
+% ========== SECTION 7: REQUIRED TEXTS ==========
+\section*{Required Texts}
+
+Selected readings are provided through Canvas, university library databases, and online resources. A recommended background text is Judd, Dennis R., and Annika M. Hinze, \emph{City Politics: The Political Economy of Urban America} (latest edition). All required readings are listed in the weekly schedule below.
+
+% ========== SECTION 8: STUDENT RESOURCES ==========
+\section*{Student Resources Website}
+It is the student's responsibility to read and understand the required and important \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{student information for course syllabi}. Included is information about:
+
+\begin{itemize}
+\item University learning goals and General Education learning objectives
+\item Students' rights to accommodations
+\item Campus student support resources and academic integrity
+\item Emergency preparedness; library and IT services
+\item Software privacy, accessibility statement, diversity statement, and land acknowledgement
+\item Final exam schedule and semester calendar
+\end{itemize}
+
+% ========== SECTION 9: ASSIGNMENTS AND GRADING ==========
+\section*{Assignments and Grading}
+
+\subsection*{Graded Work}
+\begin{itemize}
+    \item \textbf{Weekly Analytical Reflections (30\%):} A short analytical reflection each week connecting that week's readings to the course's central question. Submitted via Canvas before the weekly check-in.
+    \item \textbf{Governance Mapping Exercise (20\%):} A mapping of the institutions, actors, and intergovernmental relationships that bear on one regional policy problem, with analysis of where fragmentation helps and hinders.
+    \item \textbf{Final Metropolitan Governance Analysis (50\%):} An original analysis paper applying course frameworks to a metropolitan governance problem, ideally drawn from Southern California.
+\end{itemize}
+
+\vspace{1em}
+\noindent \textbf{a. Grading scale:}
+\noindent See Table~\ref{tab:grading-scale} for the full letter-grade percentage scale used in this course.
+\begin{center}
+\begin{table}[h]
+    \caption{Grade scale}
+    \label{tab:grading-scale}
+    \centering
+    \begin{tblr}{
+        colspec = {l c l c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Grade & Percent & Grade & Percent \\
+    A+    & 98.0--100.0 & C+ & 77.0--79.9 \\
+    A     & 93.0--97.9  & C  & 73.0--76.9 \\
+    A-    & 90.0--92.9  & C- & 70.0--72.9 \\
+    B+    & 87.0--89.9  & D+ & 67.0--69.9 \\
+    B     & 83.0--86.9  & D  & 63.0--66.9 \\
+    B-    & 80.0--82.9  & D- & 60.0--62.9 \\
+          &             & F  & 0.0--59.9 \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\vspace{1em}
+\noindent \textbf{b. Assignment weighting:}
+\noindent See Table~\ref{tab:is-weights} for assignment weights and due points.
+\begin{center}
+\begin{table}[h]
+    \caption{Assignment weighting}
+    \label{tab:is-weights}
+    \centering
+    \begin{tblr}{
+        colspec = {X[l] c c},
+        rowhead = 1,
+        row{1} = {font=\bfseries, bg=gray!20},
+    }
+    Assignment & Weight & Due \\
+    Weekly Analytical Reflections (5) & 30\% & Weekly, before check-in \\
+    Governance Mapping Exercise & 20\% & End of Week 2 \\
+    Final Metropolitan Governance Analysis & 50\% & End of Week 5 \\
+    \textbf{Total} & \textbf{100\%} & \\
+    \end{tblr}
+\end{table}
+\end{center}
+
+\vspace{1em}
+\noindent \textbf{c. Make-up and late submission policy:}
+Because this is a compressed five-week term with weekly check-ins, deadlines matter. Extensions must be requested in writing before the due date and will be granted only for illness or other documented unforeseen circumstances. Late work without an approved extension loses one-third of a letter grade per calendar day.
+
+\vspace{0.5em}
+\noindent \textbf{Alternative procedures for submitting work:}
+The student submits all written work via \emph{Canvas}. If you cannot submit via \emph{Canvas}, contact the professor immediately to arrange an alternative.
+
+\vspace{1em}
+\noindent \textbf{d. Authentication of student work:}
+Work may be submitted to a plagiarism detection service. Cal State Fullerton uses Turnitin\copyright. Submitted work may be checked for authenticity and originality.
+
+\vspace{1em}
+\noindent \textbf{e. Retention of student work:}
+Work submitted for a grade shall be retained for a reasonable time after the term ends, not to exceed the last day of the subsequent semester. The student has the right to review graded work in the presence of the instructor. (UPS 320.005)
+
+% ========== SECTION 10: ACADEMIC INTEGRITY ==========
+\section*{Academic Integrity}
+The student is expected to adhere to the highest standards of academic integrity. Academic dishonesty will be subject to the sanctions described in the \href{https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS\%20300/UPS\%20300.021.pdf}{Academic Dishonesty Policy} (UPS 300.021), which includes, but is not limited to, cheating, plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without prior authorization.
+
+% ========== SECTION 11: POLICY ON GENERATIVE AI ==========
+\section*{Policy on the Use of Generative AI and Other Technology}
+
+Generative AI (including large language models, image generators, and other tools) is permitted in this course, but use must be transparent, intentional, and in service of learning. The core principle is simple: \textbf{you must do the intellectual work of this course}. AI can amplify your thinking, but not replace it.
+
+\subsection*{Course-supported AI environment: PapyrusAI}
+
+This course uses \textbf{PapyrusAI} (\href{https://www.genaied.org/papyrusai.html}{genaied.org/papyrusai}) as the supported AI environment for graded writing. PapyrusAI is an instructor-configured, contained LLM environment: I build the modules, set the source materials the AI may draw on, and define how it interacts with you. Modules in this course are designed to \emph{coach}, not to write for you---they will ask questions, push back on weak claims, and point you to readings, but they will not produce paragraphs you can paste into an assignment.
+
+Specific PapyrusAI modules accompany the weekly reflections, the governance mapping exercise, and the final analysis. \textbf{Access PapyrusAI from the left-hand navigation menu inside our Canvas course site}---no separate login or account setup is required. Use of these modules is encouraged but not required.
+
+You may also use general-purpose AI tools (ChatGPT, Claude, Gemini, etc.) outside PapyrusAI subject to the rules below. The permitted/not-permitted list applies equally regardless of which tool you use.
+
+\subsection*{Permitted uses:}
+\begin{itemize}
+\item Brainstorming and outlining arguments
+\item Explaining concepts you don't understand (then explaining it back in your own words)
+\item Literature searching and summarizing sources
+\item Editing, proofreading, and revising your work
+\item Sanity-checking your analysis or logic
+\end{itemize}
+
+\subsection*{Not permitted:}
+\begin{itemize}
+\item Using AI to generate your analysis, arguments, or conclusions
+\item Submitting AI-generated text as your own writing
+\item Using AI to avoid engaging with course concepts or readings
+\item Letting AI do the intellectual heavy lifting (interpreting sources, building arguments, synthesizing ideas)
+\end{itemize}
+
+\subsection*{Disclosure requirement:}
+If you use AI tools in ways beyond basic editing, you must disclose your use. For work completed inside a PapyrusAI module, the module generates a transparency log you can attach to your submission. For use outside PapyrusAI, include a brief note at the end of your assignment explaining what tools you used and how. This is transparency about your process, not a confession.
+
+% ========== SECTION 12: TECHNICAL COMPETENCIES ==========
+\section*{Technical Competencies}
+The student needs:
+\begin{itemize}
+\item Proficiency with Canvas, including submitting assignments and accessing course materials
+\item Ability to use university email and Canvas messages for course communication
+\item Ability to join video meetings for the weekly check-in
+\item Basic word processing skills and ability to export documents to PDF
+\end{itemize}
+
+% ========== SECTION 13: WEEKLY SCHEDULE ==========
+\section*{Weekly Schedule}
+
+We will follow the schedule below as closely as possible. Adjustments will be confirmed at the weekly check-in and on \emph{Canvas}.
+
+\vspace{0.5em}
+\noindent \textbf{Reading structure:} All readings are required. A short analytical reflection is due each week before the check-in unless otherwise noted.
+
+\bigskip
+
+\subsection*{Week 1 --- What Is Metropolitan Governance?}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Metropolitan regions
+            \item Urbanization
+            \item Governance and fragmentation
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Judd and Hinze, chapters 1--2
+            \item Peterson, selections from \emph{City Limits}
+        \end{itemize}
+    \subsubsection*{Assignment}
+        \begin{itemize}
+            \item Weekly analytical reflection
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Idea Catcher} (open from Week 1, runs all five weeks). Log connections, surprises, and governance puzzles as you read. It will not write your reflections---it will help you build toward the final analysis.
+        \end{itemize}
+
+\subsection*{Week 2 --- Polycentric Governance and Institutional Collective Action}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Polycentric systems
+            \item Institutional collective action
+            \item Regional coordination
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Ostrom, Tiebout, and Warren (1961)
+            \item Oakerson, selections from \emph{Governing Local Public Economies}
+            \item Feiock, selections on Institutional Collective Action
+        \end{itemize}
+    \subsubsection*{Assignment}
+        \begin{itemize}
+            \item \textbf{Governance Mapping Exercise due (end of Week 2)}
+            \item Weekly analytical reflection
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Governance Mapping Companion.} Helps you identify the institutions, actors, and intergovernmental relationships bearing on your chosen problem, and probes where fragmentation helps and hinders. The module asks questions; you write the map.
+        \end{itemize}
+
+\subsection*{Week 3 --- Power and Political Economy}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Urban regimes
+            \item Growth machine theory
+            \item Development politics
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Stone, selections from \emph{Regime Politics}
+            \item Logan and Molotch, ``The City as Growth Machine''
+        \end{itemize}
+    \subsubsection*{Assignment}
+        \begin{itemize}
+            \item Weekly analytical reflection
+        \end{itemize}
+
+\subsection*{Week 4 --- Governing Metropolitan Problems}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Housing
+            \item Transportation
+            \item Climate governance
+            \item Homelessness
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Selected contemporary policy and governance readings (TBD)
+        \end{itemize}
+    \subsubsection*{Assignment}
+        \begin{itemize}
+            \item Weekly analytical reflection
+            \item Final analysis topic confirmed at check-in
+        \end{itemize}
+    \subsubsection*{PapyrusAI module}
+        \begin{itemize}
+            \item \textbf{Final Analysis Dialectical Partner} unlocks this week. Argues back against your thesis, asks for evidence on each claim, and challenges counterarguments. Will not draft paragraphs.
+        \end{itemize}
+
+\subsection*{Week 5 --- Metropolitan Futures}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Smart cities
+            \item Resilience
+            \item Crisis governance
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Selected contemporary policy and governance readings (TBD)
+        \end{itemize}
+    \subsubsection*{Final Assignment}
+        \begin{itemize}
+            \item \textbf{Final Metropolitan Governance Analysis due (end of Week 5)}
+        \end{itemize}
+
+\end{document}
