@@ -65,7 +65,7 @@ def html_list(items):
 def landing_page_body():
     return f"""
 <h2>Welcome</h2>
-<p>Metropolitan politics is the study of how fragmented systems attempt to govern interdependent regional problems. This five-week independent study introduces major theories and institutional frameworks associated with metropolitan governance and policymaking, focusing on fragmentation, polycentric governance, intergovernmental relations, and regional policy coordination.</p>
+<p>Metropolitan politics is the study of how fragmented systems attempt to govern interdependent regional problems. This ten-week independent study introduces major theories and institutional frameworks associated with metropolitan governance and policymaking, focusing on fragmentation, polycentric governance, intergovernmental relations, and regional policy coordination.</p>
 <p>The independent study also serves as a pilot version of a future full-semester course on metropolitan governance (POSC 427). The central question guiding the work is:</p>
 <blockquote><p><em>Why is metropolitan governance in Southern California so fragmented, and how does anything get solved anyway?</em></p></blockquote>
 
@@ -80,31 +80,31 @@ def landing_page_body():
 </dl>
 
 <h2>Course Format</h2>
-<p>Independent study, fully online/asynchronous with weekly instructor check-ins.</p>
-<p>All readings, assignments, and announcements are organized in <em>Canvas</em>, and we will communicate via <em>Canvas</em> and university email. Check both at least once daily during the five-week term.</p>
+<p>Independent study, fully online/asynchronous with five bi-weekly instructor check-ins.</p>
+<p>All readings, assignments, and announcements are organized in <em>Canvas</em>, and we will communicate via <em>Canvas</em> and university email. Check both at least once daily during the ten-week term.</p>
 <p><strong>Response time:</strong> I will strive to respond to email and <em>Canvas</em> messages within 24 hours, except on weekends and holidays. If you have not heard back within 24 hours, send a follow-up; after 48 hours, contact me via phone or SMS at (657) 278-4770.</p>
-<p><strong>Weekly check-in:</strong> We will meet once each week (in person or by video) to discuss the week's readings, review your written work, and set goals for the following week. Meeting times are arranged at <a href="https://dadams.io/appointments">dadams.io/appointments</a>.</p>
+<p><strong>Bi-weekly check-ins:</strong> We will meet once at the end of each two-week content block (in person or by video) to discuss the readings, review your written work, and set goals for the following block. Meeting times are arranged at <a href="https://dadams.io/appointments">dadams.io/appointments</a>.</p>
 
 <h2>Grading Summary</h2>
 <table>
 <thead><tr><th scope="col">Assignment</th><th scope="col">Weight</th><th scope="col">Canvas Points</th><th scope="col">Due</th></tr></thead>
 <tbody>
-<tr><td>Weekly Analytical Reflections (5)</td><td>30%</td><td>30 total; 6 each</td><td>Weekly, before check-in</td></tr>
-<tr><td>Governance Mapping Exercise</td><td>20%</td><td>20</td><td>End of Week 2</td></tr>
-<tr><td>Final Metropolitan Governance Analysis</td><td>50%</td><td>50</td><td>End of Week 5</td></tr>
+<tr><td>Analytical Reflections (5)</td><td>30%</td><td>30 total; 6 each</td><td>Each two-week content unit, before the bi-weekly check-in</td></tr>
+<tr><td>Governance Mapping Exercise</td><td>20%</td><td>20</td><td>End of Weeks 3-4</td></tr>
+<tr><td>Final Metropolitan Governance Analysis</td><td>50%</td><td>50</td><td>End of Weeks 9-10</td></tr>
 <tr><td><strong>Total</strong></td><td><strong>100%</strong></td><td><strong>100</strong></td><td></td></tr>
 </tbody>
 </table>
 
 <h2>Schedule Highlights</h2>
 <table>
-<thead><tr><th scope="col">Week</th><th scope="col">Dates</th><th scope="col">Theme</th><th scope="col">Due Date</th></tr></thead>
+<thead><tr><th scope="col">Course Weeks</th><th scope="col">Dates</th><th scope="col">Theme</th><th scope="col">Due Date</th></tr></thead>
 <tbody>
-<tr><td>Week 1</td><td>May 26-29, 2026</td><td>What Is Metropolitan Governance?</td><td>Friday, May 29, 2026</td></tr>
-<tr><td>Week 2</td><td>June 1-5, 2026</td><td>Polycentric Governance and Institutional Collective Action</td><td>Friday, June 5, 2026</td></tr>
-<tr><td>Week 3</td><td>June 8-12, 2026</td><td>Power and Political Economy</td><td>Friday, June 12, 2026</td></tr>
-<tr><td>Week 4</td><td>June 15-20, 2026</td><td>Governing Metropolitan Problems</td><td>Saturday, June 20, 2026; June 19 is Juneteenth</td></tr>
-<tr><td>Week 5</td><td>June 22-26, 2026</td><td>Metropolitan Futures</td><td>Friday, June 26, 2026</td></tr>
+<tr><td>Weeks 1-2</td><td>May 26-June 5, 2026</td><td>What Is Metropolitan Governance?</td><td>Friday, June 5, 2026</td></tr>
+<tr><td>Weeks 3-4</td><td>June 8-20, 2026</td><td>Polycentric Governance and Institutional Collective Action</td><td>Saturday, June 20, 2026; June 19 is Juneteenth</td></tr>
+<tr><td>Weeks 5-6</td><td>June 22-July 3, 2026</td><td>Power and Political Economy</td><td>Friday, July 3, 2026</td></tr>
+<tr><td>Weeks 7-8</td><td>July 6-17, 2026</td><td>Governing Metropolitan Problems</td><td>Friday, July 17, 2026</td></tr>
+<tr><td>Weeks 9-10</td><td>July 20-31, 2026</td><td>Metropolitan Futures</td><td>Friday, July 31, 2026</td></tr>
 </tbody>
 </table>
 
@@ -121,7 +121,7 @@ def landing_page_body():
 
 <h2>Course Policies</h2>
 <h3>Make-up and late submission policy</h3>
-<p>Because this is a compressed five-week term with weekly check-ins, deadlines matter. Extensions must be requested in writing before the due date and will be granted only for illness or other documented unforeseen circumstances. Late work without an approved extension loses one-third of a letter grade per calendar day.</p>
+<p>Because this is a compressed ten-week term with bi-weekly check-ins, deadlines matter. Extensions must be requested in writing before the due date and will be granted only for illness or other documented unforeseen circumstances. Late work without an approved extension loses one-third of a letter grade per calendar day.</p>
 
 <h3>Alternative procedures for submitting work</h3>
 <p>The student submits all written work via <em>Canvas</em>. If you cannot submit via <em>Canvas</em>, contact the professor immediately to arrange an alternative.</p>
@@ -157,10 +157,11 @@ def landing_page_body():
 WEEKS = [
     {
         "num": 1,
+        "label": "Weeks 1-2",
         "title": "What Is Metropolitan Governance?",
-        "dates": "May 26-29, 2026",
-        "due_label": "Friday, May 29, 2026",
-        "due_at": "2026-05-29T23:59:00-07:00",
+        "dates": "May 26-June 5, 2026",
+        "due_label": "Friday, June 5, 2026",
+        "due_at": "2026-06-05T23:59:00-07:00",
         "topics": [
             "Metropolitan regions",
             "Urbanization",
@@ -176,10 +177,11 @@ WEEKS = [
     },
     {
         "num": 2,
+        "label": "Weeks 3-4",
         "title": "Polycentric Governance and Institutional Collective Action",
-        "dates": "June 1-5, 2026",
-        "due_label": "Friday, June 5, 2026",
-        "due_at": "2026-06-05T23:59:00-07:00",
+        "dates": "June 8-20, 2026",
+        "due_label": "Saturday, June 20, 2026",
+        "due_at": "2026-06-20T23:59:00-07:00",
         "topics": [
             "Polycentric systems",
             "Institutional collective action",
@@ -192,13 +194,15 @@ WEEKS = [
             'Dietz, Thomas, Elinor Ostrom, and Paul C. Stern. 2003. "The Struggle to Govern the Commons." <em>Science</em> 302(5652): 1907&ndash;1912.',
         ],
         "assignments": ["Weekly Analytical Reflection 2", "Governance Mapping Exercise"],
+        "note": "June 19 is Juneteenth; this content block's due date is moved to Saturday.",
     },
     {
         "num": 3,
+        "label": "Weeks 5-6",
         "title": "Power and Political Economy",
-        "dates": "June 8-12, 2026",
-        "due_label": "Friday, June 12, 2026",
-        "due_at": "2026-06-12T23:59:00-07:00",
+        "dates": "June 22-July 3, 2026",
+        "due_label": "Friday, July 3, 2026",
+        "due_at": "2026-07-03T23:59:00-07:00",
         "topics": [
             "Urban regimes",
             "Growth machine theory",
@@ -213,10 +217,11 @@ WEEKS = [
     },
     {
         "num": 4,
+        "label": "Weeks 7-8",
         "title": "Governing Metropolitan Problems",
-        "dates": "June 15-20, 2026",
-        "due_label": "Saturday, June 20, 2026",
-        "due_at": "2026-06-20T23:59:00-07:00",
+        "dates": "July 6-17, 2026",
+        "due_label": "Friday, July 17, 2026",
+        "due_at": "2026-07-17T23:59:00-07:00",
         "topics": [
             "Housing",
             "Transportation",
@@ -230,14 +235,14 @@ WEEKS = [
             'Gerlak, Andrea K. 2006. "Federalism and U.S. Water Policy: Lessons for the Twenty-First Century." <em>Publius: The Journal of Federalism</em> 36(2): 231&ndash;257.',
         ],
         "assignments": ["Weekly Analytical Reflection 4"],
-        "note": "June 19 is Juneteenth; this week's due date is moved to Saturday.",
     },
     {
         "num": 5,
+        "label": "Weeks 9-10",
         "title": "Metropolitan Futures",
-        "dates": "June 22-26, 2026",
-        "due_label": "Friday, June 26, 2026",
-        "due_at": "2026-06-26T23:59:00-07:00",
+        "dates": "July 20-31, 2026",
+        "due_label": "Friday, July 31, 2026",
+        "due_at": "2026-07-31T23:59:00-07:00",
         "topics": [
             "Smart cities",
             "Resilience",
@@ -254,11 +259,31 @@ WEEKS = [
 ]
 
 
+def week_label(week):
+    return week.get("label", f"Week {week['num']}")
+
+
+def module_name(week):
+    return f"{week_label(week)} {DASH} {week['title']}"
+
+
+def overview_page_title(week):
+    return f"{week_label(week)} Overview: {week['title']}"
+
+
+def legacy_module_name(week):
+    return f"Week {week['num']} {DASH} {week['title']}"
+
+
+def legacy_overview_page_title(week):
+    return f"Week {week['num']} Overview: {week['title']}"
+
+
 def overview_body(week):
     due_note = f"<p><strong>Due:</strong> {', '.join(week['assignments'])} by 11:59 p.m. on {week['due_label']}.</p>"
     holiday_note = f"<p><strong>Holiday adjustment:</strong> {week['note']}</p>" if week.get("note") else ""
     return f"""
-<h2>Week {week['num']} {DASH} {week['title']}</h2>
+<h2>{week_label(week)} {DASH} {week['title']}</h2>
 <p><strong>Dates:</strong> {week['dates']}</p>
 {due_note}
 {holiday_note}
@@ -275,13 +300,13 @@ def weekly_reflection_description(week):
     if week["num"] == 1:
         return f"""
 <h2>Purpose</h2>
-<p>This short paper asks you to use the first week's readings to make a focused argument about the course's central question: <em>Why is metropolitan governance in Southern California so fragmented, and how does anything get solved anyway?</em></p>
+<p>This short paper asks you to use the first content unit's readings to make a focused argument about the course's central question: <em>Why is metropolitan governance in Southern California so fragmented, and how does anything get solved anyway?</em></p>
 
 <h2>Length</h2>
 <p>500-700 words, not including a works cited list. This should be a focused 2-3 page paper, not a summary of every reading.</p>
 
 <h2>Prompt</h2>
-<p>Use at least two Week 1 readings to answer this question: <strong>What makes metropolitan governance different from ordinary city government, and why does fragmentation matter?</strong></p>
+<p>Use at least two readings from Weeks 1-2 to answer this question: <strong>What makes metropolitan governance different from ordinary city government, and why does fragmentation matter?</strong></p>
 
 <h2>What to Include</h2>
 <ul>
@@ -299,8 +324,8 @@ def weekly_reflection_description(week):
 """
 
     return f"""
-<p>A short analytical reflection each week connecting that week's readings to the course's central question. Submitted via Canvas before the weekly check-in.</p>
-<p><strong>Week {week['num']} focus:</strong> {week['title']}</p>
+<p>A short analytical reflection for this two-week content unit connecting the readings to the course's central question. Submitted via Canvas before the bi-weekly check-in.</p>
+<p><strong>{week_label(week)} focus:</strong> {week['title']}</p>
 <p><strong>Due:</strong> {week['due_label']} at 11:59 p.m. Pacific time.</p>
 """
 
@@ -335,7 +360,7 @@ def governance_mapping_description():
 <p>A student writing about homelessness in Orange County might map city governments, the county, the Continuum of Care, nonprofit service providers, housing authorities, police departments, state housing agencies, and neighborhood groups. The analysis might show that fragmentation allows cities to tailor services locally, but also creates disputes over shelter siting, uneven funding, and weak regional accountability. The paper could then use institutional collective action to explain why cooperation is difficult even when every jurisdiction is affected by the same regional problem.</p>
 
 <h2>Due</h2>
-<p>Friday, June 5, 2026 at 11:59 p.m. Pacific time.</p>
+<p>Saturday, June 20, 2026 at 11:59 p.m. Pacific time.</p>
 """
 
 
@@ -345,7 +370,7 @@ def final_analysis_description():
 <p>The final analysis is an original paper applying course frameworks to a metropolitan governance problem. The paper should make an argument, not simply describe a policy area. You should explain how a metropolitan governance problem is structured, why it is difficult to solve, and what the course readings help us understand about it.</p>
 
 <h2>Length</h2>
-<p>2,000-2,500 words, not including references. This is roughly 7-9 double-spaced pages. For a five-week summer course, the priority is a focused, well-supported argument rather than a broad research paper.</p>
+<p>2,000-2,500 words, not including references. This is roughly 7-9 double-spaced pages. For a ten-week summer course, the priority is a focused, well-supported argument rather than a broad research paper.</p>
 
 <h2>Prompt</h2>
 <p>Choose one metropolitan governance problem, ideally from Southern California. Use course concepts such as fragmentation, polycentric governance, institutional collective action, collaborative governance, urban regimes, growth machines, or cross-sector collaboration to analyze why the problem is difficult to govern and what kinds of coordination might improve the situation.</p>
@@ -365,7 +390,7 @@ def final_analysis_description():
 <p>A paper on regional transportation in Los Angeles might ask why a labor market and travel network that operate regionally are governed through a mix of Metro, municipal governments, SCAG, Caltrans, county actors, and state and federal funding rules. The paper could apply polycentric governance and institutional collective action to argue that overlapping authority can create local responsiveness and experimentation, but also delays, uneven priorities, and coordination costs. A focused policy implication might evaluate whether stronger regional planning incentives, shared funding agreements, or project-specific collaboration would address the problem without eliminating local authority.</p>
 
 <h2>Due</h2>
-<p>Friday, June 26, 2026 at 11:59 p.m. Pacific time.</p>
+<p>Friday, July 31, 2026 at 11:59 p.m. Pacific time.</p>
 """
 
 
@@ -386,14 +411,14 @@ ASSIGNMENTS.extend(
         {
             "name": "Governance Mapping Exercise",
             "points_possible": 20,
-            "due_at": "2026-06-05T23:59:00-07:00",
+            "due_at": "2026-06-20T23:59:00-07:00",
             "week": 2,
             "description": governance_mapping_description(),
         },
         {
             "name": "Final Metropolitan Governance Analysis",
             "points_possible": 50,
-            "due_at": "2026-06-26T23:59:00-07:00",
+            "due_at": "2026-07-31T23:59:00-07:00",
             "week": 5,
             "description": final_analysis_description(),
         },
@@ -431,7 +456,7 @@ RUBRIC_DEFINITIONS = [
         "criteria": [
             criterion(
                 "Focused argument",
-                "The reflection directly answers the weekly prompt with a clear, specific claim rather than only summarizing the readings.",
+                "The reflection directly answers the prompt with a clear, specific claim rather than only summarizing the readings.",
                 2,
                 [
                     rating("Strong", "Clear, focused claim that addresses the prompt.", 2),
@@ -869,6 +894,121 @@ def update_assignment_prompts():
     print(json.dumps(result, indent=2))
 
 
+def find_by_titles(items, titles):
+    for title in titles:
+        for item in items:
+            if item.get("title") == title or item.get("name") == title:
+                return item
+    return None
+
+
+def update_page(page, title, body, front_page=False):
+    page_url = urllib.parse.quote(page["url"], safe="")
+    wiki_page = {
+        "title": title,
+        "body": body,
+    }
+    if not page.get("front_page"):
+        wiki_page["published"] = False
+        wiki_page["front_page"] = front_page
+
+    return api_request(
+        "PUT",
+        f"/api/v1/courses/{COURSE_ID}/pages/{page_url}",
+        {"wiki_page": wiki_page},
+    )
+
+
+def update_10_week_schedule():
+    require_env()
+    course = api_request("GET", f"/api/v1/courses/{COURSE_ID}")
+    pages = list_all(f"/api/v1/courses/{COURSE_ID}/pages")
+    modules = list_all(f"/api/v1/courses/{COURSE_ID}/modules")
+    assignments = list_all(f"/api/v1/courses/{COURSE_ID}/assignments")
+    assignments_by_name = {assignment["name"]: assignment for assignment in assignments}
+
+    result = {
+        "course": {"id": course["id"], "name": course["name"]},
+        "pages_updated": [],
+        "modules_updated": [],
+        "assignments_updated": [],
+        "missing_pages": [],
+        "missing_modules": [],
+        "missing_assignments": [],
+    }
+
+    landing = find_by_titles(
+        pages,
+        ["Welcome to POSC 427: Metropolitan Governance and Policymaking"],
+    )
+    if landing:
+        updated = update_page(
+            landing,
+            "Welcome to POSC 427: Metropolitan Governance and Policymaking",
+            landing_page_body(),
+            front_page=False,
+        )
+        result["pages_updated"].append(updated.get("title"))
+    else:
+        result["missing_pages"].append("Welcome to POSC 427: Metropolitan Governance and Policymaking")
+
+    for week in WEEKS:
+        module = find_by_titles(modules, [module_name(week), legacy_module_name(week)])
+        if module:
+            updated = api_request(
+                "PUT",
+                f"/api/v1/courses/{COURSE_ID}/modules/{module['id']}",
+                {
+                    "module": {
+                        "name": module_name(week),
+                        "position": week["num"],
+                        "published": False,
+                    }
+                },
+            )
+            result["modules_updated"].append(updated.get("name"))
+        else:
+            result["missing_modules"].append(module_name(week))
+
+        page = find_by_titles(pages, [overview_page_title(week), legacy_overview_page_title(week)])
+        if page:
+            updated = update_page(page, overview_page_title(week), overview_body(week), front_page=False)
+            result["pages_updated"].append(updated.get("title"))
+        else:
+            result["missing_pages"].append(overview_page_title(week))
+
+    for assignment in ASSIGNMENTS:
+        current = assignments_by_name.get(assignment["name"])
+        if not current:
+            result["missing_assignments"].append(assignment["name"])
+            continue
+
+        updated = api_request(
+            "PUT",
+            f"/api/v1/courses/{COURSE_ID}/assignments/{current['id']}",
+            {
+                "assignment": {
+                    "description": assignment["description"],
+                    "due_at": assignment["due_at"],
+                    "points_possible": assignment["points_possible"],
+                    "published": False,
+                    "submission_types": ["online_upload"],
+                    "grading_type": "points",
+                }
+            },
+        )
+        result["assignments_updated"].append(
+            {
+                "name": updated.get("name"),
+                "points_possible": updated.get("points_possible"),
+                "due_at": updated.get("due_at"),
+                "published": updated.get("published"),
+            }
+        )
+
+    print(json.dumps(result, indent=2))
+
+
 def main():
     require_env()
     course = api_request("GET", f"/api/v1/courses/{COURSE_ID}")
@@ -888,14 +1028,13 @@ def main():
     modules = {}
     pages_by_week = {}
     for week in WEEKS:
-        module_name = f"Week {week['num']} {DASH} {week['title']}"
-        module, was_created = create_or_get_module(module_name, week["num"])
+        module, was_created = create_or_get_module(module_name(week), week["num"])
         modules[week["num"]] = module
         created["modules"] += 1 if was_created else 0
         reused["modules"] += 0 if was_created else 1
 
         page, was_created = create_or_get_page(
-            f"Week {week['num']} Overview: {week['title']}",
+            overview_page_title(week),
             overview_body(week),
             front_page=False,
         )
@@ -927,7 +1066,7 @@ def main():
         "course": {"id": course["id"], "name": course["name"]},
         "review": [
             "Weekly Analytical Reflections are represented as 5 Canvas assignments worth 6 points each, matching the syllabus total of 30%.",
-            "Week 5 schedule lists only the final assignment, but the grading table says Weekly Analytical Reflections (5); a Week 5 reflection was created to match the grading table.",
+            "Weeks 9-10 schedule lists the final assignment, but the grading table says Weekly Analytical Reflections (5); a fifth reflection was created to match the grading table.",
             "No rubrics or detailed prompt requirements were specified in the syllabus.",
             "Written work is configured as online upload based on the syllabus statement that all written work is submitted via Canvas.",
             "Canvas requires front pages to be published, so the landing page was created unpublished and not marked as the course front page.",
@@ -1063,7 +1202,9 @@ def verify_rubrics():
 
 if __name__ == "__main__":
     try:
-        if "--create-rubrics" in sys.argv:
+        if "--update-10-week-schedule" in sys.argv:
+            update_10_week_schedule()
+        elif "--create-rubrics" in sys.argv:
             create_or_attach_rubrics()
         elif "--verify-rubrics" in sys.argv:
             verify_rubrics()
