@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import sys
 
 from canvas_common import (
@@ -23,6 +24,11 @@ from canvas_common import (
 )
 
 QUIZ_POINTS_POSSIBLE = 10.0  # matches the source gradebook (equal weight per quiz)
+
+
+def time_limit_for(question_count: int) -> int:
+    """~1 min/question, rounded up to the nearest 5, 15-minute floor."""
+    return max(15, math.ceil(question_count / 5) * 5)
 
 # (source_quiz_id, week_number)
 SOURCE_QUIZZES: tuple[tuple[int, int], ...] = (
@@ -68,10 +74,10 @@ def clone_one_quiz(source_quiz_id: int, week: int, group_id: int, dry_run: bool)
         ("quiz[title]", title),
         ("quiz[quiz_type]", "assignment"),
         ("quiz[assignment_group_id]", str(group_id)),
-        ("quiz[time_limit]", str(source.get("time_limit") or "")),
+        ("quiz[time_limit]", str(time_limit_for(len(questions)))),
         ("quiz[shuffle_answers]", "1" if source.get("shuffle_answers") else "0"),
         ("quiz[allowed_attempts]", str(source.get("allowed_attempts", 1))),
-        ("quiz[one_question_at_a_time]", "1" if source.get("one_question_at_a_time") else "0"),
+        ("quiz[one_question_at_a_time]", "1"),
         ("quiz[scoring_policy]", source.get("scoring_policy", "keep_highest")),
         ("quiz[show_correct_answers]", "1" if source.get("show_correct_answers") else "0"),
         ("quiz[points_possible]", f"{QUIZ_POINTS_POSSIBLE:g}"),
