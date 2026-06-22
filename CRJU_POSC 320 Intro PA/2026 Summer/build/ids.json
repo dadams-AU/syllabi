@@ -1,0 +1,44 @@
+{
+  "assignment_groups": {
+    "Discussion Posts": 6970897,
+    "Management Brief Project": 6970895,
+    "Quizzes": 6970896,
+    "Research Log": 6970898
+  },
+  "core_assignments": {
+    "Management Brief Stage 1: Problem Statement and Research Foundation": 39803677,
+    "Management Brief Stage 2: Stakeholder Analysis and Context": 39803679,
+    "Management Brief Stage 3: Organizational Theory Application": 39803681,
+    "Management Brief Stage 4: Management Challenges and Solutions": 39803683,
+    "Management Brief Stage 5: Final Recommendations and Executive Summary": 39803685,
+    "Research Log: Final Reflection": 39803693,
+    "Research Log: Week 1": 39803687,
+    "Research Log: Week 2": 39803689,
+    "Research Log: Week 3": 39803691,
+    "Research Log: Week 4": 39803692,
+    "Week 1 Discussion: Your Experience with Government": 23023931,
+    "Week 2 Discussion: Who's Involved, and Why It's Complicated": 23023932,
+    "Week 3 Discussion: Structure, Staffing, and the Struggle to Perform": 23023933,
+    "Week 4 Discussion: Decision-Making Under Pressure": 23023934,
+    "Week 5 Discussion: Balancing Regulation and Innovation": 23023935
+  },
+  "discussion_assignment_ids": {
+    "Week 1 Discussion: Your Experience with Government": 39803694,
+    "Week 2 Discussion: Who's Involved, and Why It's Complicated": 39803695,
+    "Week 3 Discussion: Structure, Staffing, and the Struggle to Perform": 39803696,
+    "Week 4 Discussion: Decision-Making Under Pressure": 39803697,
+    "Week 5 Discussion: Balancing Regulation and Innovation": 39803698
+  },
+  "quizzes": {
+    "Module 1 Quiz: Intro and Overview": 9278298,
+    "Module 10 Quiz: Accountability": 9278307,
+    "Module 2 Quiz: Basics and Eras": 9278299,
+    "Module 5 Quiz: Executive and Admin Reform": 9278302,
+    "Module 6 Quiz: Civil Service and Human Capital": 9278303,
+    "Module 7 Quiz: Decision Making and Budgeting": 9278304,
+    "Module 8 Quiz: Implementation and Performance": 9278305,
+    "Module 9 Quiz: Regulation and Oversight": 9278306,
+    "Quiz Module 3: What Government Does\u2014And How It Does It": 9278300,
+    "Quiz Module 4: Organizational Theory and Organizational Problems": 9278301
+  }
+}
