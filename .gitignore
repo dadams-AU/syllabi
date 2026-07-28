@@ -353,3 +353,8 @@ $RECYCLE.BIN/
 # Python
 __pycache__/
 *.pyc
+
+# Zotero auto-exports (Better BibTeX "keep updated" targets).
+# These are drift-check scratch files -- the curated *.bib in each course
+# folder is the source of truth for syllabi and proposals.
+*_zotero.bib
