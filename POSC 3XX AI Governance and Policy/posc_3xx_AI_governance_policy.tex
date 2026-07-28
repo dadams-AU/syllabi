@@ -48,6 +48,9 @@
 \usepackage{tabularray}
 \UseTblrLibrary{booktabs}
 
+% Bibliography (reading list appendix; see 3XX.bib)
+\usepackage[longnamesfirst]{natbib}
+
 % Tagging for accessibility (if available)
 \IfFileExists{tagpdf-base.sty}{
     \usepackage{tagpdf}
@@ -710,5 +713,27 @@ We will follow the schedule below as closely as possible. If adjustments are nee
         \begin{itemize}
             \item \textbf{Final Audit Report due:} Date and time assigned by Registrar (December 14--18)
         \end{itemize}
+
+% ========== APPENDIX: READING LIST ==========
+\bigskip
+\renewcommand{\refname}{Appendix: Reading List}
+\renewcommand{\bibpreamble}{%
+    \noindent Full citations for the assigned readings listed in the course schedule above. All items other than the required book are provided through \emph{Canvas} and the Pollak Library at no cost. Readings marked in the schedule as updated each offering (current investigative reporting, case dossiers, and regulatory trackers) are posted to \emph{Canvas} at the start of the semester and are not listed here.\par\vspace{0.75\baselineskip}}
+
+\nocite{bullock2019discretion,wheeler2023challenges,
+        narayanan2024snakeoil,mitchell2019modelcards,
+        engstrom2020government,colorado2024sb205,ncsl_ai_tracker,
+        hogan2015waterwoes,
+        veale2021demystifying,bradford2023empires,
+        eubanks2018automating,bovens2002streetlevel,
+        angwin2016machinebias,amnesty2021xenophobic,
+        pahlka2023recoding,nist2023airmf,
+        obermeyer2019dissecting,ross2023denied,
+        christian2020alignment,devynck2026scifi,cisa2023secureai,
+        nyag2021fakecomments,
+        digichina2022algorithms,brynjolfsson2022turingtrap}
+
+\bibliographystyle{apsr}
+\bibliography{3XX}
 
 \end{document}
