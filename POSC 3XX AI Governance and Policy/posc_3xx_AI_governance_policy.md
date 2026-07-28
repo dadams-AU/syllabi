@@ -347,7 +347,7 @@ We will follow the schedule below as closely as possible. If adjustments are nee
 - Who decides where AI physically lives
 
 ### Readings
-- Bloomberg News (2025), "The AI Boom Is Draining Water from the Areas That Need It Most"
+- Nicoletti, Ma, and Bass (2025), "The AI Boom Is Draining Water from the Areas That Need It Most," *Bloomberg*
 
 - Hogan (2015), "Data Flows and Water Woes: The Utah Data Center," *Big Data & Society*
 
@@ -576,7 +576,7 @@ We will follow the schedule below as closely as possible. If adjustments are nee
 \nocite{bullock2019discretion,wheeler2023challenges,
         narayanan2024snakeoil,mitchell2019modelcards,
         engstrom2020government,colorado2024sb205,ncsl_ai_tracker,
-        hogan2015waterwoes,bloomberg2025water,main2025tucson,
+        hogan2015waterwoes,nicoletti2025water,main2025tucson,
         veale2021demystifying,bradford2023empires,
         eubanks2018automating,bovens2002streetlevel,
         angwin2016machinebias,amnesty2021xenophobic,
