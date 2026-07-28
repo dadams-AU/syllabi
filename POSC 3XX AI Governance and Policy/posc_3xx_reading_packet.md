@@ -1,5 +1,6 @@
 ---
 title: "Reading Packet"
+layout: null
 course-code: "POSC/CPSC 3XX"
 course-title: "AI Governance & Policy, Fall 2026"
 author:
@@ -172,7 +173,7 @@ Public administration and policy anchors come from *Public Administration Review
 ```{=latex}
 \bigskip
 \renewcommand{\refname}{Full Citations}
-\renewcommand{\bibpreamble}{%
+\renewcommand{\bibpreamble}{\ignorespaces%
   Complete bibliographic information for every assigned reading, in
   alphabetical order. Items described above as updated each offering are
   posted to \emph{Canvas} at the start of the semester and are not listed
