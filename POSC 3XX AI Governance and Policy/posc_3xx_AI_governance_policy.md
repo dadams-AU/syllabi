@@ -347,11 +347,11 @@ We will follow the schedule below as closely as possible. If adjustments are nee
 - Who decides where AI physically lives
 
 ### Readings
-- Current investigative reporting on data center energy and water demands (updated each offering)
+- Bloomberg News (2025), "The AI Boom Is Draining Water from the Areas That Need It Most"
 
 - Hogan (2015), "Data Flows and Water Woes: The Utah Data Center," *Big Data & Society*
 
-- Case dossier: local coverage of a current data center siting dispute
+- Case dossier: Main (2025), "'The City That Draws the Line': One Arizona Community's Fight against a Huge Datacenter," *The Guardian* (Tucson "Project Blue"), with follow-on coverage posted to *Canvas*
 
 ## 9/21 -- Week 5: The EU AI Act as Counterfactual
 ### Monday 9/21: The EU AI Act
@@ -576,7 +576,7 @@ We will follow the schedule below as closely as possible. If adjustments are nee
 \nocite{bullock2019discretion,wheeler2023challenges,
         narayanan2024snakeoil,mitchell2019modelcards,
         engstrom2020government,colorado2024sb205,ncsl_ai_tracker,
-        hogan2015waterwoes,
+        hogan2015waterwoes,bloomberg2025water,main2025tucson,
         veale2021demystifying,bradford2023empires,
         eubanks2018automating,bovens2002streetlevel,
         angwin2016machinebias,amnesty2021xenophobic,
