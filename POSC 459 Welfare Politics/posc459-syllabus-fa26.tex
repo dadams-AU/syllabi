@@ -4,7 +4,8 @@
 \DocumentMetadata{
     pdfstandard=UA-2,
     pdfversion=2.0,
-    lang=en-US
+    lang=en-US,
+    tagging=on
 }
 
 \documentclass[12pt]{article}
@@ -41,17 +42,19 @@
 \setlistdepth{3}
 
 % Tables and graphics
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{graphicx}
 \usepackage{array, booktabs, longtable}
 \usepackage{caption}
-\usepackage{tabularray}
-\UseTblrLibrary{booktabs}
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+% Tables use \tagpdfsetup{table/header-rows={1}} plus a \rowcolor header row.
+% Do NOT use tabularray (tblr): it emits nested <P> tags that fail PDF/UA-2.
 
 % Tagging for accessibility (if available)
 \IfFileExists{tagpdf-base.sty}{
     \usepackage{tagpdf}
-    \tagpdfsetup{activate-all=true, interwordspace=true}
+    \tagpdfsetup{interwordspace=true}
 }{
     \newcommand\tagpdfsetup[1]{}
 }
@@ -275,12 +278,10 @@ Graduate students complete all readings including graduate-only readings posted 
     \caption{Grade scale}
     \label{tab:grading-scale}
     \centering
-    \begin{tblr}{
-        colspec = {l c l c},
-        rowhead = 1,
-        row{1} = {font=\bfseries, bg=gray!20},
-    }
-    Grade & Percent & Grade & Percent \\
+    \tagpdfsetup{table/header-rows={1}}
+    \begin{tabular}{l c l c}
+    \rowcolor{gray!20}
+    \textbf{Grade} & \textbf{Percent} & \textbf{Grade} & \textbf{Percent} \\
     A+    & 98.0--100.0 & C+ & 77.0--79.9 \\
     A     & 93.0--97.9  & C  & 73.0--76.9 \\
     A-    & 90.0--92.9  & C- & 70.0--72.9 \\
@@ -288,7 +289,7 @@ Graduate students complete all readings including graduate-only readings posted 
     B     & 83.0--86.9  & D  & 63.0--66.9 \\
     B-    & 80.0--82.9  & D- & 60.0--62.9 \\
           &             & F  & 0.0--59.9 \\
-    \end{tblr}
+    \end{tabular}
 \end{table}
 \end{center}
 
@@ -300,12 +301,10 @@ Graduate students complete all readings including graduate-only readings posted 
     \caption{Undergraduate assignment weighting}
     \label{tab:ug-weights}
     \centering
-    \begin{tblr}{
-        colspec = {X[l] c c},
-        rowhead = 1,
-        row{1} = {font=\bfseries, bg=gray!20},
-    }
-    Assignment & Weight & Due \\
+    \tagpdfsetup{table/header-rows={1}}
+    \begin{tabularx}{\linewidth}{L c c}
+    \rowcolor{gray!20}
+    \textbf{Assignment} & \textbf{Weight} & \textbf{Due} \\
     Attendance and Participation & 10\% & Ongoing \\
     Discussion Papers (5 x 2\%) & 10\% & See schedule \\
     Midterm Exam & 20\% & Wednesday, October 14 \\
@@ -313,7 +312,7 @@ Graduate students complete all readings including graduate-only readings posted 
     Term Paper & 20\% & Wednesday, December 2 \\
     Final Exam & 20\% & Finals Week \\
     \textbf{Total} & \textbf{100\%} & \\
-    \end{tblr}
+    \end{tabularx}
 \end{table}
 \end{center}
 
@@ -323,12 +322,10 @@ Graduate students complete all readings including graduate-only readings posted 
     \caption{Graduate assignment weighting}
     \label{tab:grad-weights}
     \centering
-    \begin{tblr}{
-        colspec = {X[l] c c},
-        rowhead = 1,
-        row{1} = {font=\bfseries, bg=gray!20},
-    }
-    Assignment & Weight & Due \\
+    \tagpdfsetup{table/header-rows={1}}
+    \begin{tabularx}{\linewidth}{L c c}
+    \rowcolor{gray!20}
+    \textbf{Assignment} & \textbf{Weight} & \textbf{Due} \\
     Attendance and Participation & 10\% & Ongoing \\
     Discussion Papers (5 x 2\%) & 10\% & See schedule \\
     Midterm Exam & 20\% & Wednesday, October 14 \\
@@ -337,7 +334,7 @@ Graduate students complete all readings including graduate-only readings posted 
     Final Research Paper & 20\% & Finals Week \\
     Final Exam & 20\% & Finals Week \\
     \textbf{Total} & \textbf{100\%} & \\
-    \end{tblr}
+    \end{tabularx}
 \end{table}
 \end{center}
 

@@ -56,12 +56,14 @@
   topsep=0pt                      % No space before the list
 }
 \setlistdepth{3}                  % Ensure consistent list tagging depth
-\usepackage{xcolor}               % Colors (used by hyperref and optional table shading)
+\usepackage[table]{xcolor}        % Colors (table option supplies \rowcolor)
 \usepackage{graphicx}             % Include graphics
 \usepackage{array, booktabs, longtable} % Enhanced table formatting
 \usepackage{caption}              % Customize captions
-\usepackage{tabularray}           % Modern table package
-\UseTblrLibrary{booktabs}         % Use booktabs for better table rules
+\usepackage{tabularx}             % Tables with stretchable (X) columns
+\newcolumntype{L}{>{\raggedright\arraybackslash}X} % Left-aligned stretchable column
+% Tables use \tagpdfsetup{table/header-rows={1}} plus a \rowcolor header row.
+% Do NOT use tabularray (tblr): it emits nested <P> tags that fail PDF/UA-2.
 
 % Bibliography
 \usepackage[longnamesfirst]{natbib}
@@ -215,12 +217,10 @@ This course meets in person on Mondays. Some weeks include asynchronous or indep
   \caption{Grade scale}
   \label{tab:grading-scale}
   \centering
-  \begin{tblr}{
-    colspec = {l c l c},
-    rowhead = 1,                 
-    row{1} = {font=\bfseries, bg=gray!20},
-  }
-  Grade & Percent    & Grade & Percent \\
+  \tagpdfsetup{table/header-rows={1}}
+  \begin{tabular}{l c l c}
+  \rowcolor{gray!20}
+  \textbf{Grade} & \textbf{Percent} & \textbf{Grade} & \textbf{Percent} \\
   A+    & 98.0--100.0& C+    & 77.0--79.9 \\
   A     & 93.0--97.9 & C     & 73.0--76.9 \\
   A-    & 90.0--92.9 & C-    & 70.0--72.9 \\
@@ -228,7 +228,7 @@ This course meets in person on Mondays. Some weeks include asynchronous or indep
   B     & 83.0--86.9 & D     & 63.0--66.9 \\
   B-    & 80.0--82.9 & D-    & 60.0--62.9 \\
         &            & F     & 0.0--59.9 \\
-  \end{tblr}
+  \end{tabular}
 \end{table}
 \end{center}
 
@@ -270,19 +270,17 @@ The due dates for the course requirements are as follows:
   \caption{Assignment weighting}
   \label{tab:grade-weights}
   \centering
-  \begin{tblr}{
-    colspec = {l c},
-    rowhead = 1,                 
-    row{1} = {font=\bfseries, bg=gray!20},
-  }
-    Assignment & Weight \\
+  \tagpdfsetup{table/header-rows={1}}
+  \begin{tabular}{l c}
+    \rowcolor{gray!20}
+    \textbf{Assignment} & \textbf{Weight} \\
     Weekly Readings Assignments & 35\% \\
     Reading Discussion Facilitation & 5\% \\
     Integration Seminar and Field Map & 5\% \\
     MPA Comprehensive General Area Essay Exam & 35\% \\
     Concentration Area Paper & 20\% \\
   Total            & 100\%      \\
-  \end{tblr}
+  \end{tabular}
 \end{table}
 \end{center}
 
@@ -485,12 +483,10 @@ For the \textit{Street-Level Bureaucracy} (Week 8) and \textit{Unmasking Adminis
     \caption{Guidelines for Responsible AI Use in the Course}
     \label{tab:ai-guidelines}
     \centering
-    \begin{tblr}{
-        colspec = {X[6,l] X[6,l]},
-        rowhead = 1,
-        row{1} = {font=\bfseries, bg=gray!20}
-    }
-    AI Use: Do's & AI Use: Don'ts \\
+    \tagpdfsetup{table/header-rows={1}}
+    \begin{tabularx}{\linewidth}{L L}
+    \rowcolor{gray!20}
+    \textbf{AI Use: Do's} & \textbf{AI Use: Don'ts} \\
 Use \textbf{ChatGPT Edu} through your CSUF login, and nothing else. & Use TitanGPT, Copilot, Gemini, Claude, a personal ChatGPT account, or any paid tier. \\
 Use the \textbf{approved prompts, copied verbatim}. & Modify, extend, shorten, or follow up on an approved prompt. \\
 Submit the \textbf{complete, unedited transcript} in your Feedback Appendix. & Submit excerpts, summaries, or a cleaned-up version of the exchange. \\
@@ -499,7 +495,7 @@ Read the questions it returns and answer them \textbf{yourself, next week}. & Us
 Use Grammarly for \textbf{spelling, grammar, and punctuation} only. & Use Grammarly to rewrite, paraphrase, or transform style or structure. \\
 Choose \textbf{Track A} if AI is not helping you think. & Assume Track B is expected, standard, or worth more. \\
 Remember: \textbf{your voice and reasoning must remain central}. & Treat AI output as authoritative without evaluating it. \\
-    \end{tblr}
+    \end{tabularx}
 \end{table}
 \end{center}
 
