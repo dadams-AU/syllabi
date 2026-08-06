@@ -1,0 +1,18 @@
+#!/bin/sh
+# Refuse to publish a homepage that points at syllabi nobody can reach.
+#
+# Install:  ln -sf ../../hooks/pre-push .git/hooks/pre-push
+# Bypass:   git push --no-verify
+#
+# --pre-push tells the checker not to count the commits this push is about to
+# publish as unpushed. Uncommitted work is still reported: pushing does not fix
+# it, and the live file would stay older than the one on disk.
+
+root=$(git rev-parse --show-toplevel) || exit 0
+[ -x "$root/check_index.py" ] || exit 0
+
+if ! "$root/check_index.py" --pre-push; then
+    echo "pre-push: index.html does not match the syllabi in the repo (above)."
+    echo "pre-push: fix it, or push with --no-verify."
+    exit 1
+fi

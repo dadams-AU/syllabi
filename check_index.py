@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-"""Check that index.html actually points at the syllabi it claims to.
+"""Check that index.html and README.md point at the syllabi they claim to.
 
-Four failures this repo has had, each of which shipped a correct artifact that
-nobody could reach:
+Six ways a correct, committed syllabus has failed to reach a student here:
 
-  broken     a link in index.html points at a file that is not in the repo
+  broken     a link points at a file that is not in the repo
   stale      a linked PDF is older than the .tex sitting beside it
   unpushed   a linked file differs from origin/main, so GitHub serves something
              other than what is on disk (the links resolve against main)
   unlinked   a syllabus built for the current term is not linked from the page
   superseded a course is linked at an older term than the newest one it has
+  mislabeled a syllabus header and the folder it sits in disagree on the term
 
 Usage:
     ./check_index.py                  # check against the current term
     ./check_index.py --term "Fall 2026"
     ./check_index.py --quiet          # exit code only
+    ./check_index.py --pre-push       # what hooks/pre-push runs
 
 Exit status is 1 if anything failed, 0 if clean.
 """
@@ -28,7 +29,9 @@ import sys
 import urllib.parse
 
 REPO = os.path.dirname(os.path.abspath(__file__))
-INDEX = os.path.join(REPO, "index.html")
+# Every surface that publishes a link to a syllabus. README.md carried the same
+# stale POSC 521 link index.html did, so checking one of them is not enough.
+PAGES = ["index.html", "README.md"]
 RAW_PREFIX = "https://raw.githubusercontent.com/dadams-AU/syllabi/main/"
 
 # Calendar order within a year, so "newest term" is comparable.
@@ -97,12 +100,12 @@ def show(term):
     return f"{term[1].capitalize()} {term[0]}" if term else "unknown term"
 
 
-def linked_paths():
-    """Repo-relative paths that index.html points at."""
-    with open(INDEX, encoding="utf-8") as f:
-        html = f.read()
+def linked_paths(page):
+    """Repo-relative paths a page points at, from href="..." and markdown (...)."""
+    with open(page, encoding="utf-8") as f:
+        text = f.read()
     out = []
-    for url in re.findall(r'href="([^"]+)"', html):
+    for url in re.findall(r'href="([^"]+)"', text) + re.findall(r"\]\(([^)\s]+)\)", text):
         if url.startswith(RAW_PREFIX):
             out.append(urllib.parse.unquote(url[len(RAW_PREFIX):]))
         elif not re.match(r"(https?:|mailto:|#)", url):
@@ -139,72 +142,84 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--term", help='term to treat as current, e.g. "Fall 2026"')
-    ap.add_argument("--index", help="check a different index.html (for testing)")
+    ap.add_argument("--index", help="check one page instead of all of them (for testing)")
+    ap.add_argument("--pre-push", action="store_true",
+                    help="the push about to run will publish the local commits, so "
+                         "do not report them as unpushed; uncommitted work still is")
     ap.add_argument("--quiet", action="store_true", help="exit code only")
     args = ap.parse_args()
-
-    global INDEX
-    if args.index:
-        INDEX = args.index
 
     term = parse_term(args.term) if args.term else current_term(dt.date.today())
     if args.term and not term:
         sys.exit(f"could not parse term: {args.term!r}")
 
-    links = linked_paths()
-    linked_abs = {os.path.normpath(os.path.join(REPO, p)) for p in links}
+    pages = [args.index] if args.index else [os.path.join(REPO, p) for p in PAGES]
     problems = []
-
-    # 1. Every link resolves to a file that is actually in the repo.
-    for rel in links:
-        if not os.path.exists(os.path.join(REPO, rel)):
-            problems.append(("broken", rel, "no such file in the repo"))
-
-    # 2. A linked PDF is not older than the source beside it.
-    for rel in links:
-        pdf = os.path.join(REPO, rel)
-        tex = pdf[:-4] + ".tex"
-        if rel.endswith(".pdf") and os.path.exists(pdf) and os.path.exists(tex):
-            if os.path.getmtime(pdf) < os.path.getmtime(tex):
-                problems.append(("stale", rel, "PDF is older than its .tex; rebuild it"))
+    built = syllabus_pdfs()
+    rank = lambda t: (t[0], SEASONS[t[1]])
 
     # 3. What GitHub serves is what is on disk. The links resolve against main.
     dirty = set()
     for line in (git("status", "--porcelain") or "").splitlines():
         dirty.add(line[3:].strip().strip('"'))
-    ahead = set((git("diff", "--name-only", "origin/main", "HEAD") or "").splitlines())
+    ahead = set() if args.pre_push else set(
+        (git("diff", "--name-only", "origin/main", "HEAD") or "").splitlines())
     if git("rev-parse", "--verify", "origin/main") is None:
         problems.append(("unpushed", "origin/main", "no origin/main to compare against"))
-    for rel in links:
-        if rel in dirty:
-            problems.append(("unpushed", rel, "uncommitted changes; the live file is older"))
-        elif rel in ahead:
-            problems.append(("unpushed", rel, "committed but not pushed; the live file is older"))
 
-    # 4. Every course with a current-term syllabus is linked at that term.
-    built = syllabus_pdfs()
-    for course in sorted({c for _, _, c, t in built if t == term}):
-        pdfs = [p for p, _, c, t in built if c == course and t == term]
-        if not any(os.path.normpath(p) in linked_abs for p in pdfs):
-            newest = max(pdfs, key=os.path.getmtime)
-            problems.append(("unlinked", os.path.relpath(newest, REPO),
-                             f"{show(term)} syllabus is not linked from index.html"))
+    total_links = 0
+    for page in pages:
+        name = os.path.basename(page)
+        tag = lambda where: f"{name}: {where}" if len(pages) > 1 else where
+        links = linked_paths(page)
+        linked_abs = {os.path.normpath(os.path.join(REPO, p)) for p in links}
+        total_links += len(links)
 
-    # 5. No course is linked at an older term than the newest one it has built.
-    #    Rank by calendar order, not by the season's name: "fall" sorts before
-    #    "spring" alphabetically, which would silently pass every stale link.
-    rank = lambda t: (t[0], SEASONS[t[1]])
-    for course in sorted({c for _, _, c, _ in built}):
-        terms = [t for _, _, c, t in built if c == course and t]
-        linked = [t for p, _, c, t in built
-                  if c == course and t and os.path.normpath(p) in linked_abs]
-        if not linked:
-            continue
-        newest, shown = max(terms, key=rank), max(linked, key=rank)
-        if rank(newest) > rank(shown):
-            problems.append(("superseded", course,
-                             f"newest built syllabus is {show(newest)}, "
-                             f"page links {show(shown)}"))
+        # 1. Every link resolves to a file that is actually in the repo.
+        for rel in links:
+            if not os.path.exists(os.path.join(REPO, rel)):
+                problems.append(("broken", tag(rel), "no such file in the repo"))
+
+        # 2. A linked PDF is not older than the source beside it.
+        for rel in links:
+            pdf = os.path.join(REPO, rel)
+            tex = pdf[:-4] + ".tex"
+            if rel.endswith(".pdf") and os.path.exists(pdf) and os.path.exists(tex):
+                if os.path.getmtime(pdf) < os.path.getmtime(tex):
+                    problems.append(("stale", tag(rel),
+                                     "PDF is older than its .tex; rebuild it"))
+
+        # 3 (continued). Uncommitted or unpushed linked files.
+        for rel in links:
+            if rel in dirty:
+                problems.append(("unpushed", tag(rel),
+                                 "uncommitted changes; the live file is older"))
+            elif rel in ahead:
+                problems.append(("unpushed", tag(rel),
+                                 "committed but not pushed; the live file is older"))
+
+        # 4. Every course with a current-term syllabus is linked at that term.
+        for course in sorted({c for _, _, c, t in built if t == term}):
+            pdfs = [p for p, _, c, t in built if c == course and t == term]
+            if not any(os.path.normpath(p) in linked_abs for p in pdfs):
+                newest = max(pdfs, key=os.path.getmtime)
+                problems.append(("unlinked", tag(os.path.relpath(newest, REPO)),
+                                 f"{show(term)} syllabus is not linked from {name}"))
+
+        # 5. No course is linked at an older term than the newest one it built.
+        #    Rank by calendar order, not by the season's name: "fall" sorts
+        #    before "spring" alphabetically, which passes every stale link.
+        for course in sorted({c for _, _, c, _ in built}):
+            terms = [t for _, _, c, t in built if c == course and t]
+            linked = [t for p, _, c, t in built
+                      if c == course and t and os.path.normpath(p) in linked_abs]
+            if not linked:
+                continue
+            newest, shown = max(terms, key=rank), max(linked, key=rank)
+            if rank(newest) > rank(shown):
+                problems.append(("superseded", tag(course),
+                                 f"newest built syllabus is {show(newest)}, "
+                                 f"{name} links {show(shown)}"))
 
     # 6. A syllabus's own header agrees with the folder it sits in. Disagreement
     #    is copy-then-edit residue: the term got updated in one place, not both.
@@ -222,7 +237,8 @@ def main():
             past += 1
 
     if not args.quiet:
-        print(f"index.html: {len(links)} links, current term {show(term)}\n")
+        pages_shown = ", ".join(os.path.basename(p) for p in pages)
+        print(f"{pages_shown}: {total_links} links, current term {show(term)}\n")
         if problems:
             width = max(len(kind) for kind, _, _ in problems)
             for kind, where, why in problems:
