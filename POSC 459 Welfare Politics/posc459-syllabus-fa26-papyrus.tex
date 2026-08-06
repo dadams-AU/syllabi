@@ -48,6 +48,9 @@
 \usepackage{caption}
 \usepackage{tabularx}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+% Table readability: taller rows and wider gutters, applied document-wide.
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{10pt}
 % Tables use \tagpdfsetup{table/header-rows={1}} with a bold header row.
 % Do not reinstate \rowcolor: colortbl fills are emitted as untagged content
 % and fail PDF/UA-2 clause 8.2.2-1. Header semantics come from header-rows.
@@ -433,7 +436,7 @@ Every assignment in this course carries one of three labels, stated on the assig
 
 \begin{center}
     \tagpdfsetup{table/header-rows={1}}
-    \begin{tabularx}{\linewidth}{L c L}
+    \begin{tabularx}{\linewidth}{L l l}
     \textbf{Assignment} & \textbf{Label} & \textbf{Who} \\
     Reading journal (ten entries, participation) & GREEN & All \\
     Week 2 baseline writing diagnostic & RED & All \\
@@ -673,7 +676,7 @@ We will follow the schedule below as closely as possible. If adjustments are nee
             \item Berkowitz, Edward D. and Larry DeWitt. ``Social Security,'' chapter 15 in \emph{Oxford Handbook} (Pollak)
             \item Oberlander, Jonathan. ``Medicare,'' chapter 17 in \emph{Oxford Handbook} (Pollak)
             \item Greszler, Rachel. 2021. ``Seven Hard Truths Americans Should Know about Social Security.'' Heritage Foundation Issue Brief 5212
-            \item Center on Budget and Policy Priorities. 2018. ``Top Ten Facts about Social Security''
+            \item Center on Budget and Policy Priorities. ``Policy Basics: Top Ten Facts about Social Security.'' Updated May 31, 2024. \url{https://www.cbpp.org/research/social-security/top-ten-facts-about-social-security} (PDF snapshot on Canvas---CBPP revises this page, so use the Canvas copy so we are all reading the same numbers.)
         \end{itemize}
     \subsubsection*{Assignments}
         \begin{itemize}
