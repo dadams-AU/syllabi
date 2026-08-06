@@ -48,7 +48,9 @@
 \usepackage{caption}
 \usepackage{tabularx}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
-% Tables use \tagpdfsetup{table/header-rows={1}} plus a \rowcolor header row.
+% Tables use \tagpdfsetup{table/header-rows={1}} with a bold header row.
+% Do not reinstate \rowcolor: colortbl fills are emitted as untagged content
+% and fail PDF/UA-2 clause 8.2.2-1. Header semantics come from header-rows.
 % Do NOT use tabularray (tblr): it emits nested <P> tags that fail PDF/UA-2.
 
 % Tagging for accessibility (if available)
@@ -280,7 +282,6 @@ Graduate students complete all readings including graduate-only readings posted 
     \centering
     \tagpdfsetup{table/header-rows={1}}
     \begin{tabular}{l c l c}
-    \rowcolor{gray!20}
     \textbf{Grade} & \textbf{Percent} & \textbf{Grade} & \textbf{Percent} \\
     A+    & 98.0--100.0 & C+ & 77.0--79.9 \\
     A     & 93.0--97.9  & C  & 73.0--76.9 \\
@@ -303,7 +304,6 @@ Graduate students complete all readings including graduate-only readings posted 
     \centering
     \tagpdfsetup{table/header-rows={1}}
     \begin{tabularx}{\linewidth}{L c c}
-    \rowcolor{gray!20}
     \textbf{Assignment} & \textbf{Weight} & \textbf{Due} \\
     Attendance and Participation & 10\% & Ongoing \\
     Discussion Papers (5 x 2\%) & 10\% & See schedule \\
@@ -324,7 +324,6 @@ Graduate students complete all readings including graduate-only readings posted 
     \centering
     \tagpdfsetup{table/header-rows={1}}
     \begin{tabularx}{\linewidth}{L c c}
-    \rowcolor{gray!20}
     \textbf{Assignment} & \textbf{Weight} & \textbf{Due} \\
     Attendance and Participation & 10\% & Ongoing \\
     Discussion Papers (5 x 2\%) & 10\% & See schedule \\
@@ -435,7 +434,7 @@ Every assignment in this course carries one of three labels, stated on the assig
 
 This course uses \textbf{PapyrusAI} (\href{https://www.genaied.org/papyrusai.html}{genaied.org/papyrusai}) as the supported AI environment for graded writing. PapyrusAI is an instructor-configured, contained LLM environment: I build the modules, set the source materials the AI may draw on, and define how it interacts with you. Modules in this course are designed to \emph{coach}, not to write for you---they will ask questions, push back on weak claims, and point you to readings, but they will not produce paragraphs you can paste into an assignment.
 
-Specific PapyrusAI modules will accompany the policy brief, term paper, graduate research milestones, discussion papers, and the asynchronous-week documentary responses. \textbf{Access PapyrusAI from the left-hand navigation menu inside our Canvas course site}---no separate login or account setup is required. Use of these modules is encouraged but not required; they exist to make productive AI use easy to access and unproductive use harder to fall into.
+Specific PapyrusAI modules accompany the reading journal, the policy brief, the term paper, and the graduate research milestones. \textbf{Access PapyrusAI from the left-hand navigation menu inside our Canvas course site.} There is no separate login and no password to remember. The first time you open it you will be asked for a course code; ours is \textbf{\mbox{FALL2026-POSC459}}. Enter it exactly as written---a mistyped code does not give you an error, it puts you somewhere that is not this class, and you will not see our modules. If PapyrusAI does not appear in the navigation menu, or the code does not work, tell me before you spend time working around it. Use of these modules is encouraged but not required; they exist to make productive AI use easy to access and unproductive use harder to fall into.
 
 You may also use general-purpose AI tools (ChatGPT, Claude, Gemini, etc.) outside PapyrusAI subject to the rules below. The permitted/not-permitted list applies equally regardless of which tool you use.
 
