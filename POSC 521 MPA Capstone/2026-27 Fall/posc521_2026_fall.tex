@@ -1,6 +1,7 @@
 %% Syllabus - POSC 521: MPA Capstone Seminar
 %% Author: David P. Adams
 %% Semester: Fall 2026
+% !TEX program = lualatex
 \DocumentMetadata{
   pdfstandard=UA-2,               % PDF/UA-2 standard for accessibility
   pdfversion=2.0,                 % PDF version 2.0
@@ -63,6 +64,9 @@
 \usepackage{tabularx}             % Tables with stretchable (X) columns
 \newcolumntype{L}{>{\raggedright\arraybackslash}X} % Left-aligned stretchable column
 % Tables use \tagpdfsetup{table/header-rows={1}} plus a \rowcolor header row.
+% NOTE: \rowcolor is safe under LuaLaTeX -- colortbl fills are marked as
+% artifacts. Under XeLaTeX they leak as unmarked content and fail PDF/UA-2
+% clause 8.2.2-1. Compile with LuaLaTeX (see the !TEX line at the top).
 % Do NOT use tabularray (tblr): it emits nested <P> tags that fail PDF/UA-2.
 
 % Bibliography

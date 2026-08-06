@@ -1,6 +1,7 @@
 % POSC 459 – Social Welfare Politics and Policy
 % Fall 2026 | David P. Adams
 % Compile with LuaLaTeX
+% !TEX program = lualatex
 \DocumentMetadata{
     pdfstandard=UA-2,
     pdfversion=2.0,
@@ -49,6 +50,9 @@
 \usepackage{tabularx}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 % Tables use \tagpdfsetup{table/header-rows={1}} plus a \rowcolor header row.
+% NOTE: \rowcolor is safe under LuaLaTeX -- colortbl fills are marked as
+% artifacts. Under XeLaTeX they leak as unmarked content and fail PDF/UA-2
+% clause 8.2.2-1. Compile with LuaLaTeX (see the !TEX line at the top).
 % Do NOT use tabularray (tblr): it emits nested <P> tags that fail PDF/UA-2.
 
 % Tagging for accessibility (if available)
