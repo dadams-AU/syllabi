@@ -9,15 +9,25 @@ Idempotent by title/name: re-running updates existing pages and skips
 modules that already exist.
 """
 import json
+import mimetypes
 import os
+import re
+import subprocess
 import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+import uuid
 
 COURSE_ID = "3592717"
 BASE_URL = os.environ.get("CANVAS_BASE_URL", "").rstrip("/")
 TOKEN = os.environ.get("CANVAS_TOKEN", "")
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+SYLLABUS_PDF = os.path.join(HERE, "POSC 459 Welfare Politics",
+                            "posc459-syllabus-fa26-papyrus.pdf")
+# Replaced at build time with a Canvas file link once the PDF is uploaded.
+SYLLABUS_PDF_MARKER = "<!--SYLLABUS_PDF_LINK-->"
 
 
 def require_env():
@@ -55,6 +65,130 @@ def list_all(path):
         if len(batch) < 100:
             return rows
         page += 1
+
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    """Canvas' upload step answers 3xx; we need the Location, not a blind follow."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def _multipart(fields, field_name, filename, payload, content_type):
+    boundary = uuid.uuid4().hex
+    out = []
+    for key, value in fields.items():
+        out.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"{key}\"\r\n\r\n{value}\r\n"
+                   .encode("utf-8"))
+    out.append(
+        f"--{boundary}\r\nContent-Disposition: form-data; name=\"{field_name}\"; "
+        f"filename=\"{filename}\"\r\nContent-Type: {content_type}\r\n\r\n".encode("utf-8"))
+    out.append(payload)
+    out.append(f"\r\n--{boundary}--\r\n".encode("utf-8"))
+    return b"".join(out), f"multipart/form-data; boundary={boundary}"
+
+
+def upload_file(local_path, folder_path="course files"):
+    """Canvas three-step upload: request a slot, POST the bytes, confirm."""
+    name = os.path.basename(local_path)
+    content_type = mimetypes.guess_type(name)[0] or "application/octet-stream"
+    with open(local_path, "rb") as fh:
+        payload = fh.read()
+
+    slot = api("POST", f"/api/v1/courses/{COURSE_ID}/files", {
+        "name": name,
+        "size": len(payload),
+        "content_type": content_type,
+        "parent_folder_path": folder_path,
+        "on_duplicate": "overwrite",
+    })
+
+    body, ctype = _multipart(slot["upload_params"], "file", name, payload, content_type)
+    req = urllib.request.Request(slot["upload_url"], data=body,
+                                 headers={"Content-Type": ctype}, method="POST")
+    opener = urllib.request.build_opener(NoRedirect)
+    try:
+        with opener.open(req, timeout=300) as resp:
+            location, raw = resp.headers.get("Location"), resp.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as exc:
+        if exc.code not in (301, 302, 303):
+            raise
+        location, raw = exc.headers.get("Location"), ""
+
+    if location:
+        return api("GET", location)
+    return json.loads(raw)
+
+
+def ensure_syllabus_pdf():
+    """Return the Canvas file object for the syllabus PDF, uploading if needed."""
+    if not os.path.exists(SYLLABUS_PDF):
+        print(f"  !! syllabus PDF not found at {SYLLABUS_PDF}; leaving placeholder")
+        return None
+    name = os.path.basename(SYLLABUS_PDF)
+    local_size = os.path.getsize(SYLLABUS_PDF)
+    for f in list_all(f"/api/v1/courses/{COURSE_ID}/files"):
+        if f.get("display_name") == name:
+            if f.get("size") == local_size:
+                print(f"  file current  : {name} (id {f['id']})")
+                return f
+            print(f"  file stale    : {name} -> re-uploading")
+            break
+    uploaded = upload_file(SYLLABUS_PDF)
+    print(f"  file uploaded : {name} (id {uploaded['id']}, {uploaded['size']:,} bytes)")
+    return uploaded
+
+
+VAULT_459 = ("/home/dadams/obsidian-vaults/snags/9. Teaching/2026-T1 Fall/"
+             "POSC 459 - Welfare Politics and Policy")
+
+
+def vault_md_to_html(relpath):
+    """Convert a vault note to Canvas HTML, dropping instructor-only callouts.
+
+    Unlike the assignment sheets, this note carries its callout mid-document,
+    so whole Obsidian callout blocks are removed in place rather than the file
+    being truncated at the first one.
+    """
+    text = open(os.path.join(VAULT_459, relpath), encoding="utf-8").read()
+    if text.startswith("---"):
+        text = text[text.index("\n---", 3) + 4:]
+
+    lines, out, i = text.split("\n"), [], 0
+    while i < len(lines):
+        if re.match(r"^>\s*\[!", lines[i]):
+            while i < len(lines) and lines[i].lstrip().startswith(">"):
+                i += 1
+            while i < len(lines) and not lines[i].strip():
+                i += 1
+            continue
+        out.append(lines[i])
+        i += 1
+    text = "\n".join(out)
+
+    text = re.sub(r"^#\s+.*\n", "", text.lstrip("\n"), count=1)
+    text = re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", r"\2", text)
+    text = re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
+
+    html = subprocess.run(["pandoc", "-f", "markdown+pipe_tables", "-t", "html",
+                           "--wrap=none"], input=text, capture_output=True,
+                          text=True, check=True).stdout.strip()
+    for probe in ("instructor note", "not student-facing", "answer key"):
+        if probe in html.lower():
+            raise SystemExit(f"REFUSING TO BUILD: {relpath} still contains {probe!r}.")
+    return html
+
+
+def syllabus_link_html(f):
+    if not f:
+        return "<p><strong>[UPLOAD THE SYLLABUS PDF AND LINK IT HERE.]</strong></p>"
+    href = f"/courses/{COURSE_ID}/files/{f['id']}"
+    return (
+        f'<p><a class="instructure_file_link inline_disabled" '
+        f'title="{f["display_name"]}" href="{href}?wrap=1" target="_blank" '
+        f'rel="noopener" data-api-endpoint="{BASE_URL}/api/v1/courses/{COURSE_ID}/files/{f["id"]}" '
+        f'data-api-returntype="File">Download the full syllabus (PDF)</a></p>'
+    )
 
 
 # --------------------------------------------------------------------------
@@ -411,93 +545,178 @@ is poorly designed, imposes burden it does not justify, or fails on its own term
 to me directly. I would rather hear it in week three than read it in evaluations.</p>
 """
 
+NAVY, ACCENT, INK = "#00244E", "#C25100", "#1F2933"
+MUTED, LINE, WASH = "#52606D", "#D8DEE6", "#F4F7FA"
+
+CARD = (f"flex:1 1 240px;border:1px solid {LINE};border-left:5px solid {NAVY};"
+        "border-radius:6px;padding:16px 18px;background:#fff;min-width:240px;")
+PILL = (f"display:inline-block;background:{WASH};border:1px solid {LINE};border-radius:999px;"
+        f"padding:3px 12px;margin:0 6px 6px 0;font-size:0.85em;color:{INK};")
+
 HOME_BODY = f"""
-<p>Welcome to <strong>POSC 459, Social Welfare Politics and Policy</strong>. This course is an
-intensive introduction to U.S. social welfare policy and politics. It has four parts: the big picture
-(who are the poor, and how did the welfare state develop?); the programs (social insurance, the safety
-net, tax expenditures); two case studies in major reform (welfare reform and the ACA); and the
-political forces that shape all of it (public opinion, interest groups, race, and gender).</p>
+<div style="background:{NAVY};color:#fff;padding:26px 28px;border-radius:8px;">
+  <div style="font-size:0.8em;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;">
+    Fall 2026 &middot; Section 01 &middot; Schedule Code 17538</div>
+  <div style="font-size:1.85em;font-weight:700;line-height:1.2;margin:6px 0 4px;">
+    POSC 459: Social Welfare Politics and Policy</div>
+  <div style="font-size:1.02em;opacity:0.95;">
+    Monday &amp; Wednesday, 1:00&ndash;2:15 p.m. &middot; GH 305 &middot; 3 units<br>
+    First class Monday, August 24 &middot; Dr. David P. Adams</div>
+</div>
 
-<h2>Start here</h2>
+<p style="font-size:1.06em;line-height:1.6;margin:22px 0;">This course is an intensive introduction
+to U.S. social welfare policy and politics. Political science helps explain <em>why</em> we get the
+policies we get; policy analysis helps evaluate <em>whether those policies do what they claim</em>.
+Both lenses are at work all semester.</p>
 
-<ul>
-<li><a href="/courses/{COURSE_ID}/pages/course-syllabus">Course Syllabus</a> &mdash; full syllabus, texts, and schedule</li>
-<li><a href="/courses/{COURSE_ID}/pages/policy-on-the-use-of-generative-ai-and-other-technology">Policy on the Use of Generative AI and Other Technology</a> &mdash; read before the first assignment</li>
-</ul>
+<h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">Start here</h2>
 
-<h2>Instructor</h2>
+<div style="display:flex;flex-wrap:wrap;gap:16px;margin:18px 0 26px;">
+  <div style="{CARD}">
+    <div style="font-weight:700;font-size:1.05em;margin-bottom:6px;">
+      <a href="/courses/{COURSE_ID}/pages/course-syllabus" style="color:{NAVY};">Course Syllabus</a></div>
+    <div style="color:{MUTED};font-size:0.93em;line-height:1.5;">The governing document. Texts, the
+    full week-by-week schedule, grading, and every policy. Download the PDF and keep it.</div>
+  </div>
+  <div style="{CARD}">
+    <div style="font-weight:700;font-size:1.05em;margin-bottom:6px;">
+      <a href="/courses/{COURSE_ID}/pages/policy-on-the-use-of-generative-ai-and-other-technology"
+      style="color:{NAVY};">AI Policy</a></div>
+    <div style="color:{MUTED};font-size:0.93em;line-height:1.5;">AI is permitted here, with rules.
+    Every assignment is labeled GREEN, YELLOW, or RED. <strong>Read this before the first
+    assignment.</strong></div>
+  </div>
+  <div style="{CARD}">
+    <div style="font-weight:700;font-size:1.05em;margin-bottom:6px;">
+      <a href="/courses/{COURSE_ID}/pages/policy-brief-scaffold-how-to-use-it"
+      style="color:{NAVY};">PapyrusAI Guide</a></div>
+    <div style="color:{MUTED};font-size:0.93em;line-height:1.5;">How the optional writing-coach
+    module works, and how to opt out. Ungraded and never required.</div>
+  </div>
+</div>
 
-<p>David P. Adams, Ph.D.<br>
-Office: 516 Gordon Hall<br>
-Phone/Text: (657) 278-4770<br>
-Email: <a href="mailto:dpadams@fullerton.edu">dpadams@fullerton.edu</a><br>
-Website: <a href="https://dadams.io">dadams.io</a><br>
-Office Hours: Mondays and Wednesdays, [TBD], and by
-<a href="https://dadams.io/appointments">appointment</a><br>
-Schedule meetings: <a href="https://dadams.io/appointments">dadams.io/appointments</a></p>
-
-<p><strong>Response time:</strong> I will strive to respond to all student emails and Canvas messages
-within 24 hours, except on weekends and holidays. If you have not received a response within 24 hours,
-please send a follow-up message. If you are still waiting after 48 hours, contact me via phone or SMS
-at (657) 278-4770.</p>
-
-<h2>Meeting times</h2>
-
-<p>In-Person, Monday &amp; Wednesday, 1:00&ndash;2:15 p.m., [Room TBD]. 3 units.<br>
-Three weeks are asynchronous: Week 4 (Sep 14&ndash;16), Week 9 (Oct 19&ndash;21), and Week 14
-(Nov 30&ndash;Dec 2).</p>
-
-<h2>Grading summary</h2>
+<h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">The first two weeks</h2>
 
 <table{TABLE_STYLE}>
-<thead>
-<tr><th{TH}>Component</th><th{TH}>Weight</th><th{TH}>Who</th></tr>
-</thead>
+<thead><tr><th{TH}>When</th><th{TH}>What</th></tr></thead>
 <tbody>
-<tr><td{TD}>Attendance and Participation</td><td{TD}>10%</td><td{TD}>All</td></tr>
-<tr><td{TD}>Discussion Papers (5 of 10)</td><td{TD}>10%</td><td{TD}>All</td></tr>
-<tr><td{TD}>Midterm Exam</td><td{TD}>20%</td><td{TD}>All</td></tr>
-<tr><td{TD}>Final Exam</td><td{TD}>20%</td><td{TD}>All</td></tr>
-<tr><td{TD}>Policy Brief</td><td{TD}>20%</td><td{TD}>Undergraduate</td></tr>
-<tr><td{TD}>Term Paper</td><td{TD}>20%</td><td{TD}>Undergraduate</td></tr>
-<tr><td{TD}>Research Proposal</td><td{TD}>10%</td><td{TD}>Graduate</td></tr>
-<tr><td{TD}>Introduction / Outline / Annotated Bibliography</td><td{TD}>10%</td><td{TD}>Graduate</td></tr>
-<tr><td{TD}>Final Research Paper</td><td{TD}>20%</td><td{TD}>Graduate</td></tr>
+<tr><td{TD}><strong>Mon, Aug 24</strong></td><td{TD}>First class. Campbell chs. 1&ndash;2 and Desmond
+ch. 1. <em>Growing Up Poor in America</em>, Part 1 assigned for viewing on your own.</td></tr>
+<tr><td{TD}><strong>Mon, Aug 31</strong></td><td{TD}><strong>Baseline writing diagnostic</strong>, in
+class, about 20 minutes, no AI. Not graded for content &mdash; it establishes what your own writing
+sounds like before anything AI-supported begins.</td></tr>
+<tr><td{TD}><strong>Tue, Sep 1</strong></td><td{TD}>Discussion Paper 1 due, 11:59 p.m. (optional
+&mdash; you write any five of ten across the term).</td></tr>
+<tr><td{TD}><strong>Wed, Sep 2</strong></td><td{TD}>Research pre-survey, PapyrusAI sign-up, and a
+class discussion treating this course's AI policy as something to critique.</td></tr>
+<tr><td{TD}><strong>Fri, Sep 4</strong></td><td{TD}>Documentary Response 1 due, 11:59 p.m.</td></tr>
 </tbody>
 </table>
 
-<h2>Important dates</h2>
+<h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">Dates worth putting in your calendar now</h2>
 
-<ul>
-<li>Midterm Exam: Wednesday, October 14 (in-class)</li>
-<li>Graduate Research Proposals due: Monday, October 5</li>
-<li>Policy Briefs due (undergraduates): Wednesday, October 28</li>
-<li>Term Papers / Graduate Outlines due: Wednesday, December 2</li>
-<li>Final Exam: Finals week, December 14&ndash;18 (Registrar-assigned)</li>
-<li>Thanksgiving Break: November 23&ndash;27 (no class)</li>
-</ul>
+<table{TABLE_STYLE}>
+<thead><tr><th{TH}>Date</th><th{TH}>What</th><th{TH}>Who</th></tr></thead>
+<tbody>
+<tr><td{TD}>Mon, Sep 21</td><td{TD}>Policy brief program selection</td><td{TD}>Undergraduates</td></tr>
+<tr><td{TD}>Mon, Oct 5</td><td{TD}>Research proposal</td><td{TD}>Graduate students</td></tr>
+<tr><td{TD}>Fri, Oct 9</td><td{TD}>Source and claims memo (5%)</td><td{TD}>Undergraduates</td></tr>
+<tr><td{TD}><strong>Wed, Oct 14</strong></td><td{TD}><strong>Midterm exam</strong>, in class</td><td{TD}>All</td></tr>
+<tr><td{TD}>Wed, Oct 28</td><td{TD}>Policy brief (15%)</td><td{TD}>Undergraduates</td></tr>
+<tr><td{TD}>Wed, Dec 2</td><td{TD}>Term paper &middot; graduate outline</td><td{TD}>All</td></tr>
+<tr><td{TD}>Wed, Dec 9</td><td{TD}>Last day of instruction &middot; reading journal checkpoint 2</td><td{TD}>All</td></tr>
+<tr><td{TD}><strong>Mon, Dec 14</strong></td><td{TD}><strong>Final exam, 1:00&ndash;2:50 p.m., GH 305.</strong>
+Graduate final research papers are due at the start of it.</td><td{TD}>All</td></tr>
+</tbody>
+</table>
 
-<h2>Technical problems</h2>
+<p style="margin-top:14px;"><span style="{PILL}">No class Mon, Sep 7 &mdash; Labor Day</span>
+<span style="{PILL}">No class Wed, Nov 11 &mdash; Veterans Day</span>
+<span style="{PILL}">No class Nov 23&ndash;27 &mdash; Thanksgiving</span></p>
 
-<p>If you encounter any technical difficulties, contact the instructor immediately to document the
-problem. Then contact the
-<a href="http://www.fullerton.edu/it/students/helpdesk/index.php">student IT help desk</a>,
-<a href="mailto:StudentITHelpDesk@fullerton.edu">email</a>, phone (657) 278-8888, or walk in to the
-<a href="http://www.fullerton.edu/it/students/sgc/index.php">student genius center</a>.</p>
+<p><strong>Three weeks have no in-person meetings</strong> and run asynchronously: Week 4
+(Sep 14&ndash;16), Week 9 (Oct 19&ndash;21), and Week 14 (Nov 30&ndash;Dec 2). Weeks 4 and 9 pair a
+documentary with a short response. Week 14 is reading and independent work with nothing new to
+submit.</p>
 
-<p><strong>For issues with Canvas:</strong> Canvas Support Hotline = (657) 278-8888,
-<a href="https://canvashelp.fullerton.edu/">search the CSUF Canvas Guides</a>, or
-<a href="https://titans.service-now.com/sp?id=sc_cat_item&amp;sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&amp;subject=Canvas">report a problem</a>.</p>
+<h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">How the grade works</h2>
 
-<p><strong>Alternative submission:</strong> If you cannot submit an assignment via Canvas, contact the
-professor as soon as possible to document the issue and arrange an alternative.</p>
+<div style="display:flex;flex-wrap:wrap;gap:16px;margin:18px 0;">
+  <div style="{CARD}">
+    <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">Everyone</div>
+    <div style="color:{INK};font-size:0.95em;line-height:1.8;">
+      Attendance and participation &mdash; <strong>10%</strong><br>
+      Discussion papers, best 5 of 10 &mdash; <strong>10%</strong><br>
+      Midterm exam &mdash; <strong>20%</strong><br>
+      Final exam &mdash; <strong>20%</strong></div>
+  </div>
+  <div style="{CARD}">
+    <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">Undergraduates &mdash; the other 40%</div>
+    <div style="color:{INK};font-size:0.95em;line-height:1.8;">
+      Program selection &mdash; <strong>credit/no credit</strong><br>
+      Source and claims memo &mdash; <strong>5%</strong><br>
+      Policy brief &mdash; <strong>15%</strong><br>
+      Term paper &mdash; <strong>20%</strong></div>
+  </div>
+  <div style="{CARD}">
+    <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">Graduate students &mdash; the other 40%</div>
+    <div style="color:{INK};font-size:0.95em;line-height:1.8;">
+      Research proposal &mdash; <strong>10%</strong><br>
+      Introduction, outline, bibliography &mdash; <strong>10%</strong><br>
+      Final research paper &mdash; <strong>20%</strong></div>
+  </div>
+</div>
+
+<p style="background:{WASH};border-left:5px solid {ACCENT};padding:12px 16px;">
+<strong>The reading journal.</strong> Ten short entries across the term, credited for existing rather
+than graded on content, counting toward participation. I check twice: five entries by October 14, five
+more by December 9. Keep it wherever you like &mdash; the PapyrusAI Idea Catcher, a document, or a
+paper notebook all count the same.</p>
+
+<h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">Reaching me</h2>
+
+<div style="display:flex;flex-wrap:wrap;gap:16px;margin:18px 0;">
+  <div style="{CARD}">
+    <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">David P. Adams, Ph.D.</div>
+    <div style="color:{INK};font-size:0.95em;line-height:1.8;">
+      Gordon Hall 516<br>
+      <a href="mailto:dpadams@fullerton.edu">dpadams@fullerton.edu</a><br>
+      Phone or text: (657) 278-4770<br>
+      <a href="https://dadams.io/appointments">Book a meeting</a> &middot;
+      <a href="https://dadams.io">dadams.io</a></div>
+  </div>
+  <div style="{CARD}">
+    <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">What to expect</div>
+    <div style="color:{INK};font-size:0.95em;line-height:1.6;">
+      I answer email and Canvas messages <strong>within 24 hours</strong>, except weekends and
+      holidays. No reply after 24 hours? Send a follow-up. Still nothing after 48? Call or text me
+      &mdash; something went wrong.</div>
+  </div>
+</div>
+
+<h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">When technology breaks</h2>
+
+<p><strong>Tell me first</strong>, so the problem is documented, then contact the
+<a href="http://www.fullerton.edu/it/students/helpdesk/index.php">student IT help desk</a>
+(<a href="mailto:StudentITHelpDesk@fullerton.edu">email</a>, (657) 278-8888) or walk in to the
+<a href="http://www.fullerton.edu/it/students/sgc/index.php">Student Genius Center</a>.</p>
+
+<p><strong>Canvas specifically:</strong> (657) 278-8888, the
+<a href="https://canvashelp.fullerton.edu/">CSUF Canvas Guides</a>, or
+<a href="https://titans.service-now.com/sp?id=sc_cat_item&amp;sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&amp;subject=Canvas">report
+a problem</a>.</p>
+
+<p style="background:{WASH};border-left:5px solid {NAVY};padding:12px 16px;">
+<strong>If Canvas will not take your submission, email it to me before the deadline.</strong> A broken
+upload is not a late assignment. The same goes for PapyrusAI: a module that will not load is never the
+reason something is late.</p>
 """
 
 SYLLABUS_BODY = f"""
 <p><em>The PDF syllabus is the governing document for this course. This page carries the essentials;
 anything that disagrees with the PDF is an error on this page, and I would like to know about it.</em></p>
 
-<p><strong>[UPLOAD THE SYLLABUS PDF AND LINK IT HERE.]</strong></p>
+{SYLLABUS_PDF_MARKER}
 
 <h2>Catalog description</h2>
 
@@ -550,10 +769,20 @@ it in all aspects of this course.</p>
 on the Use of Generative AI and Other Technology</a> for the full policy.</p>
 """
 
+SCAFFOLD_GUIDE_LEAD = f"""
+<p style="border-left:5px solid #8d6e00;background:#fff8e1;padding:10px 14px;">
+<strong>Reference, not an assignment. Nothing here is graded and nothing here is required.</strong><br>
+<span style="font-size:0.9em;">This guide explains the optional PapyrusAI Policy Brief Scaffold
+module. The full AI policy is on the page
+<a href="/courses/{COURSE_ID}/pages/policy-on-the-use-of-generative-ai-and-other-technology">Policy
+on the Use of Generative AI and Other Technology</a>.</span></p>
+"""
+
 PAGES = [
     ("Course Home", HOME_BODY),
     ("Course Syllabus", SYLLABUS_BODY),
     ("Policy on the Use of Generative AI and Other Technology", AI_POLICY_BODY),
+    ("Policy Brief Scaffold — How to Use It", None),  # body built from the vault note
 ]
 
 # Week labels transcribed verbatim from the .tex schedule; Part dividers match
@@ -588,9 +817,17 @@ def main():
     course = api("GET", f"/api/v1/courses/{COURSE_ID}")
     print(f"Course: {course['name']} ({course['workflow_state']})\n")
 
+    syllabus_file = ensure_syllabus_pdf()
+    link_html = syllabus_link_html(syllabus_file)
+    print()
+
     existing_pages = {p["title"]: p for p in list_all(f"/api/v1/courses/{COURSE_ID}/pages")}
     page_urls = {}
     for title, body in PAGES:
+        if body is None:
+            body = SCAFFOLD_GUIDE_LEAD + "\n" + vault_md_to_html(
+                "Assignments/07a - Policy Brief Scaffold - Student Guide.md")
+        body = body.replace(SYLLABUS_PDF_MARKER, link_html)
         payload = {"wiki_page": {"title": title, "body": body.strip(), "published": False}}
         if title in existing_pages:
             res = api("PUT", f"/api/v1/courses/{COURSE_ID}/pages/{existing_pages[title]['url']}", payload)
@@ -617,7 +854,8 @@ def main():
     start_id = mod_ids["Start Here"]
     have = {it.get("title") for it in list_all(f"/api/v1/courses/{COURSE_ID}/modules/{start_id}/items")}
     for pos, title in enumerate(["Course Syllabus",
-                                 "Policy on the Use of Generative AI and Other Technology"], start=1):
+                                 "Policy on the Use of Generative AI and Other Technology",
+                                 "Policy Brief Scaffold — How to Use It"], start=1):
         if title in have:
             print(f"  item exists   : {title}")
             continue
