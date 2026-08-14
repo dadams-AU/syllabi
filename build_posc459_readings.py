@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
-"""Upload the five licensed POSC 459 readings and link them into their weeks.
+"""Upload the POSC 459 readings that must be Canvas files and link them into weeks.
 
-These are the library-licensed journal articles that cannot be handled with a
-durable link -- CSUF has no clean permalink route for them, so they go up as
-Canvas files. All five come out of Zotero collection "459"; the Zotero item
-key is recorded on each entry so the source is traceable.
+Two groups, same mechanics.
+
+READINGS: library-licensed journal articles with no durable link -- CSUF has no
+clean permalink route for them. All five come out of Zotero collection "459";
+the Zotero item key is recorded so the source is traceable.
+
+FREE: public documents that need no permission but still should not be assigned
+as bare links, because the publisher revises in place. Sourced from the vault
+under "Readings/Week NN/". The CBPP entry is the reason this group exists: that
+page is revised at its live URL, its own "Download PDF" still serves the 2016
+original, and a student reading in November would otherwise see numbers the
+class never discussed.
 
 Idempotent, like the other builders here: a file already in the course with
 the same display name and byte size is left alone, and a module item pointing
@@ -26,6 +34,9 @@ from build_posc459_canvas import (  # noqa: E402
 )
 
 ZOTERO = os.path.expanduser("~/Zotero/storage")
+VAULT = os.path.expanduser(
+    "~/obsidian-vaults/snags/9. Teaching/2026-T1 Fall/"
+    "POSC 459 - Welfare Politics and Policy/Readings")
 
 # week_prefix matches the live Canvas module by prefix rather than by full
 # title, so an em-dash or a date edit in the module name does not break this.
@@ -72,6 +83,33 @@ READINGS = [
     },
 ]
 
+# Public documents. Retrieved and filed 2026-08-13 (tududi 629-631).
+FREE = [
+    {
+        "source": "Heritage IB5212",
+        "src": f"{VAULT}/Week 05/Greszler 2021 - Seven Hard Truths About Social Security (Heritage IB5212).pdf",
+        "name": "Greszler 2021 - Seven Hard Truths About Social Security (Heritage IB5212).pdf",
+        "week_prefix": "Week 5 (",
+        "title": "Recommended - Greszler 2021, Seven Hard Truths About Social Security (Heritage Issue Brief 5212)",
+    },
+    {
+        "source": "CBPP snapshot",
+        "src": f"{VAULT}/Week 05/CBPP 2024 - Top Ten Facts about Social Security (snapshot 2026-08-13).pdf",
+        "name": "CBPP 2024 - Top Ten Facts about Social Security (course snapshot).pdf",
+        "week_prefix": "Week 5 (",
+        # Not CBPP's own PDF: theirs is the unrevised 2016 file. This is the
+        # page as it stood on 2026-08-13, carrying "Updated May 31, 2024".
+        "title": "Recommended - CBPP 2024, Top Ten Facts about Social Security (course snapshot, updated 5/31/2024)",
+    },
+    {
+        "source": "Heritage IB5298",
+        "src": f"{VAULT}/Week 09/Rector, Hall, and Ford 2022 - A Road Map for Conservative, Pro-Family Welfare Reform (Heritage IB5298).pdf",
+        "name": "Rector, Hall, and Ford 2022 - A Road Map for Conservative, Pro-Family Welfare Reform (Heritage IB5298).pdf",
+        "week_prefix": "Week 9 (",
+        "title": "Recommended - Rector, Hall, and Ford 2022, A Road Map for Conservative, Pro-Family Welfare Reform (Heritage Issue Brief 5298)",
+    },
+]
+
 FOLDER = "course files/readings"
 
 
@@ -79,7 +117,8 @@ def ensure_file(entry, existing, dry):
     """Upload unless a byte-identical file of the same name is already there."""
     src, name = entry["src"], entry["name"]
     if not os.path.exists(src):
-        raise SystemExit(f"REFUSING TO BUILD: source PDF missing for {entry['zotero']}:\n  {src}")
+        ref = entry.get("zotero") or entry["source"]
+        raise SystemExit(f"REFUSING TO BUILD: source PDF missing for {ref}:\n  {src}")
     size = os.path.getsize(src)
 
     hit = existing.get(name)
@@ -130,7 +169,7 @@ def main():
     existing = {f["display_name"]: f for f in list_all(f"/api/v1/courses/{COURSE_ID}/files")}
     modules = list_all(f"/api/v1/courses/{COURSE_ID}/modules")
 
-    for entry in READINGS:
+    for entry in READINGS + FREE:
         matches = [m for m in modules if m["name"].startswith(entry["week_prefix"])]
         if len(matches) != 1:
             raise SystemExit(
@@ -138,13 +177,13 @@ def main():
                 "Run build_posc459_canvas.py first, or fix the prefix."
             )
         mod = matches[0]
-        print(f"{entry['zotero']}  ->  {mod['name']}")
+        print(f"{entry.get('zotero') or entry['source']}  ->  {mod['name']}")
         f = ensure_file(entry, existing, dry)
         items = list_all(f"/api/v1/courses/{COURSE_ID}/modules/{mod['id']}/items")
         ensure_item(mod, entry, f, items, dry)
         print()
 
-    print(f"Done. {len(READINGS)} readings. All unpublished.")
+    print(f"Done. {len(READINGS)} licensed + {len(FREE)} free readings. All unpublished.")
 
 
 if __name__ == "__main__":

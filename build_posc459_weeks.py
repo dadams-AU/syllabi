@@ -122,6 +122,10 @@ def tex2html(s):
     s = s.replace("---", "\u2014").replace("--", "\u2013")
     s = s.replace("``", "\u201c").replace("''", "\u201d")
     s = re.sub(r"\\\\", " ", s)
+    # LaTeX spacing commands. Only the punctuation forms: the named ones fall to
+    # the generic strip below, and a bare ~ has already been produced by the
+    # $\sim$ rule above, so it must survive.
+    s = re.sub(r"\\[ ,;:]", " ", s)
     s = re.sub(r"\\[a-zA-Z]+\*?", "", s)
     s = s.replace("{", "").replace("}", "").strip()
     s = re.sub(r"\s+", " ", s)

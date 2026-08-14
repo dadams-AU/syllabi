@@ -332,12 +332,52 @@ rest of the term.</p>
 (<a href="https://www.genaied.org/papyrusai.html">genaied.org/papyrusai</a>) as the supported AI
 environment for graded writing. PapyrusAI is an instructor-configured, contained LLM environment:
 I build the modules, set the source materials the AI may draw on, and define how it interacts with
-you. Modules in this course are designed to <em>coach</em>, not to write for you. They will ask
-questions, push back on weak claims, and point you to readings, but they will not produce paragraphs
-you can paste into an assignment.</p>
+you. No module in this course will produce paragraphs you can paste into an assignment. That limit
+comes from the course policy below and applies to every tool you use for this class, so it is not
+something PapyrusAI costs you.</p>
 
-<p>Specific PapyrusAI modules accompany the reading journal, the policy brief, the term paper, and
-the graduate research milestones. <strong>Access PapyrusAI from the left-hand navigation menu inside
+<p>Most modules here are <em>coaching</em> modules attached to one assignment. They ask questions,
+push back on weak claims, and point you to readings rather than answering for you. <strong>Four were
+built for specific assignments in this course</strong>, and those assignments are marked
+<em>(PapyrusAI module)</em> in the weighting tables in the syllabus:</p>
+
+<ul style="line-height:1.7;">
+<li><strong>Idea Catcher</strong> &mdash; the reading journal. Takes an entry in under three minutes,
+never grades it, and does the counting for you.</li>
+<li><strong>Policy Brief Scaffold</strong> &mdash; the Source and Claims Memo and the Policy Brief.
+Per-program modules that ask what a program does, whom it reaches, and where each claim came
+from.</li>
+<li><strong>Term Paper Dialectical Partner</strong> &mdash; the term paper. Built to take the opposing
+position on your reform proposal and make you defend it.</li>
+<li><strong>Research Paper Coach</strong> &mdash; the graduate track, opening once your proposal is in.
+Argues against your thesis rather than helping you state it.</li>
+</ul>
+
+<p>Using any of them is optional and no part of your grade depends on it.</p>
+
+<p><strong>There is also a <em>General Use</em> module</strong>, which is not attached to any
+assignment and does not coach. It answers what you ask, the way you would expect ChatGPT or Claude
+to. Use it for the discussion papers, the documentary responses, the graduate milestones, anything
+else in the course, or a question that is not an assignment at all. It runs under the same
+permitted/not-permitted list as every other tool, so it is no more and no less restricted than the
+ChatGPT Edu account the CSU gave you.</p>
+
+<p><strong>It can search the web, and that changes what to expect from it.</strong> When it gives
+you a number about a program, it is built to name the document that number came from and link it,
+and to tell you plainly when it could not find something rather than produce a plausible substitute.
+Click the links. A retrieved source that turns out to say something other than what you were told is
+the failure worth watching for, and it is caught by opening it.</p>
+
+<p><strong>What it will not do:</strong> summarize a reading you have not read, including going and
+finding a summary of it, and the same for the assigned documentaries. That limit is deliberate and
+it is the one place this module is stricter than a general tool. If you have read something and want
+to talk about it, it will talk about it for as long as you like.</p>
+
+<p><strong>A module session can stand in for your disclosure sentence.</strong> Sessions are
+logged, you can read the log yourself, and attaching it to a Yellow assignment satisfies the
+disclosure requirement. <strong>Downloading the log is a manual step and nothing attaches on its
+own</strong> &mdash; it comes out of the three-dot menu inside the module. If you would rather write
+the sentence, write the sentence; both are complete. <strong>Access PapyrusAI from the left-hand navigation menu inside
 our Canvas course site.</strong> There is no separate login and no password to remember. The first
 time you open it you will be asked for a course code; ours is <strong>FALL2026-POSC459</strong>.
 Enter it exactly as written. A mistyped code does not give you an error; it puts you somewhere that
@@ -600,8 +640,9 @@ Both lenses are at work all semester.</p>
 <table{TABLE_STYLE}>
 <thead><tr><th{TH}>When</th><th{TH}>What</th></tr></thead>
 <tbody>
-<tr><td{TD}><strong>Mon, Aug 24</strong></td><td{TD}>First class. Campbell chs. 1&ndash;2 and Desmond
-ch. 1. <em>Growing Up Poor in America</em>, Part 1 assigned for viewing on your own.</td></tr>
+<tr><td{TD}><strong>Mon, Aug 24</strong></td><td{TD}>First class. Rank et al., <em>Poorly
+Understood</em>, Section 1, pp. 15&ndash;49 &mdash; a Pollak Library ebook, so you do not need to have
+bought a book yet. <em>Growing Up Poor in America</em>, Part 1 assigned for viewing on your own.</td></tr>
 <tr><td{TD}><strong>Mon, Aug 31</strong></td><td{TD}><strong>Baseline writing diagnostic</strong>, in
 class, about 20 minutes, no AI. Not graded for content &mdash; it establishes what your own writing
 sounds like before anything AI-supported begins.</td></tr>
