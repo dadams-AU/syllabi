@@ -69,8 +69,10 @@ W = "Weekly Readings Assignments"
 BIB = (
     "One 150-word annotation per assigned reading: the central argument, its relevance to "
     "the week, and a page number locating the passage your summary describes. "
-    "Attach your Feedback Appendix (Track A or Track B). The appendix is diagnostic and "
-    "improves next week's work, not this submission."
+    "Your Feedback Appendix is the Track A protocol you worked through, or your Track B "
+    "transcript. That completed work is the appendix; there is nothing else to write. "
+    "It exists for reflection and improvement next week. It is not a revision aid for "
+    "this submission."
 )
 ROUGH = (
     "Three pages. Patterns, connections, and contradictions across the week's readings, "
@@ -80,9 +82,17 @@ FINAL = (
     "Four pages maximum, refined from your rough draft using class discussion and the peer "
     "review studio. Go deep on no more than three readings and say in your opening paragraph "
     "which you chose and why. Every claim about a reading carries a page number. "
-    "Attach your Feedback Appendix."
+    "Attach your Feedback Appendix: the Track A protocol you worked through or your Track B "
+    "transcript, whichever you did, plus your Next-Week Plan of five to seven bullets."
 )
-REFL = "250-300 words on how your thinking changed this week and what you will do differently next."
+def refl(denhardt=None):
+    """Reflection blurb. Denhardt weeks also owe a Comparative Matrix revision."""
+    base = ("250-300 words on how your thinking changed this week and what you will do "
+            "differently next.")
+    if denhardt:
+        base += (f" Add or revise at least one row of your Comparative Matrix against Denhardt "
+                 f"{denhardt}, and say in one sentence what forced the change.")
+    return base
 
 # --- Week 2: matrix week, no synthesis paper -------------------------------
 add(W, "Week 2 - Annotated Bibliography (Denhardt Ch. 1-6)", 5,
@@ -94,24 +104,25 @@ add(W, "Week 2 - Comparative Matrix, Version 1", 20,
     "where the four positions are least reconcilable, and why that row is the one that matters. "
     "No AI, on either track. You are building the instrument you will think with.")
 add(W, "Week 2 - Reflection", 10,
-    when("2026-09-04", MIDNIGHT), UPLOAD, "points", "RED", REFL)
+    when("2026-09-04", MIDNIGHT), UPLOAD, "points", "RED", refl())
 
 # --- Week 3: reading week, Labor Day ---------------------------------------
 add(W, "Week 3 - Annotated Bibliography (Classical Foundations)", 5,
     when("2026-09-11", MIDNIGHT), UPLOAD, "points", "YELLOW", BIB)
 
 # --- Week 4 through Week 11 ------------------------------------------------
-# (week label, bib due or None, rough due, final due, reflection due)
+# (week label, bib due or None, rough due, final due, reflection due, Denhardt chapter)
+# The chapter is the one the syllabus makes that week's reflection revise the matrix against.
 CYCLES = [
-    ("Week 4 - Classical Foundations", None, "2026-09-14", "2026-09-16", "2026-09-18"),
-    ("Week 5 - Ethics and Values", "2026-09-21", "2026-09-21", "2026-09-23", "2026-09-25"),
-    ("Week 6 - Leadership and Motivation", "2026-09-28", "2026-09-28", "2026-09-30", "2026-10-02"),
-    ("Week 7 - Performance Management", "2026-10-05", "2026-10-05", "2026-10-07", "2026-10-09"),
-    ("Week 9 - Privatization and Contracting", "2026-10-19", "2026-10-19", "2026-10-21", "2026-10-23"),
-    ("Week 10 - Social Equity", "2026-10-26", "2026-10-26", "2026-10-28", "2026-10-30"),
+    ("Week 4 - Classical Foundations", None, "2026-09-14", "2026-09-16", "2026-09-18", None),
+    ("Week 5 - Ethics and Values", "2026-09-21", "2026-09-21", "2026-09-23", "2026-09-25", "Ch. 7"),
+    ("Week 6 - Leadership and Motivation", "2026-09-28", "2026-09-28", "2026-09-30", "2026-10-02", "Ch. 8"),
+    ("Week 7 - Performance Management", "2026-10-05", "2026-10-05", "2026-10-07", "2026-10-09", "Ch. 9"),
+    ("Week 9 - Privatization and Contracting", "2026-10-19", "2026-10-19", "2026-10-21", "2026-10-23", None),
+    ("Week 10 - Social Equity", "2026-10-26", "2026-10-26", "2026-10-28", "2026-10-30", "Ch. 10-12"),
 ]
 
-for label, bib, rough, final, refl in CYCLES:
+for label, bib, rough, final, refl_due, denhardt in CYCLES:
     if bib:
         add(W, f"{label} - Annotated Bibliography", 5,
             when(bib, CLASS_TIME), UPLOAD, "points", "YELLOW", BIB)
@@ -120,7 +131,7 @@ for label, bib, rough, final, refl in CYCLES:
     add(W, f"{label} - Final Synthesis Paper", 20,
         when(final, MIDNIGHT), UPLOAD, "points", "YELLOW", FINAL)
     add(W, f"{label} - Reflection", 10,
-        when(refl, MIDNIGHT), UPLOAD, "points", "RED", REFL)
+        when(refl_due, MIDNIGHT), UPLOAD, "points", "RED", refl(denhardt))
 
 # --- Weeks 8 and 11: book deep-dives ---------------------------------------
 DEEP = [
@@ -160,8 +171,8 @@ add("Seminar Performance", "Seminar Performance - Checkpoint 1 (Weeks 2-7)", 100
     when("2026-10-12", CLASS_TIME), ["none"], "points", "RED",
     "Your contribution to seminar discussion and the peer review studio across Weeks 2-7, "
     "scored on the attached rubric and returned 10/12. Nothing is submitted. "
-    "Volume is not scored: this measures the quality of what you contribute, not how often "
-    "you speak.")
+    "Volume is not scored. Four sentences that reorganize a discussion outrank forty that "
+    "keep it moving.")
 add("Seminar Performance", "Seminar Performance - Checkpoint 2 (Weeks 8-16)", 100,
     when("2026-12-07", CLASS_TIME), ["none"], "points", "RED",
     "Your contribution from Week 8 forward, plus the cold defense of your concentration paper "
@@ -372,6 +383,10 @@ def sync_assignments(group_ids):
                 "assignment_group_id": group_ids[spec["group"]],
                 "submission_types": spec["subs"],
                 "grading_type": spec["grading"],
+                # Re-running SETS this on every assignment, so a run after you have
+                # published assignments will quietly unpublish all 43. The course
+                # itself and its modules are untouched. Check before re-running
+                # mid-term; the fix is to publish again, not to edit this.
                 "published": False,
                 "omit_from_final_grade": False,
             }
