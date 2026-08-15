@@ -264,19 +264,19 @@ accordingly.</p>
 <tbody>
 <tr><td{TD}><strong>Monday, by class time</strong></td>
     <td{TD}>Annotated bibliography (5 pts) and rough draft synthesis paper, three pages (10 pts)</td>
-    <td{TD} nowrap><span style="color:{YELLOW_INK};font-weight:700;">YELLOW</span> /
-           <span style="color:{RED_INK};font-weight:700;">RED</span></td></tr>
+    <td{TD} nowrap><strong style="color:{YELLOW_INK};">YELLOW</strong> /
+           <strong style="color:{RED_INK};">RED</strong></td></tr>
 <tr><td{TD}><strong>Monday, in class</strong></td>
     <td{TD}>Discussion, then the 30-minute peer review studio. Two actionable suggestions and one
     question to your partner, in writing, before you leave.</td>
-    <td{TD}><span style="color:{RED_INK};font-weight:700;">RED</span></td></tr>
+    <td{TD}><strong style="color:{RED_INK};">RED</strong></td></tr>
 <tr><td{TD}><strong>Wednesday, 11:59 p.m.</strong></td>
     <td{TD}>Final synthesis paper, four pages maximum, deep on no more than three readings, page
     numbers on every claim about a text (20 pts)</td>
-    <td{TD}><span style="color:{YELLOW_INK};font-weight:700;">YELLOW</span></td></tr>
+    <td{TD}><strong style="color:{YELLOW_INK};">YELLOW</strong></td></tr>
 <tr><td{TD}><strong>Friday, 11:59 p.m.</strong></td>
     <td{TD}>Personal reflection, 250&ndash;300 words (10 pts)</td>
-    <td{TD}><span style="color:{RED_INK};font-weight:700;">RED</span></td></tr>
+    <td{TD}><strong style="color:{RED_INK};">RED</strong></td></tr>
 </tbody>
 </table>
 
