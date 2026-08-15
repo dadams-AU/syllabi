@@ -172,7 +172,9 @@ RED_INK, YELLOW_INK = "#8C1D18", "#7A4B00"
 
 TABLE_STYLE = ' style="border-collapse:collapse;width:100%;"'
 TD = ' style="border:1px solid #ccc;padding:6px 10px;"'
-TH = ' style="border:1px solid #ccc;padding:6px 10px;background:#eee;text-align:left;"'
+# scope="col" is required for screen readers to associate cells with headers.
+TH = (' scope="col" style="border:1px solid #ccc;padding:6px 10px;'
+      'background:#eee;text-align:left;"')
 
 CARD = (f"flex:1 1 240px;border:1px solid {LINE};border-left:5px solid {NAVY};"
         "border-radius:6px;padding:16px 18px;background:#fff;min-width:240px;")

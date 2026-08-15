@@ -347,7 +347,11 @@ def paged(path):
 
 
 def description_html(label, blurb):
-    return f'<p><strong>{label}</strong></p>\n<p>{blurb}</p>'
+    # The AI label used to be its own paragraph containing nothing but bold text,
+    # which UDOIT reads as a heading faked with styling: 43 hits, one per
+    # assignment. As a run-in on the blurb it is just as prominent and is an
+    # ordinary paragraph.
+    return f'<p><strong>{label}</strong> &mdash; {blurb}</p>'
 
 
 def sync_groups():
