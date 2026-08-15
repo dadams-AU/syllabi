@@ -284,6 +284,9 @@ def seminar_criteria(per_criterion_points, include_defense):
     return crits
 
 
+# Only the two Seminar Performance rubrics live here. Every other rubric in
+# the course is in build_posc521_rubrics.py; these two stay put because they
+# were built first and work, and a second script editing them would fork them.
 RUBRICS = {
     "Seminar Performance - Checkpoint 1 (Weeks 2-7)": (
         "Seminar Performance - Checkpoint 1",
