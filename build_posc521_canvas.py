@@ -982,7 +982,14 @@ def main():
 
     for title, body, is_front in pages:
         body = body.replace(SYLLABUS_PDF_MARKER, pdf_link).strip()
-        wiki = {"title": title, "body": body, "published": is_front}
+        # Keep whatever publish state the page already has. Sending is_front on an
+        # update unpublishes the AI policy page every time this runs, which is a
+        # content sync quietly pulling a live page from students. The front page
+        # stays published because a front page has to be. New pages start where
+        # is_front says. (Modules are safe: published=False is only on create.)
+        prior = existing_pages.get(title)
+        published = bool(prior["published"]) if prior else is_front
+        wiki = {"title": title, "body": body, "published": True if is_front else published}
         if is_front:
             wiki["front_page"] = True
         payload = {"wiki_page": wiki}
