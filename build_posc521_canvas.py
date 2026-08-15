@@ -279,7 +279,8 @@ accordingly.</p>
 </table>
 
 <p style="margin-top:14px;"><strong>The Feedback Appendix rides along every week</strong>, on either
-track. It is diagnostic: it informs next week's work and may not be used to revise the submission it
+track. It is the completed protocol or transcript itself, handed in; there is no separate document to
+write. It is diagnostic: it informs next week's work and may not be used to revise the submission it
 critiques. What gets scored is what you did with the critique, never the quality of the critique you
 received.</p>
 
