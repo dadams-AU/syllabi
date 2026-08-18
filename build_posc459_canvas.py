@@ -727,6 +727,13 @@ paper notebook all count the same.</p>
       <a href="https://dadams.io">dadams.io</a></div>
   </div>
   <div style="{CARD}">
+    <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">Office hours</div>
+    <div style="color:{INK};font-size:0.95em;line-height:1.8;">
+      Mondays 3:00&ndash;4:00 and 5:30&ndash;6:30<br>
+      Tuesdays 12:00&ndash;1:00<br>
+      Or by <a href="https://dadams.io/appointments">appointment</a> any day</div>
+  </div>
+  <div style="{CARD}">
     <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">What to expect</div>
     <div style="color:{INK};font-size:0.95em;line-height:1.6;">
       I answer email and Canvas messages <strong>within 24 hours</strong>, except weekends and
@@ -820,10 +827,10 @@ on the Use of Generative AI and Other Technology</a>.</span></p>
 """
 
 PAGES = [
-    ("Course Home", HOME_BODY),
-    ("Course Syllabus", SYLLABUS_BODY),
-    ("Policy on the Use of Generative AI and Other Technology", AI_POLICY_BODY),
-    ("Policy Brief Scaffold — How to Use It", None),  # body built from the vault note
+    ("Course Home", HOME_BODY, True),
+    ("Course Syllabus", SYLLABUS_BODY, False),
+    ("Policy on the Use of Generative AI and Other Technology", AI_POLICY_BODY, False),
+    ("Policy Brief Scaffold — How to Use It", None, False),  # body built from the vault note
 ]
 
 # Week labels transcribed verbatim from the .tex schedule; Part dividers match
@@ -864,12 +871,22 @@ def main():
 
     existing_pages = {p["title"]: p for p in list_all(f"/api/v1/courses/{COURSE_ID}/pages")}
     page_urls = {}
-    for title, body in PAGES:
+    for title, body, is_front in PAGES:
         if body is None:
             body = SCAFFOLD_GUIDE_LEAD + "\n" + vault_md_to_html(
                 "Assignments/07a - Policy Brief Scaffold - Student Guide.md")
         body = body.replace(SYLLABUS_PDF_MARKER, link_html)
-        payload = {"wiki_page": {"title": title, "body": body.strip(), "published": False}}
+        # Keep whatever publish state the page already has. Sending published=False
+        # on an update pulls a live page from students every time this runs. New
+        # pages still start unpublished per AGENTS.md, except the front page, which
+        # Canvas requires to be published to be designated as such.
+        prior = existing_pages.get(title)
+        published = bool(prior["published"]) if prior else is_front
+        wiki = {"title": title, "body": body.strip(),
+                "published": True if is_front else published}
+        if is_front:
+            wiki["front_page"] = True
+        payload = {"wiki_page": wiki}
         if title in existing_pages:
             res = api("PUT", f"/api/v1/courses/{COURSE_ID}/pages/{existing_pages[title]['url']}", payload)
             print(f"  page updated : {title}")
@@ -905,7 +922,8 @@ def main():
                              "title": title, "position": pos}})
         print(f"  item added    : {title} -> Start Here")
 
-    print(f"\nDone. {len(PAGES)} pages, {len(MODULES)} modules. All unpublished.")
+    print(f"\nDone. {len(PAGES)} pages, {len(MODULES)} modules. "
+          "New content unpublished; existing publish states preserved.")
 
 
 if __name__ == "__main__":

@@ -52,7 +52,9 @@ def require_env():
 
 
 def api(method, path, payload=None, params=None):
-    url = f"{BASE_URL}{path}"
+    # The file-upload confirm step passes an absolute Location URL back through
+    # here; prepending BASE_URL to it yields a bogus host and a DNS failure.
+    url = path if path.startswith("http") else f"{BASE_URL}{path}"
     if params:
         url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
     data = json.dumps(payload).encode() if payload is not None else None
