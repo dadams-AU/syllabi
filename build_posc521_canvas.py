@@ -397,7 +397,7 @@ How We Can Do Better.</em> Metropolitan Books. <span style="color:{MUTED};">Week
   <div style="{CARD}">
     <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">David P. Adams, Ph.D.</div>
     <div style="color:{INK};font-size:0.95em;line-height:1.8;">
-      Gordon Hall 521<br>
+      Gordon Hall 516<br>
       <a href="mailto:dpadams@fullerton.edu">dpadams@fullerton.edu</a><br>
       Phone or text: (657) 278-4770<br>
       <a href="https://dadams.io">dadams.io</a></div>
@@ -405,8 +405,8 @@ How We Can Do Better.</em> Metropolitan Books. <span style="color:{MUTED};">Week
   <div style="{CARD}">
     <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">Office hours</div>
     <div style="color:{INK};font-size:0.95em;line-height:1.8;">
-      Mondays 12:00&ndash;2:00 and 5:30&ndash;6:30<br>
-      Tuesdays 12:00&ndash;2:00<br>
+      Mondays 3:00&ndash;4:00 and 5:30&ndash;6:30<br>
+      Tuesdays 12:00&ndash;1:00<br>
       Or by <a href="https://dadams.io/appointments">appointment</a> any day<br>
       In person or by Zoom, ID 334 750 2639</div>
   </div>
