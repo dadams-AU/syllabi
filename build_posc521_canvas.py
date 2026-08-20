@@ -521,7 +521,7 @@ but do not test that assumption on a Sunday night). Instructions:
 stays inside a CSU agreement with real privacy protections. And every one of you gets the same
 instrument. When students bring whatever they happen to subscribe to, the class quietly stratifies by
 who can spend two hundred dollars a month, and the assignment stops measuring what it claims to
-measure. One tool, one baseline, one standard.</li>
+measure.</li>
 <li><strong>If you cannot get access</strong>, tell me. Do not substitute another tool and do not
 stall. <a href="{A_HREF}">Track A</a> is available to you immediately and costs you nothing in points
 or standing.</li>
@@ -591,8 +591,7 @@ two colors apart.</p>
 <h2{H2}>Where AI fits, assignment by assignment</h2>
 
 <p>Two assignments in this course admit AI, in one place inside each of them, under one approved
-prompt. Everything else is yours alone. You should not have to work that out from the assignment
-descriptions, so here is the whole course in one table.</p>
+prompt. Everything else is yours alone.</p>
 
 <table{TABLE_STYLE}>
 <thead><tr><th{TH}>Assignment</th><th{TH}>Label</th><th{TH}>Where AI may be used</th></tr></thead>
@@ -639,8 +638,6 @@ forgot to mark is my oversight rather than a gap for you to work in.</p>
 
 <h2{H2}>Why the policy is this narrow</h2>
 
-<p>You deserve to know why rather than simply being told.</p>
-
 <p>The comprehensive exam rewards depth. The answers that succeed are narrower and deeper: two or
 three frameworks genuinely commanded, not every framework named. Unstructured AI use pushes writing in
 exactly the opposite direction, toward responses that are impressively broad and genuinely shallow,
@@ -677,26 +674,27 @@ transcripts.</p>
 <ul>
 <li><strong>Authorship.</strong> All submitted prose must be written by you. AI may provide critique,
 but may not generate or rewrite your sentences, paragraphs, or structure.</li>
-<li><strong>Attribution.</strong> When AI feedback is used, paste the complete transcript into the
-Feedback Appendix with the date, and label it (&ldquo;ChatGPT Edu critique, 9/16/26&rdquo;). A share
-link is welcome alongside the text and is not a substitute for it. Do not treat AI text as source
-material to incorporate into your writing.</li>
-<li><strong>Bias awareness.</strong> AI outputs reflect biases. Evaluate them critically for fairness
-and accuracy.</li>
-<li><strong>Verification.</strong> Validate AI-suggested facts or sources before using them in your
-work.</li>
+<li><strong>Attribution.</strong> Label the transcript where it sits in the Feedback Appendix
+(&ldquo;ChatGPT Edu critique, 9/16/26&rdquo;). Do not treat AI text as source material to incorporate
+into your writing.</li>
+<li><strong>Bias.</strong> The questions it asks are the common ones. It draws them from what is
+frequent in its training text, so it will ask the obvious question about a familiar case and stay
+silent on the one your case actually raises. The question it never asks is the one to watch for, and
+you are the only one positioned to notice it.</li>
+<li><strong>Verification.</strong> Check every fact, quotation, and citation before it enters your
+work. Fabricated sources are the failure mode most likely to hurt you, and they are convincing.</li>
 <li><strong>Confidentiality.</strong> Do not upload sensitive, private, or proprietary information
 into AI tools. Several of you work in agencies; personnel matters, client records, and unpublished
 agency data do not go into a chatbot, Edu tier or not. Assume anything you enter may be retained
 <em>by the company</em>, indefinitely and beyond your reach. That is a separate question from whether
 <em>you</em> will still be able to open a past conversation, which no vendor guarantees. Plan for
 both: it may outlive your wanting it, and it may vanish before you need it.</li>
-<li><strong>Sustainability.</strong> Be mindful of AI's environmental footprint and use tools
-thoughtfully.</li>
+<li><strong>Sustainability.</strong> These systems carry real energy and water costs. Thoughtful use
+is part of responsible use.</li>
 <li><strong>Opting out is legitimate.</strong> If you would rather not use AI at all, for labor,
 environmental, privacy, or any other principled reason, that is a respected choice in this course.
-<a href="{A_HREF}">Track A</a> is available to you immediately and costs you nothing in points or
-standing. You do not owe me a justification.</li>
+<a href="{A_HREF}">Track A</a> is built for exactly that and carries the same points. You do not
+owe me a justification.</li>
 </ul>
 
 <p>Further reading:
@@ -754,11 +752,6 @@ critique to next week's work. This is the part of the appendix carrying the weig
 seminar performance.</li>
 <li>Final work that demonstrates original analysis and a consistent authorial voice.</li>
 </ul>
-
-<p>The goal is to treat AI as a <em>feedback partner</em>: a tool to sharpen your analysis, deepen
-your questions, and strengthen your voice in public administration. If you cannot explain and defend
-your argument, evidence choices, and revisions without external support, then the work does not meet
-the course standard.</p>
 
 <h2{H2}>Revisiting this policy</h2>
 
