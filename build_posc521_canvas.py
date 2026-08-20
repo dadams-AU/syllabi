@@ -475,10 +475,22 @@ not.</p>
 
 <p>If what you want is help making your writing <em>sound better</em>, that is a reasonable thing to
 want, and in a capstone it is also the thing you are here to build. A rewrite button does not leave
-the skill with you. <strong>The CSUF Writing Center</strong> (Pollak Library North 199, in person and
-online, free, appointments and drop-in) does the same job in a way that does, and it works with
-graduate writers. So will I, if you bring me a paragraph and ask what is making it land flat. Neither
-of those requires disclosing anything and neither costs you points.</p>
+the skill with you. Two campus offices do the same work in a way that does.</p>
+
+<p><strong>The Graduate Success Center</strong> runs free one-on-one writing appointments for CSUF
+graduate students, on any assignment in your program. Sessions are an hour, held on Zoom, one per
+week, booked through TitanNet with your campus username and password up to two weeks out. Consultants
+are not editors and will not make changes to your work; the hour is a working conversation about your
+draft. Appointments are offered in fall and spring only and they fill, so book well ahead of a due
+date rather than the night before. If TitanNet shows no open times, every slot has been claimed;
+check back, because people cancel. If you have not booked one before, the GSC has a step-by-step
+guide: <a href="https://www.fullerton.edu/graduate/_resources/pdfs/gsc/GSC-Writing-Appointment-Guide-041526.pdf">How to Make and Cancel a GSC Writing
+Appointment (PDF)</a>.</p>
+
+<p><strong>The CSUF Writing Center</strong> (Pollak Library North 199, in person and online, free,
+appointments and drop-in) does the same job and works with graduate writers as well. So will I, if
+you bring me a paragraph and ask what is making it land flat. None of that requires disclosing
+anything and none of it costs you points.</p>
 
 <p><strong>Features you did not turn on.</strong> Some software has AI switched on by default.
 <strong>What counts is what you adopt.</strong> If Word suggests the rest of your sentence and you
@@ -575,14 +587,6 @@ to be done without it, and doing it without it is the point.</td></tr>
 <p style="margin-top:14px;"><strong>Labels are always written out</strong>, as the words GREEN,
 YELLOW, and RED rather than as a color alone, so that nothing here depends on your being able to tell
 two colors apart.</p>
-
-<p><strong>The words carry across courses. What they permit does not.</strong> I use these three
-labels in every course I teach, and you may meet them elsewhere in the division. What a given label
-allows is always set by the assignment in front of you. A YELLOW in a course where AI may help you
-search for sources is not the YELLOW defined above, and carrying that meaning into this seminar will
-put you outside this policy. You are already tracking a different AI rule in every course you take,
-which is a real burden and one I am contributing to; a shared vocabulary shrinks it and does not
-remove it.</p>
 
 <h2{H2}>Where AI fits, assignment by assignment</h2>
 
