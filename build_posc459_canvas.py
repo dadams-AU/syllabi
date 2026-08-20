@@ -207,7 +207,9 @@ intellectual work of this course</strong>. AI can amplify your thinking, but not
 
 <p style="border-left:4px solid #666;padding:10px 14px;background:#f6f6f6;">
 <strong>Short version:</strong> if a tool suggests new words and you use them, that counts
-as AI use under this policy. Everything below is detail.</p>
+as AI use under this policy. And the rule that governs all of it: <strong>AI may identify problems
+in your writing. It may not supply the prose that fixes them.</strong> Everything below is
+detail.</p>
 
 <p><em>This page is the full policy. The syllabus carries the short version; where the two
 differ, this page governs and you should tell me so I can fix the syllabus.</em></p>
@@ -225,8 +227,7 @@ its own</strong>. This includes:</p>
 <li>Automated coding, data, and content generators</li>
 </ul>
 
-<p><strong>AI built into tools you already use.</strong> This is the part people miss. The policy
-also covers AI features embedded in ordinary software: Google Docs Smart Compose and &ldquo;Help me
+<p>The policy also covers AI features embedded in ordinary software: Google Docs Smart Compose and &ldquo;Help me
 write,&rdquo; Gmail Smart Reply, Microsoft Word Copilot, Apple Intelligence and other phone or
 operating-system writing assistants, Google and Bing AI search summaries, and PDF readers or
 reference managers that summarize sources or answer questions about them. <strong>You do not have
@@ -251,8 +252,7 @@ professional&rdquo; features are not.</p>
 <p><strong>What you can use freely, and where to go instead.</strong> Ordinary spelling, grammar,
 and punctuation checking is always fine and never needs disclosure. <strong>Microsoft Word's
 built-in spelling and grammar checker, LanguageTool, and equivalents are all permitted</strong>,
-and so is the flagging half of Grammarly. The line is the same one as above: a tool that tells you
-something may be wrong is fine; a tool that writes the replacement is not.</p>
+and so is the flagging half of Grammarly.</p>
 
 <p>If what you actually want is help making your writing <em>sound better</em>, that is a completely
 reasonable thing to want, particularly if you have been told your whole life that your writing is
@@ -272,8 +272,7 @@ to show you how.</p>
 
 <p><strong>On edge cases.</strong> AI is now embedded in enough ordinary software that neither of us
 will anticipate every case. If you are unsure whether something counts, <strong>ask before you
-submit</strong>. A good-faith question asked in advance is treated as exactly that. It is not a
-confession and it does not put you under suspicion.</p>
+submit</strong>. A good-faith question asked in advance is treated as exactly that.</p>
 
 <h2>Where AI fits: assignment labels</h2>
 
@@ -291,8 +290,7 @@ doing so is the point.</li>
 </ul>
 
 <p><strong>Red assignments in this course:</strong> the Week 2 baseline writing diagnostic, all
-in-class writing, the midterm exam, and the final exam. Everything else is Green or Yellow, and here
-is the whole list, so you are not waiting for a Canvas page to open to find out.</p>
+in-class writing, the midterm exam, and the final exam. Everything else is Green or Yellow:</p>
 
 <table{TABLE_STYLE}>
 <thead>
@@ -332,9 +330,8 @@ rest of the term.</p>
 (<a href="https://www.genaied.org/papyrusai.html">genaied.org/papyrusai</a>) as the supported AI
 environment for graded writing. PapyrusAI is an instructor-configured, contained LLM environment:
 I build the modules, set the source materials the AI may draw on, and define how it interacts with
-you. No module in this course will produce paragraphs you can paste into an assignment. That limit
-comes from the course policy below and applies to every tool you use for this class, so it is not
-something PapyrusAI costs you.</p>
+you. No module here will produce paragraphs you can paste into an assignment, which is the
+course rule rather than something PapyrusAI costs you.</p>
 
 <p>Most modules here are <em>coaching</em> modules attached to one assignment. They ask questions,
 push back on weak claims, and point you to readings rather than answering for you. <strong>Four were
@@ -353,8 +350,6 @@ position on your reform proposal and make you defend it.</li>
 Argues against your thesis rather than helping you state it.</li>
 </ul>
 
-<p>Using any of them is optional and no part of your grade depends on it.</p>
-
 <p><strong>There is also a <em>General Use</em> module</strong>, which is not attached to any
 assignment and does not coach. It answers what you ask, the way you would expect ChatGPT or Claude
 to. Use it for the discussion papers, the documentary responses, the graduate milestones, anything
@@ -362,48 +357,30 @@ else in the course, or a question that is not an assignment at all. It runs unde
 permitted/not-permitted list as every other tool, so it is no more and no less restricted than the
 ChatGPT Edu account the CSU gave you.</p>
 
-<p><strong>It can search the web, and that changes what to expect from it.</strong> When it gives
-you a number about a program, it is built to name the document that number came from and link it,
-and to tell you plainly when it could not find something rather than produce a plausible substitute.
-Click the links. A retrieved source that turns out to say something other than what you were told is
-the failure worth watching for, and it is caught by opening it.</p>
-
-<p><strong>What it will not do:</strong> summarize a reading you have not read, including going and
-finding a summary of it, and the same for the assigned documentaries. That limit is deliberate and
-it is the one place this module is stricter than a general tool. If you have read something and want
-to talk about it, it will talk about it for as long as you like.</p>
+<p><strong>It can search the web</strong>, so when it gives you a number about a program it is
+built to name the document that number came from and link it, and to say plainly when it could not
+find something rather than produce a plausible substitute. Click the links. <strong>It will not
+summarize a reading you have not read</strong>, or go find a summary of one, and the same goes for
+the assigned documentaries &mdash; the one place it is stricter than a general tool. If you have
+read something and want to talk about it, it will talk for as long as you like.</p>
 
 <p><strong>A module session can stand in for your disclosure sentence.</strong> Sessions are
-logged, you can read the log yourself, and attaching it to a Yellow assignment satisfies the
-disclosure requirement. <strong>Downloading the log is a manual step and nothing attaches on its
-own</strong> &mdash; it comes out of the three-dot menu inside the module. If you would rather write
-the sentence, write the sentence; both are complete. <strong>Access PapyrusAI from the left-hand navigation menu inside
-our Canvas course site.</strong> There is no separate login and no password to remember. The first
-time you open it you will be asked for a course code; ours is <strong>FALL2026-POSC459</strong>.
-Enter it exactly as written. A mistyped code does not give you an error; it puts you somewhere that
-is not this class, and you will not see our modules. If PapyrusAI does not appear in the navigation
-menu, or the code does not work, tell me before you spend time working around it. Use of these
-modules is encouraged but not required; they exist to make productive AI use easy to access and
-unproductive use harder to fall into.</p>
+logged and you can read the log yourself; attaching one to a Yellow assignment satisfies the
+disclosure requirement, and the mechanics are under <em>Disclosure requirement</em> below. If you
+would rather write the sentence, write the sentence. Both are complete.</p>
 
-<p>You may also use general-purpose AI tools (ChatGPT, Claude, Gemini, etc.) outside PapyrusAI
-subject to the rules below. The permitted/not-permitted list applies equally regardless of which
-tool you use.</p>
+<p>You may also use general-purpose AI tools outside PapyrusAI. Everything below applies the same
+way to all of them. <strong>Getting into PapyrusAI &mdash; the course code and the menu &mdash; is
+on the course home page.</strong></p>
 
-<p><strong>You can complete this entire course without PapyrusAI.</strong> Every graded assignment
-is written to be done on a non-PapyrusAI path, and taking that path costs you nothing in points or
-standing. Where an assignment asks you to show that you talked your work through with someone, a
-module session, a CSUF Writing Center appointment, and a conversation with me all count equally.
-<strong>Neither path is the default and neither is worth more.</strong> You do not owe me a reason
-for your choice, and you can change it at any point in the semester. <strong>If you switch in the
-middle of a multi-stage assignment, whatever you have already produced still counts and you do not
-redo any of it</strong>. Tell me you have switched and keep going.</p>
-
-<p><strong>And if the tool is broken, that is not your problem to solve at midnight.</strong>
-PapyrusAI is new, and some of you will hit a wrong code, a missing menu item, or a module that will
-not load. <strong>The module is never the reason an assignment is late.</strong> Email me with what
-happened, submit what you have, and we will sort it out. I would rather get that email at 11 p.m.
-than read an apology in week fourteen.</p>
+<p><strong>You can complete this entire course without PapyrusAI</strong>, and taking that path
+costs you nothing in points or standing. Every graded assignment is written to be done without it.
+Where an assignment asks you to show that you talked your work through with someone, a module
+session, a CSUF Writing Center appointment, and a conversation with me all count equally, and none
+of the three is the default. You do not owe me a reason for your choice, and you can change it at
+any point in the semester. <strong>If you switch in the middle of a multi-stage assignment, whatever
+you have already produced still counts and you do not redo any of it</strong>. Tell me you have
+switched and keep going.</p>
 
 <p><strong>About the research study.</strong> PapyrusAI is being studied at CSUF under IRB protocol
 HSR-24-25-240, <em>Enhancing Academic Writing and Digital Literacy with an AI Coach</em>. You will
@@ -425,17 +402,16 @@ unless I explicitly allow it.</li>
 <li>Generating synthetic examples or test cases for your ideas</li>
 </ul>
 
-<p><strong>Where editing ends and rewriting begins.</strong> This is the boundary students ask about
-most, so here it is plainly: <strong>AI may identify problems in your writing. It may not supply the
-prose that fixes them.</strong> &ldquo;This paragraph buries its main claim&rdquo; is fine; act on it
+<p><strong>Where editing ends and rewriting begins.</strong> &ldquo;This paragraph buries its
+main claim&rdquo; is fine; act on it
 yourself. &ldquo;Here is a clearer version of your paragraph&rdquo; is not, even if you edit it
 afterward. Asking <em>what is wrong</em> is permitted; asking it to <em>write the fix</em> is not.</p>
 
-<p><strong>On outlines, since this is where the line looks blurry.</strong> Thinking through an
+<p><strong>On outlines.</strong> Thinking through an
 outline with a tool <em>before</em> you draft is permitted. That is planning, and the plan is still
 yours to argue for. Handing it a draft you have written and asking it to reorganize the piece is not,
-because at that point the structure is a finding about your argument and finding it is the work. The
-short version: plan with it, do not let it rearrange you.</p>
+because at that point the structure is a finding about your argument and finding it is the work.
+Plan with it; do not let it rearrange you.</p>
 
 <h2>Not permitted</h2>
 
@@ -473,13 +449,10 @@ work. And it does show up.</p>
 
 <h2>Why this policy exists</h2>
 
-<p>You deserve reasons, not just rules.</p>
-
 <p><strong>AI makes breadth cheap.</strong> When summarizing a fifth reading costs nothing, you
 summarize the fifth reading instead of sitting with the second one until you understand what it is
 actually claiming. The tool quietly relocates your effort from understanding to coverage. Coverage is
-not what this course, or your career, rewards. The claim here is about where the path of least
-resistance leads when a genuinely useful tool is available. Laziness has nothing to do with it.</p>
+not what this course, or your career, rewards. Laziness has nothing to do with it.</p>
 
 <p><strong>These systems are agreeable.</strong> They will validate a weak thesis enthusiastically,
 produce fluent prose about things they have no basis for asserting, and fabricate citations that look
@@ -487,7 +460,7 @@ exactly like real ones. Fluency is not accuracy. In a field where you will be as
 about what programs do and whom they affect, a confident and compliant reader is worse than no reader
 at all, unless you are already doing the judging.</p>
 
-<p><strong>And in this course specifically.</strong> This policy supports Outcomes 3, 4, and 6 because
+<p><strong>In this course specifically.</strong> This policy supports Outcomes 3, 4, and 6 because
 you must practice those judgments without outsourcing them. You are asked to apply policy-analytic
 concepts to evaluate welfare programs (Outcome 3), to analyze how race and gender structured both
 program design and access to benefits (Outcome 4), and to construct evidence-based arguments from
@@ -505,8 +478,7 @@ caution.</p>
 <h2>Guidance: using these tools well</h2>
 
 <ul>
-<li><strong>Authorship.</strong> All submitted prose is written by you. AI may critique; it may not
-generate or rewrite your sentences, paragraphs, or structure.</li>
+<li><strong>Authorship.</strong> All submitted prose is written by you.</li>
 <li><strong>Verification.</strong> Check every fact, quotation, and citation before it enters your
 work. Fabricated sources are the failure mode most likely to hurt you, and they are convincing.</li>
 <li><strong>Bias.</strong> These systems reproduce the assumptions in their training data. Read
@@ -514,11 +486,9 @@ outputs critically for whose perspective is centered and whose is missing. That 
 is teaching you anyway.</li>
 <li><strong>Privacy and security.</strong> Do not paste anything sensitive, private, or confidential
 into a chatbot: student records, personnel matters, unpublished data, or others' personal information.
-Assume anything you enter may be retained <em>by the company</em>, indefinitely and beyond your reach.
-That is a separate question from whether <em>you</em> will still be able to open a past conversation
-in the product, which no vendor guarantees. That is why the advice above is to download anything you
-need at the end of a session. Plan for both: it may outlive you wanting it, and it may vanish before
-you need it.</li>
+Assume anything you enter may be retained <em>by the company</em>, indefinitely and beyond your
+reach, and assume separately that you may not be able to open it again yourself. Plan for both: it
+may outlive you wanting it, and it may vanish before you need it.</li>
 <li><strong>Do not feed it the course.</strong> Unless I explicitly say otherwise, do not paste full
 assigned readings, a classmate's work, or confidential course materials into a public AI system. Much
 of what we read is licensed to the university, not to you to redistribute. And metabolizing a reading
@@ -634,6 +604,20 @@ Both lenses are at work all semester.</p>
     module works, and how to opt out. Ungraded and never required.</div>
   </div>
 </div>
+
+<h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">Getting into PapyrusAI</h2>
+
+<p><strong>PapyrusAI is in the left-hand navigation menu of this course.</strong> There is no
+separate login and no password to remember. The first time you open it you will be asked for a
+course code; ours is <strong>FALL2026-POSC459</strong>. Enter it exactly as written &mdash; a
+mistyped code does not give you an error, it puts you somewhere that is not this class, and you
+will not see our modules. If PapyrusAI does not appear in the menu, or the code does not work, tell
+me before you spend time working around it.</p>
+
+<p>The modules are optional and ungraded, and they exist to make productive AI use easy to reach and
+unproductive use harder to fall into. What each one does, and how to do the course without them, is
+on the <a href="/courses/{COURSE_ID}/pages/policy-on-the-use-of-generative-ai-and-other-technology">AI
+policy page</a>.</p>
 
 <h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">The first two weeks</h2>
 
@@ -757,7 +741,8 @@ a problem</a>.</p>
 <p style="background:{WASH};border-left:5px solid {NAVY};padding:12px 16px;">
 <strong>If Canvas will not take your submission, email it to me before the deadline.</strong> A broken
 upload is not a late assignment. The same goes for PapyrusAI: a module that will not load is never the
-reason something is late.</p>
+reason something is late. Email me what happened, submit what you have, and we will sort it out. I
+would rather get that email at 11 p.m. than read an apology in week fourteen.</p>
 """
 
 SYLLABUS_BODY = f"""
@@ -803,13 +788,26 @@ Readings are required for graduate students.</p>
 
 <h2>Academic integrity</h2>
 
-<p>Students are expected to adhere to the highest standards of academic integrity. Any student found to
-have engaged in academic dishonesty will be subject to the sanctions described in the
-<a href="https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf">Academic
-Dishonesty Policy</a> (UPS 300.021). Academic dishonesty includes, but is not limited to, cheating,
-plagiarism, fabrication, facilitating academic dishonesty, and submitting previously graded work without
-prior authorization. Students are expected to be familiar with the university's policy and to adhere to
-it in all aspects of this course.</p>
+<p>The question this course asks about your work is <strong>whether you did the thinking</strong>.
+Most syllabi ask a different one &mdash; whether you wrote these particular words, authorship as a
+solitary act &mdash; and that standard cannot do much work in a course that asks you to use tools
+which produce text. Susan Blum made the case that authorship-as-solitude was never quite right in
+<em>My Word! Plagiarism and College Culture</em> (2009), well before any of this existed.</p>
+
+<p>In practice, represent your process accurately. Cite what you drew on. Working through a reading
+with classmates is good and expected; turning in work you produced together as individual work is
+not. Work you wrote for another course needs my agreement before it counts again here. And if you
+are unsure whether something is in bounds, ask before you submit &mdash; asking has never counted
+against anyone.</p>
+
+<p>Where AI is involved, the
+<a href="/courses/{COURSE_ID}/pages/policy-on-the-use-of-generative-ai-and-other-technology">AI
+policy page</a> is the operative document, including what counts as misuse and what follows from it.
+It also explains why I will not run your writing through an AI detector.</p>
+
+<p>CSUF's <a href="https://www.fullerton.edu/senate/publications_policies_resolutions/ups/UPS%20300/UPS%20300.021.pdf">Academic
+Dishonesty Policy</a> (UPS 300.021) governs this course and carries the formal sanctions. What is
+written above is how I read it.</p>
 
 <h2>Generative AI</h2>
 
