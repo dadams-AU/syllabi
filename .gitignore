@@ -358,3 +358,8 @@ __pycache__/
 # These are drift-check scratch files -- the curated *.bib in each course
 # folder is the source of truth for syllabi and proposals.
 *_zotero.bib
+
+# Student names. Per-term discussion facilitation pairings hold student names
+# in both presenter columns, and this repo is public on GitHub; they stay on
+# the machine they were built on. (Added 2026-08-21.)
+discussion_presenter_pairs*.csv
