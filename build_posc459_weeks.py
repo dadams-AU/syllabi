@@ -245,8 +245,15 @@ def main():
 
         # Page titles are plain text: tex2html emits markup on the ASYNC weeks.
         title = f"Week {n:02d} — {strip_tags(w['topic'])}"
+        # Keep whatever publish state the page already has; new pages start
+        # unpublished per AGENTS.md. Sending published=False on every PUT
+        # would unpublish live pages -- the bug build_posc459_canvas.py fixed
+        # on 2026-08-18, ported here 2026-08-21 before the first rerun against
+        # the published course.
+        prior = pages.get(title)
+        published = bool(prior["published"]) if prior else False
         payload = {"wiki_page": {"title": title, "body": page_body(w, mine),
-                                 "published": False}}
+                                 "published": published}}
         if title in pages:
             res = api("PUT", f"/api/v1/courses/{COURSE_ID}/pages/{pages[title]['url']}", payload)
             verb = "updated"
@@ -276,7 +283,7 @@ def main():
             added += 1
         print(f"  page {verb}: {title[:58]:60s} +{added} module items ({len(mine)} assignments)")
 
-    print(f"\nDone. {len(weeks)} week pages. All unpublished.")
+    print(f"\nDone. {len(weeks)} week pages. New pages unpublished; existing publish states preserved.")
 
 
 if __name__ == "__main__":
