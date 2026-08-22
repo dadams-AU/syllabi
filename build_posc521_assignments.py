@@ -76,11 +76,11 @@ BIB = (
 )
 ROUGH = (
     "Three pages. Patterns, connections, and contradictions across the week's readings, "
-    "written entirely by you and brought to Monday's discussion and peer review studio."
+    "written entirely by you and brought to Monday's peer review studio and discussion."
 )
 FINAL = (
-    "Four pages maximum, refined from your rough draft using class discussion and the peer "
-    "review studio. Go deep on no more than three readings and say in your opening paragraph "
+    "Four pages maximum, refined from your rough draft using the peer review studio and "
+    "class discussion. Go deep on no more than three readings and say in your opening paragraph "
     "which you chose and why. Every claim about a reading carries a page number. "
     "Attach your Feedback Appendix: the Track A protocol you worked through or your Track B "
     "transcript, whichever you did, plus your Next-Week Plan of five to seven bullets."
@@ -269,7 +269,7 @@ def seminar_criteria(per_criterion_points, include_defense):
             levels(scale,
                    "Both suggestions name a specific move your partner could make by Tuesday, and your "
                    "question opens something they had not considered. Handed over in writing every "
-                   "synthesis week.",
+                   "studio week, Weeks 4 through 11.",
                    "Suggestions are specific but minor, or one of the two is general. The written "
                    "handoff is complete.",
                    "Suggestions are encouraging and general -- 'tighten the argument,' 'good use of "

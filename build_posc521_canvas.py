@@ -269,8 +269,9 @@ accordingly.</p>
     <td{TD} nowrap><strong style="color:{YELLOW_INK};">YELLOW</strong> /
            <strong style="color:{RED_INK};">RED</strong></td></tr>
 <tr><td{TD}><strong>Monday, in class</strong></td>
-    <td{TD}>Discussion, then the 30-minute peer review studio. Two actionable suggestions and one
-    question to your partner, in writing, before you leave.</td>
+    <td{TD}>I set the stage, then the twenty-minute peer review studio in assigned pairs that rotate
+    every week, then discussion. Two actionable suggestions and one question to your partner, in
+    writing, before the discussion starts.</td>
     <td{TD}><strong style="color:{RED_INK};">RED</strong></td></tr>
 <tr><td{TD}><strong>Wednesday, 11:59 p.m.</strong></td>
     <td{TD}>Final synthesis paper, four pages maximum, deep on no more than three readings, page
@@ -786,7 +787,12 @@ MODULES = [
         "notes": [],
         "pages": [HOME_TITLE, AI_POLICY_TITLE,
                   "Track A: The Self-Critique Protocol",
-                  "Track B: Using the Approved Prompts"],
+                  "Track B: Using the Approved Prompts",
+                  # Built by the vault's push_521_pages.py from studio_pairs.tex;
+                  # skipped here (page_urls miss) until that has run once. Lives
+                  # in Start Here rather than Week 4 because it is published in
+                  # Week 1, before any week module is.
+                  "Peer Review Studio: Pairs, Weeks 4-11"],
         "syllabus_pdf": True,
         "assignments": [],
     },
@@ -820,7 +826,7 @@ MODULES = [
     {
         "name": "Week 4 (9/14) — Public Administration Theory II: Classical Foundations",
         "notes": [
-            "Monday 9/14, in person: The Founding Arguments and Simon's Demolition. Class discussion plus peer review studio.",
+            "Monday 9/14, in person: The Founding Arguments and Simon's Demolition. Peer review studio, then class discussion.",
             "Read: the Week 3 set, discussed in full",
         ],
         "prefix": "Week 4 - ",
@@ -828,7 +834,7 @@ MODULES = [
     {
         "name": "Week 5 (9/21) — Ethics and Values in Public Administration",
         "notes": [
-            "Monday 9/21, in person: Public Service Values and Ethics. Class discussion plus peer review studio.",
+            "Monday 9/21, in person: Public Service Values and Ethics. Peer review studio, then class discussion.",
             "Read: Friedrich (1940), “Public Policy and the Nature of Administrative Responsibility”; Finer (1941), “Administrative Responsibility in Democratic Government”; Goss (1996), “A Distinct Public Administration Ethics?”; Denhardt and Denhardt, ch. 7",
             "Also in class, 20 minutes: this course's AI policy, read as a Friedrich–Finer case. We return to the question in Week 11, and it will not survive the encounter intact. Keep your answer somewhere you can find it.",
             "Friday's reflection adds or revises at least one Comparative Matrix row (Denhardt ch. 7).",
@@ -838,7 +844,7 @@ MODULES = [
     {
         "name": "Week 6 (9/28) — Leadership and Motivation",
         "notes": [
-            "Monday 9/28, in person: Leadership and Motivation. Class discussion plus peer review studio.",
+            "Monday 9/28, in person: Leadership and Motivation. Peer review studio, then class discussion.",
             "Read: Christensen, Paarlberg, and Perry (2017), “Public Service Motivation Research”; Denhardt and Denhardt, ch. 8; Lachance (2017), “Public Service Motivation”; Perry and Wise (1990), “The Motivational Bases of Public Service”; Fairholm (2004), “Different Perspectives on the Practice of Leadership”",
             "Friday's reflection adds or revises at least one Comparative Matrix row (Denhardt ch. 8).",
         ],
@@ -847,7 +853,7 @@ MODULES = [
     {
         "name": "Week 7 (10/5) — Performance Management",
         "notes": [
-            "Monday 10/5, in person: Performance Management. Class discussion plus peer review studio.",
+            "Monday 10/5, in person: Performance Management. Peer review studio, then class discussion.",
             "Read: Behn (2003), “Why Measure Performance?”; Denhardt and Denhardt, ch. 9; Douglas and Ansell (2021), “Getting a Grip on Performance of Collaborations”; Marvel (2015), “Unconscious Bias in Citizens' Evaluations”; Nicholson-Crotty (2004), “Public Management and Organizational Performance”",
             "Friday's reflection adds or revises at least one Comparative Matrix row (Denhardt ch. 9).",
         ],
@@ -856,7 +862,7 @@ MODULES = [
     {
         "name": "Week 8 (10/12) — Street-Level Bureaucrats (Book Deep-Dive)",
         "notes": [
-            "Monday 10/12, in person: Street-Level Bureaucrats. Class discussion plus peer review studio.",
+            "Monday 10/12, in person: Street-Level Bureaucrats. Peer review studio, then class discussion.",
             "Read: Lipsky (2010), Street-Level Bureaucracy",
             "Deep-dive week: Part A Monday, Part B Wednesday, reflection Friday. No AI at any point, on either track.",
             "Returned Monday 10/12: Seminar Performance, Checkpoint 1 (Weeks 2–7)",
@@ -867,7 +873,7 @@ MODULES = [
     {
         "name": "Week 9 (10/19) — Privatization and Contracting",
         "notes": [
-            "Monday 10/19, in person: Privatization and Contracting. Class discussion plus peer review studio.",
+            "Monday 10/19, in person: Privatization and Contracting. Peer review studio, then class discussion.",
             "Read: Milward and Provan (2000), “Governing the Hollow State”; Hood (1991), “A Public Management for All Seasons?”; Brown, Potoski, and Van Slyke (2006), “Managing Public Service Contracts”; Jos and Tompkins (2009), “Keeping it Public”; Rainey and Bozeman (2000), “Comparing Public and Private Organizations”",
         ],
         "prefix": "Week 9 - ",
@@ -875,7 +881,7 @@ MODULES = [
     {
         "name": "Week 10 (10/26) — 21st Century Challenges and Social Equity",
         "notes": [
-            "Monday 10/26, in person: 21st Century Challenges. Class discussion plus peer review studio.",
+            "Monday 10/26, in person: 21st Century Challenges. Peer review studio, then class discussion.",
             "Read: Maynard-Moody and Musheno (2012), “Social Equities and Inequities in Practice”; Gooden (2017), “Social Equity and Evidence”; McCandless et al. (2022), “A Long Road”; Denhardt and Denhardt, chs. 10–12",
             "Friday's reflection adds or revises at least one Comparative Matrix row (Denhardt chs. 10–12).",
         ],
@@ -884,7 +890,7 @@ MODULES = [
     {
         "name": "Week 11 (11/2) — Unmasking Administrative Evil (Book Deep-Dive)",
         "notes": [
-            "Monday 11/2, in person: Technical Rationality, Moral Inversion, and the Masking of Administrative Evil. Class discussion plus peer review studio.",
+            "Monday 11/2, in person: Technical Rationality, Moral Inversion, and the Masking of Administrative Evil. Peer review studio, then class discussion.",
             "Read: Balfour, Adams, and Nickels (2020), Unmasking Administrative Evil, 5th ed.",
             "Deep-dive week: Part A Monday, Part B Wednesday, reflection Friday. No AI at any point, on either track.",
         ],
@@ -1036,10 +1042,10 @@ def main():
     added = 0
     for mod in MODULES:
         mid = mod_ids[mod["name"]]
-        have = set()
-        if mid and not DRY_RUN:
-            have = {it.get("title") for it in
-                    list_all(f"/api/v1/courses/{COURSE_ID}/modules/{mid}/items")}
+        existing = []
+        if mid:
+            existing = list_all(f"/api/v1/courses/{COURSE_ID}/modules/{mid}/items")
+        have = {it.get("title") for it in existing}
 
         items = []
         for note in mod.get("notes", []):
@@ -1052,6 +1058,20 @@ def main():
                           "title": syllabus_file["display_name"]})
         for a in resolve_assignments(mod, assignments):
             items.append({"type": "Assignment", "content_id": a["id"], "title": a["name"]})
+
+        # SubHeaders are pure text owned by this script, so one whose title is
+        # no longer in the module's notes is stale and goes. Found 2026-08-21
+        # when rewording the Weeks 4-11 session lines: without this, every
+        # rewording left the old line in place next to the new one. Other
+        # item types are left alone; they may have been placed by hand.
+        wanted = {it["title"] for it in items if it["type"] == "SubHeader"}
+        for it in existing:
+            if it.get("type") == "SubHeader" and it.get("title") not in wanted:
+                if DRY_RUN:
+                    print(f"  would remove  : [{mod['name'][:26]:26}] SubHeader  {it['title'][:60]}")
+                    continue
+                api("DELETE", f"/api/v1/courses/{COURSE_ID}/modules/{mid}/items/{it['id']}")
+                print(f"  item removed  : [{mod['name'][:26]:26}] {it['title'][:58]}")
 
         for pos, item in enumerate(items, start=1):
             if item["title"] in have:
