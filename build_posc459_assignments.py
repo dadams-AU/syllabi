@@ -74,8 +74,13 @@ def due(date_str, hour=23, minute=59):
     return datetime.datetime(y, m, d, hour, minute, tzinfo=TZ).isoformat()
 
 
-def sheet_html(filename):
+def sheet_html(filename, start_heading=None):
     """Student-facing body of an assignment sheet, as Canvas HTML.
+
+    start_heading, if given, drops everything before that markdown heading: the
+    discussion papers share sheet 03, whose header block and five-row table are
+    an overview that reads as noise repeated on each of the five assignments
+    (David, 2026-08-23), so those start at "## What you're doing".
 
     Strips YAML frontmatter and everything from the first Obsidian callout
     onward — every callout in this folder is an instructor note marked
@@ -97,6 +102,11 @@ def sheet_html(filename):
 
     # Drop the H1 title: the Canvas assignment name already carries it.
     text = re.sub(r"^#\s+.*\n", "", text.lstrip("\n"), count=1)
+    if start_heading:
+        i = text.find(start_heading)
+        if i < 0:
+            raise SystemExit(f"{filename}: start heading {start_heading!r} not found")
+        text = text[i:]
     # Sheet 04's film table points a student row at an instructor-only note.
     # The underlying Week 14 decision is flagged on the assignment itself.
     text = text.replace("**Unresolved — see instructor note**", "**To be announced**")
@@ -117,6 +127,27 @@ def sheet_html(filename):
             raise SystemExit(f"REFUSING TO BUILD: {filename} still contains "
                              f"{probe!r} after stripping. Fix the sheet or the filter.")
     return html
+
+
+def prompt_lead(n):
+    """The prompt for Discussion Paper n, from the vault sheet 03b, as Canvas HTML.
+
+    Each paper carries its own prompt above the shared rules from sheet 03, so a
+    student opening the assignment sees what to write about without a second
+    click. Section headers in 03b are "## n · title".
+    """
+    path = os.path.join(SHEETS, "03b - Discussion Prompts.md")
+    text = open(path, encoding="utf-8").read()
+    m = re.search(rf"^## {n} · (.*?)\n(.*?)(?=^## \d+ · |^> \[!|\Z)", text, re.M | re.S)
+    if not m:
+        raise SystemExit(f"prompt {n} not found in 03b")
+    title, body = m.group(1).strip(), m.group(2).strip().rstrip("-").strip()
+    body = re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", r"\2", body)
+    body = re.sub(r"\[\[([^\]]+)\]\]", r"\1", body)
+    html = subprocess.run(["pandoc", "-f", "markdown+pipe_tables", "-t", "html", "--wrap=none"],
+                          input=body, capture_output=True, text=True, check=True).stdout.strip()
+    title = re.sub(r"\*(.+?)\*", r"<em>\1</em>", title)
+    return f"<h3>Prompt {n} &mdash; {title}</h3>\n{html}"
 
 
 LABEL_BOX = {
@@ -150,7 +181,8 @@ def flag_html(msg):
 # --------------------------------------------------------------------------
 GROUPS = [
     {"name": "Attendance and Participation", "weight": 10},
-    {"name": "Discussion Papers", "weight": 10, "rules": "drop_lowest:5\n"},
+    # Five required papers since 2026-08-23; no drop rule (David: "no dropping lowest score").
+    {"name": "Discussion Papers", "weight": 10},
     {"name": "Midterm Exam", "weight": 20},
     {"name": "Major Written Work", "weight": 40},
     {"name": "Final Exam", "weight": 20},
@@ -191,47 +223,28 @@ A = [
              "for ten across the term. Same rule as the first checkpoint: if it lives in Idea "
              "Catcher, nothing to upload.</p>"},
 
-    {"name": "Documentary Response 1 — Growing Up Poor in America, Part 1",
-     "group": "Attendance and Participation", "points": 20, "types": UPLOAD,
-     "due": due("2026-09-04"), "sheet": "04 - Documentary Responses.md", "label": "YELLOW"},
-    {"name": "Documentary Response 2 — Growing Up Poor in America, Part 2",
-     "group": "Attendance and Participation", "points": 20, "types": UPLOAD,
-     "due": due("2026-09-18"), "sheet": "04 - Documentary Responses.md", "label": "YELLOW"},
-    {"name": "Documentary Response 3 — Two American Families",
-     "group": "Attendance and Participation", "points": 20, "types": UPLOAD,
-     "due": due("2026-10-23"), "sheet": "04 - Documentary Responses.md", "label": "YELLOW"},
+    # Documentary Responses 1-3 were folded into Discussion Papers 1, 3, and 4 on
+    # 2026-08-23 and deleted from Canvas the same night; the films are the spine of
+    # those three papers (sheet 03, prompts in 03b).
     # Week 14 carries no documentary response (resolved 8/11). It is reading and
     # independent work: the week opens after Thanksgiving with term papers and
     # graduate outlines due that Wednesday. Three responses, not four.
 
-    # ---- Discussion Papers (10%), best 5 of 10 ----------------------------
+    # ---- Discussion Papers (10%), five required, Fridays 11:59 p.m. --------
+    # Restructured 2026-08-23 from ten-choose-five (David). Papers 1, 3, 4 carry
+    # the films that used to be separate documentary responses. Weeks chosen so
+    # nothing else is due: grad proposal 10/5, memo 10/9, midterm 10/14, brief
+    # 10/28, term paper 12/2 all fall elsewhere.
     *[{"name": f"Discussion Paper {n} — {title}", "group": "Discussion Papers",
        "points": 20, "types": UPLOAD, "due": due(d),
-       "sheet": "03 - Discussion Papers.md", "label": "YELLOW", "rubric": "discussion",
-       "lead": lead}
-      for n, title, d, lead in [
-          (1, "Who counts as poor, and who decides? (Week 2)", "2026-09-01", None),
-          (2, "The CSU AI contract (Week 3)", "2026-09-08", None),
-          (3, "Who built the welfare state? (Week 5)", "2026-09-21", None),
-          (4, "Deservingness in the safety net (Week 6)", "2026-09-28", None),
-          (5, "Fifty different programs (Week 7)", "2026-10-05", None),
-          (6, "Welfare reform and the ACA, compared (Week 11)", "2026-11-02", None),
-          # Week 12 meets Mon 11/9 ONLY (Veterans Day cancels Wed 11/11), so a
-          # Monday-night deadline lands after the only discussion of these readings
-          # and the rubric scores "submitted after discussion" as no credit.
-          (7, "Race and the welfare state (Week 12)", "2026-11-08", None),
-          (8, "Gender, federalism, and design (Week 13)", "2026-11-16", None),
-          # Week 15 discusses these readings Monday 12/7; Wednesday 12/9 is final
-          # exam review, not discussion. Same defect as prompt 7 -- a Monday-night
-          # deadline lands after the only session that discusses them.
-          (9, "Whose solutions? (Week 15)", "2026-12-06", None),
-          # Open all term, but capped at the last prompt deadline: without a date
-          # the late policy cannot apply and a paper could land after grades close.
-          (10, "What should count as welfare? (any week)", "2026-12-07",
-           "<p><strong>This prompt is open all term.</strong> Submit it against any prompt "
-           "deadline and tell me which week you are submitting against. The listed date is "
-           "the last prompt deadline of the term, so it is the outside limit rather than a "
-           "target &mdash; earlier is fine and usually better.</p>"),
+       "sheet": "03 - Discussion Papers.md", "start": "## What you're doing",
+       "label": "YELLOW", "rubric": "discussion", "lead": prompt_lead(n)}
+      for n, title, d in [
+          (1, "Growing Up Poor in America and policy feedback (Week 4)", "2026-09-18"),
+          (2, "Deservingness in the safety net (Week 6)", "2026-10-02"),
+          (3, "Two American Families and welfare reform (Week 9)", "2026-10-23"),
+          (4, "Welfare reform and the ACA, with Poverty, Politics and Profit (Week 11)", "2026-11-06"),
+          (5, "Gender, federalism, and design (Week 13)", "2026-11-20"),
       ]],
 
     # ---- Midterm (20%) ----------------------------------------------------
@@ -322,19 +335,12 @@ RUBRICS = {
          "Engages a specific claim from the assigned reading, quoted or closely paraphrased "
          "with a page number; takes a defensible position and supports it from the reading.",
          [("Full credit", 20, "Engages a specific claim, takes a defensible position, supports "
-                              "it from the reading."),
-          ("Partial credit", 10, "Summarizes accurately but does not take or defend a position."),
-          ("No credit", 0, "Does not engage the assigned reading, or is submitted after "
-                           "discussion.")])]),
-
-    "documentary": ("Documentary Response", [
-        ("Film detail, reading claim, and the relationship between them", 20,
-         "Names a specific scene, person, or moment from the film; connects it to a specific "
-         "claim from that week's reading with a page number; says what the connection shows.",
-         [("Full credit", 20, "Specific film detail, specific reading claim, a defended "
-                              "relationship between them."),
-          ("Partial credit", 10, "Engages both but stays general."),
-          ("No credit", 0, "Could have been written without watching the film.")])]),
+                              "it from the reading; in a film week, specific film detail, a "
+                              "specific reading claim, and a defended relationship between them."),
+          ("Partial credit", 10, "Summarizes accurately but does not take or defend a position, "
+                                 "or engages film and reading but stays general."),
+          ("No credit", 0, "Does not engage the assigned reading, or, in a film week, could "
+                           "have been written without watching the film.")])]),
 
     # Four criteria, no weights given in the sheet -> split equally. FLAGGED.
     "memo": ("Source and Claims Memo", [
@@ -477,7 +483,7 @@ def main():
     for spec in A:
         body = spec.get("body") or ""
         if spec.get("sheet"):
-            body = sheet_html(spec["sheet"])
+            body = sheet_html(spec["sheet"], spec.get("start"))
         parts = [label_html(spec.get("label")), spec.get("lead", ""), body]
         if spec.get("flag"):
             parts.insert(0, flag_html(spec["flag"]))
@@ -514,13 +520,11 @@ def main():
                 {"name": g["name"], "group_weight": g["weight"], "rules": g["rules"]})
             print(f"\n  rule applied  : {g['name']} -> {g['rules'].strip()}")
 
-    # Rubrics: documentary responses share one, discussion papers share one.
+    # Rubrics: the five discussion papers share one definition (a copy per assignment).
     print()
     existing_rubrics = {r["title"]: r for r in list_all(f"/api/v1/courses/{COURSE_ID}/rubrics")}
     for res, spec in made:
         key = spec.get("rubric")
-        if not key and spec["name"].startswith("Documentary Response"):
-            key = "documentary"
         if not key:
             continue
         payload = build_rubric_payload(key, res["id"], spec["name"])

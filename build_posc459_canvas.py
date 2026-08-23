@@ -302,8 +302,7 @@ in-class writing, the midterm exam, and the final exam. Everything else is Green
 <tr><td{TD}>All in-class writing and in-class activities</td><td{TD}>RED</td><td{TD}>All</td></tr>
 <tr><td{TD}>Midterm exam</td><td{TD}>RED</td><td{TD}>All</td></tr>
 <tr><td{TD}>Final exam</td><td{TD}>RED</td><td{TD}>All</td></tr>
-<tr><td{TD}>Discussion papers (5 of 10)</td><td{TD}>YELLOW</td><td{TD}>All</td></tr>
-<tr><td{TD}>Documentary responses (async weeks)</td><td{TD}>YELLOW</td><td{TD}>All</td></tr>
+<tr><td{TD}>Discussion papers (five; three are film weeks)</td><td{TD}>YELLOW</td><td{TD}>All</td></tr>
 <tr><td{TD}>Policy brief: program selection</td><td{TD}>YELLOW</td><td{TD}>Undergraduate</td></tr>
 <tr><td{TD}>Policy brief: source and claims memo</td><td{TD}>YELLOW</td><td{TD}>Undergraduate</td></tr>
 <tr><td{TD}>Policy brief</td><td{TD}>YELLOW</td><td{TD}>Undergraduate</td></tr>
@@ -352,7 +351,7 @@ Argues against your thesis rather than helping you state it.</li>
 
 <p><strong>There is also a <em>General Use</em> module</strong>, which is not attached to any
 assignment and does not coach. It answers what you ask, the way you would expect ChatGPT or Claude
-to. Use it for the discussion papers, the documentary responses, the graduate milestones, anything
+to. Use it for the discussion papers, the graduate milestones, anything
 else in the course, or a question that is not an assignment at all. It runs under the same
 permitted/not-permitted list as every other tool, so it is no more and no less restricted than the
 ChatGPT Edu account the CSU gave you.</p>
@@ -630,11 +629,8 @@ bought a book yet. <em>Growing Up Poor in America</em>, Part 1 assigned for view
 <tr><td{TD}><strong>Mon, Aug 31</strong></td><td{TD}><strong>Baseline writing diagnostic</strong>, in
 class, about 20 minutes, no AI. Not graded for content &mdash; it establishes what your own writing
 sounds like before anything AI-supported begins.</td></tr>
-<tr><td{TD}><strong>Tue, Sep 1</strong></td><td{TD}>Discussion Paper 1 due, 11:59 p.m. (optional
-&mdash; you write any five of ten across the term).</td></tr>
 <tr><td{TD}><strong>Wed, Sep 2</strong></td><td{TD}>Research pre-survey, PapyrusAI sign-up, and a
 class discussion treating this course's AI policy as something to critique.</td></tr>
-<tr><td{TD}><strong>Fri, Sep 4</strong></td><td{TD}>Documentary Response 1 due, 11:59 p.m.</td></tr>
 </tbody>
 </table>
 
@@ -643,6 +639,7 @@ class discussion treating this course's AI policy as something to critique.</td>
 <table{TABLE_STYLE}>
 <thead><tr><th{TH}>Date</th><th{TH}>What</th><th{TH}>Who</th></tr></thead>
 <tbody>
+<tr><td{TD}>Fri, Sep 18</td><td{TD}>Discussion Paper 1, 11:59 p.m. (the first of five; the others are Fridays Oct 2, Oct 23, Nov 6, Nov 20)</td><td{TD}>All</td></tr>
 <tr><td{TD}>Mon, Sep 21</td><td{TD}>Policy brief program selection</td><td{TD}>Undergraduates</td></tr>
 <tr><td{TD}>Mon, Oct 5</td><td{TD}>Research proposal</td><td{TD}>Graduate students</td></tr>
 <tr><td{TD}>Fri, Oct 9</td><td{TD}>Source and claims memo (5%)</td><td{TD}>Undergraduates</td></tr>
@@ -661,7 +658,7 @@ Graduate final research papers are due at the start of it.</td><td{TD}>All</td><
 
 <p><strong>Three weeks have no in-person meetings</strong> and run asynchronously: Week 4
 (Sep 14&ndash;16), Week 9 (Oct 19&ndash;21), and Week 14 (Nov 30&ndash;Dec 2). Weeks 4 and 9 pair a
-documentary with a short response. Week 14 is reading and independent work with nothing new to
+documentary with that week's discussion paper. Week 14 is reading and independent work with nothing new to
 submit.</p>
 
 <h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">How the grade works</h2>
@@ -671,7 +668,7 @@ submit.</p>
     <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">Everyone</div>
     <div style="color:{INK};font-size:0.95em;line-height:1.8;">
       Attendance and participation &mdash; <strong>10%</strong><br>
-      Discussion papers, best 5 of 10 &mdash; <strong>10%</strong><br>
+      Discussion papers, five across the term &mdash; <strong>10%</strong><br>
       Midterm exam &mdash; <strong>20%</strong><br>
       Final exam &mdash; <strong>20%</strong></div>
   </div>

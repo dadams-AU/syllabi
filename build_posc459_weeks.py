@@ -30,25 +30,27 @@ NAVY, ACCENT, INK = "#00244E", "#C25100", "#1F2933"
 MUTED, LINE, WASH = "#52606D", "#D8DEE6", "#F4F7FA"
 
 # Which assignments belong to which week. Keyed off what the week is ABOUT,
-# not the due date: the Sunday-due discussion papers and the Week 1 film
-# response both fall outside their own week's calendar range.
+# not the due date.
 WEEK_ASSIGNMENTS = {
-    1: ["Documentary Response 1"],
-    2: ["Baseline Writing Diagnostic", "Discussion Paper 1"],
-    3: ["Discussion Paper 2"],
-    4: ["Documentary Response 2"],
-    5: ["Discussion Paper 3", "Policy Brief: Program Selection"],
-    6: ["Discussion Paper 4"],
-    7: ["Discussion Paper 5", "Research Proposal (Graduate",
+    # Five discussion papers since 2026-08-23 (Fridays 9/18, 10/2, 10/23, 11/6,
+    # 11/20); the documentary responses are papers 1, 3, and 4. Week 1's film is
+    # assigned for viewing and belongs to paper 1, so Week 1 carries no item.
+    1: [],
+    2: ["Baseline Writing Diagnostic"],
+    3: [],
+    4: ["Discussion Paper 1"],
+    5: ["Policy Brief: Program Selection"],
+    6: ["Discussion Paper 2"],
+    7: ["Research Proposal (Graduate",
         "Policy Brief: Source and Claims Memo"],
     8: ["Reading Journal — Checkpoint 1", "Midterm Exam"],
-    9: ["Documentary Response 3"],
+    9: ["Discussion Paper 3"],
     10: ["Policy Brief (Undergraduates)"],
-    11: ["Discussion Paper 6"],
-    12: ["Discussion Paper 7"],
-    13: ["Discussion Paper 8"],
+    11: ["Discussion Paper 4"],
+    12: [],
+    13: ["Discussion Paper 5"],
     14: ["Term Paper (Undergraduates)", "Introduction, Outline, and Annotated"],
-    15: ["Discussion Paper 9", "Discussion Paper 10", "Reading Journal — Checkpoint 2"],
+    15: ["Reading Journal — Checkpoint 2"],
     16: ["Final Research Paper (Graduate", "Final Exam"],
 }
 
