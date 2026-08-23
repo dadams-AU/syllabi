@@ -606,12 +606,15 @@ Both lenses are at work all semester.</p>
 
 <h2 style="border-bottom:3px solid {ACCENT};padding-bottom:6px;">Getting into PapyrusAI</h2>
 
-<p><strong>PapyrusAI is in the left-hand navigation menu of this course.</strong> There is no
-separate login and no password to remember. The first time you open it you will be asked for a
-course code; ours is <strong>FALL2026-POSC459</strong>. Enter it exactly as written &mdash; a
-mistyped code does not give you an error, it puts you somewhere that is not this class, and you
-will not see our modules. If PapyrusAI does not appear in the menu, or the code does not work, tell
-me before you spend time working around it.</p>
+<p><strong>PapyrusAI is in the left-hand navigation menu of this course.</strong> The first
+time you open it, you will set up a PapyrusAI account and enter our course code,
+<strong>FALL2026-POSC459</strong>. Enter the code exactly as written &mdash; a mistyped code does
+not give you an error, it puts you somewhere that is not this class, and you will not see our
+modules. After that one-time setup the menu link takes you straight in, with no separate login. The
+<a href="https://docs.google.com/document/d/1hVXs5RwWi8Pau1YlhwoF5Y5zO3-1hMZAyUxych7iIDo"
+target="_blank" rel="noopener">PapyrusAI Student Guide</a> walks through the setup step by step. If
+PapyrusAI does not appear in the menu, or the code does not work, tell me before you spend time
+working around it.</p>
 
 <p>The modules are optional and ungraded, and they exist to make productive AI use easy to reach and
 unproductive use harder to fall into. What each one does, and how to do the course without them, is
