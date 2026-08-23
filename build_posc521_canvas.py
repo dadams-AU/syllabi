@@ -788,6 +788,9 @@ MODULES = [
         "pages": [HOME_TITLE, AI_POLICY_TITLE,
                   "Track A: The Self-Critique Protocol",
                   "Track B: Using the Approved Prompts",
+                  # Built by the vault's push_521_pages.py from facilitation_guidance.tex;
+                  # published 2026-08-22, linked here because pair sign-ups are Week 1.
+                  "Facilitating a Discussion Segment (Weeks 5-11)",
                   # Built by the vault's push_521_pages.py from studio_pairs.tex;
                   # skipped here (page_urls miss) until that has run once. Lives
                   # in Start Here rather than Week 4 because it is published in
