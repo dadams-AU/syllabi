@@ -131,7 +131,7 @@ ANNOTATED_BIB = [
         (1.0, "Complete",
          "The Track A protocol worked through on your own entry or a classmate's, or the full "
          "unedited ChatGPT Edu transcript under the verbatim prompt. Either way it is here and "
-         "it is about this week's entries."),
+         "it is about this week's bibliography."),
         (0.5, "Partial",
          "The appendix is present and thin: a protocol answered in a word or two, or a "
          "transcript that has been trimmed, summarized, or run under a prompt you altered."),
