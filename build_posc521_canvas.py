@@ -710,6 +710,12 @@ tool other than ChatGPT Edu; modifying an approved prompt; continuing a conversa
 approved exchange; showing an assigned reading to the tool; submitting an incomplete, edited, or
 reconstructed transcript; using AI on a no-AI assignment; and using diagnostic feedback to revise the
 submission it critiqued.</li>
+<li><strong>&ldquo;Showing an assigned reading&rdquo; means your act, not the tool's.</strong> The approved
+prompts end by telling the tool not to search the web, open links, or retrieve the source, and in testing it has
+done so anyway. Every annotation is required to carry a citation and a page locator, so a Track B exchange
+necessarily hands over enough to identify the reading. If a response comes back with source markers, a reference
+line, or a search indicator, that is the tool going out on its own and it is not misuse by you. The exchange is
+void rather than a violation: keep the transcript as it came back, run the prompt again, and submit both.</li>
 <li>Consequences may include revision requirements, grade penalties, or formal academic integrity
 proceedings under UPS 300.021.</li>
 <li><strong>How I judge severity.</strong> These are not all the same thing and I will not treat them
