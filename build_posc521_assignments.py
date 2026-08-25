@@ -158,6 +158,9 @@ for label, mon, wed, fri, refl_topic in DEEP:
         f"250-300 words on {refl_topic}.")
 
 # --- Facilitation ----------------------------------------------------------
+# The live description also carries a facilitators-by-week table that this builder
+# cannot hold (student names stay out of this repo). Re-running this file rewrites the
+# description without it; run the vault's push_facilitation_pairs.py afterward.
 add("Reading Discussion Facilitation",
     "Reading Discussion Facilitation and Post-Class Reflection", 100,
     None, UPLOAD, "points", "RED",
