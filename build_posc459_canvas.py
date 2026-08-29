@@ -23,6 +23,17 @@ COURSE_ID = "3592717"
 BASE_URL = os.environ.get("CANVAS_BASE_URL", "").rstrip("/")
 TOKEN = os.environ.get("CANVAS_TOKEN", "")
 
+# This script has no dry-run mode. Its 521 counterpart does, so --dry-run gets
+# passed here out of habit and used to be ignored in silence: on 2026-08-29 a
+# "dry run" uploaded a new syllabus PDF and rewrote four live pages in an
+# available course. Refuse the flag rather than let it read as a rehearsal.
+# Wiring a real DRY_RUN through the write paths is the actual fix, still to do.
+if "--dry-run" in sys.argv:
+    raise SystemExit(
+        "build_posc459_canvas.py has no dry-run mode; every run writes to the "
+        "live course. Re-run without --dry-run if that is what you intend."
+    )
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 SYLLABUS_PDF = os.path.join(HERE, "POSC 459 Welfare Politics",
                             "posc459-syllabus-fa26-papyrus.pdf")
@@ -714,7 +725,7 @@ paper notebook all count the same.</p>
     <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">Office hours</div>
     <div style="color:{INK};font-size:0.95em;line-height:1.8;">
       Mondays 3:00&ndash;4:00 and 5:30&ndash;6:30<br>
-      Tuesdays 12:00&ndash;1:00<br>
+      Thursdays 12:00&ndash;1:00<br>
       Or by <a href="https://dadams.io/appointments">appointment</a> any day</div>
   </div>
   <div style="{CARD}">

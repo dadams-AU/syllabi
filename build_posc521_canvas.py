@@ -409,7 +409,7 @@ How We Can Do Better.</em> Metropolitan Books. <span style="color:{MUTED};">Week
     <div style="font-weight:700;margin-bottom:8px;color:{NAVY};">Office hours</div>
     <div style="color:{INK};font-size:0.95em;line-height:1.8;">
       Mondays 3:00&ndash;4:00 and 5:30&ndash;6:30<br>
-      Tuesdays 12:00&ndash;1:00<br>
+      Thursdays 12:00&ndash;1:00<br>
       Or by <a href="https://dadams.io/appointments">appointment</a> any day<br>
       In person or by Zoom, ID 334 750 2639</div>
   </div>
