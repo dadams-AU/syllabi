@@ -1063,8 +1063,15 @@ def main():
             if title in page_urls:
                 items.append({"type": "Page", "page_url": page_urls[title], "title": title})
         if mod.get("syllabus_pdf") and syllabus_file:
+            # "Syllabus", not the file's display_name. Items are matched by title,
+            # and the live Start Here item has been called "Syllabus" since the
+            # course was built, so titling this one posc521_2026_fall.pdf made
+            # every re-upload add a second copy beside it (hit 2026-08-29). The
+            # content_id needs no repointing: Canvas's on_duplicate=overwrite
+            # replaces the file in place, so the existing item follows the new
+            # upload on its own.
             items.append({"type": "File", "content_id": syllabus_file["id"],
-                          "title": syllabus_file["display_name"]})
+                          "title": "Syllabus"})
         for a in resolve_assignments(mod, assignments):
             items.append({"type": "Assignment", "content_id": a["id"], "title": a["name"]})
 
