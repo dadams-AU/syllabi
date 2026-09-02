@@ -108,6 +108,26 @@ FREE = [
         "week_prefix": "Week 9 (",
         "title": "Recommended - Rector, Hall, and Ford 2022, A Road Map for Conservative, Pro-Family Welfare Reform (Heritage Issue Brief 5298)",
     },
+    # Gilens chapters added 2026-08-30 (task 621, the last of the twelve scans).
+    # The syllabus assigns ch. 3 and says "Skim chapter 5 ... also posted."
+    # Esping-Andersen ch. 1 (Wk 3) was the twelfth scan and is deliberately NOT
+    # here: it was grad-only, and no graduate students enrolled in Fall 2026
+    # (David, 2026-08-30). If a grad ever adds, the 19 MB scan is in the vault
+    # at Readings/Week 03/ and should be downsampled before upload.
+    {
+        "source": "Gilens ch. 3 scan",
+        "src": f"{VAULT}/Week 12/Gilens 1999 Ch 3 - Racial Attitudes, the Undeserving Poor, and Opposition to Welfare.pdf",
+        "name": "Gilens 1999 Ch 3 - Racial Attitudes, the Undeserving Poor, and Opposition to Welfare.pdf",
+        "week_prefix": "Week 12 (",
+        "title": "Gilens 1999, Why Americans Hate Welfare, ch. 3 - Racial Attitudes, the Undeserving Poor, and Opposition to Welfare",
+    },
+    {
+        "source": "Gilens ch. 5 scan",
+        "src": f"{VAULT}/Week 12/Gilens 1999 Ch 5 - The News Media and the Racialization of Poverty.pdf",
+        "name": "Gilens 1999 Ch 5 - The News Media and the Racialization of Poverty.pdf",
+        "week_prefix": "Week 12 (",
+        "title": "Skim - Gilens 1999, Why Americans Hate Welfare, ch. 5 - The News Media and the Racialization of Poverty",
+    },
 ]
 
 FOLDER = "course files/readings"
