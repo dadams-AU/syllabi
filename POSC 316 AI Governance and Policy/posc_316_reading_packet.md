@@ -1,21 +1,22 @@
 ---
 title: "Reading Packet"
 layout: null
-course-code: "POSC/CPSC 3XX"
-course-title: "AI Governance & Policy, Fall 2026"
+course-code: "POSC 316 / CPSC 316"
+course-title: "AI Governance and Policy, Fall 2028"
 author:
   - "David P. Adams, Ph.D."
-date: "Fall 2026"
+date: "Fall 2028"
 logo: "csuf_logo.png"
 logo-alt: "Cal State Fullerton wordmark"
 keywords:
   - "CSUF"
-  - "POSC 3XX"
+  - "POSC 316"
+  - "CPSC 316"
   - "AI Governance"
   - "Reading List"
   - "Course Materials"
 natbib: true
-bibliography: "3XX"
+bibliography: "316"
 ---
 
 # How This Packet Works
@@ -38,7 +39,7 @@ This is the only item you need to obtain yourself. Copies are on reserve at the 
 
 # Part I: Foundations
 
-## Week 1 (8/24) — Why Is This a Governance Problem?
+## Week 1 (8/21) — Why Is This a Governance Problem?
 
 **Monday — The Governance Frame**
 
@@ -48,7 +49,7 @@ This is the only item you need to obtain yourself. Copies are on reserve at the 
 
 - Wheeler (2023), "The Three Challenges of AI Regulation," Brookings Institution
 
-## Week 2 (8/31) — AI Literacy for Policy and Governance
+## Week 2 (8/28) — AI Literacy for Policy and Governance
 
 **Monday — From Rules to Learning**
 
@@ -61,14 +62,14 @@ This is the only item you need to obtain yourself. Copies are on reserve at the 
 
 # Part II: Governance and Federalism
 
-## Week 3 (9/7) — Who Regulates? The U.S. Sectoral Patchwork
+## Week 3 (9/4) — Who Regulates? The U.S. Sectoral Patchwork
 
-*Labor Day Monday — Wednesday 9/9 only.*
+*Labor Day Monday — Wednesday 9/6 only.*
 
 - Engstrom, Ho, Sharkey, and Cuéllar (2020), *Government by Algorithm* (ACUS report): executive summary and one agency case study
 - Colorado AI Act (SB24-205) explainer; NCSL AI legislation tracker, skim *(updated each offering)*
 
-## Week 4 (9/14) — Governance Made Concrete: AI Infrastructure
+## Week 4 (9/11) — Governance Made Concrete: AI Infrastructure
 
 **Monday — The Physical Footprint of AI**
 
@@ -79,7 +80,7 @@ This is the only item you need to obtain yourself. Copies are on reserve at the 
 - Hogan (2015), "Data Flows and Water Woes: The Utah Data Center," *Big Data & Society* 2(2)
 - **Case dossier:** Main (2025), "'The City That Draws the Line': One Arizona Community's Fight against a Huge Datacenter," *The Guardian*, with follow-on coverage *(updated each offering)*
 
-## Week 5 (9/21) — The EU AI Act as Counterfactual
+## Week 5 (9/18) — The EU AI Act as Counterfactual
 
 **Monday — The EU AI Act**
 
@@ -91,31 +92,31 @@ This is the only item you need to obtain yourself. Copies are on reserve at the 
 
 # Part III: The State as AI User
 
-## Week 6 (9/28) — Algorithmic Decision-Making Inside Agencies
+## Week 6 (9/25) — Algorithmic Decision-Making Inside Agencies
 
 - **Eubanks**, introduction and chapters 1–2
 - Bovens and Zouridis (2002), "From Street-Level to System-Level Bureaucracies," *Public Administration Review* 62(2)
 
-## Week 7 (10/5) — Case Deep-Dive: When Automated Systems Fail People
+## Week 7 (10/2) — Case Deep-Dive: When Automated Systems Fail People
 
 - **Eubanks**, chapters 3–4
 - **Case dossier**, one assigned per offering:
     - *COMPAS* — Angwin, Larson, Mattu, and Kirchner (2016), "Machine Bias," *ProPublica*, with the Northpointe technical rebuttal exchange
     - *Dutch childcare benefits scandal* — Amnesty International (2021), *Xenophobic Machines* (excerpt)
 
-## Week 8 (10/12) — Procurement and the Governance Toolkit
+## Week 8 (10/9) — Procurement and the Governance Toolkit
 
 - **Eubanks**, chapter 5 and conclusion
 - Pahlka (2023), *Recoding America*, one chapter (excerpt)
 - NIST (2023), *AI Risk Management Framework (AI RMF 1.0)*, core functions, skim
 
-## Week 9 (10/19) — Review and Midterm
+## Week 9 (10/16) — Review and Midterm
 
 No new reading. Audit Checkpoint due Monday; midterm examination Wednesday.
 
 # Part IV: Harm, Liability, and Security
 
-## Week 10 (10/26) — When the Algorithm Hurts Someone
+## Week 10 (10/23) — When the Algorithm Hurts Someone
 
 **Monday — Liability for Automated Decisions**
 
@@ -126,7 +127,7 @@ No new reading. Audit Checkpoint due Monday; midterm examination Wednesday.
 
 - Autonomous-vehicle litigation dossier with a short liability explainer *(updated each offering)*
 
-## Week 11 (11/2) — Autonomy and Security
+## Week 11 (10/30) — Autonomy and Security
 
 **Monday — Governing Autonomous Agents**
 
@@ -139,14 +140,12 @@ No new reading. Audit Checkpoint due Monday; midterm examination Wednesday.
 
 # Part V: Democracy and Development
 
-## Week 12 (11/9) — AI and Democratic Institutions
-
-*Veterans Day Wednesday — Monday 11/9 only.*
+## Week 12 (11/6) — AI and Democratic Institutions
 
 - New York State Office of the Attorney General (2021), *Fake Comments*, executive summary
 - Current explainer on AI and election integrity; NCSL deepfake election-law tracker, skim *(updated each offering)*
 
-## Week 13 (11/16) — Responsible Development and the Future of Work
+## Week 13 (11/13) — Responsible Development and the Future of Work
 
 **Monday — Responsible Development Across Sectors**
 

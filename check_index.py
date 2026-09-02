@@ -51,7 +51,7 @@ ABBREV = {"sp": "spring", "su": "summer", "fa": "fall", "wi": "winter"}
 
 # Folders that hold proposals, templates, and shells rather than a syllabus of
 # record. Nothing here is expected to be linked from the page.
-SKIP = re.compile(r"(proposal|template|shell|POSC 3XX|POSC 428)", re.I)
+SKIP = re.compile(r"(proposal|template|shell|POSC 316|POSC 428)", re.I)
 
 
 def parse_term(text):
