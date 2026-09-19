@@ -240,7 +240,9 @@ A = [
        "sheet": "03 - Discussion Papers.md", "start": "## What you're doing",
        "label": "YELLOW", "rubric": "discussion", "lead": prompt_lead(n)}
       for n, title, d in [
-          (1, "Growing Up Poor in America and policy feedback (Week 4)", "2026-09-18"),
+          # Paper 1 moved 9/18 -> Sun 9/20 on 2026-09-18: the prompt had asked for a
+          # nonexistent "Part 2" of the film. The other four stay on Fridays.
+          (1, "Growing Up Poor in America and policy feedback (Week 4)", "2026-09-20"),
           (2, "Deservingness in the safety net (Week 6)", "2026-10-02"),
           (3, "Two American Families and welfare reform (Week 9)", "2026-10-23"),
           (4, "Welfare reform and the ACA, with Poverty, Politics and Profit (Week 11)", "2026-11-06"),

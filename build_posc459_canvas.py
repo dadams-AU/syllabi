@@ -639,7 +639,7 @@ policy page</a>.</p>
 <tbody>
 <tr><td{TD}><strong>Mon, Aug 24</strong></td><td{TD}>First class. Rank et al., <em>Poorly
 Understood</em>, Section 1, pp. 15&ndash;49 &mdash; a Pollak Library ebook, so you do not need to have
-bought a book yet. <em>Growing Up Poor in America</em>, Part 1 assigned for viewing on your own.</td></tr>
+bought a book yet. <em>Growing Up Poor in America</em> assigned for viewing on your own.</td></tr>
 <tr><td{TD}><strong>Mon, Aug 31</strong></td><td{TD}><strong>Baseline writing diagnostic</strong>, in
 class, about 20 minutes, no AI. Not graded for content &mdash; it establishes what your own writing
 sounds like before anything AI-supported begins.</td></tr>
