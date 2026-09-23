@@ -90,7 +90,7 @@ FREE = [
         "src": f"{VAULT}/Week 05/Greszler 2021 - Seven Hard Truths About Social Security (Heritage IB5212).pdf",
         "name": "Greszler 2021 - Seven Hard Truths About Social Security (Heritage IB5212).pdf",
         "week_prefix": "Week 5 (",
-        "title": "Recommended - Greszler 2021, Seven Hard Truths About Social Security (Heritage Issue Brief 5212)",
+        "title": "For Wed 9/23, last names A–L - Greszler 2021, Seven Hard Truths About Social Security (Heritage Issue Brief 5212)",
     },
     {
         "source": "CBPP snapshot",
@@ -99,7 +99,7 @@ FREE = [
         "week_prefix": "Week 5 (",
         # Not CBPP's own PDF: theirs is the unrevised 2016 file. This is the
         # page as it stood on 2026-08-13, carrying "Updated May 31, 2024".
-        "title": "Recommended - CBPP 2024, Top Ten Facts about Social Security (course snapshot, updated 5/31/2024)",
+        "title": "For Wed 9/23, last names M–Z - CBPP 2024, Top Ten Facts about Social Security (course snapshot, updated 5/31/2024)",
     },
     {
         "source": "Heritage IB5298",
