@@ -78,6 +78,16 @@ ROUGH = (
     "Three pages. Patterns, connections, and contradictions across the week's readings, "
     "written entirely by you and brought to Monday's peer review studio and discussion."
 )
+# Week 5 onward. The analysis is graded Wednesday, in the final; grading it again on
+# Monday charged one performance twice and penalized the student who brings in a mess
+# and fixes it in the studio. See ROUGH_DRAFT_COMPLETION in build_posc521_rubrics.py.
+ROUGH_COMPLETION = (
+    "Three pages. Patterns, connections, and contradictions across the week's readings, "
+    "written entirely by you and in Canvas by class time so your partner has it in the "
+    "studio. Scored on whether you arrive with a workable draft that has a position in "
+    "it somewhere, not on how good the analysis is yet. The analysis is graded Wednesday, "
+    "in the final synthesis paper."
+)
 FINAL = (
     "Four pages maximum, refined from your rough draft using the peer review studio and "
     "class discussion. Go deep on no more than three readings and say in your opening paragraph "
@@ -127,7 +137,8 @@ for label, bib, rough, final, refl_due, denhardt in CYCLES:
         add(W, f"{label} - Annotated Bibliography", 5,
             when(bib, CLASS_TIME), UPLOAD, "points", "YELLOW", BIB)
     add(W, f"{label} - Rough Draft Synthesis Paper", 10,
-        when(rough, CLASS_TIME), UPLOAD, "points", "RED", ROUGH)
+        when(rough, CLASS_TIME), UPLOAD, "points", "RED",
+        ROUGH if label.startswith("Week 4 ") else ROUGH_COMPLETION)
     add(W, f"{label} - Final Synthesis Paper", 20,
         when(final, MIDNIGHT), UPLOAD, "points", "YELLOW", FINAL)
     add(W, f"{label} - Reflection", 10,

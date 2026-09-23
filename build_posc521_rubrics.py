@@ -226,6 +226,51 @@ ROUGH_DRAFT = [
     ),
 ]
 
+# Weeks 5 onward. The rough draft stopped being scored for analysis after Week 4.
+# Its first two criteria (Patterns and contradictions, Implications for theory and
+# practice) were graded again forty-eight hours later by FINAL_SYNTHESIS at higher
+# weight, and FINAL_SYNTHESIS separately scores the draft-to-final movement, so one
+# analytical performance was priced three times. It also charged a student for
+# arriving with a mess and then fixing it in the studio, which is the design working
+# as intended. What the final cannot see is whether she showed up with something a
+# partner could work on, so that is what this scores. Presence in the room is not a
+# criterion here; Seminar Performance already grades it, and adding it would repeat
+# the mistake this rubric exists to correct.
+#
+# Week 4 stays on ROUGH_DRAFT above. It is graded, and its scores have to keep
+# matching the rubric the students can see attached to it.
+ROUGH_DRAFT_COMPLETION = [
+    steps(
+        "A draft to work from",
+        (4.0, "Three pages",
+         "Three pages of continuous prose. Not an outline, not notes toward a paper."),
+        (2.0, "Thin",
+         "Short of three pages, or written as notes and headings rather than as a draft."),
+        (0.0, "Not yet", "A paragraph or two, or nothing."),
+    ),
+    steps(
+        "A position your partner can argue with",
+        (4.0, "There is one",
+         "Somewhere in the draft is a sentence about the readings that a reasonable reader "
+         "could disagree with. It does not have to be right and it does not have to survive "
+         "Monday. It has to be findable."),
+        (2.0, "Reporting only",
+         "The draft says what the readings say and commits to nothing your partner can push "
+         "against."),
+        (0.0, "Not yet", "No draft to look in."),
+    ),
+    steps(
+        "On time for the studio",
+        (2.0, "In Canvas by class time",
+         "Submitted by Monday at 7:00, so your partner has it in front of him in the room."),
+        (1.0, "Later Monday",
+         "Submitted after class began. Your partner worked from something else."),
+        (0.0, "Not yet",
+         "After Monday, when the studio it exists for has already run."),
+    ),
+]
+
+
 FINAL_SYNTHESIS = [
     four(
         "Depth and selection", 6,
@@ -783,17 +828,17 @@ SPECS = [
     ("Week 4 - Classical Foundations - Reflection", REFLECTION_STANDARD, True),
 
     bib(5, "Ethics and Values"),
-    ("Week 5 - Ethics and Values - Rough Draft Synthesis Paper", ROUGH_DRAFT, True),
+    ("Week 5 - Ethics and Values - Rough Draft Synthesis Paper", ROUGH_DRAFT_COMPLETION, True),
     ("Week 5 - Ethics and Values - Final Synthesis Paper", FINAL_SYNTHESIS, True),
     ("Week 5 - Ethics and Values - Reflection", REFLECTION_MATRIX, True),
 
     bib(6, "Leadership and Motivation"),
-    ("Week 6 - Leadership and Motivation - Rough Draft Synthesis Paper", ROUGH_DRAFT, True),
+    ("Week 6 - Leadership and Motivation - Rough Draft Synthesis Paper", ROUGH_DRAFT_COMPLETION, True),
     ("Week 6 - Leadership and Motivation - Final Synthesis Paper", FINAL_SYNTHESIS, True),
     ("Week 6 - Leadership and Motivation - Reflection", REFLECTION_MATRIX, True),
 
     bib(7, "Performance Management"),
-    ("Week 7 - Performance Management - Rough Draft Synthesis Paper", ROUGH_DRAFT, True),
+    ("Week 7 - Performance Management - Rough Draft Synthesis Paper", ROUGH_DRAFT_COMPLETION, True),
     ("Week 7 - Performance Management - Final Synthesis Paper", FINAL_SYNTHESIS, True),
     ("Week 7 - Performance Management - Reflection", REFLECTION_MATRIX, True),
 
@@ -805,12 +850,12 @@ SPECS = [
     ("Week 8 - Street-Level Bureaucracy - Reflection", DEEP_DIVE_REFLECTION, True),
 
     bib(9, "Privatization and Contracting"),
-    ("Week 9 - Privatization and Contracting - Rough Draft Synthesis Paper", ROUGH_DRAFT, True),
+    ("Week 9 - Privatization and Contracting - Rough Draft Synthesis Paper", ROUGH_DRAFT_COMPLETION, True),
     ("Week 9 - Privatization and Contracting - Final Synthesis Paper", FINAL_SYNTHESIS, True),
     ("Week 9 - Privatization and Contracting - Reflection", REFLECTION_STANDARD, True),
 
     bib(10, "Social Equity"),
-    ("Week 10 - Social Equity - Rough Draft Synthesis Paper", ROUGH_DRAFT, True),
+    ("Week 10 - Social Equity - Rough Draft Synthesis Paper", ROUGH_DRAFT_COMPLETION, True),
     ("Week 10 - Social Equity - Final Synthesis Paper", FINAL_SYNTHESIS, True),
     ("Week 10 - Social Equity - Reflection", REFLECTION_MATRIX, True),
 
