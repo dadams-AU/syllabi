@@ -13,8 +13,6 @@ a.sl-link:hover { color: var(--term-cyan); text-decoration: underline; }
 .hero-note + .hero-actions { margin-top: 0.85rem; }
 
 /* ---------- Catalog ---------- */
-/* let the grep box shrink below its input's intrinsic width on 320px phones */
-.pub-toolbar .grep-box { min-width: 0; }
 .syl-group { margin-top: 2rem; }
 .syl-group .pub-heading { margin-bottom: 1rem; }
 .syl-group[hidden], .syl-card[hidden] { display: none; }
