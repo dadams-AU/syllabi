@@ -34,6 +34,24 @@ A curated set of LaTeX-formatted syllabi for undergraduate and graduate courses 
 
 ---
 
+## 🖥️ The website
+
+[syllabi.dadams.io](https://syllabi.dadams.io) is one static page, deployed from `main` by GitHub Pages.
+
+| To change…                                                     | Edit                                                        |
+| -------------------------------------------------------------- | ----------------------------------------------------------- |
+| Current term: hero buttons, `fall-2026.toml`, `current` badges | `index.html`                                                |
+| Course cards and their PDF links                               | `index.html`, the `#catalog` section                        |
+| Styles for this site only                                      | `css/syllabi.css`                                           |
+| Shared theme (colors, fonts, nav, terminal windows)            | `css/custom.css`, a verbatim copy of dadams.io's            |
+| Theme toggle, keyboard shortcuts, catalog filter               | `js/scripts.js`, also a verbatim copy of dadams.io's        |
+
+Change the two shared files in [dadams-AU/mainweb](https://github.com/dadams-AU/mainweb) first, then copy them here, so the sites stay in step.
+
+Point links to syllabi either at `raw.githubusercontent.com/dadams-AU/syllabi/main/...` or at a relative path, and leave `?v=` queries off relative links: `check_index.py` resolves every link against the repo and fails on anything it can't find. The pre-push hook runs it for you once it's installed (`ln -sf ../../hooks/pre-push .git/hooks/pre-push`).
+
+---
+
 ## 📄 License
 
 **Creative Commons BY-NC-SA 4.0**
