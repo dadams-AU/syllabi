@@ -15,15 +15,15 @@ A curated set of LaTeX-formatted syllabi for undergraduate and graduate courses 
 ## 📚 Available Syllabi
 
 ### 🎓 Undergraduate
-- [**POSC 315** · Introduction to Public Policy](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy) — Summer 2026 PDF: [posc315_summer_2026.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20315%20Intro%20Policy/2026%20Summer/posc315_summer_2026.pdf)
-- [**POSC 427** · Metropolitan Governance and Policymaking](https://github.com/dadams-AU/syllabi/tree/main/POSC%20427%20Metropolitian%20Politics%20and%20Policy) — Spring 2027 PDF: [posc427_spring_2027.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20427%20Metropolitian%20Politics%20and%20Policy/Spring%202027/posc427_spring_2027.pdf) · Summer 2026 Independent Study PDF: [posc427_summer_2026_independent.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20427%20Metropolitian%20Politics%20and%20Policy/Summer%202026/posc427_summer_2026_independent.pdf)
-- [**POSC/CRJU 320** · Introduction to Public Administration](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA) — Summer Session B 2026 PDF: [CRJU-POSC_320.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/CRJU_POSC%20320%20Intro%20PA/2026%20Summer/CRJU-POSC_320.pdf)
-- [**POSC 459** · Social Welfare Politics and Policy](https://github.com/dadams-AU/syllabi/tree/main/POSC%20459%20Welfare%20Politics) — Fall 2026 PDF: [posc459-syllabus-fa26-papyrus.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20459%20Welfare%20Politics/posc459-syllabus-fa26-papyrus.pdf)
+- [**POSC 315** · Introduction to Public Policy](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy) — Summer 2026 PDF: [posc315_summer_2026.pdf](POSC%20315%20Intro%20Policy/2026%20Summer/posc315_summer_2026.pdf)
+- [**POSC 427** · Metropolitan Governance and Policymaking](https://github.com/dadams-AU/syllabi/tree/main/POSC%20427%20Metropolitian%20Politics%20and%20Policy) — Spring 2027 PDF: [posc427_spring_2027.pdf](POSC%20427%20Metropolitian%20Politics%20and%20Policy/Spring%202027/posc427_spring_2027.pdf) · Summer 2026 Independent Study PDF: [posc427_summer_2026_independent.pdf](POSC%20427%20Metropolitian%20Politics%20and%20Policy/Summer%202026/posc427_summer_2026_independent.pdf)
+- [**POSC/CRJU 320** · Introduction to Public Administration](https://github.com/dadams-AU/syllabi/tree/main/CRJU_POSC%20320%20Intro%20PA) — Summer Session B 2026 PDF: [CRJU-POSC_320.pdf](CRJU_POSC%20320%20Intro%20PA/2026%20Summer/CRJU-POSC_320.pdf)
+- [**POSC 459** · Social Welfare Politics and Policy](https://github.com/dadams-AU/syllabi/tree/main/POSC%20459%20Welfare%20Politics) — Fall 2026 PDF: [posc459-syllabus-fa26-papyrus.pdf](POSC%20459%20Welfare%20Politics/posc459-syllabus-fa26-papyrus.pdf)
 
 ### 🎓 Graduate (MPA)
-- [**POSC 509** · Foundations of Public Administration](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations) — Spring 2026 PDF: [POSC_509_Spring26.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20509%20MPA%20Foundations/spring%2026/POSC_509_Spring26.pdf)
-- [**POSC 521** · Public Administration Theory (MPA Capstone)](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone) — Fall 2026 PDF: [posc521_2026_fall.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20521%20MPA%20Capstone/2026-27%20Fall/posc521_2026_fall.pdf) · Spring 2026 PDF: [posc521_2026_spring.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20521%20MPA%20Capstone/2025-26%20Spring/posc521_2026_spring.pdf)
-- [**POSC 588** · Collaborative Governance](https://github.com/dadams-AU/syllabi/tree/main/POSC%20588%20Collab%20Gov) — Spring 2026 PDF: [POSC_588_Spring26.pdf](https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20588%20Collab%20Gov/spring_26/POSC_588_Spring26.pdf)
+- [**POSC 509** · Foundations of Public Administration](https://github.com/dadams-AU/syllabi/tree/main/POSC%20509%20MPA%20Foundations) — Spring 2026 PDF: [POSC_509_Spring26.pdf](POSC%20509%20MPA%20Foundations/spring%2026/POSC_509_Spring26.pdf)
+- [**POSC 521** · Public Administration Theory (MPA Capstone)](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone) — Fall 2026 PDF: [posc521_2026_fall.pdf](POSC%20521%20MPA%20Capstone/2026-27%20Fall/posc521_2026_fall.pdf) · Spring 2026 PDF: [posc521_2026_spring.pdf](POSC%20521%20MPA%20Capstone/2025-26%20Spring/posc521_2026_spring.pdf)
+- [**POSC 588** · Collaborative Governance](https://github.com/dadams-AU/syllabi/tree/main/POSC%20588%20Collab%20Gov) — Spring 2026 PDF: [POSC_588_Spring26.pdf](POSC%20588%20Collab%20Gov/spring_26/POSC_588_Spring26.pdf)
 
 
 ## 🔄 Maintenance
@@ -48,7 +48,7 @@ A curated set of LaTeX-formatted syllabi for undergraduate and graduate courses 
 
 Change the two shared files in [dadams-AU/mainweb](https://github.com/dadams-AU/mainweb) first, then copy them here, so the sites stay in step.
 
-Point links to syllabi either at `raw.githubusercontent.com/dadams-AU/syllabi/main/...` or at a relative path, and leave `?v=` queries off relative links: `check_index.py` resolves every link against the repo and fails on anything it can't find. The pre-push hook runs it for you once it's installed (`ln -sf ../../hooks/pre-push .git/hooks/pre-push`).
+Link syllabi by relative path (`POSC%20521%20MPA%20Capstone/...pdf`), not through `raw.githubusercontent.com`: GitHub Pages serves the PDF from syllabi.dadams.io and it opens in the browser, while the raw host sends it as a download. Leave `?v=` queries off relative links: `check_index.py` resolves every link against the repo and fails on anything it can't find. The pre-push hook runs it for you once it's installed (`ln -sf ../../hooks/pre-push .git/hooks/pre-push`).
 
 ---
 
