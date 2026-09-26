@@ -45,8 +45,10 @@ A curated set of LaTeX-formatted syllabi for undergraduate and graduate courses 
 | Styles for this site only                                      | `css/syllabi.css`                                           |
 | Shared theme (colors, fonts, nav, terminal windows)            | `css/custom.css`, a verbatim copy of dadams.io's            |
 | Theme toggle, keyboard shortcuts, catalog filter               | `js/scripts.js`, also a verbatim copy of dadams.io's        |
+| Favicon                                                        | `favicon.ico`, `apple-touch-icon.png`, copies of dadams.io's |
+| Link-preview card                                              | `Images/og-card.png`, drawn by mainweb's `tools/drawings.py og-syllabi` |
 
-Change the two shared files in [dadams-AU/mainweb](https://github.com/dadams-AU/mainweb) first, then copy them here, so the sites stay in step.
+Change the shared files in [dadams-AU/mainweb](https://github.com/dadams-AU/mainweb) first, then copy them here, so the sites stay in step.
 
 Link syllabi by relative path (`POSC%20521%20MPA%20Capstone/...pdf`), not through `raw.githubusercontent.com`: GitHub Pages serves the PDF from syllabi.dadams.io and it opens in the browser, while the raw host sends it as a download. Leave `?v=` queries off relative links: `check_index.py` resolves every link against the repo and fails on anything it can't find. The pre-push hook runs it for you once it's installed (`ln -sf ../../hooks/pre-push .git/hooks/pre-push`).
 
