@@ -863,7 +863,7 @@ MODULES = [
         "name": "Week 7 (10/5) — Performance Management",
         "notes": [
             "Monday 10/5, in person: Performance Management. Peer review studio, then class discussion.",
-            "Read: Behn (2003), “Why Measure Performance?”; Denhardt and Denhardt, ch. 9; Douglas and Ansell (2021), “Getting a Grip on Performance of Collaborations”; Marvel (2015), “Unconscious Bias in Citizens' Evaluations”; Nicholson-Crotty (2004), “Public Management and Organizational Performance”",
+            "Read: Behn (2003), “Why Measure Performance?”; Denhardt and Denhardt, ch. 9; Douglas and Ansell (2021), “Getting a Grip on Performance of Collaborations”; Marvel (2016), “Unconscious Bias in Citizens' Evaluations”; Nicholson-Crotty and O'Toole (2004), “Public Management and Organizational Performance”",
             "Friday's reflection adds or revises at least one Comparative Matrix row (Denhardt ch. 9).",
         ],
         "prefix": "Week 7 - ",
