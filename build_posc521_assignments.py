@@ -224,7 +224,9 @@ add(CP, "Concentration Paper - Final Paper", 100,
     when("2026-12-14", MIDNIGHT), UPLOAD, "points", "RED",
     "8-10 pages excluding references, double-spaced, APA or Chicago author-date. Adjudicate your "
     "tradeoff: take a defensible position and state plainly what it costs and who pays. Include an "
-    "explicit equity assessment drawing on the Week 10 readings. No AI assistance of any kind.")
+    "explicit equity assessment drawing on the Week 10 readings. Recommend a course of action: what "
+    "the responsible administrator in your case should do, justified through moral reasoning and "
+    "public service values, not efficiency alone. No AI assistance of any kind.")
 
 
 # --- Rubrics ---------------------------------------------------------------
