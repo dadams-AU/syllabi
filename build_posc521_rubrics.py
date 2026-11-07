@@ -757,7 +757,8 @@ LIT_REVIEW = [
 
 # Weights fixed by the syllabus: Depth 30, Sources 20, Clarity 20, Writing 15,
 # Completeness 15. Depth carries the tradeoff, the administrative evil line, the
-# equity assessment, and the recommendation (added 2026-10-31 for MPA SLO 6),
+# equity assessment, and the recommendation (added 2026-10-31 for MPA SLO 6;
+# the weighing of the ethical problem added 2026-11-05 for its Assessment criterion),
 # because that is how the syllabus scopes it.
 FINAL_PAPER = [
     four(
@@ -766,7 +767,8 @@ FINAL_PAPER = [
         "You take a position on whether what Pahlka describes is masked administrative evil or "
         "administrative failure, and you defend where you drew the line. The equity assessment "
         "names who bears the burden and who is excluded from the benefit, out of the Week 10 "
-        "readings. You recommend what the responsible administrator in your case should do and "
+        "readings. You weigh how serious the ethical problem is and what follows if nothing is "
+        "done, then recommend what the responsible administrator in your case should do and "
         "justify it through moral reasoning and public service values, not efficiency alone. Pahlka, Balfour and Adams and Nickels, Lipsky, and the hollow state are made "
         "to work on one another rather than cited in turn.",
         "The tradeoff is adjudicated and defended, with the cost named and the payer left "
