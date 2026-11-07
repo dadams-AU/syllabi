@@ -1,10 +1,13 @@
-% POSC 427 – Metropolitan Governance and Policymaking
+% POSC 427 – Metropolitan Politics and Policymaking
 % Spring 2027 | David P. Adams
 % Compile with LuaLaTeX
+% !TEX program = lualatex
 \DocumentMetadata{
     pdfstandard=UA-2,
+    pdfstandard=a-4f,
     pdfversion=2.0,
-    lang=en-US
+    lang=en-US,
+    tagging=on
 }
 
 \documentclass[12pt]{article}
@@ -41,17 +44,24 @@
 \setlistdepth{3}
 
 % Tables and graphics
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{graphicx}
 \usepackage{array, booktabs, longtable}
 \usepackage{caption}
-\usepackage{tabularray}
-\UseTblrLibrary{booktabs}
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+% Table readability: taller rows and wider gutters, applied document-wide.
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{10pt}
+% Tables use \tagpdfsetup{table/header-rows={1}} plus a \rowcolor header row.
+% NOTE: \rowcolor is safe under LuaLaTeX -- colortbl fills are marked as
+% artifacts. Do NOT use tabularray (tblr): it emits nested <P> tags that
+% fail PDF/UA-2.
 
 % Tagging for accessibility (if available)
 \IfFileExists{tagpdf-base.sty}{
     \usepackage{tagpdf}
-    \tagpdfsetup{activate-all=true, interwordspace=true}
+    \tagpdfsetup{interwordspace=true}
 }{
     \newcommand\tagpdfsetup[1]{}
 }
@@ -69,7 +79,7 @@
     linkcolor=blue,
     urlcolor=blue,
     citecolor=blue,
-    pdftitle={POSC 427: Metropolitan Governance and Policymaking},
+    pdftitle={POSC 427: Metropolitan Politics and Policymaking},
     pdfauthor={David P. Adams},
     pdfsubject={California State University, Fullerton Course Syllabus},
     pdfkeywords={CSUF, Syllabus, POSC 427, Metropolitan Governance, Urban Politics, Public Policy},
@@ -77,7 +87,7 @@
 }
 \urlstyle{same}
 
-\title{POSC 427: Metropolitan Governance and Policymaking}
+\title{POSC 427: Metropolitan Politics and Policymaking}
 \author{}
 \date{Spring 2027}
 
@@ -129,17 +139,18 @@ If you encounter any technical difficulties, contact the instructor immediately 
 
 % ========== SECTION 4: COURSE INFORMATION ==========
 \section*{Course Information}
-\noindent \textbf{Prefix, number, title:} POSC 427, \textit{Metropolitan Governance and Policymaking} \\
-\noindent \textbf{Meeting times:} In-Person, [Days TBD], [Time TBD], [Room TBD] \\
-\noindent \textbf{Units:} 3 \quad \textbf{Schedule Code:} [TBD]
+\noindent \textbf{Prefix, number, title:} POSC 427-01, \textit{Metropolitan Politics and Policymaking} \\
+\noindent \textbf{Meeting times:} In-person, Mondays, 7:00--9:45 p.m., GH 335 \\
+\noindent \textbf{Units:} 3 \quad \textbf{Schedule Code:} 21345
 
 \vspace{0.5em}
 \begin{flatlist}
+% VERIFY against live catalog: description and prerequisite line
 \item \textbf{Course requisite(s):} POSC 100, upper-division standing, or graduate standing
 \item \textbf{Catalog description:} The governance, politics, and policymaking dynamics of metropolitan regions in the United States. Fragmentation, intergovernmental relations, regional coordination, institutional complexity, and collective action across urban and suburban jurisdictions, with attention to how metropolitan regions govern shared policy problems.
 \item \textbf{Policy regarding the use of generative AI:} See the \emph{Policy on the Use of Generative AI and Other Technology} section below.
 \item \textbf{Course materials and equipment:} Canvas; access to course readings; laptop recommended
-\item \textbf{Required texts:} Readings provided through Canvas and the Pollak Library; recommended background text Judd \& Hinze (see \emph{Required Texts} below)
+\item \textbf{Required texts:} Fulton, \emph{The Reluctant Metropolis}; Trounstine, \emph{Segregation by Design}; Miller and Cox, \emph{Governing the Metropolitan Region} (Pollak Library ebook). See \emph{Required Texts} below.
 \end{flatlist}
 
 % ========== SECTION 5: COURSE DESCRIPTION ==========
@@ -148,9 +159,9 @@ If you encounter any technical difficulties, contact the instructor immediately 
 {\setlength{\parindent}{0pt}\setlength{\parskip}{0.6\baselineskip}%
 Metropolitan politics is the study of how fragmented systems attempt to govern interdependent regional problems. This course examines the governance, politics, and policymaking dynamics of metropolitan regions in the United States, with particular emphasis on fragmentation, intergovernmental relations, regional coordination, institutional complexity, and collective action across urban and suburban jurisdictions.
 
-While the course engages classic urban politics scholarship, it places particular emphasis on metropolitan governance, institutional fragmentation, federalism, collaborative governance, and the institutional challenges associated with governing complex regional systems.
+The course is structural and political. It asks why the region is fragmented, who holds authority over what, who gets a seat at the table, and who can walk away. Students who have taken POSC 588 (Collaborative Governance) will find that this course complements it: 588 is about running a collaboration once it exists, and 427 is about the institutions and politics that decide whether one forms at all.
 
-Students will examine how metropolitan regions attempt to govern shared policy problems including housing, transportation, environmental governance, public safety, economic development, homelessness, and climate adaptation. The course uses Southern California as a recurring empirical case while situating metropolitan governance within broader debates in political science and public administration.
+Students will examine how metropolitan regions attempt to govern shared policy problems including housing, water, transportation, economic development, homelessness, and recovery from disaster. The course uses Southern California as its running empirical case, with Orange County and Los Angeles County supplying most of the examples, while situating metropolitan governance within broader debates in political science and public administration.
 
 The central question guiding the course is:
 
@@ -172,24 +183,31 @@ By the end of the semester, students will be able to:
     \item Apply institutional and governance frameworks to metropolitan policy problems.
     \item Assess how intergovernmental relations shape policymaking capacity.
     \item Analyze metropolitan inequality and spatial governance challenges.
-    \item Develop evidence-based policy recommendations for regional governance problems.
+    \item Represent a jurisdiction or agency in a structured regional negotiation and explain the outcome using course frameworks.
 \end{enumerate}
 }
 
 % ========== SECTION 7: REQUIRED TEXTS ==========
 \section*{Required Texts}
 
-Selected readings are provided through Canvas, university library databases, and online resources. Canvas readings are required and carry equal weight to assigned book chapters.
+Three books anchor the course. Two are for purchase at the Titan Shops bookstore; the third is available at no cost as a Pollak Library ebook.
 
-\subsection*{Recommended Background Text}
+\subsection*{Purchase}
 
 \begin{itemize}
-    \item Judd, Dennis R., and Annika M. Hinze. 2022. \emph{City Politics: The Political Economy of Urban America.} 11th ed. New York, NY: Routledge.
+    \item Fulton, William. 2001. \emph{The Reluctant Metropolis: The Politics of Urban Growth in Los Angeles.} Paperback ed., with a new afterword. Baltimore, MD: Johns Hopkins University Press. ISBN 978-0-8018-6506-0.
+    \item Trounstine, Jessica. 2018. \emph{Segregation by Design: Local Politics and Inequality in American Cities.} New York, NY: Cambridge University Press. ISBN 978-1-108-45498-8.
+\end{itemize}
+
+\subsection*{Pollak Library Ebook (No Purchase)}
+
+\begin{itemize}
+    \item Miller, David Y., and Raymond W.\ Cox III. 2014. \emph{Governing the Metropolitan Region: America's New Frontier.} Armonk, NY: M.E.\ Sharpe / Routledge. ISBN 978-0-7656-3984-4. Pollak Library ebook; link on Canvas.
 \end{itemize}
 
 \subsection*{Additional Readings}
 
-Additional readings---articles, book chapters, and policy documents---are posted on Canvas and noted in the course schedule. Graduate Reading selections are required for graduate students and recommended for undergraduates.
+Additional readings (journal articles, book chapters, and primary documents) are posted on Canvas and listed in full in the course schedule. They are required and carry the same weight as the assigned book chapters. Each week assigns no more than two readings beyond the book chapters.
 
 % ========== SECTION 8: STUDENT RESOURCES ==========
 \section*{Student Resources Website}
@@ -208,38 +226,24 @@ It is the student's responsibility to read and understand the required and impor
 \section*{Course Requirements}
 
 \subsection*{Course Format}
-This is an in-person lecture and discussion course. Students complete assigned readings before class; class time is divided between lecture and structured discussion of metropolitan governance theory and Southern California cases.
+This is an in-person seminar that meets once a week in the evening. Most students are MPA graduate students; some are upper-division undergraduates. Students complete the assigned readings before class. Class time is given to discussion, case work on Southern California governance problems, and one full-session simulation in Week 8. I will lecture briefly to frame a week's readings, but the sessions are built on what you bring to the table.
+
+A typical Monday runs in three blocks. From 7:00 to 7:25 I frame the week and name the puzzle the readings leave open. From 7:25 to 8:35 the discussion leaders run the room on the questions they posted Sunday, and we break at 8:35. From 8:45 to 9:35 we work a Southern California case on the week's problem, in small groups first and then as one table, and the last ten minutes name what to watch for in next week's reading.
 
 \subsection*{Graded Work}
 
+Graduate and undergraduate students complete the same six assignments. The graduate version of the Final Institutional Analysis Paper must engage the scholarly literature: it situates the case against at least four peer-reviewed sources beyond the syllabus and takes a position in the polycentricity debate (Ostrom, Tiebout, and Warren against the consolidationists; Feiock on when ICA mechanisms hold). The undergraduate version is applied: an 8--10 page analysis addressed to a city council or a COG board, using the course frameworks without a literature review. Graduate lengths for the other assignments are stated below; undergraduate lengths are roughly two-thirds.
+
 \begin{itemize}
-    \item \textbf{Undergraduates:}
-    \begin{itemize}
-        \item \textbf{Metropolitan Governance Profile (20\%):} A structured profile of one metropolitan region---its jurisdictions, governing institutions, and the principal regional bodies that coordinate (or fail to coordinate) shared problems.
-        \item \textbf{Institutional Mapping Memo (20\%):} A memo mapping the institutions, actors, and intergovernmental relationships that bear on one regional policy problem, with analysis of where fragmentation helps and hinders.
-        \item \textbf{Midterm Examination (20\%):} In-class examination covering Part I and the early Part II material.
-        \item \textbf{Final Metropolitan Policy Memo (25\%):} A policy memo developing evidence-based recommendations for a regional governance problem, building on the profile and mapping memo.
-        \item \textbf{Participation and Discussion (15\%):} Active, prepared engagement in class discussion.
-    \end{itemize}
-    \item \textbf{Graduate students:}
-    \begin{itemize}
-        \item \textbf{Institutional Mapping Memo (15\%):} As above.
-        \item \textbf{Graduate Analytical Memos (20\%):} Four short analytical memos engaging the graduate readings and metropolitan governance theory.
-        \item \textbf{Discussion Leadership (10\%):} Lead one class session's discussion of the assigned and graduate readings.
-        \item \textbf{Midterm Examination (20\%):} As above.
-        \item \textbf{Final Institutional Analysis Paper (25\%):} A 12--15 page original institutional analysis paper, in place of the undergraduate policy memo.
-        \item \textbf{Participation and Discussion (10\%):} As above.
-    \end{itemize}
+    \item \textbf{Metropolitan Governance Profile (20\%), due Week 5.} A structured profile of one Southern California subregion or regional body (a council of governments, a joint powers authority, a special district, a county, or a cluster of cities): its jurisdictions, governing institutions, and the coordinating bodies that manage (or fail to manage) its shared problems. You may update one of Fulton's cases to the present. Close with one page on which framework from Weeks 1 through 4 best explains why this body took the form it did. Graduate length: 6--8 pages.
+    \item \textbf{Institutional Mapping Memo (20\%), due Week 10.} A memo mapping the institutions, actors, and intergovernmental relationships that bear on one regional policy problem, with analysis of where fragmentation helps and hinders. Name who bears the costs of the fragmentation you map: which residents, which jurisdictions, and whether the burden tracks income or race. Graduate length: 8--10 pages.
+    \item \textbf{Regional Housing Simulation and Reflection (15\%), simulation in Week 8, reflection due Week 9.} A full-session simulation of a Regional Housing Needs Assessment (RHNA) allocation fight among Orange County cities, the Southern California Association of Governments (SCAG), and the California Department of Housing and Community Development (HCD). Roles are assigned in Week 7. The simulation runs on the Monday before spring recess, and the reflection is due the Monday after it. The reflection takes one move made at the table, connects it to one course framework, says what the framework predicted and whether the room obeyed it, and judges whether what formed was a polycentric arrangement or a cartel. Seven of the fifteen points rest on the preparation worksheet, the paired-seat note, and the signed term sheet; eight on the reflection. A student who misses the simulation with a documented reason receives the observer's materials and the posted term sheet and writes the reflection on another seat's move; the fifteen points then rest on the reflection alone. Graduate length: 4--5 pages.
+    \item \textbf{Discussion Leadership (10\%).} One session. You frame the week's readings and lead the first half of discussion. You lead in pairs, sign up in Week 1 for a slot from Week 3 on, and post a one-page framing sheet (the claim you will contest, your questions in order, one Southern California instance the readings omit) to Canvas by noon the Sunday before. Ten points on three questions: did the page frame an argument, did the first half run on your questions, did you get the room past its first answer.
+    \item \textbf{Final Institutional Analysis Paper (25\%), due at the final exam slot.} An original analysis of one metropolitan governance problem using the course frameworks. The paper must address the upstream or cross-boundary dimension of the problem, the part that no single jurisdiction can reach on its own. Graduate length: 12--15 pages; undergraduate length: 8--10 pages.
+    \item \textbf{Participation and Discussion (10\%).} Participation is graded twice, after Week 7 and after Week 14, on a three-step standard: present and prepared; contributes with reference to the week's readings; moves the discussion somewhere it would not have gone without you.
 \end{itemize}
 
-\subsection*{Graduate Student Requirements}
-Graduate students complete additional theoretical readings (the Graduate Reading selections in the schedule and graduate-only readings posted on Canvas) and written analytical assignments designed to deepen engagement with metropolitan governance theory, institutional analysis, and collaborative governance. In place of the undergraduate Metropolitan Governance Profile and Final Metropolitan Policy Memo, graduate students complete four analytical memos, one discussion leadership assignment, and a scaffolded institutional analysis paper:
-
-\begin{enumerate}
-    \item \textbf{Graduate Analytical Memos (20\%):} Four short memos across the semester, each engaging a graduate reading and connecting theory to a metropolitan governance problem.
-    \item \textbf{Discussion Leadership (10\%):} Lead one session, framing the readings and guiding discussion.
-    \item \textbf{Final Institutional Analysis Paper (25\%)} (12--15 pages): Due during finals week. Original analysis synthesizing course theory, scholarly literature, and evidence on a metropolitan governance problem, with a clear argument structure and proper citation.
-\end{enumerate}
+Graded work comes back with comments within two weeks: the Profile before Week 7, the Memo before Week 12. The three papers may build on one case.
 
 % ========== SECTION 10: GRADING POLICIES ==========
 \section*{Grading Policies and Standards}
@@ -251,12 +255,10 @@ Graduate students complete additional theoretical readings (the Graduate Reading
     \caption{Grade scale}
     \label{tab:grading-scale}
     \centering
-    \begin{tblr}{
-        colspec = {l c l c},
-        rowhead = 1,
-        row{1} = {font=\bfseries, bg=gray!20},
-    }
-    Grade & Percent & Grade & Percent \\
+    \tagpdfsetup{table/header-rows={1}}
+    \begin{tabular}{l c l c}
+    \rowcolor{gray!20}
+    \textbf{Grade} & \textbf{Percent} & \textbf{Grade} & \textbf{Percent} \\
     A+    & 98.0--100.0 & C+ & 77.0--79.9 \\
     A     & 93.0--97.9  & C  & 73.0--76.9 \\
     A-    & 90.0--92.9  & C- & 70.0--72.9 \\
@@ -264,54 +266,30 @@ Graduate students complete additional theoretical readings (the Graduate Reading
     B     & 83.0--86.9  & D  & 63.0--66.9 \\
     B-    & 80.0--82.9  & D- & 60.0--62.9 \\
           &             & F  & 0.0--59.9 \\
-    \end{tblr}
+    \end{tabular}
 \end{table}
 \end{center}
 
 \vspace{1em}
-\noindent \textbf{b. Required course assignments (undergraduate):}
-\noindent See Table~\ref{tab:ug-weights} for undergraduate assignment weights and due dates.
+\noindent \textbf{b. Required course assignments:}
+\noindent See Table~\ref{tab:weights} for assignment weights and due dates. Weights are the same for graduate and undergraduate students.
 \begin{center}
 \begin{table}[h]
-    \caption{Undergraduate assignment weighting}
-    \label{tab:ug-weights}
+    \caption{Assignment weighting}
+    \label{tab:weights}
     \centering
-    \begin{tblr}{
-        colspec = {X[l] c c},
-        rowhead = 1,
-        row{1} = {font=\bfseries, bg=gray!20},
-    }
-    Assignment & Weight & Due \\
-    Metropolitan Governance Profile & 20\% & See schedule \\
-    Institutional Mapping Memo & 20\% & See schedule \\
-    Midterm Examination & 20\% & [TBD] \\
-    Final Metropolitan Policy Memo & 25\% & Finals Week \\
-    Participation and Discussion & 15\% & Ongoing \\
-    \textbf{Total} & \textbf{100\%} & \\
-    \end{tblr}
-\end{table}
-\end{center}
-
-\noindent See Table~\ref{tab:grad-weights} for graduate assignment weights and due dates.
-\begin{center}
-\begin{table}[h]
-    \caption{Graduate assignment weighting}
-    \label{tab:grad-weights}
-    \centering
-    \begin{tblr}{
-        colspec = {X[l] c c},
-        rowhead = 1,
-        row{1} = {font=\bfseries, bg=gray!20},
-    }
-    Assignment & Weight & Due \\
-    Institutional Mapping Memo & 15\% & See schedule \\
-    Graduate Analytical Memos (4) & 20\% & See schedule \\
-    Discussion Leadership & 10\% & See schedule \\
-    Midterm Examination & 20\% & [TBD] \\
-    Final Institutional Analysis Paper & 25\% & Finals Week \\
+    \tagpdfsetup{table/header-rows={1}}
+    \begin{tabularx}{\linewidth}{L c L}
+    \rowcolor{gray!20}
+    \textbf{Assignment} & \textbf{Weight} & \textbf{Due} \\
+    Metropolitan Governance Profile & 20\% & Week 5, Monday, March 1 \\
+    Institutional Mapping Memo & 20\% & Week 10, Monday, April 12 \\
+    Regional Housing Simulation and Reflection & 15\% & Simulation Week 8 (March 22); reflection Week 9 (April 5) \\
+    Discussion Leadership & 10\% & Assigned session \\
+    Final Institutional Analysis Paper & 25\% & Monday, May 17, 7:00 p.m. \\
     Participation and Discussion & 10\% & Ongoing \\
     \textbf{Total} & \textbf{100\%} & \\
-    \end{tblr}
+    \end{tabularx}
 \end{table}
 \end{center}
 
@@ -322,8 +300,8 @@ Students are expected to attend all in-person sessions. If you are unable to att
 \vspace{1em}
 \noindent \textbf{d. Examination dates:}
 \begin{itemize}
-    \item Midterm Examination: [date TBD] (in-class)
-    \item Final deliverables (policy memo / institutional analysis paper) due during finals week; exact date assigned by Registrar
+    \item There are no examinations in this course.
+    \item The Final Institutional Analysis Paper is due at the start of the Registrar's final exam slot for this section: Monday, May 17, 2027, 7:00 p.m., GH 335.
 \end{itemize}
 
 \vspace{1em}
@@ -332,7 +310,7 @@ All assignments are due on the date specified in the course schedule. Extensions
 
 \vspace{0.5em}
 \noindent \textbf{Alternative procedures for submitting work:}
-Students are expected to submit all written work via \emph{Canvas}. Exams are taken in person. If you cannot submit via \emph{Canvas}, contact the professor immediately to arrange an alternative.
+Students are expected to submit all written work via \emph{Canvas}. If you cannot submit via \emph{Canvas}, contact the professor immediately to arrange an alternative.
 
 \vspace{1em}
 \noindent \textbf{f. Authentication of student work:}
@@ -359,7 +337,7 @@ Generative AI (including large language models, image generators, and other tool
 
 This course uses \textbf{PapyrusAI} (\href{https://www.genaied.org/papyrusai.html}{genaied.org/papyrusai}) as the supported AI environment for graded writing. PapyrusAI is an instructor-configured, contained LLM environment: I build the modules, set the source materials the AI may draw on, and define how it interacts with you. Modules in this course are designed to \emph{coach}, not to write for you---they will ask questions, push back on weak claims, and point you to readings, but they will not produce paragraphs you can paste into an assignment.
 
-Specific PapyrusAI modules accompany the metropolitan governance profile, institutional mapping memo, final policy memo, and graduate analytical memos and research paper. \textbf{Access PapyrusAI from the left-hand navigation menu inside our Canvas course site}---no separate login or account setup is required. Use of these modules is encouraged but not required; they exist to make productive AI use easy to access and unproductive use harder to fall into.
+Two PapyrusAI modules accompany this course. The \emph{Idea Catcher} opens in Week 1 and runs all semester. The \emph{Mapping and Memo Scaffold} opens in Week 6 and supports the Institutional Mapping Memo and the Final Institutional Analysis Paper by asking questions and pushing back on your claims; it does not draft. \textbf{Access PapyrusAI from the left-hand navigation menu inside our Canvas course site}---no separate login or account setup is required. Use of these modules is encouraged but not required; they exist to make productive AI use easy to access and unproductive use harder to fall into.
 
 You may also use general-purpose AI tools (ChatGPT, Claude, Gemini, etc.) outside PapyrusAI subject to the rules below. The permitted/not-permitted list applies equally regardless of which tool you use.
 
@@ -402,7 +380,10 @@ Students need:
 We will follow the schedule below as closely as possible. If adjustments are needed, you will receive advance notice in class and on \emph{Canvas}.
 
 \vspace{0.5em}
-\noindent \textbf{Reading structure:} Readings are required for all students. Graduate Reading selections are required for graduate students and recommended for undergraduates.
+\noindent \textbf{Dates.} The class meets Mondays. Spring 2027 classes begin Saturday, January 23, and end Friday, May 14; spring recess runs March 29 through April 4; final examinations run May 15 through 21. Two Mondays fall out: February 15 (Presidents' Day, campus closed) and March 29 (spring recess). The course therefore meets fourteen times; the week numbers below count class meetings, not calendar weeks.
+
+\vspace{0.5em}
+\noindent \textbf{Reading structure:} All readings are required for all students. Book chapters are from the three required texts; everything else is posted on Canvas.
 
 \bigskip
 
@@ -411,106 +392,85 @@ We will follow the schedule below as closely as possible. If adjustments are nee
 \begin{center}\textbf{PART I: Foundations of Metropolitan Governance}\end{center}
 \noindent\rule{\textwidth}{0.6pt}
 
-\subsection*{Week 1 --- Introduction to Metropolitan Governance}
+\subsection*{Week 1 (January 25) --- What Is Metropolitan Governance?}
     \subsubsection*{Topics}
         \begin{itemize}
-            \item Urbanization and metropolitan regions
+            \item Metropolitan regions and the Southern California case
             \item Governance versus government
-            \item Regional interdependence
+            \item Regional interdependence and the fragmentation puzzle
         \end{itemize}
     \subsubsection*{Readings}
         \begin{itemize}
-            \item Judd and Hinze, chapters 1--2
-            \item Katz and Bradley, selections from \emph{The Metropolitan Revolution}
-        \end{itemize}
-    \subsubsection*{Graduate Reading}
-        \begin{itemize}
-            \item Savitch and Vogel, ``Metropolitan Consolidation versus Metropolitan Governance''
-        \end{itemize}
-    \subsubsection*{PapyrusAI module}
-        \begin{itemize}
-            \item \textbf{Idea Catcher} (open from Week 1, runs all semester). A lightweight journaling module where you log connections, surprises, and governance puzzles as you read. It will not write your assignments---it will help you arrive at the profile and memo with material already in hand.
-        \end{itemize}
-
-\subsection*{Week 2 --- Federalism and Local Government}
-    \subsubsection*{Topics}
-        \begin{itemize}
-            \item Dillon's Rule
-            \item Home rule
-            \item Intergovernmental relations
-            \item Fiscal federalism
-        \end{itemize}
-    \subsubsection*{Readings}
-        \begin{itemize}
-            \item Peterson, selections from \emph{City Limits}
-            \item Frug, selections from \emph{City Making}
-        \end{itemize}
-    \subsubsection*{Graduate Reading}
-        \begin{itemize}
-            \item Oates, ``An Essay on Fiscal Federalism''
-        \end{itemize}
-
-\subsection*{Week 3 --- Fragmentation, Regionalism, and Metropolitan Politics}
-    \subsubsection*{Topics}
-        \begin{itemize}
-            \item Metropolitan fragmentation
-            \item Consolidation debates
-            \item Regional governance
-        \end{itemize}
-    \subsubsection*{Readings}
-        \begin{itemize}
-            \item Savitch and Adhikari, ``Fragmented Regionalism''
-            \item Orfield, selections from \emph{Metropolitics}
-        \end{itemize}
-    \subsubsection*{Graduate Reading}
-        \begin{itemize}
-            \item Ostrom, Tiebout, and Warren (1961)
+            \item Miller and Cox, chapters 1--2
+            \item Fulton, Introduction (``The Collapse of the Growth Machine'')
+            \item Ostrom, Vincent, Charles M.\ Tiebout, and Robert Warren. 1961. ``The Organization of Government in Metropolitan Areas: A Theoretical Inquiry.'' \emph{American Political Science Review} 55(4): 831--842.
+            \item Tiebout, Charles M. 1956. ``A Pure Theory of Local Expenditures.'' \emph{Journal of Political Economy} 64(5): 416--424.
         \end{itemize}
     \subsubsection*{Assignments}
         \begin{itemize}
-            \item Metropolitan Governance Profile region selection due (brief Canvas post)
+            \item Discussion Leadership sign-up (in class) for slots from Week 3 on
         \end{itemize}
     \subsubsection*{PapyrusAI module}
         \begin{itemize}
-            \item \textbf{Governance Profile Scaffold} unlocks after region selection. Walks you through identifying jurisdictions, governing institutions, and regional coordinating bodies. The module asks questions; you write the profile.
+            \item \textbf{Idea Catcher} opens this week and runs all semester. A journaling module where you log connections, surprises, and governance puzzles as you read. It does not write assignments. It helps you arrive at the profile, the memo, and the paper with material already in hand.
         \end{itemize}
 
-\subsection*{Week 4 --- Polycentric Governance and Institutional Collective Action}
+\subsection*{Week 2 (February 1) --- States, Cities, and Home Rule}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Dillon's Rule and home rule
+            \item Proposition 13 and the fiscalization of land use
+            \item What the state gives, and what the state takes back
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Miller and Cox, chapter 3
+            \item Frug, Gerald E., and David J.\ Barron. 2008. \emph{City Bound: How States Stifle Urban Innovation.} Ithaca, NY: Cornell University Press, chapters 3--4 (``Home Rule''; ``Revenue and Expenditures'').
+            \item Peterson, Paul E. 1981. \emph{City Limits.} Chicago, IL: University of Chicago Press, chapter 2 (``The Interests of the Limited City'').
+        \end{itemize}
+
+\subsection*{Week 3 (February 8) --- How the Fragments Got Made}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Incorporation and the Lakewood Plan
+            \item Special districts
+            \item Local Agency Formation Commissions (LAFCOs)
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Fulton, chapter 3 (``Suburbs of Extraction'')
+            \item Miller and Cox, chapter 4
+            \item Burns, Nancy. 1994. \emph{The Formation of American Local Governments: Private Values in Public Institutions.} New York, NY: Oxford University Press, chapters 1 and 3.
+        \end{itemize}
+
+\subsection*{Week 4 (February 22) --- Polycentricity and Institutional Collective Action}
     \subsubsection*{Topics}
         \begin{itemize}
             \item Polycentric systems
             \item Institutional collective action
-            \item Coordination under fragmentation
+            \item Why a hundred governments and not one
         \end{itemize}
     \subsubsection*{Readings}
         \begin{itemize}
-            \item Oakerson, selections from \emph{Governing Local Public Economies}
-            \item Feiock, selections on Institutional Collective Action
-        \end{itemize}
-    \subsubsection*{Graduate Reading}
-        \begin{itemize}
-            \item Elinor Ostrom, selections from \emph{Understanding Institutional Diversity}
+            \item Oakerson, Ronald J. 1999. \emph{Governing Local Public Economies: Creating the Civic Metropolis.} Oakland, CA: ICS Press, selected chapters (posted on Canvas).
+            \item Feiock, Richard C. 2013. ``The Institutional Collective Action Framework.'' \emph{Policy Studies Journal} 41(3): 397--425.
         \end{itemize}
 
-\subsection*{Week 5 --- Power, Regimes, and Political Economy}
+\subsection*{Week 5 (March 1) --- Consolidation versus Regionalism: The Valley Secession Fight}
     \subsubsection*{Topics}
         \begin{itemize}
-            \item Urban regimes
-            \item Growth machine theory
-            \item Power and development
+            \item Consolidation, secession, and the governance alternative
+            \item San Fernando Valley secession, 2002
+            \item Who gets to leave, and who decides
         \end{itemize}
     \subsubsection*{Readings}
         \begin{itemize}
-            \item Stone, selections from \emph{Regime Politics}
-            \item Logan and Molotch, ``The City as Growth Machine''
-        \end{itemize}
-    \subsubsection*{Graduate Reading}
-        \begin{itemize}
-            \item Dahl, selections from \emph{Who Governs?}
+            \item Sonenshein, Raphael J. 2004. \emph{The City at Stake: Secession, Reform, and the Battle for Los Angeles.} Princeton, NJ: Princeton University Press, chapter 5 (``Valley Secession and the Suburban Revolt'').
+            \item Savitch, H.\ V., and Ronald K.\ Vogel. 2000. ``Metropolitan Consolidation versus Metropolitan Governance in Louisville.'' \emph{State and Local Government Review} 32(3): 198--212.
         \end{itemize}
     \subsubsection*{Assignments}
         \begin{itemize}
-            \item \textbf{Metropolitan Governance Profile due (undergraduates)}
+            \item \textbf{Metropolitan Governance Profile due}
         \end{itemize}
 
 % ======================== PART II ========================
@@ -519,94 +479,124 @@ We will follow the schedule below as closely as possible. If adjustments are nee
 \begin{center}\textbf{PART II: Governing Metropolitan Problems}\end{center}
 \noindent\rule{\textwidth}{0.6pt}
 
-\subsection*{Week 6 --- Metropolitan Inequality and Spatial Segregation}
+\subsection*{Week 6 (March 8) --- Segregation by Design}
     \subsubsection*{Topics}
         \begin{itemize}
-            \item Spatial inequality and segregation
-            \item Suburbanization and exclusion
+            \item Local government as the engine of segregation
+            \item Zoning, enclaves, and the protection of property values
+            \item Who pays for exclusion
         \end{itemize}
     \subsubsection*{Readings}
         \begin{itemize}
-            \item Readings: TBD
-        \end{itemize}
-
-\subsection*{Week 7 --- Housing and Land Use Governance}
-    \subsubsection*{Topics}
-        \begin{itemize}
-            \item Zoning and land use authority
-            \item Housing affordability and regional housing needs
-        \end{itemize}
-    \subsubsection*{Readings}
-        \begin{itemize}
-            \item Readings: TBD
-        \end{itemize}
-    \subsubsection*{PapyrusAI module}
-        \begin{itemize}
-            \item \textbf{Institutional Mapping Companion} unlocks this week. Helps you identify the institutions, actors, and intergovernmental relationships bearing on your chosen policy problem, and probes where fragmentation helps and hinders.
-        \end{itemize}
-
-\subsection*{Week 8 --- Transportation and Regional Coordination}
-    \subsubsection*{Topics}
-        \begin{itemize}
-            \item Regional transportation governance
-            \item Metropolitan planning organizations
-        \end{itemize}
-    \subsubsection*{Readings}
-        \begin{itemize}
-            \item Readings: TBD
+            \item Trounstine, Prologue and chapters 1--5
         \end{itemize}
     \subsubsection*{Assignments}
         \begin{itemize}
-            \item \textbf{Midterm Examination} (in-class, date TBD)
-            \item \textbf{Institutional Mapping Memo due}
-        \end{itemize}
-
-\subsection*{Week 9 --- Environmental and Climate Governance}
-    \subsubsection*{Topics}
-        \begin{itemize}
-            \item Regional environmental governance
-            \item Climate adaptation across jurisdictions
-        \end{itemize}
-    \subsubsection*{Readings}
-        \begin{itemize}
-            \item Readings: TBD
-        \end{itemize}
-
-\subsection*{Week 10 --- Economic Development and Fiscal Competition}
-    \subsubsection*{Topics}
-        \begin{itemize}
-            \item Interjurisdictional competition
-            \item Economic development incentives
-        \end{itemize}
-    \subsubsection*{Readings}
-        \begin{itemize}
-            \item Readings: TBD
+            \item Simulation narrative and options posted; read before Week 7. Seats are assigned in Week 7.
         \end{itemize}
     \subsubsection*{PapyrusAI module}
         \begin{itemize}
-            \item \textbf{Policy Memo Dialectical Partner} (undergrad) unlocks this week. Argues back against your recommendations, asks for evidence on each claim, and challenges counterarguments. Will not draft paragraphs. (Graduate students continue with the \textbf{Research Paper Coach}.)
+            \item \textbf{Mapping and Memo Scaffold} opens this week. It supports the Institutional Mapping Memo and, later, the Final Institutional Analysis Paper by asking which institutions you have missed, where authority actually sits, and what evidence a claim rests on. It pushes back; it does not draft.
         \end{itemize}
 
-\subsection*{Week 11 --- Homelessness and Human Services Governance}
+\subsection*{Week 7 (March 15) --- Housing, RHNA, and the State}
     \subsubsection*{Topics}
         \begin{itemize}
-            \item Continuums of care and regional service governance
-            \item Homelessness as a coordination problem
+            \item Regional Housing Needs Assessment: how the numbers are made and assigned
+            \item Housing elements, HCD review, and state preemption
+            \item Neighborhood defenders and the politics of delay
         \end{itemize}
     \subsubsection*{Readings}
         \begin{itemize}
-            \item Readings: TBD
+            \item Trounstine, chapters 6--10
+            \item Einstein, Katherine Levine, David M.\ Glick, and Maxwell Palmer. 2019. \emph{Neighborhood Defenders: Participatory Politics and America's Housing Crisis.} New York, NY: Cambridge University Press, chapter 2 (``Neighborhood Defenders and the Power of Delay'').
+            \item Southern California Association of Governments. 2021. \emph{6th Cycle Regional Housing Needs Assessment (RHNA) Final Allocation Plan.} Los Angeles, CA: SCAG (Orange County allocations and methodology sections).
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item Simulation seats assigned (in class)
         \end{itemize}
 
-\subsection*{Week 12 --- Public Safety and Surveillance Governance}
+\subsection*{Week 8 (March 22) --- Simulation: The Regional Housing Allocation}
     \subsubsection*{Topics}
         \begin{itemize}
-            \item Regional public safety coordination
-            \item Surveillance technology and data governance
+            \item Full-session simulation of an RHNA allocation fight among Orange County cities, SCAG, and HCD
         \end{itemize}
     \subsubsection*{Readings}
         \begin{itemize}
-            \item Readings: TBD
+            \item Simulation packet only (role sheets, allocation data, and HCD housing element guidance excerpts), posted on Canvas
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item \textbf{Regional Housing Simulation} (in class; attendance required)
+            \item Simulation Reflection due the Monday after spring recess (April 5)
+        \end{itemize}
+
+\subsection*{Spring Recess (March 29--April 4)}
+    \begin{itemize}
+        \item No class meeting. Campus closed Wednesday, March 31.
+    \end{itemize}
+
+\subsection*{Week 9 (April 5) --- Water as the Original Regional Problem}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item The Metropolitan Water District of Southern California
+            \item Groundwater basins and the Orange County Water District
+            \item The Sustainable Groundwater Management Act (SGMA) and basin governance
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Fulton, chapter 4 (``Chinatown Redefined'')
+            \item Erie, Steven P. 2006. \emph{Beyond Chinatown: The Metropolitan Water District, Growth, and the Environment in Southern California.} Stanford, CA: Stanford University Press, chapter 1 (``Mighty Metropolitan'').
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item \textbf{Simulation Reflection due}
+        \end{itemize}
+
+\subsection*{Week 10 (April 12) --- Transportation and Metropolitan Planning Organizations}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item SCAG as a metropolitan planning organization and council of governments
+            \item The Orange County Transportation Authority and Measure M
+            \item Sales-tax transportation measures as regional governance
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Fulton, chapters 5--6 (``The Money Train''; ``The Reluctant Metropolis'')
+            \item Miller and Cox, chapter 10
+        \end{itemize}
+    \subsubsection*{Assignments}
+        \begin{itemize}
+            \item \textbf{Institutional Mapping Memo due}
+        \end{itemize}
+
+\subsection*{Week 11 (April 19) --- Fiscal Competition and Economic Development}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Growth machines
+            \item Sales-tax competition and the fiscalization of land use
+            \item Stadium deals, auto malls, and redevelopment's afterlife
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Fulton, chapter 10 (``Welcome to Sales Tax Canyon'')
+            \item Logan, John R., and Harvey L.\ Molotch. 1987. \emph{Urban Fortunes: The Political Economy of Place.} Berkeley, CA: University of California Press, chapter 3 (``The City as a Growth Machine'').
+            \item Johnson, Martin, and Max Neiman. 2004. ``Courting Business: Competition for Economic Development among Cities.'' In \emph{Metropolitan Governance: Conflict, Competition, and Cooperation}, edited by Richard C.\ Feiock, chapter 6. Washington, DC: Georgetown University Press.
+        \end{itemize}
+
+\subsection*{Week 12 (April 26) --- Homelessness as a Coordination Problem}
+    \subsubsection*{Topics}
+        \begin{itemize}
+            \item Continuums of Care and the federal funding structure
+            \item \emph{Orange County Catholic Worker v.\ County of Orange} and the north, central, and south county settlements
+            \item The Orange County Housing Finance Trust as a joint powers authority
+            \item Workshop: the cross-boundary dimension of your final paper
+        \end{itemize}
+    \subsubsection*{Readings}
+        \begin{itemize}
+            \item Lubell, Mark, Adam Douglas Henry, and Mike McCoy. 2010. ``Collaborative Institutions in an Ecology of Games.'' \emph{American Journal of Political Science} 54(2): 287--300.
+            \item Primary documents (posted on Canvas): the Orange County Housing Finance Trust joint exercise of powers agreement (2019), and the settlement agreement in \emph{Orange County Catholic Worker v.\ County of Orange}, No.\ 8:18-cv-00155 (C.D.\ Cal.).
         \end{itemize}
 
 % ======================== PART III ========================
@@ -615,48 +605,35 @@ We will follow the schedule below as closely as possible. If adjustments are nee
 \begin{center}\textbf{PART III: Futures of Metropolitan Governance}\end{center}
 \noindent\rule{\textwidth}{0.6pt}
 
-\subsection*{Week 13 --- Smart Cities and Data Governance}
+\subsection*{Week 13 (May 3) --- Resilience and Crisis Governance: Rebuilding after the 2025 Los Angeles Fires}
     \subsubsection*{Topics}
         \begin{itemize}
-            \item Smart-city initiatives
-            \item Data governance and accountability
+            \item Recovery across city, county, state, and federal lines
+            \item Permitting, insurance, and land use after the Palisades and Eaton fires
+            \item Polycentric response and its limits
         \end{itemize}
     \subsubsection*{Readings}
         \begin{itemize}
-            \item Readings: TBD
+            \item Ostrom, Elinor. 2010. ``Beyond Markets and States: Polycentric Governance of Complex Economic Systems.'' \emph{American Economic Review} 100(3): 641--672.
+            \item Office of the Governor of California. 2025. Executive Order N-4-25 (January 12, 2025), suspending CEQA and Coastal Act review for rebuilding in the Los Angeles fire zones.
         \end{itemize}
 
-\subsection*{Week 14 --- Metropolitan Resilience and Crisis Governance}
-    \subsubsection*{Topics}
-        \begin{itemize}
-            \item Resilience and crisis response
-            \item Governing under disruption
-        \end{itemize}
-    \subsubsection*{Readings}
-        \begin{itemize}
-            \item Readings: TBD
-        \end{itemize}
-
-\subsection*{Week 15 --- Can Metropolitan Regions Govern Themselves?}
+\subsection*{Week 14 (May 10) --- Can Metropolitan Regions Govern Themselves?}
     \subsubsection*{Topics}
         \begin{itemize}
             \item Synthesis across Parts I--III
-            \item Prospects for regional governance
+            \item Prospects for regional governance in Southern California
         \end{itemize}
     \subsubsection*{Readings}
         \begin{itemize}
-            \item Readings: TBD
-        \end{itemize}
-    \subsubsection*{PapyrusAI module}
-        \begin{itemize}
-            \item \textbf{Final Synthesis Studio.} Ties the course's governance frameworks to your own argument, helping you locate the institutional-design dimension in your policy memo or research paper before submission.
+            \item Miller and Cox, chapter 13 (``Speculation on the Future'')
+            \item Fulton, afterword to the paperback edition
         \end{itemize}
 
 \subsection*{Finals Week}
     \subsubsection*{Deliverables}
         \begin{itemize}
-            \item \textbf{Final Metropolitan Policy Memo due (undergraduates):} Date assigned by Registrar
-            \item \textbf{Final Institutional Analysis Paper due (graduate students):} Date assigned by Registrar
+            \item \textbf{Final Institutional Analysis Paper due Monday, May 17, 2027, 7:00 p.m.} (the Registrar's final exam slot for this section, GH 335). Submit on Canvas.
         \end{itemize}
 
 \end{document}
