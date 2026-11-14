@@ -432,6 +432,32 @@ kbd {
   .fetch { grid-template-columns: 1fr; gap: 0.9rem; }
   .fetch-logo { width: 6.5rem; }
   .fetch dl > div { grid-template-columns: 5rem minmax(0, 1fr); }
+  .fetch dl > .fetch-tech { display: none; } /* phones get the academic rows; the toolchain waits for a wider screen */
+}
+
+/* contact rows: the whole row is the link, and the value looks like one */
+.contact-list { margin: 0; padding: 0.35rem; list-style: none; background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius); }
+.contact-list li + li { border-top: 1px dashed var(--border); }
+.contact-row {
+  display: grid;
+  grid-template-columns: 1.25rem 8rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+  min-height: 3.25rem;
+  padding: 0.6rem 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s ease;
+}
+.contact-row:hover, .contact-row:focus-visible { color: var(--text); background: var(--accent-soft); }
+.contact-row i { color: var(--accent); text-align: center; }
+.contact-key { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+.contact-val { font-weight: 500; color: var(--accent); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent); text-underline-offset: 0.2em; overflow-wrap: anywhere; }
+.contact-row:hover .contact-val { text-decoration-color: currentColor; }
+@media (max-width: 575.98px) {
+  .contact-row { grid-template-columns: 1.25rem minmax(0, 1fr); }
+  .contact-row i { grid-row: span 2; }
 }
 
 /* key/value output (finger, toml) */
@@ -441,8 +467,9 @@ kbd {
 .kv dt::after { content: ":"; color: var(--term-dim); }
 .kv dd { margin: 0; overflow-wrap: anywhere; }
 .kv-toml dt::after { content: " ="; }
-.kv-toml dd a { color: var(--term-green); text-decoration: none; }
-.kv-toml dd a:hover { color: var(--term-yellow); text-decoration: underline; }
+/* links in a config block still have to look like links */
+.kv-toml dd a { color: var(--term-green); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--term-green) 45%, transparent); text-underline-offset: 0.2em; }
+.kv-toml dd a:hover { color: var(--term-yellow); text-decoration-color: currentColor; }
 .toml-section { margin: 1rem 0 0.25rem; font-weight: 700; color: var(--term-purple); }
 .toml-section:first-child { margin-top: 0; }
 
@@ -476,7 +503,6 @@ kbd {
 }
 .dir-card:hover { color: var(--text); border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-2px); }
 .dir-card:hover::after { color: var(--accent); transform: translateX(3px); }
-.dir-perm { font-family: var(--font-mono); font-size: 0.72rem; color: var(--faint); }
 .dir-path { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; color: var(--accent); }
 .dir-path i { width: 1.15em; margin-right: 0.3rem; }
 .dir-title { font-size: 1.1rem; font-weight: 600; color: var(--text-strong); }
@@ -517,7 +543,6 @@ kbd {
 .now-card:nth-child(3) { border-top-color: var(--yellow); }
 .now-card:nth-child(4) { border-top-color: var(--purple); }
 .now-kind { margin: 0 0 0.45rem; font-family: var(--font-mono); font-size: 0.76rem; color: var(--faint); }
-.now-kind::before { content: "## "; color: var(--accent); }
 .now-title { margin: 0 0 0.45rem; font-size: 1.02rem; font-weight: 600; line-height: 1.4; }
 .now-title a { color: var(--text-strong); text-decoration: none; }
 .now-title a:hover { color: var(--accent); text-decoration: underline; }
@@ -588,24 +613,15 @@ kbd {
 .page-hero-tight { padding-bottom: 1rem; }
 
 /* ---------- 9. Research ---------- */
-.docstring {
-  margin: 1rem 0 1.25rem;
-  padding: 1rem 1.25rem;
-  font-family: var(--font-mono);
-  font-size: clamp(0.92rem, 1.5vw, 1.05rem);
-  line-height: 1.65;
-  color: var(--term-text);
-  background: var(--term-bg);
-  border: 1px solid var(--term-border);
-  border-left: 3px solid var(--term-green);
-  border-radius: var(--radius-sm);
+.research-question { margin: 1.25rem 0 1.5rem; padding: 0.15rem 0 0.15rem 1.25rem; border-left: 3px solid var(--accent); }
+.research-question p {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-strong);
+  text-wrap: balance;
 }
-.ds-def { margin: 0; }
-.py-kw { color: var(--term-purple); }
-.py-fn { color: var(--term-blue); }
-.ds-body { margin: 0.2rem 0 0; padding-left: 4ch; color: var(--term-green); }
-.ds-body p { margin: 0; }
-.ds-q { color: var(--term-dim); }
 
 .focus-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 @media (max-width: 767.98px) { .focus-grid { grid-template-columns: 1fr; } }
@@ -664,7 +680,6 @@ kbd {
   font-weight: 700;
   border-bottom: 1px solid var(--border);
 }
-.pub-heading::before { content: "## "; color: var(--accent); }
 .pub-list { margin: 0; padding: 0; list-style: none; }
 .pub {
   display: grid;
@@ -798,9 +813,7 @@ kbd {
 .prose li { margin-bottom: 0.4rem; }
 .prose li::marker { color: var(--accent); }
 .prose h2 { margin: 2.5rem 0 1rem; font-family: var(--font-mono); font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; }
-.prose h2::before { content: "## "; color: var(--accent); }
 .prose h3 { margin: 2rem 0 0.75rem; font-size: 1.2rem; font-weight: 600; }
-.prose h3::before { content: "### "; font-family: var(--font-mono); font-size: 0.9em; color: var(--accent); }
 .prose h4 { margin: 1.75rem 0 0.6rem; font-size: 1.05rem; font-weight: 600; }
 .prose blockquote {
   margin: 1.75rem 0;
@@ -1002,7 +1015,7 @@ a.sl-seg:hover { color: var(--term-cyan); text-decoration: underline; }
   .site-main { padding-top: 0; }
   .site-main::before { display: none; }
   body { color: #000; background: #fff; }
-  .term, pre, .docstring, .grep-box { color: #000 !important; background: #fff !important; border-color: #999 !important; box-shadow: none; }
+  .term, pre, .grep-box { color: #000 !important; background: #fff !important; border-color: #999 !important; box-shadow: none; }
   a { color: #000; text-decoration: none; }
   .pub-title a::after { content: ""; }
   .section + .section { border-top: 0; }
