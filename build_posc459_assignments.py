@@ -393,7 +393,8 @@ RUBRICS = {
          "Specific enough to act on, and connected to the analysis that precedes it.", None),
         ("Political obstacles", 30, "Who loses, who blocks, what would have to change.", None),
         ("Evidence, citation, writing", 30,
-         "Sources carried forward and extended; APA; readable.", None),
+         "Sources carried forward and extended, with at least five new sources (at least two "
+         "scholarly articles or books and at least two course readings); APA; readable.", None),
     ]),
 
     "proposal": ("Graduate Research Proposal", [
