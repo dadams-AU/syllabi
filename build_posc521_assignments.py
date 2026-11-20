@@ -205,7 +205,7 @@ add("Integration Seminar and Field Map", "Field Map (Week 12)", 100,
 # --- Comprehensive exam ----------------------------------------------------
 add("MPA Comprehensive General Area Essay Exam",
     "MPA Comprehensive General Area Essay Exam", 100,
-    when("2026-11-16", "16:59:00"), UPLOAD, "pass_fail", "RED",
+    when("2026-11-16", "16:59:00"), ["none"], "pass_fail", "RED",  # submitted in comps course 3663092, not here
     "Distributed Monday 11/9 at 9:45 p.m. at the close of the integration seminar. Two questions; "
     "answer one. 1,620 words maximum. Pass/fail. Retake window during finals week, 12/12-12/18. "
     "No AI.")
