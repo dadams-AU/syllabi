@@ -306,7 +306,8 @@ A = [
              "1:00&ndash;2:50 p.m., GH 305. Bring a blue book.</strong></p>"
              "<p>This is not a survey of the whole course. It asks you to write at length about "
              "<strong>your own program or research topic</strong> &mdash; what it does, whom it "
-             "reaches, how it was built, and what you would change &mdash; using the concepts and "
+             "reaches, how it was built, what the argument over it is, and what you would change "
+             "&mdash; using the concepts and "
              "evidence of the course. If you have done your own work all semester, you are already "
              "prepared for it. Graduate final research papers are due at the start of this "
              "session.</p>"},
